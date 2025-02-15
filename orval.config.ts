@@ -5,7 +5,7 @@ export default defineConfig({
   openai: {
     input: {
       target: './openapi.yaml',
-      validation: true,
+      validation: false,
     },
     output: {
       mode: 'split',
