@@ -10,7 +10,11 @@
 import { readFileSync, writeFileSync } from 'node:fs'
 import { readdir } from 'node:fs/promises'
 import { join } from 'node:path'
+import process from 'node:process'
 import { genDir } from '@/config'
+
+// Record start time
+const startTime = process.hrtime.bigint()
 
 async function processFiles(dir: string) {
   const files = await readdir(dir, { withFileTypes: true })
@@ -35,7 +39,7 @@ async function processFiles(dir: string) {
 
         if (content !== withComments) {
           writeFileSync(fullPath, withComments)
-          console.log(`Updated ${fullPath}`)
+          // console.log(`Updated ${fullPath}`)
         }
       }
       catch (error) {
@@ -47,5 +51,9 @@ async function processFiles(dir: string) {
 
 // Run the cleanup
 processFiles(genDir)
-  .then(() => console.log('ESLint rule replacement complete'))
+  .then(() => {
+    const endTime = process.hrtime.bigint()
+    const durationMs = Number(endTime - startTime) / 1_000_000
+    console.log(`✅ Orval gen cleanup completed in ${durationMs.toFixed(2)}ms`)
+  })
   .catch(console.error)
