@@ -24,10 +24,16 @@ async function processFiles(dir: string) {
     else if (file.isFile() && file.name.endsWith('.ts')) {
       try {
         const content = readFileSync(fullPath, 'utf8')
-        const updated = content.replace(/@typescript-eslint\//g, 'ts/')
+        const replaced = content.replace(/@typescript-eslint\//g, 'ts/')
+        const withComments = [
+          '/* eslint-disable style/max-statements-per-line */',
+          '/* eslint-disable jsdoc/check-alignment */',
+          '/* eslint-disable ts/explicit-function-return-type */',
+          replaced,
+        ].join('\n')
 
-        if (content !== updated) {
-          writeFileSync(fullPath, updated)
+        if (content !== withComments) {
+          writeFileSync(fullPath, withComments)
           console.log(`Updated ${fullPath}`)
         }
       }
