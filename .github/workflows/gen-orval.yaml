@@ -1,0 +1,36 @@
+# Local Command - act -j gen-orval
+name: Sync App API Schema with OpenAPI Spec
+
+on:
+  push:
+    paths:
+      - openapi.yaml
+  workflow_dispatch:
+
+# Generate Orval Artifacts
+# so that our script runs the same way as it does locally
+jobs:
+  gen-orval:
+    # Runner images - https://github.com/actions/runner-images#available-images
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          registry-url: https://registry.npmjs.org/
+
+      - uses: pnpm/action-setup@v4
+        name: Install pnpm
+        id: pnpm-install
+
+      - name: Generate Orval
+        run: pnpm generate-orval
+
+      - name: Commit any API Client Updates
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'fix: Sync code with Official OpenAPI Spec'
