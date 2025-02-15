@@ -1,5 +1,5 @@
-import { genDir } from '@/config'
 import { defineConfig } from 'orval'
+import { genDir } from './src/config'
 
 export default defineConfig({
   openai: {
