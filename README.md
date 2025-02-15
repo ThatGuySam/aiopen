@@ -6,7 +6,7 @@
 [![JSDocs][jsdocs-src]][jsdocs-href]
 [![License][license-src]][license-href]
 
-Portable Mock Server for OpenAI's API
+Portable Mock Server for OpenAI's API, Synced with Official OpenAI Spec Daily
 
 ## Purpose
 - 💸 **Cost Prevention** - Eliminate API charges during testing
