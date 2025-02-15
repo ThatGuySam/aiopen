@@ -16,7 +16,10 @@ export default defineConfig({
       baseUrl: 'http://localhost:3000/v1',
     },
     hooks: {
-      afterAllFilesWrite: 'eslint --fix',
+      afterAllFilesWrite: [
+        'pnpm tsx scripts/orval-cleanup.ts',
+        'eslint --fix',
+      ],
     },
   },
 })
