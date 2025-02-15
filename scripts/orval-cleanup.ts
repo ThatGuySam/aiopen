@@ -29,6 +29,7 @@ async function processFiles(dir: string) {
           '/* eslint-disable style/max-statements-per-line */',
           '/* eslint-disable jsdoc/check-alignment */',
           '/* eslint-disable ts/explicit-function-return-type */',
+          '/* eslint-disable unused-imports/no-unused-vars */',
           replaced,
         ].join('\n')
 
