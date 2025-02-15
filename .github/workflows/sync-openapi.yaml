@@ -21,8 +21,9 @@ jobs:
 
       - name: Checkout only openapi.yaml history
         run: |
-          git checkout -b upstream-changes --track upstream/main
-          git checkout main -- .  # Revert all except openapi.yaml
+          git fetch upstream master  # Explicitly fetch master branch
+          git checkout -b upstream-changes upstream/master
+          git checkout main -- .
           git checkout upstream-changes -- openapi.yaml
 
       - name: Commit changes (if any)
