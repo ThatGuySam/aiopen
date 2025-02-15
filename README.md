@@ -8,6 +8,13 @@
 
 Portable Mock Server for OpenAI's API
 
+## Purpose
+- 💸 **Cost Prevention** - Eliminate API charges during testing
+- 🔑 **Token Free** - Test without having to maintain real tokens
+- 🚨 **Compatibility Safeguard** - Catch schema mismatches early
+- 🔒 **Data Privacy** - Keep sensitive payloads within local env
+- 🧳 **Portable Mocking** - Deployable across multiple environments
+
 ## Sponsors
 
 <p align="center">
