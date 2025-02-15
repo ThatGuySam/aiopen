@@ -12,7 +12,7 @@ export default defineConfig({
       target: `${genDir}/client.ts`,
       schemas: `${genDir}/models`,
       client: 'axios',
-      mock: false,
+      mock: true,
       baseUrl: 'http://localhost:3000/v1',
     },
     hooks: {
