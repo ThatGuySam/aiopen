@@ -13,7 +13,7 @@ jobs:
 
       - name: Fetch Latest Spec
         run: |
-          curl -s https://raw.githubusercontent.com/openai/openai-openapi/main/openapi.yaml > openapi.yaml
+          curl -s https://raw.githubusercontent.com/openai/openai-openapi/refs/heads/master/openapi.yaml > openapi.yaml
 
       - name: Commit Changes
         uses: stefanzweifel/git-auto-commit-action@v5
