@@ -4,7 +4,7 @@
  *
  * @example
  * ```bash
- * na tsx scripts/orval-cleanup.ts
+ * pnpm tsx scripts/orval-cleanup.ts
  * ```
  */
 import { readFileSync, writeFileSync } from 'node:fs'
