@@ -10,9 +10,9 @@ export interface ListFineTuningJobCheckpointsParams {
 /**
  * Identifier for the last checkpoint ID from the previous pagination request.
  */
-  after?: string
-  /**
-   * Number of checkpoints to retrieve.
-   */
-  limit?: number
+    after?: string
+    /**
+     * Number of checkpoints to retrieve.
+     */
+    limit?: number
 }

@@ -13,6 +13,6 @@ export type InviteRequestProjectsItemRole = typeof InviteRequestProjectsItemRole
 
 // eslint-disable-next-line ts/no-redeclare
 export const InviteRequestProjectsItemRole = {
-  member: 'member',
-  owner: 'owner',
+    member: 'member',
+    owner: 'owner',
 } as const

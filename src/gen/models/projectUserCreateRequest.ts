@@ -8,8 +8,8 @@
 import type { ProjectUserCreateRequestRole } from './projectUserCreateRequestRole'
 
 export interface ProjectUserCreateRequest {
-  /** The ID of the user. */
-  user_id: string
-  /** `owner` or `member` */
-  role: ProjectUserCreateRequestRole
+    /** The ID of the user. */
+    user_id: string
+    /** `owner` or `member` */
+    role: ProjectUserCreateRequestRole
 }

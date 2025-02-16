@@ -10,7 +10,7 @@ export type UsageImagesSourcesItem = typeof UsageImagesSourcesItem[keyof typeof 
 
 // eslint-disable-next-line ts/no-redeclare
 export const UsageImagesSourcesItem = {
-  imagegeneration: 'image.generation',
-  imageedit: 'image.edit',
-  imagevariation: 'image.variation',
+    imagegeneration: 'image.generation',
+    imageedit: 'image.edit',
+    imagevariation: 'image.variation',
 } as const

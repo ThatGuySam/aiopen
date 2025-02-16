@@ -16,6 +16,6 @@ import type { AssistantObjectToolResourcesFileSearch } from './assistantObjectTo
  * @nullable
  */
 export type AssistantObjectToolResources = {
-  code_interpreter?: AssistantObjectToolResourcesCodeInterpreter
-  file_search?: AssistantObjectToolResourcesFileSearch
+    code_interpreter?: AssistantObjectToolResourcesCodeInterpreter
+    file_search?: AssistantObjectToolResourcesFileSearch
 } | null

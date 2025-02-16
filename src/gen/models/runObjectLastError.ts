@@ -12,8 +12,8 @@ import type { RunObjectLastErrorCode } from './runObjectLastErrorCode'
  * @nullable
  */
 export type RunObjectLastError = {
-  /** One of `server_error`, `rate_limit_exceeded`, or `invalid_prompt`. */
-  code: RunObjectLastErrorCode
-  /** A human-readable description of the error. */
-  message: string
+    /** One of `server_error`, `rate_limit_exceeded`, or `invalid_prompt`. */
+    code: RunObjectLastErrorCode
+    /** A human-readable description of the error. */
+    message: string
 } | null

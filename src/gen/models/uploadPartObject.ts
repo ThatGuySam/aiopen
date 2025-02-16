@@ -13,5 +13,5 @@ export type UploadPartObject = typeof UploadPartObject[keyof typeof UploadPartOb
 
 // eslint-disable-next-line ts/no-redeclare
 export const UploadPartObject = {
-  uploadpart: 'upload.part',
+    uploadpart: 'upload.part',
 } as const

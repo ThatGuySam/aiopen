@@ -12,6 +12,6 @@ import type { RunStepStreamEventOneOfSevenEvent } from './runStepStreamEventOneO
  * Occurs when a [run step](/docs/api-reference/run-steps/step-object) is completed.
  */
 export interface RunStepStreamEventOneOfSeven {
-  event: RunStepStreamEventOneOfSevenEvent
-  data: RunStepObject
+    event: RunStepStreamEventOneOfSevenEvent
+    data: RunStepObject
 }

@@ -8,6 +8,6 @@
 import type { ProjectUserUpdateRequestRole } from './projectUserUpdateRequestRole'
 
 export interface ProjectUserUpdateRequest {
-  /** `owner` or `member` */
-  role: ProjectUserUpdateRequestRole
+    /** `owner` or `member` */
+    role: ProjectUserUpdateRequestRole
 }

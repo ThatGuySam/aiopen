@@ -13,6 +13,6 @@ export type MessageDeltaObjectDeltaRole = typeof MessageDeltaObjectDeltaRole[key
 
 // eslint-disable-next-line ts/no-redeclare
 export const MessageDeltaObjectDeltaRole = {
-  user: 'user',
-  assistant: 'assistant',
+    user: 'user',
+    assistant: 'assistant',
 } as const

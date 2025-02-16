@@ -11,6 +11,6 @@ import type { RunToolCallObject } from './runToolCallObject'
  * Details on the tool outputs needed for this run to continue.
  */
 export interface RunObjectRequiredActionSubmitToolOutputs {
-  /** A list of the relevant tool calls. */
-  tool_calls: RunToolCallObject[]
+    /** A list of the relevant tool calls. */
+    tool_calls: RunToolCallObject[]
 }

@@ -13,5 +13,5 @@ export type ChatCompletionToolType = typeof ChatCompletionToolType[keyof typeof 
 
 // eslint-disable-next-line ts/no-redeclare
 export const ChatCompletionToolType = {
-  function: 'function',
+    function: 'function',
 } as const

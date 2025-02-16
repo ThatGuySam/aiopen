@@ -10,6 +10,6 @@ export type CreateTranscriptionRequestTimestampGranularitiesItem = typeof Create
 
 // eslint-disable-next-line ts/no-redeclare
 export const CreateTranscriptionRequestTimestampGranularitiesItem = {
-  word: 'word',
-  segment: 'segment',
+    word: 'word',
+    segment: 'segment',
 } as const

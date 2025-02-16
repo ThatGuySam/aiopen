@@ -11,12 +11,12 @@ import type { UsageVectorStoresResultObject } from './usageVectorStoresResultObj
  * The aggregated vector stores usage details of the specific time bucket.
  */
 export interface UsageVectorStoresResult {
-  object: UsageVectorStoresResultObject
-  /** The vector stores usage in bytes. */
-  usage_bytes: number
-  /**
-   * When `group_by=project_id`, this field provides the project ID of the grouped usage result.
-   * @nullable
-   */
-  project_id?: string | null
+    object: UsageVectorStoresResultObject
+    /** The vector stores usage in bytes. */
+    usage_bytes: number
+    /**
+     * When `group_by=project_id`, this field provides the project ID of the grouped usage result.
+     * @nullable
+     */
+    project_id?: string | null
 }

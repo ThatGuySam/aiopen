@@ -13,8 +13,8 @@ export type UploadStatus = typeof UploadStatus[keyof typeof UploadStatus]
 
 // eslint-disable-next-line ts/no-redeclare
 export const UploadStatus = {
-  pending: 'pending',
-  completed: 'completed',
-  cancelled: 'cancelled',
-  expired: 'expired',
+    pending: 'pending',
+    completed: 'completed',
+    cancelled: 'cancelled',
+    expired: 'expired',
 } as const

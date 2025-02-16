@@ -11,8 +11,8 @@ import type { AuditLogProjectCreatedData } from './auditLogProjectCreatedData'
  * The details for events with this `type`.
  */
 export interface AuditLogProjectCreated {
-  /** The project ID. */
-  id?: string
-  /** The payload used to create the project. */
-  data?: AuditLogProjectCreatedData
+    /** The project ID. */
+    id?: string
+    /** The payload used to create the project. */
+    data?: AuditLogProjectCreatedData
 }

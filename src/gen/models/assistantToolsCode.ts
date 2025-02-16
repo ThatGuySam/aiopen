@@ -8,6 +8,6 @@
 import type { AssistantToolsCodeType } from './assistantToolsCodeType'
 
 export interface AssistantToolsCode {
-  /** The type of tool being defined: `code_interpreter` */
-  type: AssistantToolsCodeType
+    /** The type of tool being defined: `code_interpreter` */
+    type: AssistantToolsCodeType
 }

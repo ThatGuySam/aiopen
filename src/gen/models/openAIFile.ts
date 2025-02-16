@@ -13,26 +13,26 @@ import type { OpenAIFileStatus } from './openAIFileStatus'
  * The `File` object represents a document that has been uploaded to OpenAI.
  */
 export interface OpenAIFile {
-  /** The file identifier, which can be referenced in the API endpoints. */
-  id: string
-  /** The size of the file, in bytes. */
-  bytes: number
-  /** The Unix timestamp (in seconds) for when the file was created. */
-  created_at: number
-  /** The name of the file. */
-  filename: string
-  /** The object type, which is always `file`. */
-  object: OpenAIFileObject
-  /** The intended purpose of the file. Supported values are `assistants`, `assistants_output`, `batch`, `batch_output`, `fine-tune`, `fine-tune-results` and `vision`. */
-  purpose: OpenAIFilePurpose
-  /**
-   * Deprecated. The current status of the file, which can be either `uploaded`, `processed`, or `error`.
-   * @deprecated
-   */
-  status: OpenAIFileStatus
-  /**
-   * Deprecated. For details on why a fine-tuning training file failed validation, see the `error` field on `fine_tuning.job`.
-   * @deprecated
-   */
-  status_details?: string
+    /** The file identifier, which can be referenced in the API endpoints. */
+    id: string
+    /** The size of the file, in bytes. */
+    bytes: number
+    /** The Unix timestamp (in seconds) for when the file was created. */
+    created_at: number
+    /** The name of the file. */
+    filename: string
+    /** The object type, which is always `file`. */
+    object: OpenAIFileObject
+    /** The intended purpose of the file. Supported values are `assistants`, `assistants_output`, `batch`, `batch_output`, `fine-tune`, `fine-tune-results` and `vision`. */
+    purpose: OpenAIFilePurpose
+    /**
+     * Deprecated. The current status of the file, which can be either `uploaded`, `processed`, or `error`.
+     * @deprecated
+     */
+    status: OpenAIFileStatus
+    /**
+     * Deprecated. For details on why a fine-tuning training file failed validation, see the `error` field on `fine_tuning.job`.
+     * @deprecated
+     */
+    status_details?: string
 }

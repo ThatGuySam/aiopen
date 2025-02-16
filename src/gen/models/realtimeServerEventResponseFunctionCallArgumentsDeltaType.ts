@@ -16,5 +16,5 @@ export type RealtimeServerEventResponseFunctionCallArgumentsDeltaType = typeof R
 
 // eslint-disable-next-line ts/no-redeclare
 export const RealtimeServerEventResponseFunctionCallArgumentsDeltaType = {
-  responsefunction_call_argumentsdelta: 'response.function_call_arguments.delta',
+    responsefunction_call_argumentsdelta: 'response.function_call_arguments.delta',
 } as const

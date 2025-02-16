@@ -13,5 +13,5 @@ export type RealtimeClientEventResponseCancelType = typeof RealtimeClientEventRe
 
 // eslint-disable-next-line ts/no-redeclare
 export const RealtimeClientEventResponseCancelType = {
-  responsecancel: 'response.cancel',
+    responsecancel: 'response.cancel',
 } as const

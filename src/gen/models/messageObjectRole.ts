@@ -13,6 +13,6 @@ export type MessageObjectRole = typeof MessageObjectRole[keyof typeof MessageObj
 
 // eslint-disable-next-line ts/no-redeclare
 export const MessageObjectRole = {
-  user: 'user',
-  assistant: 'assistant',
+    user: 'user',
+    assistant: 'assistant',
 } as const

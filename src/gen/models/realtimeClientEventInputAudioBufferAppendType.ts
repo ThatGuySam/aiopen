@@ -13,5 +13,5 @@ export type RealtimeClientEventInputAudioBufferAppendType = typeof RealtimeClien
 
 // eslint-disable-next-line ts/no-redeclare
 export const RealtimeClientEventInputAudioBufferAppendType = {
-  input_audio_bufferappend: 'input_audio_buffer.append',
+    input_audio_bufferappend: 'input_audio_buffer.append',
 } as const

@@ -12,13 +12,13 @@ import type { CreateChatCompletionStreamResponseChoicesItemFinishReason } from '
 import type { CreateChatCompletionStreamResponseChoicesItemLogprobs } from './createChatCompletionStreamResponseChoicesItemLogprobs'
 
 export interface CreateChatCompletionStreamResponseChoicesItem {
-  delta: ChatCompletionStreamResponseDelta
-  /**
+    delta: ChatCompletionStreamResponseDelta
+    /**
    * Log probability information for the choice.
    * @nullable
    */
-  logprobs?: CreateChatCompletionStreamResponseChoicesItemLogprobs
-  /**
+    logprobs?: CreateChatCompletionStreamResponseChoicesItemLogprobs
+    /**
    * The reason the model stopped generating tokens. This will be `stop` if the model hit a natural stop point or a provided stop sequence,
 `length` if the maximum number of tokens specified in the request was reached,
 `content_filter` if content was omitted due to a flag from our content filters,
@@ -26,7 +26,7 @@ export interface CreateChatCompletionStreamResponseChoicesItem {
 
    * @nullable
    */
-  finish_reason: CreateChatCompletionStreamResponseChoicesItemFinishReason
-  /** The index of the choice in the list of choices. */
-  index: number
+    finish_reason: CreateChatCompletionStreamResponseChoicesItemFinishReason
+    /** The index of the choice in the list of choices. */
+    index: number
 }

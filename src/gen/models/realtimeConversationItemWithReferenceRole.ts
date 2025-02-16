@@ -17,7 +17,7 @@ export type RealtimeConversationItemWithReferenceRole = typeof RealtimeConversat
 
 // eslint-disable-next-line ts/no-redeclare
 export const RealtimeConversationItemWithReferenceRole = {
-  user: 'user',
-  assistant: 'assistant',
-  system: 'system',
+    user: 'user',
+    assistant: 'assistant',
+    system: 'system',
 } as const

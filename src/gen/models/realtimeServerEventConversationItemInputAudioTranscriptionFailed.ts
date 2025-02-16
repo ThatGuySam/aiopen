@@ -17,17 +17,17 @@ request for a user message failed. These events are separate from other
 
  */
 export interface RealtimeServerEventConversationItemInputAudioTranscriptionFailed {
-  /** The unique ID of the server event. */
-  event_id: string
-  /**
+    /** The unique ID of the server event. */
+    event_id: string
+    /**
  The event type, must be
 `conversation.item.input_audio_transcription.failed`.
  */
-  type: RealtimeServerEventConversationItemInputAudioTranscriptionFailedType
-  /** The ID of the user message item. */
-  item_id: string
-  /** The index of the content part containing the audio. */
-  content_index: number
-  /** Details of the transcription error. */
-  error: RealtimeServerEventConversationItemInputAudioTranscriptionFailedError
+    type: RealtimeServerEventConversationItemInputAudioTranscriptionFailedType
+    /** The ID of the user message item. */
+    item_id: string
+    /** The index of the content part containing the audio. */
+    content_index: number
+    /** Details of the transcription error. */
+    error: RealtimeServerEventConversationItemInputAudioTranscriptionFailedError
 }

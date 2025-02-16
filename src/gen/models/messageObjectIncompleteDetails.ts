@@ -12,6 +12,6 @@ import type { MessageObjectIncompleteDetailsReason } from './messageObjectIncomp
  * @nullable
  */
 export type MessageObjectIncompleteDetails = {
-  /** The reason the message is incomplete. */
-  reason: MessageObjectIncompleteDetailsReason
+    /** The reason the message is incomplete. */
+    reason: MessageObjectIncompleteDetailsReason
 } | null

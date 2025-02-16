@@ -11,8 +11,8 @@ import type { AuditLogOrganizationUpdatedChangesRequested } from './auditLogOrga
  * The details for events with this `type`.
  */
 export interface AuditLogOrganizationUpdated {
-  /** The organization ID. */
-  id?: string
-  /** The payload used to update the organization settings. */
-  changes_requested?: AuditLogOrganizationUpdatedChangesRequested
+    /** The organization ID. */
+    id?: string
+    /** The payload used to update the organization settings. */
+    changes_requested?: AuditLogOrganizationUpdatedChangesRequested
 }

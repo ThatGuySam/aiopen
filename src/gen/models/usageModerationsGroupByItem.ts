@@ -10,8 +10,8 @@ export type UsageModerationsGroupByItem = typeof UsageModerationsGroupByItem[key
 
 // eslint-disable-next-line ts/no-redeclare
 export const UsageModerationsGroupByItem = {
-  project_id: 'project_id',
-  user_id: 'user_id',
-  api_key_id: 'api_key_id',
-  model: 'model',
+    project_id: 'project_id',
+    user_id: 'user_id',
+    api_key_id: 'api_key_id',
+    model: 'model',
 } as const

@@ -10,5 +10,5 @@ export type UsageCompletionsResultObject = typeof UsageCompletionsResultObject[k
 
 // eslint-disable-next-line ts/no-redeclare
 export const UsageCompletionsResultObject = {
-  organizationusagecompletionsresult: 'organization.usage.completions.result',
+    organizationusagecompletionsresult: 'organization.usage.completions.result',
 } as const

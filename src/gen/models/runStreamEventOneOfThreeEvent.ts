@@ -10,5 +10,5 @@ export type RunStreamEventOneOfThreeEvent = typeof RunStreamEventOneOfThreeEvent
 
 // eslint-disable-next-line ts/no-redeclare
 export const RunStreamEventOneOfThreeEvent = {
-  threadrunqueued: 'thread.run.queued',
+    threadrunqueued: 'thread.run.queued',
 } as const

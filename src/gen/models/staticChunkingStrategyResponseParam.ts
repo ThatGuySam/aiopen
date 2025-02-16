@@ -9,7 +9,7 @@ import type { StaticChunkingStrategy } from './staticChunkingStrategy'
 import type { StaticChunkingStrategyResponseParamType } from './staticChunkingStrategyResponseParamType'
 
 export interface StaticChunkingStrategyResponseParam {
-  /** Always `static`. */
-  type: StaticChunkingStrategyResponseParamType
-  static: StaticChunkingStrategy
+    /** Always `static`. */
+    type: StaticChunkingStrategyResponseParamType
+    static: StaticChunkingStrategy
 }

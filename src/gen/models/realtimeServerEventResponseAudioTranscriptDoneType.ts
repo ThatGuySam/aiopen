@@ -13,5 +13,5 @@ export type RealtimeServerEventResponseAudioTranscriptDoneType = typeof Realtime
 
 // eslint-disable-next-line ts/no-redeclare
 export const RealtimeServerEventResponseAudioTranscriptDoneType = {
-  responseaudio_transcriptdone: 'response.audio_transcript.done',
+    responseaudio_transcriptdone: 'response.audio_transcript.done',
 } as const

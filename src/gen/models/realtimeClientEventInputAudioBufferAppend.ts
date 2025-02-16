@@ -23,13 +23,13 @@ not send a confirmation response to this event.
 
  */
 export interface RealtimeClientEventInputAudioBufferAppend {
-  /** Optional client-generated ID used to identify this event. */
-  event_id?: string
-  /** The event type, must be `input_audio_buffer.append`. */
-  type: RealtimeClientEventInputAudioBufferAppendType
-  /**
+    /** Optional client-generated ID used to identify this event. */
+    event_id?: string
+    /** The event type, must be `input_audio_buffer.append`. */
+    type: RealtimeClientEventInputAudioBufferAppendType
+    /**
  Base64-encoded audio bytes. This must be in the format specified by the
 `input_audio_format` field in the session configuration.
  */
-  audio: string
+    audio: string
 }

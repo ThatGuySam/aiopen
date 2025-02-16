@@ -13,5 +13,5 @@ export type InviteDeleteResponseObject = typeof InviteDeleteResponseObject[keyof
 
 // eslint-disable-next-line ts/no-redeclare
 export const InviteDeleteResponseObject = {
-  organizationinvitedeleted: 'organization.invite.deleted',
+    organizationinvitedeleted: 'organization.invite.deleted',
 } as const

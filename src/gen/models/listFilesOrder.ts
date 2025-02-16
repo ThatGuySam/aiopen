@@ -10,6 +10,6 @@ export type ListFilesOrder = typeof ListFilesOrder[keyof typeof ListFilesOrder]
 
 // eslint-disable-next-line ts/no-redeclare
 export const ListFilesOrder = {
-  asc: 'asc',
-  desc: 'desc',
+    asc: 'asc',
+    desc: 'desc',
 } as const

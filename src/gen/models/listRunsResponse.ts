@@ -8,9 +8,9 @@
 import type { RunObject } from './runObject'
 
 export interface ListRunsResponse {
-  object: string
-  data: RunObject[]
-  first_id: string
-  last_id: string
-  has_more: boolean
+    object: string
+    data: RunObject[]
+    first_id: string
+    last_id: string
+    has_more: boolean
 }

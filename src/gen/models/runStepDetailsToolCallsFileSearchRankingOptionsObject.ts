@@ -11,12 +11,12 @@ import type { RunStepDetailsToolCallsFileSearchRankingOptionsObjectRanker } from
  * The ranking options for the file search.
  */
 export interface RunStepDetailsToolCallsFileSearchRankingOptionsObject {
-  /** The ranker used for the file search. */
-  ranker: RunStepDetailsToolCallsFileSearchRankingOptionsObjectRanker
-  /**
-   * The score threshold for the file search. All values must be a floating point number between 0 and 1.
-   * @minimum 0
-   * @maximum 1
-   */
-  score_threshold: number
+    /** The ranker used for the file search. */
+    ranker: RunStepDetailsToolCallsFileSearchRankingOptionsObjectRanker
+    /**
+     * The score threshold for the file search. All values must be a floating point number between 0 and 1.
+     * @minimum 0
+     * @maximum 1
+     */
+    score_threshold: number
 }

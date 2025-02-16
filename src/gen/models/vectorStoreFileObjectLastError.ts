@@ -12,8 +12,8 @@ import type { VectorStoreFileObjectLastErrorCode } from './vectorStoreFileObject
  * @nullable
  */
 export type VectorStoreFileObjectLastError = {
-  /** One of `server_error` or `rate_limit_exceeded`. */
-  code: VectorStoreFileObjectLastErrorCode
-  /** A human-readable description of the error. */
-  message: string
+    /** One of `server_error` or `rate_limit_exceeded`. */
+    code: VectorStoreFileObjectLastErrorCode
+    /** A human-readable description of the error. */
+    message: string
 } | null

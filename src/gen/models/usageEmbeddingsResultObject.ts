@@ -10,5 +10,5 @@ export type UsageEmbeddingsResultObject = typeof UsageEmbeddingsResultObject[key
 
 // eslint-disable-next-line ts/no-redeclare
 export const UsageEmbeddingsResultObject = {
-  organizationusageembeddingsresult: 'organization.usage.embeddings.result',
+    organizationusageembeddingsresult: 'organization.usage.embeddings.result',
 } as const

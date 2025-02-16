@@ -12,13 +12,13 @@ import type { MessageContentTextAnnotationsFilePathObjectType } from './messageC
  * A URL for the file that's generated when the assistant used the `code_interpreter` tool to generate a file.
  */
 export interface MessageContentTextAnnotationsFilePathObject {
-  /** Always `file_path`. */
-  type: MessageContentTextAnnotationsFilePathObjectType
-  /** The text in the message content that needs to be replaced. */
-  text: string
-  file_path: MessageContentTextAnnotationsFilePathObjectFilePath
-  /** @minimum 0 */
-  start_index: number
-  /** @minimum 0 */
-  end_index: number
+    /** Always `file_path`. */
+    type: MessageContentTextAnnotationsFilePathObjectType
+    /** The text in the message content that needs to be replaced. */
+    text: string
+    file_path: MessageContentTextAnnotationsFilePathObjectFilePath
+    /** @minimum 0 */
+    start_index: number
+    /** @minimum 0 */
+    end_index: number
 }

@@ -12,9 +12,9 @@ import type { MessageDeltaContentImageFileObjectType } from './messageDeltaConte
  * References an image [File](/docs/api-reference/files) in the content of a message.
  */
 export interface MessageDeltaContentImageFileObject {
-  /** The index of the content part in the message. */
-  index: number
-  /** Always `image_file`. */
-  type: MessageDeltaContentImageFileObjectType
-  image_file?: MessageDeltaContentImageFileObjectImageFile
+    /** The index of the content part in the message. */
+    index: number
+    /** Always `image_file`. */
+    type: MessageDeltaContentImageFileObjectType
+    image_file?: MessageDeltaContentImageFileObjectImageFile
 }

@@ -10,5 +10,5 @@ export type MessageStreamEventOneOfFiveEvent = typeof MessageStreamEventOneOfFiv
 
 // eslint-disable-next-line ts/no-redeclare
 export const MessageStreamEventOneOfFiveEvent = {
-  threadmessagedelta: 'thread.message.delta',
+    threadmessagedelta: 'thread.message.delta',
 } as const

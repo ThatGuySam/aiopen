@@ -17,10 +17,10 @@ replace the previous `system` messages.
 
  */
 export interface ChatCompletionRequestDeveloperMessage {
-  /** The contents of the developer message. */
-  content: ChatCompletionRequestDeveloperMessageContent
-  /** The role of the messages author, in this case `developer`. */
-  role: ChatCompletionRequestDeveloperMessageRole
-  /** An optional name for the participant. Provides the model information to differentiate between participants of the same role. */
-  name?: string
+    /** The contents of the developer message. */
+    content: ChatCompletionRequestDeveloperMessageContent
+    /** The role of the messages author, in this case `developer`. */
+    role: ChatCompletionRequestDeveloperMessageRole
+    /** An optional name for the participant. Provides the model information to differentiate between participants of the same role. */
+    name?: string
 }

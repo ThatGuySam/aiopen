@@ -13,6 +13,6 @@ export type InviteRequestRole = typeof InviteRequestRole[keyof typeof InviteRequ
 
 // eslint-disable-next-line ts/no-redeclare
 export const InviteRequestRole = {
-  reader: 'reader',
-  owner: 'owner',
+    reader: 'reader',
+    owner: 'owner',
 } as const

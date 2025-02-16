@@ -17,14 +17,14 @@ will also be sent to the client.
 
  */
 export interface RealtimeServerEventInputAudioBufferCommitted {
-  /** The unique ID of the server event. */
-  event_id: string
-  /** The event type, must be `input_audio_buffer.committed`. */
-  type: RealtimeServerEventInputAudioBufferCommittedType
-  /**
+    /** The unique ID of the server event. */
+    event_id: string
+    /** The event type, must be `input_audio_buffer.committed`. */
+    type: RealtimeServerEventInputAudioBufferCommittedType
+    /**
   The ID of the preceding item after which the new item will be inserted.
  */
-  previous_item_id: string
-  /** The ID of the user message item that will be created. */
-  item_id: string
+    previous_item_id: string
+    /** The ID of the user message item that will be created. */
+    item_id: string
 }

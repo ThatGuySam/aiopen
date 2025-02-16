@@ -13,5 +13,5 @@ export type CreateCompletionResponseObject = typeof CreateCompletionResponseObje
 
 // eslint-disable-next-line ts/no-redeclare
 export const CreateCompletionResponseObject = {
-  text_completion: 'text_completion',
+    text_completion: 'text_completion',
 } as const

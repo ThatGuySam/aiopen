@@ -18,23 +18,23 @@ audio tokens) will become the input for later turns.
 
  */
 export interface RealtimeResponseUsage {
-  /**
+    /**
  The total number of tokens in the Response including input and output
 text and audio tokens.
  */
-  total_tokens?: number
-  /**
+    total_tokens?: number
+    /**
  The number of input tokens used in the Response, including text and
 audio tokens.
  */
-  input_tokens?: number
-  /**
+    input_tokens?: number
+    /**
  The number of output tokens sent in the Response, including text and
 audio tokens.
  */
-  output_tokens?: number
-  /** Details about the input tokens used in the Response. */
-  input_token_details?: RealtimeResponseUsageInputTokenDetails
-  /** Details about the output tokens used in the Response. */
-  output_token_details?: RealtimeResponseUsageOutputTokenDetails
+    output_tokens?: number
+    /** Details about the input tokens used in the Response. */
+    input_token_details?: RealtimeResponseUsageInputTokenDetails
+    /** Details about the output tokens used in the Response. */
+    output_token_details?: RealtimeResponseUsageOutputTokenDetails
 }

@@ -13,5 +13,5 @@ export type RealtimeClientEventResponseCreateType = typeof RealtimeClientEventRe
 
 // eslint-disable-next-line ts/no-redeclare
 export const RealtimeClientEventResponseCreateType = {
-  responsecreate: 'response.create',
+    responsecreate: 'response.create',
 } as const

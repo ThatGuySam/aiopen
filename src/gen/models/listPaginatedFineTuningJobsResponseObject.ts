@@ -10,5 +10,5 @@ export type ListPaginatedFineTuningJobsResponseObject = typeof ListPaginatedFine
 
 // eslint-disable-next-line ts/no-redeclare
 export const ListPaginatedFineTuningJobsResponseObject = {
-  list: 'list',
+    list: 'list',
 } as const

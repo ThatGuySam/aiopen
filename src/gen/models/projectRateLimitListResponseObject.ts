@@ -10,5 +10,5 @@ export type ProjectRateLimitListResponseObject = typeof ProjectRateLimitListResp
 
 // eslint-disable-next-line ts/no-redeclare
 export const ProjectRateLimitListResponseObject = {
-  list: 'list',
+    list: 'list',
 } as const

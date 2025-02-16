@@ -14,6 +14,6 @@ export type CreateImageRequestStyle = typeof CreateImageRequestStyle[keyof typeo
 
 // eslint-disable-next-line ts/no-redeclare
 export const CreateImageRequestStyle = {
-  vivid: 'vivid',
-  natural: 'natural',
+    vivid: 'vivid',
+    natural: 'natural',
 } as const

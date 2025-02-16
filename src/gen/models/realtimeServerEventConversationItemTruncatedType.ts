@@ -13,5 +13,5 @@ export type RealtimeServerEventConversationItemTruncatedType = typeof RealtimeSe
 
 // eslint-disable-next-line ts/no-redeclare
 export const RealtimeServerEventConversationItemTruncatedType = {
-  conversationitemtruncated: 'conversation.item.truncated',
+    conversationitemtruncated: 'conversation.item.truncated',
 } as const

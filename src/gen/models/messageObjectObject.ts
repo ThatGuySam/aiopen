@@ -13,5 +13,5 @@ export type MessageObjectObject = typeof MessageObjectObject[keyof typeof Messag
 
 // eslint-disable-next-line ts/no-redeclare
 export const MessageObjectObject = {
-  threadmessage: 'thread.message',
+    threadmessage: 'thread.message',
 } as const

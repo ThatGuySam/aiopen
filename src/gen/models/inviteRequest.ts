@@ -9,10 +9,10 @@ import type { InviteRequestProjectsItem } from './inviteRequestProjectsItem'
 import type { InviteRequestRole } from './inviteRequestRole'
 
 export interface InviteRequest {
-  /** Send an email to this address */
-  email: string
-  /** `owner` or `reader` */
-  role: InviteRequestRole
-  /** An array of projects to which membership is granted at the same time the org invite is accepted. If omitted, the user will be invited to the default project for compatibility with legacy behavior. */
-  projects?: InviteRequestProjectsItem[]
+    /** Send an email to this address */
+    email: string
+    /** `owner` or `reader` */
+    role: InviteRequestRole
+    /** An array of projects to which membership is granted at the same time the org invite is accepted. If omitted, the user will be invited to the default project for compatibility with legacy behavior. */
+    projects?: InviteRequestProjectsItem[]
 }

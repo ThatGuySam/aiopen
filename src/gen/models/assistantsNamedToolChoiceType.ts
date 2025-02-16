@@ -13,7 +13,7 @@ export type AssistantsNamedToolChoiceType = typeof AssistantsNamedToolChoiceType
 
 // eslint-disable-next-line ts/no-redeclare
 export const AssistantsNamedToolChoiceType = {
-  function: 'function',
-  code_interpreter: 'code_interpreter',
-  file_search: 'file_search',
+    function: 'function',
+    code_interpreter: 'code_interpreter',
+    file_search: 'file_search',
 } as const

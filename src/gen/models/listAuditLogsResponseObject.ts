@@ -10,5 +10,5 @@ export type ListAuditLogsResponseObject = typeof ListAuditLogsResponseObject[key
 
 // eslint-disable-next-line ts/no-redeclare
 export const ListAuditLogsResponseObject = {
-  list: 'list',
+    list: 'list',
 } as const

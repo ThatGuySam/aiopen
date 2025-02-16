@@ -9,8 +9,8 @@ import type { UsageTimeBucketObject } from './usageTimeBucketObject'
 import type { UsageTimeBucketResultItem } from './usageTimeBucketResultItem'
 
 export interface UsageTimeBucket {
-  object: UsageTimeBucketObject
-  start_time: number
-  end_time: number
-  result: UsageTimeBucketResultItem[]
+    object: UsageTimeBucketObject
+    start_time: number
+    end_time: number
+    result: UsageTimeBucketResultItem[]
 }

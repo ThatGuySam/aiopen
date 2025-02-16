@@ -13,5 +13,5 @@ export type StaticChunkingStrategyResponseParamType = typeof StaticChunkingStrat
 
 // eslint-disable-next-line ts/no-redeclare
 export const StaticChunkingStrategyResponseParamType = {
-  static: 'static',
+    static: 'static',
 } as const

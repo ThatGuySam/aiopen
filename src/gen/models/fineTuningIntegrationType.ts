@@ -13,5 +13,5 @@ export type FineTuningIntegrationType = typeof FineTuningIntegrationType[keyof t
 
 // eslint-disable-next-line ts/no-redeclare
 export const FineTuningIntegrationType = {
-  wandb: 'wandb',
+    wandb: 'wandb',
 } as const

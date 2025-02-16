@@ -13,5 +13,5 @@ export type CreateModerationRequestInputOneOfItemOneOfFourType = typeof CreateMo
 
 // eslint-disable-next-line ts/no-redeclare
 export const CreateModerationRequestInputOneOfItemOneOfFourType = {
-  text: 'text',
+    text: 'text',
 } as const

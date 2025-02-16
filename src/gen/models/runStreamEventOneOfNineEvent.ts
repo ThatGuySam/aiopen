@@ -10,5 +10,5 @@ export type RunStreamEventOneOfNineEvent = typeof RunStreamEventOneOfNineEvent[k
 
 // eslint-disable-next-line ts/no-redeclare
 export const RunStreamEventOneOfNineEvent = {
-  threadruncompleted: 'thread.run.completed',
+    threadruncompleted: 'thread.run.completed',
 } as const

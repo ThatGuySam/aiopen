@@ -11,6 +11,6 @@ import type { RunStepDeltaObjectDeltaStepDetails } from './runStepDeltaObjectDel
  * The delta containing the fields that have changed on the run step.
  */
 export interface RunStepDeltaObjectDelta {
-  /** The details of the run step. */
-  step_details?: RunStepDeltaObjectDeltaStepDetails
+    /** The details of the run step. */
+    step_details?: RunStepDeltaObjectDeltaStepDetails
 }

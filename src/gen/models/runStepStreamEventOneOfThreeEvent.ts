@@ -10,5 +10,5 @@ export type RunStepStreamEventOneOfThreeEvent = typeof RunStepStreamEventOneOfTh
 
 // eslint-disable-next-line ts/no-redeclare
 export const RunStepStreamEventOneOfThreeEvent = {
-  threadrunstepin_progress: 'thread.run.step.in_progress',
+    threadrunstepin_progress: 'thread.run.step.in_progress',
 } as const

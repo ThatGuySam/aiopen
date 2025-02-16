@@ -13,5 +13,5 @@ export type UserObject = typeof UserObject[keyof typeof UserObject]
 
 // eslint-disable-next-line ts/no-redeclare
 export const UserObject = {
-  organizationuser: 'organization.user',
+    organizationuser: 'organization.user',
 } as const

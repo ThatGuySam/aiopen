@@ -13,21 +13,21 @@
 
  */
 export interface RealtimeSessionCreateRequestInputAudioTranscription {
-  /**
+    /**
  The model to use for transcription, `whisper-1` is the only currently
 supported model.
  */
-  model?: string
-  /**
+    model?: string
+    /**
  The language of the input audio. Supplying the input language in
 [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) (e.g. `en`) format
 will improve accuracy and latency.
  */
-  language?: string
-  /**
+    language?: string
+    /**
  An optional text to guide the model's style or continue a previous audio
 segment. The [prompt](/docs/guides/speech-to-text#prompting) should match
 the audio language.
  */
-  prompt?: string
+    prompt?: string
 }

@@ -16,7 +16,7 @@ export type RealtimeResponseOutputAudioFormat = typeof RealtimeResponseOutputAud
 
 // eslint-disable-next-line ts/no-redeclare
 export const RealtimeResponseOutputAudioFormat = {
-  pcm16: 'pcm16',
-  g711_ulaw: 'g711_ulaw',
-  g711_alaw: 'g711_alaw',
+    pcm16: 'pcm16',
+    g711_ulaw: 'g711_ulaw',
+    g711_alaw: 'g711_alaw',
 } as const

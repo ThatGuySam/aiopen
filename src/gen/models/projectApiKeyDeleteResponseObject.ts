@@ -10,5 +10,5 @@ export type ProjectApiKeyDeleteResponseObject = typeof ProjectApiKeyDeleteRespon
 
 // eslint-disable-next-line ts/no-redeclare
 export const ProjectApiKeyDeleteResponseObject = {
-  organizationprojectapi_keydeleted: 'organization.project.api_key.deleted',
+    organizationprojectapi_keydeleted: 'organization.project.api_key.deleted',
 } as const

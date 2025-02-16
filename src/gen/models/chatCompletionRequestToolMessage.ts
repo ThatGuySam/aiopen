@@ -9,10 +9,10 @@ import type { ChatCompletionRequestToolMessageContent } from './chatCompletionRe
 import type { ChatCompletionRequestToolMessageRole } from './chatCompletionRequestToolMessageRole'
 
 export interface ChatCompletionRequestToolMessage {
-  /** The role of the messages author, in this case `tool`. */
-  role: ChatCompletionRequestToolMessageRole
-  /** The contents of the tool message. */
-  content: ChatCompletionRequestToolMessageContent
-  /** Tool call that this message is responding to. */
-  tool_call_id: string
+    /** The role of the messages author, in this case `tool`. */
+    role: ChatCompletionRequestToolMessageRole
+    /** The contents of the tool message. */
+    content: ChatCompletionRequestToolMessageContent
+    /** Tool call that this message is responding to. */
+    tool_call_id: string
 }

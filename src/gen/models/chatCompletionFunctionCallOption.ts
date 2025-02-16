@@ -13,6 +13,6 @@
 
  */
 export interface ChatCompletionFunctionCallOption {
-  /** The name of the function to call. */
-  name: string
+    /** The name of the function to call. */
+    name: string
 }

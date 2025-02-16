@@ -12,14 +12,14 @@ import type { ChatCompletionTokenLogprob } from './chatCompletionTokenLogprob'
  * @nullable
  */
 export type CreateChatCompletionStreamResponseChoicesItemLogprobs = {
-  /**
-   * A list of message content tokens with log probability information.
-   * @nullable
-   */
-  content: ChatCompletionTokenLogprob[] | null
-  /**
-   * A list of message refusal tokens with log probability information.
-   * @nullable
-   */
-  refusal: ChatCompletionTokenLogprob[] | null
+    /**
+     * A list of message content tokens with log probability information.
+     * @nullable
+     */
+    content: ChatCompletionTokenLogprob[] | null
+    /**
+     * A list of message refusal tokens with log probability information.
+     * @nullable
+     */
+    refusal: ChatCompletionTokenLogprob[] | null
 } | null

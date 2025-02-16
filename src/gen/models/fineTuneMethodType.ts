@@ -13,6 +13,6 @@ export type FineTuneMethodType = typeof FineTuneMethodType[keyof typeof FineTune
 
 // eslint-disable-next-line ts/no-redeclare
 export const FineTuneMethodType = {
-  supervised: 'supervised',
-  dpo: 'dpo',
+    supervised: 'supervised',
+    dpo: 'dpo',
 } as const

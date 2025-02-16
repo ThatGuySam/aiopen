@@ -10,6 +10,6 @@ export type CreateModerationResponseResultsItemCategoryAppliedInputTypesViolence
 
 // eslint-disable-next-line ts/no-redeclare
 export const CreateModerationResponseResultsItemCategoryAppliedInputTypesViolenceGraphicItem = {
-  text: 'text',
-  image: 'image',
+    text: 'text',
+    image: 'image',
 } as const

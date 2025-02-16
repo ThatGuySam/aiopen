@@ -14,6 +14,6 @@ export type CreateChatCompletionStreamResponseServiceTier = typeof CreateChatCom
 
 // eslint-disable-next-line ts/no-redeclare
 export const CreateChatCompletionStreamResponseServiceTier = {
-  scale: 'scale',
-  default: 'default',
+    scale: 'scale',
+    default: 'default',
 } as const

@@ -13,5 +13,5 @@ export type RunObjectObject = typeof RunObjectObject[keyof typeof RunObjectObjec
 
 // eslint-disable-next-line ts/no-redeclare
 export const RunObjectObject = {
-  threadrun: 'thread.run',
+    threadrun: 'thread.run',
 } as const

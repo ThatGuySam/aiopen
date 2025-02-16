@@ -13,6 +13,6 @@ export type TruncationObjectType = typeof TruncationObjectType[keyof typeof Trun
 
 // eslint-disable-next-line ts/no-redeclare
 export const TruncationObjectType = {
-  auto: 'auto',
-  last_messages: 'last_messages',
+    auto: 'auto',
+    last_messages: 'last_messages',
 } as const

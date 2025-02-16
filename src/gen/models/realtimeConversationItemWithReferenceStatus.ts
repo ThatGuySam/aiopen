@@ -18,6 +18,6 @@ export type RealtimeConversationItemWithReferenceStatus = typeof RealtimeConvers
 
 // eslint-disable-next-line ts/no-redeclare
 export const RealtimeConversationItemWithReferenceStatus = {
-  completed: 'completed',
-  incomplete: 'incomplete',
+    completed: 'completed',
+    incomplete: 'incomplete',
 } as const

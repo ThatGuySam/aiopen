@@ -9,9 +9,9 @@ import type { ProjectApiKey } from './projectApiKey'
 import type { ProjectApiKeyListResponseObject } from './projectApiKeyListResponseObject'
 
 export interface ProjectApiKeyListResponse {
-  object: ProjectApiKeyListResponseObject
-  data: ProjectApiKey[]
-  first_id: string
-  last_id: string
-  has_more: boolean
+    object: ProjectApiKeyListResponseObject
+    data: ProjectApiKey[]
+    first_id: string
+    last_id: string
+    has_more: boolean
 }

@@ -11,8 +11,8 @@ import type { AuditLogServiceAccountCreatedData } from './auditLogServiceAccount
  * The details for events with this `type`.
  */
 export interface AuditLogServiceAccountCreated {
-  /** The service account ID. */
-  id?: string
-  /** The payload used to create the service account. */
-  data?: AuditLogServiceAccountCreatedData
+    /** The service account ID. */
+    id?: string
+    /** The payload used to create the service account. */
+    data?: AuditLogServiceAccountCreatedData
 }

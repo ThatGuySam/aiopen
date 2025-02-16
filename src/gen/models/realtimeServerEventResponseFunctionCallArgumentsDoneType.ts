@@ -16,5 +16,5 @@ export type RealtimeServerEventResponseFunctionCallArgumentsDoneType = typeof Re
 
 // eslint-disable-next-line ts/no-redeclare
 export const RealtimeServerEventResponseFunctionCallArgumentsDoneType = {
-  responsefunction_call_argumentsdone: 'response.function_call_arguments.done',
+    responsefunction_call_argumentsdone: 'response.function_call_arguments.done',
 } as const

@@ -16,21 +16,21 @@ import type { CreateCompletionResponseObject } from './createCompletionResponseO
 
  */
 export interface CreateCompletionResponse {
-  /** A unique identifier for the completion. */
-  id: string
-  /** The list of completion choices the model generated for the input prompt. */
-  choices: CreateCompletionResponseChoicesItem[]
-  /** The Unix timestamp (in seconds) of when the completion was created. */
-  created: number
-  /** The model used for completion. */
-  model: string
-  /**
+    /** A unique identifier for the completion. */
+    id: string
+    /** The list of completion choices the model generated for the input prompt. */
+    choices: CreateCompletionResponseChoicesItem[]
+    /** The Unix timestamp (in seconds) of when the completion was created. */
+    created: number
+    /** The model used for completion. */
+    model: string
+    /**
  This fingerprint represents the backend configuration that the model runs with.
 
 Can be used in conjunction with the `seed` request parameter to understand when backend changes have been made that might impact determinism.
  */
-  system_fingerprint?: string
-  /** The object type, which is always "text_completion" */
-  object: CreateCompletionResponseObject
-  usage?: CompletionUsage
+    system_fingerprint?: string
+    /** The object type, which is always "text_completion" */
+    object: CreateCompletionResponseObject
+    usage?: CompletionUsage
 }

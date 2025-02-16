@@ -13,5 +13,5 @@ export type CreateChatCompletionStreamResponseObject = typeof CreateChatCompleti
 
 // eslint-disable-next-line ts/no-redeclare
 export const CreateChatCompletionStreamResponseObject = {
-  chatcompletionchunk: 'chat.completion.chunk',
+    chatcompletionchunk: 'chat.completion.chunk',
 } as const

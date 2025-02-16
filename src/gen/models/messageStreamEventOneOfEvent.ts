@@ -10,5 +10,5 @@ export type MessageStreamEventOneOfEvent = typeof MessageStreamEventOneOfEvent[k
 
 // eslint-disable-next-line ts/no-redeclare
 export const MessageStreamEventOneOfEvent = {
-  threadmessagecreated: 'thread.message.created',
+    threadmessagecreated: 'thread.message.created',
 } as const

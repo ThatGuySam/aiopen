@@ -14,8 +14,8 @@ import type { ChatCompletionRequestMessageContentPartTextType } from './chatComp
 
  */
 export interface ChatCompletionRequestMessageContentPartText {
-  /** The type of the content part. */
-  type: ChatCompletionRequestMessageContentPartTextType
-  /** The text content. */
-  text: string
+    /** The type of the content part. */
+    type: ChatCompletionRequestMessageContentPartTextType
+    /** The text content. */
+    text: string
 }

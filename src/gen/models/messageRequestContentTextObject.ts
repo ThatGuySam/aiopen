@@ -11,8 +11,8 @@ import type { MessageRequestContentTextObjectType } from './messageRequestConten
  * The text content that is part of a message.
  */
 export interface MessageRequestContentTextObject {
-  /** Always `text`. */
-  type: MessageRequestContentTextObjectType
-  /** Text content to be sent to the model */
-  text: string
+    /** Always `text`. */
+    type: MessageRequestContentTextObjectType
+    /** Text content to be sent to the model */
+    text: string
 }

@@ -13,6 +13,6 @@ export type FineTuneChatCompletionRequestAssistantMessageAllOfWeight = typeof Fi
 
 // eslint-disable-next-line ts/no-redeclare
 export const FineTuneChatCompletionRequestAssistantMessageAllOfWeight = {
-  NUMBER_0: 0,
-  NUMBER_1: 1,
+    NUMBER_0: 0,
+    NUMBER_1: 1,
 } as const

@@ -7,12 +7,12 @@
  */
 
 export interface Error {
-  /** @nullable */
-  code: string | null
-  /** */
-  message: string
-  /** @nullable */
-  param: string | null
-  /** */
-  type: string
+    /** @nullable */
+    code: string | null
+    /** */
+    message: string
+    /** @nullable */
+    param: string | null
+    /** */
+    type: string
 }

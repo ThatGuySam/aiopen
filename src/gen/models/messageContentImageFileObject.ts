@@ -12,7 +12,7 @@ import type { MessageContentImageFileObjectType } from './messageContentImageFil
  * References an image [File](/docs/api-reference/files) in the content of a message.
  */
 export interface MessageContentImageFileObject {
-  /** Always `image_file`. */
-  type: MessageContentImageFileObjectType
-  image_file: MessageContentImageFileObjectImageFile
+    /** Always `image_file`. */
+    type: MessageContentImageFileObjectType
+    image_file: MessageContentImageFileObjectImageFile
 }

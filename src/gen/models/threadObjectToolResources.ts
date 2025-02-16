@@ -16,6 +16,6 @@ import type { ThreadObjectToolResourcesFileSearch } from './threadObjectToolReso
  * @nullable
  */
 export type ThreadObjectToolResources = {
-  code_interpreter?: ThreadObjectToolResourcesCodeInterpreter
-  file_search?: ThreadObjectToolResourcesFileSearch
+    code_interpreter?: ThreadObjectToolResourcesCodeInterpreter
+    file_search?: ThreadObjectToolResourcesFileSearch
 } | null

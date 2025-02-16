@@ -15,10 +15,10 @@ import type { MessageDeltaObjectObject } from './messageDeltaObjectObject'
 
  */
 export interface MessageDeltaObject {
-  /** The identifier of the message, which can be referenced in API endpoints. */
-  id: string
-  /** The object type, which is always `thread.message.delta`. */
-  object: MessageDeltaObjectObject
-  /** The delta containing the fields that have changed on the Message. */
-  delta: MessageDeltaObjectDelta
+    /** The identifier of the message, which can be referenced in API endpoints. */
+    id: string
+    /** The object type, which is always `thread.message.delta`. */
+    object: MessageDeltaObjectObject
+    /** The delta containing the fields that have changed on the Message. */
+    delta: MessageDeltaObjectDelta
 }

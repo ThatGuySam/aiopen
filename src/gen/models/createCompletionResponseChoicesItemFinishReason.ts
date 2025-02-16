@@ -18,7 +18,7 @@ export type CreateCompletionResponseChoicesItemFinishReason = typeof CreateCompl
 
 // eslint-disable-next-line ts/no-redeclare
 export const CreateCompletionResponseChoicesItemFinishReason = {
-  stop: 'stop',
-  length: 'length',
-  content_filter: 'content_filter',
+    stop: 'stop',
+    length: 'length',
+    content_filter: 'content_filter',
 } as const

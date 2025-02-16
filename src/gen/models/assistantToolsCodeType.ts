@@ -13,5 +13,5 @@ export type AssistantToolsCodeType = typeof AssistantToolsCodeType[keyof typeof 
 
 // eslint-disable-next-line ts/no-redeclare
 export const AssistantToolsCodeType = {
-  code_interpreter: 'code_interpreter',
+    code_interpreter: 'code_interpreter',
 } as const

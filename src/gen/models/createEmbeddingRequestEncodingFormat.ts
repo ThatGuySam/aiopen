@@ -13,6 +13,6 @@ export type CreateEmbeddingRequestEncodingFormat = typeof CreateEmbeddingRequest
 
 // eslint-disable-next-line ts/no-redeclare
 export const CreateEmbeddingRequestEncodingFormat = {
-  float: 'float',
-  base64: 'base64',
+    float: 'float',
+    base64: 'base64',
 } as const

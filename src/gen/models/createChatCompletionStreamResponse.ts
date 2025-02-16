@@ -16,34 +16,34 @@ import type { CreateChatCompletionStreamResponseUsage } from './createChatComple
  * Represents a streamed chunk of a chat completion response returned by model, based on the provided input.
  */
 export interface CreateChatCompletionStreamResponse {
-  /** A unique identifier for the chat completion. Each chunk has the same ID. */
-  id: string
-  /**
+    /** A unique identifier for the chat completion. Each chunk has the same ID. */
+    id: string
+    /**
  A list of chat completion choices. Can contain more than one elements if `n` is greater than 1. Can also be empty for the
 last chunk if you set `stream_options: {"include_usage": true}`.
  */
-  choices: CreateChatCompletionStreamResponseChoicesItem[]
-  /** The Unix timestamp (in seconds) of when the chat completion was created. Each chunk has the same timestamp. */
-  created: number
-  /** The model to generate the completion. */
-  model: string
-  /**
+    choices: CreateChatCompletionStreamResponseChoicesItem[]
+    /** The Unix timestamp (in seconds) of when the chat completion was created. Each chunk has the same timestamp. */
+    created: number
+    /** The model to generate the completion. */
+    model: string
+    /**
    * The service tier used for processing the request.
    * @nullable
    */
-  service_tier?: CreateChatCompletionStreamResponseServiceTier
-  /**
+    service_tier?: CreateChatCompletionStreamResponseServiceTier
+    /**
  This fingerprint represents the backend configuration that the model runs with.
 Can be used in conjunction with the `seed` request parameter to understand when backend changes have been made that might impact determinism.
  */
-  system_fingerprint?: string
-  /** The object type, which is always `chat.completion.chunk`. */
-  object: CreateChatCompletionStreamResponseObject
-  /**
+    system_fingerprint?: string
+    /** The object type, which is always `chat.completion.chunk`. */
+    object: CreateChatCompletionStreamResponseObject
+    /**
    * An optional field that will only be present when you set `stream_options: {"include_usage": true}` in your request.
 When present, it contains a null value except for the last chunk which contains the token usage statistics for the entire request.
 
    * @nullable
    */
-  usage?: CreateChatCompletionStreamResponseUsage
+    usage?: CreateChatCompletionStreamResponseUsage
 }

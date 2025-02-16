@@ -13,5 +13,5 @@ export type RealtimeServerEventInputAudioBufferSpeechStoppedType = typeof Realti
 
 // eslint-disable-next-line ts/no-redeclare
 export const RealtimeServerEventInputAudioBufferSpeechStoppedType = {
-  input_audio_bufferspeech_stopped: 'input_audio_buffer.speech_stopped',
+    input_audio_bufferspeech_stopped: 'input_audio_buffer.speech_stopped',
 } as const

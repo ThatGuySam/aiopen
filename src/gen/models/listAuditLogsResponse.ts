@@ -9,9 +9,9 @@ import type { AuditLog } from './auditLog'
 import type { ListAuditLogsResponseObject } from './listAuditLogsResponseObject'
 
 export interface ListAuditLogsResponse {
-  object: ListAuditLogsResponseObject
-  data: AuditLog[]
-  first_id: string
-  last_id: string
-  has_more: boolean
+    object: ListAuditLogsResponseObject
+    data: AuditLog[]
+    first_id: string
+    last_id: string
+    has_more: boolean
 }

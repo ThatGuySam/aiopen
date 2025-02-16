@@ -13,5 +13,5 @@ export type CreateEmbeddingResponseObject = typeof CreateEmbeddingResponseObject
 
 // eslint-disable-next-line ts/no-redeclare
 export const CreateEmbeddingResponseObject = {
-  list: 'list',
+    list: 'list',
 } as const

@@ -13,5 +13,5 @@ export type OpenAIFileObject = typeof OpenAIFileObject[keyof typeof OpenAIFileOb
 
 // eslint-disable-next-line ts/no-redeclare
 export const OpenAIFileObject = {
-  file: 'file',
+    file: 'file',
 } as const

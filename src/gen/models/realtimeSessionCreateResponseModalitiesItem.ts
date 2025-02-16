@@ -10,6 +10,6 @@ export type RealtimeSessionCreateResponseModalitiesItem = typeof RealtimeSession
 
 // eslint-disable-next-line ts/no-redeclare
 export const RealtimeSessionCreateResponseModalitiesItem = {
-  text: 'text',
-  audio: 'audio',
+    text: 'text',
+    audio: 'audio',
 } as const

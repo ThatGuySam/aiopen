@@ -10,5 +10,5 @@ export type ProjectUserDeleteResponseObject = typeof ProjectUserDeleteResponseOb
 
 // eslint-disable-next-line ts/no-redeclare
 export const ProjectUserDeleteResponseObject = {
-  organizationprojectuserdeleted: 'organization.project.user.deleted',
+    organizationprojectuserdeleted: 'organization.project.user.deleted',
 } as const

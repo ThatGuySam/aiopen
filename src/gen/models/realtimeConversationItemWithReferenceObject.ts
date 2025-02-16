@@ -16,5 +16,5 @@ export type RealtimeConversationItemWithReferenceObject = typeof RealtimeConvers
 
 // eslint-disable-next-line ts/no-redeclare
 export const RealtimeConversationItemWithReferenceObject = {
-  realtimeitem: 'realtime.item',
+    realtimeitem: 'realtime.item',
 } as const

@@ -12,7 +12,7 @@ import type { RunStepDeltaStepDetailsMessageCreationObjectType } from './runStep
  * Details of the message creation by the run step.
  */
 export interface RunStepDeltaStepDetailsMessageCreationObject {
-  /** Always `message_creation`. */
-  type: RunStepDeltaStepDetailsMessageCreationObjectType
-  message_creation?: RunStepDeltaStepDetailsMessageCreationObjectMessageCreation
+    /** Always `message_creation`. */
+    type: RunStepDeltaStepDetailsMessageCreationObjectType
+    message_creation?: RunStepDeltaStepDetailsMessageCreationObjectMessageCreation
 }

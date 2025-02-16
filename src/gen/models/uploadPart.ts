@@ -14,12 +14,12 @@ import type { UploadPartObject } from './uploadPartObject'
 
  */
 export interface UploadPart {
-  /** The upload Part unique identifier, which can be referenced in API endpoints. */
-  id: string
-  /** The Unix timestamp (in seconds) for when the Part was created. */
-  created_at: number
-  /** The ID of the Upload object that this Part was added to. */
-  upload_id: string
-  /** The object type, which is always `upload.part`. */
-  object: UploadPartObject
+    /** The upload Part unique identifier, which can be referenced in API endpoints. */
+    id: string
+    /** The Unix timestamp (in seconds) for when the Part was created. */
+    created_at: number
+    /** The ID of the Upload object that this Part was added to. */
+    upload_id: string
+    /** The object type, which is always `upload.part`. */
+    object: UploadPartObject
 }

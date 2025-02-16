@@ -10,5 +10,5 @@ export type DeleteFileResponseObject = typeof DeleteFileResponseObject[keyof typ
 
 // eslint-disable-next-line ts/no-redeclare
 export const DeleteFileResponseObject = {
-  file: 'file',
+    file: 'file',
 } as const

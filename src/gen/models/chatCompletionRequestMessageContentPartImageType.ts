@@ -13,5 +13,5 @@ export type ChatCompletionRequestMessageContentPartImageType = typeof ChatComple
 
 // eslint-disable-next-line ts/no-redeclare
 export const ChatCompletionRequestMessageContentPartImageType = {
-  image_url: 'image_url',
+    image_url: 'image_url',
 } as const

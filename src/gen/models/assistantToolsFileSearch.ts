@@ -9,8 +9,8 @@ import type { AssistantToolsFileSearchFileSearch } from './assistantToolsFileSea
 import type { AssistantToolsFileSearchType } from './assistantToolsFileSearchType'
 
 export interface AssistantToolsFileSearch {
-  /** The type of tool being defined: `file_search` */
-  type: AssistantToolsFileSearchType
-  /** Overrides for the file search tool. */
-  file_search?: AssistantToolsFileSearchFileSearch
+    /** The type of tool being defined: `file_search` */
+    type: AssistantToolsFileSearchType
+    /** Overrides for the file search tool. */
+    file_search?: AssistantToolsFileSearchFileSearch
 }

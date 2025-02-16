@@ -10,5 +10,5 @@ export type DeleteVectorStoreFileResponseObject = typeof DeleteVectorStoreFileRe
 
 // eslint-disable-next-line ts/no-redeclare
 export const DeleteVectorStoreFileResponseObject = {
-  vector_storefiledeleted: 'vector_store.file.deleted',
+    vector_storefiledeleted: 'vector_store.file.deleted',
 } as const

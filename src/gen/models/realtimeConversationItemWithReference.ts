@@ -17,7 +17,7 @@ import type { RealtimeConversationItemWithReferenceType } from './realtimeConver
  * The item to add to the conversation.
  */
 export interface RealtimeConversationItemWithReference {
-  /**
+    /**
  For an item of type (`message` | `function_call` | `function_call_output`)
 this field allows the client to assign the unique ID of the item. It is
 not required because the server will generate one if not provided.
@@ -25,51 +25,51 @@ not required because the server will generate one if not provided.
 For an item of type `item_reference`, this field is required and is a
 reference to any item that has previously existed in the conversation.
  */
-  id?: string
-  /**
+    id?: string
+    /**
   The type of the item (`message`, `function_call`, `function_call_output`, `item_reference`).
  */
-  type?: RealtimeConversationItemWithReferenceType
-  /**
+    type?: RealtimeConversationItemWithReferenceType
+    /**
   Identifier for the API object being returned - always `realtime.item`.
  */
-  object?: RealtimeConversationItemWithReferenceObject
-  /**
+    object?: RealtimeConversationItemWithReferenceObject
+    /**
  The status of the item (`completed`, `incomplete`). These have no effect
 on the conversation, but are accepted for consistency with the
 `conversation.item.created` event.
  */
-  status?: RealtimeConversationItemWithReferenceStatus
-  /**
+    status?: RealtimeConversationItemWithReferenceStatus
+    /**
  The role of the message sender (`user`, `assistant`, `system`), only
 applicable for `message` items.
  */
-  role?: RealtimeConversationItemWithReferenceRole
-  /**
+    role?: RealtimeConversationItemWithReferenceRole
+    /**
  The content of the message, applicable for `message` items.
 - Message items of role `system` support only `input_text` content
 - Message items of role `user` support `input_text` and `input_audio`
   content
 - Message items of role `assistant` support `text` content.
  */
-  content?: RealtimeConversationItemWithReferenceContentItem[]
-  /**
+    content?: RealtimeConversationItemWithReferenceContentItem[]
+    /**
  The ID of the function call (for `function_call` and
 `function_call_output` items). If passed on a `function_call_output`
 item, the server will check that a `function_call` item with the same
 ID exists in the conversation history.
  */
-  call_id?: string
-  /**
+    call_id?: string
+    /**
   The name of the function being called (for `function_call` items).
  */
-  name?: string
-  /**
+    name?: string
+    /**
   The arguments of the function call (for `function_call` items).
  */
-  arguments?: string
-  /**
+    arguments?: string
+    /**
   The output of the function call (for `function_call_output` items).
  */
-  output?: string
+    output?: string
 }

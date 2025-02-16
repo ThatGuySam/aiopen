@@ -8,9 +8,9 @@
 import type { ThreadObject } from './threadObject'
 
 export interface ListThreadsResponse {
-  object: string
-  data: ThreadObject[]
-  first_id: string
-  last_id: string
-  has_more: boolean
+    object: string
+    data: ThreadObject[]
+    first_id: string
+    last_id: string
+    has_more: boolean
 }

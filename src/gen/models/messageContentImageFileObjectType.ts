@@ -13,5 +13,5 @@ export type MessageContentImageFileObjectType = typeof MessageContentImageFileOb
 
 // eslint-disable-next-line ts/no-redeclare
 export const MessageContentImageFileObjectType = {
-  image_file: 'image_file',
+    image_file: 'image_file',
 } as const

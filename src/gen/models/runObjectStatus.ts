@@ -13,13 +13,13 @@ export type RunObjectStatus = typeof RunObjectStatus[keyof typeof RunObjectStatu
 
 // eslint-disable-next-line ts/no-redeclare
 export const RunObjectStatus = {
-  queued: 'queued',
-  in_progress: 'in_progress',
-  requires_action: 'requires_action',
-  cancelling: 'cancelling',
-  cancelled: 'cancelled',
-  failed: 'failed',
-  completed: 'completed',
-  incomplete: 'incomplete',
-  expired: 'expired',
+    queued: 'queued',
+    in_progress: 'in_progress',
+    requires_action: 'requires_action',
+    cancelling: 'cancelling',
+    cancelled: 'cancelled',
+    failed: 'failed',
+    completed: 'completed',
+    incomplete: 'incomplete',
+    expired: 'expired',
 } as const

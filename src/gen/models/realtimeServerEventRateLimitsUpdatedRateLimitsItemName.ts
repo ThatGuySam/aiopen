@@ -16,6 +16,6 @@ export type RealtimeServerEventRateLimitsUpdatedRateLimitsItemName = typeof Real
 
 // eslint-disable-next-line ts/no-redeclare
 export const RealtimeServerEventRateLimitsUpdatedRateLimitsItemName = {
-  requests: 'requests',
-  tokens: 'tokens',
+    requests: 'requests',
+    tokens: 'tokens',
 } as const

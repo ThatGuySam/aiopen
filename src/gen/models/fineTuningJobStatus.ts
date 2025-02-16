@@ -13,10 +13,10 @@ export type FineTuningJobStatus = typeof FineTuningJobStatus[keyof typeof FineTu
 
 // eslint-disable-next-line ts/no-redeclare
 export const FineTuningJobStatus = {
-  validating_files: 'validating_files',
-  queued: 'queued',
-  running: 'running',
-  succeeded: 'succeeded',
-  failed: 'failed',
-  cancelled: 'cancelled',
+    validating_files: 'validating_files',
+    queued: 'queued',
+    running: 'running',
+    succeeded: 'succeeded',
+    failed: 'failed',
+    cancelled: 'cancelled',
 } as const

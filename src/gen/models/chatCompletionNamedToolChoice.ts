@@ -12,7 +12,7 @@ import type { ChatCompletionNamedToolChoiceType } from './chatCompletionNamedToo
  * Specifies a tool the model should use. Use to force the model to call a specific function.
  */
 export interface ChatCompletionNamedToolChoice {
-  /** The type of the tool. Currently, only `function` is supported. */
-  type: ChatCompletionNamedToolChoiceType
-  function: ChatCompletionNamedToolChoiceFunction
+    /** The type of the tool. Currently, only `function` is supported. */
+    type: ChatCompletionNamedToolChoiceType
+    function: ChatCompletionNamedToolChoiceFunction
 }

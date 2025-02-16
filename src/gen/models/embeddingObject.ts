@@ -13,5 +13,5 @@ export type EmbeddingObject = typeof EmbeddingObject[keyof typeof EmbeddingObjec
 
 // eslint-disable-next-line ts/no-redeclare
 export const EmbeddingObject = {
-  embedding: 'embedding',
+    embedding: 'embedding',
 } as const

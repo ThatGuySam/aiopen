@@ -13,5 +13,5 @@ export type RealtimeServerEventRateLimitsUpdatedType = typeof RealtimeServerEven
 
 // eslint-disable-next-line ts/no-redeclare
 export const RealtimeServerEventRateLimitsUpdatedType = {
-  rate_limitsupdated: 'rate_limits.updated',
+    rate_limitsupdated: 'rate_limits.updated',
 } as const

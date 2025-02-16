@@ -15,7 +15,7 @@ import type { ChatCompletionRequestMessageContentPartImageType } from './chatCom
 
  */
 export interface ChatCompletionRequestMessageContentPartImage {
-  /** The type of the content part. */
-  type: ChatCompletionRequestMessageContentPartImageType
-  image_url: ChatCompletionRequestMessageContentPartImageImageUrl
+    /** The type of the content part. */
+    type: ChatCompletionRequestMessageContentPartImageType
+    image_url: ChatCompletionRequestMessageContentPartImageImageUrl
 }

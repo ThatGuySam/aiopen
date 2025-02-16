@@ -17,9 +17,9 @@ include all output Items in the Response but will omit the raw audio data.
 
  */
 export interface RealtimeServerEventResponseDone {
-  /** The unique ID of the server event. */
-  event_id: string
-  /** The event type, must be `response.done`. */
-  type: RealtimeServerEventResponseDoneType
-  response: RealtimeResponse
+    /** The unique ID of the server event. */
+    event_id: string
+    /** The event type, must be `response.done`. */
+    type: RealtimeServerEventResponseDoneType
+    response: RealtimeResponse
 }

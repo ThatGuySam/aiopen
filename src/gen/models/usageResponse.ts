@@ -9,8 +9,8 @@ import type { UsageResponseObject } from './usageResponseObject'
 import type { UsageTimeBucket } from './usageTimeBucket'
 
 export interface UsageResponse {
-  object: UsageResponseObject
-  data: UsageTimeBucket[]
-  has_more: boolean
-  next_page: string
+    object: UsageResponseObject
+    data: UsageTimeBucket[]
+    has_more: boolean
+    next_page: string
 }

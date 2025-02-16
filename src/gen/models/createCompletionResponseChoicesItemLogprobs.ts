@@ -11,8 +11,8 @@ import type { CreateCompletionResponseChoicesItemLogprobsTopLogprobsItem } from 
  * @nullable
  */
 export type CreateCompletionResponseChoicesItemLogprobs = {
-  text_offset?: number[]
-  token_logprobs?: number[]
-  tokens?: string[]
-  top_logprobs?: CreateCompletionResponseChoicesItemLogprobsTopLogprobsItem[]
+    text_offset?: number[]
+    token_logprobs?: number[]
+    tokens?: string[]
+    top_logprobs?: CreateCompletionResponseChoicesItemLogprobsTopLogprobsItem[]
 } | null

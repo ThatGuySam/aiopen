@@ -13,8 +13,8 @@ import type { FineTuneSupervisedMethod } from './fineTuneSupervisedMethod'
  * The method used for fine-tuning.
  */
 export interface FineTuneMethod {
-  /** The type of method. Is either `supervised` or `dpo`. */
-  type?: FineTuneMethodType
-  supervised?: FineTuneSupervisedMethod
-  dpo?: FineTuneDPOMethod
+    /** The type of method. Is either `supervised` or `dpo`. */
+    type?: FineTuneMethodType
+    supervised?: FineTuneSupervisedMethod
+    dpo?: FineTuneDPOMethod
 }

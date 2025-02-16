@@ -16,6 +16,6 @@ export type ChatCompletionRequestMessageContentPartAudioInputAudioFormat = typeo
 
 // eslint-disable-next-line ts/no-redeclare
 export const ChatCompletionRequestMessageContentPartAudioInputAudioFormat = {
-  wav: 'wav',
-  mp3: 'mp3',
+    wav: 'wav',
+    mp3: 'mp3',
 } as const

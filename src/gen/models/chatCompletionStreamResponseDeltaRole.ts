@@ -13,9 +13,9 @@ export type ChatCompletionStreamResponseDeltaRole = typeof ChatCompletionStreamR
 
 // eslint-disable-next-line ts/no-redeclare
 export const ChatCompletionStreamResponseDeltaRole = {
-  developer: 'developer',
-  system: 'system',
-  user: 'user',
-  assistant: 'assistant',
-  tool: 'tool',
+    developer: 'developer',
+    system: 'system',
+    user: 'user',
+    assistant: 'assistant',
+    tool: 'tool',
 } as const

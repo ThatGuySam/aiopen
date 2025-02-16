@@ -18,6 +18,6 @@ export type CreateMessageRequestRole = typeof CreateMessageRequestRole[keyof typ
 
 // eslint-disable-next-line ts/no-redeclare
 export const CreateMessageRequestRole = {
-  user: 'user',
-  assistant: 'assistant',
+    user: 'user',
+    assistant: 'assistant',
 } as const

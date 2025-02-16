@@ -10,5 +10,5 @@ export type RunStreamEventOneOfFiveEvent = typeof RunStreamEventOneOfFiveEvent[k
 
 // eslint-disable-next-line ts/no-redeclare
 export const RunStreamEventOneOfFiveEvent = {
-  threadrunin_progress: 'thread.run.in_progress',
+    threadrunin_progress: 'thread.run.in_progress',
 } as const

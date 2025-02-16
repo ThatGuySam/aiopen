@@ -12,26 +12,26 @@
  * Details of the error.
  */
 export interface RealtimeServerEventErrorError {
-  /**
+    /**
   The type of error (e.g., "invalid_request_error", "server_error").
  */
-  type: string
-  /**
+    type: string
+    /**
    * Error code, if any.
    * @nullable
    */
-  code?: string | null
-  /** A human-readable error message. */
-  message: string
-  /**
+    code?: string | null
+    /** A human-readable error message. */
+    message: string
+    /**
    * Parameter related to the error, if any.
    * @nullable
    */
-  param?: string | null
-  /**
+    param?: string | null
+    /**
    * The event_id of the client event that caused the error, if applicable.
 
    * @nullable
    */
-  event_id?: string | null
+    event_id?: string | null
 }

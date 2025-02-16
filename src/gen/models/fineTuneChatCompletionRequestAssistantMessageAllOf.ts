@@ -8,6 +8,6 @@
 import type { FineTuneChatCompletionRequestAssistantMessageAllOfWeight } from './fineTuneChatCompletionRequestAssistantMessageAllOfWeight'
 
 export interface FineTuneChatCompletionRequestAssistantMessageAllOf {
-  /** Controls whether the assistant message is trained against (0 or 1) */
-  weight?: FineTuneChatCompletionRequestAssistantMessageAllOfWeight
+    /** Controls whether the assistant message is trained against (0 or 1) */
+    weight?: FineTuneChatCompletionRequestAssistantMessageAllOfWeight
 }

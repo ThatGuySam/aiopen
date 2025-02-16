@@ -10,10 +10,10 @@
 import type { ChatCompletionRequestMessageContentPartAudioInputAudioFormat } from './chatCompletionRequestMessageContentPartAudioInputAudioFormat'
 
 export interface ChatCompletionRequestMessageContentPartAudioInputAudio {
-  /** Base64 encoded audio data. */
-  data: string
-  /**
+    /** Base64 encoded audio data. */
+    data: string
+    /**
   The format of the encoded audio data. Currently supports "wav" and "mp3".
  */
-  format: ChatCompletionRequestMessageContentPartAudioInputAudioFormat
+    format: ChatCompletionRequestMessageContentPartAudioInputAudioFormat
 }

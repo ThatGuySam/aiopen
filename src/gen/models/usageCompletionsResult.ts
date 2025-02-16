@@ -11,42 +11,42 @@ import type { UsageCompletionsResultObject } from './usageCompletionsResultObjec
  * The aggregated completions usage details of the specific time bucket.
  */
 export interface UsageCompletionsResult {
-  object: UsageCompletionsResultObject
-  /** The aggregated number of text input tokens used, including cached tokens. For customers subscribe to scale tier, this includes scale tier tokens. */
-  input_tokens: number
-  /** The aggregated number of text input tokens that has been cached from previous requests. For customers subscribe to scale tier, this includes scale tier tokens. */
-  input_cached_tokens?: number
-  /** The aggregated number of text output tokens used. For customers subscribe to scale tier, this includes scale tier tokens. */
-  output_tokens: number
-  /** The aggregated number of audio input tokens used, including cached tokens. */
-  input_audio_tokens?: number
-  /** The aggregated number of audio output tokens used. */
-  output_audio_tokens?: number
-  /** The count of requests made to the model. */
-  num_model_requests: number
-  /**
-   * When `group_by=project_id`, this field provides the project ID of the grouped usage result.
-   * @nullable
-   */
-  project_id?: string | null
-  /**
-   * When `group_by=user_id`, this field provides the user ID of the grouped usage result.
-   * @nullable
-   */
-  user_id?: string | null
-  /**
-   * When `group_by=api_key_id`, this field provides the API key ID of the grouped usage result.
-   * @nullable
-   */
-  api_key_id?: string | null
-  /**
-   * When `group_by=model`, this field provides the model name of the grouped usage result.
-   * @nullable
-   */
-  model?: string | null
-  /**
-   * When `group_by=batch`, this field tells whether the grouped usage result is batch or not.
-   * @nullable
-   */
-  batch?: boolean | null
+    object: UsageCompletionsResultObject
+    /** The aggregated number of text input tokens used, including cached tokens. For customers subscribe to scale tier, this includes scale tier tokens. */
+    input_tokens: number
+    /** The aggregated number of text input tokens that has been cached from previous requests. For customers subscribe to scale tier, this includes scale tier tokens. */
+    input_cached_tokens?: number
+    /** The aggregated number of text output tokens used. For customers subscribe to scale tier, this includes scale tier tokens. */
+    output_tokens: number
+    /** The aggregated number of audio input tokens used, including cached tokens. */
+    input_audio_tokens?: number
+    /** The aggregated number of audio output tokens used. */
+    output_audio_tokens?: number
+    /** The count of requests made to the model. */
+    num_model_requests: number
+    /**
+     * When `group_by=project_id`, this field provides the project ID of the grouped usage result.
+     * @nullable
+     */
+    project_id?: string | null
+    /**
+     * When `group_by=user_id`, this field provides the user ID of the grouped usage result.
+     * @nullable
+     */
+    user_id?: string | null
+    /**
+     * When `group_by=api_key_id`, this field provides the API key ID of the grouped usage result.
+     * @nullable
+     */
+    api_key_id?: string | null
+    /**
+     * When `group_by=model`, this field provides the model name of the grouped usage result.
+     * @nullable
+     */
+    model?: string | null
+    /**
+     * When `group_by=batch`, this field tells whether the grouped usage result is batch or not.
+     * @nullable
+     */
+    batch?: boolean | null
 }

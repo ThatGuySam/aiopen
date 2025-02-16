@@ -13,7 +13,7 @@ export type VectorStoreObjectStatus = typeof VectorStoreObjectStatus[keyof typeo
 
 // eslint-disable-next-line ts/no-redeclare
 export const VectorStoreObjectStatus = {
-  expired: 'expired',
-  in_progress: 'in_progress',
-  completed: 'completed',
+    expired: 'expired',
+    in_progress: 'in_progress',
+    completed: 'completed',
 } as const

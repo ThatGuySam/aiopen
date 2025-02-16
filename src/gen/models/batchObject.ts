@@ -13,5 +13,5 @@ export type BatchObject = typeof BatchObject[keyof typeof BatchObject]
 
 // eslint-disable-next-line ts/no-redeclare
 export const BatchObject = {
-  batch: 'batch',
+    batch: 'batch',
 } as const

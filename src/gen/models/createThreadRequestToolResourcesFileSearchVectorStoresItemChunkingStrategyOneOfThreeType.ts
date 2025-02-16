@@ -13,5 +13,5 @@ export type CreateThreadRequestToolResourcesFileSearchVectorStoresItemChunkingSt
 
 // eslint-disable-next-line ts/no-redeclare
 export const CreateThreadRequestToolResourcesFileSearchVectorStoresItemChunkingStrategyOneOfThreeType = {
-  static: 'static',
+    static: 'static',
 } as const

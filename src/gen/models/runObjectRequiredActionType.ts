@@ -13,5 +13,5 @@ export type RunObjectRequiredActionType = typeof RunObjectRequiredActionType[key
 
 // eslint-disable-next-line ts/no-redeclare
 export const RunObjectRequiredActionType = {
-  submit_tool_outputs: 'submit_tool_outputs',
+    submit_tool_outputs: 'submit_tool_outputs',
 } as const

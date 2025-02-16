@@ -13,5 +13,5 @@ export type ResponseFormatTextType = typeof ResponseFormatTextType[keyof typeof 
 
 // eslint-disable-next-line ts/no-redeclare
 export const ResponseFormatTextType = {
-  text: 'text',
+    text: 'text',
 } as const

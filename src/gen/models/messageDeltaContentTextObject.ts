@@ -12,9 +12,9 @@ import type { MessageDeltaContentTextObjectType } from './messageDeltaContentTex
  * The text content that is part of a message.
  */
 export interface MessageDeltaContentTextObject {
-  /** The index of the content part in the message. */
-  index: number
-  /** Always `text`. */
-  type: MessageDeltaContentTextObjectType
-  text?: MessageDeltaContentTextObjectText
+    /** The index of the content part in the message. */
+    index: number
+    /** Always `text`. */
+    type: MessageDeltaContentTextObjectType
+    text?: MessageDeltaContentTextObjectText
 }

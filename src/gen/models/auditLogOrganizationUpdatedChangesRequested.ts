@@ -11,11 +11,11 @@ import type { AuditLogOrganizationUpdatedChangesRequestedSettings } from './audi
  * The payload used to update the organization settings.
  */
 export interface AuditLogOrganizationUpdatedChangesRequested {
-  /** The organization title. */
-  title?: string
-  /** The organization description. */
-  description?: string
-  /** The organization name. */
-  name?: string
-  settings?: AuditLogOrganizationUpdatedChangesRequestedSettings
+    /** The organization title. */
+    title?: string
+    /** The organization description. */
+    description?: string
+    /** The organization name. */
+    name?: string
+    settings?: AuditLogOrganizationUpdatedChangesRequestedSettings
 }

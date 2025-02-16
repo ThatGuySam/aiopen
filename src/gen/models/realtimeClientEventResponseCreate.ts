@@ -29,9 +29,9 @@ configuration for this Response only.
 
  */
 export interface RealtimeClientEventResponseCreate {
-  /** Optional client-generated ID used to identify this event. */
-  event_id?: string
-  /** The event type, must be `response.create`. */
-  type: RealtimeClientEventResponseCreateType
-  response?: RealtimeResponseCreateParams
+    /** Optional client-generated ID used to identify this event. */
+    event_id?: string
+    /** The event type, must be `response.create`. */
+    type: RealtimeClientEventResponseCreateType
+    response?: RealtimeResponseCreateParams
 }

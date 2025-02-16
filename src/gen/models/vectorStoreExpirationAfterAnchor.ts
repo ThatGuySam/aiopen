@@ -13,5 +13,5 @@ export type VectorStoreExpirationAfterAnchor = typeof VectorStoreExpirationAfter
 
 // eslint-disable-next-line ts/no-redeclare
 export const VectorStoreExpirationAfterAnchor = {
-  last_active_at: 'last_active_at',
+    last_active_at: 'last_active_at',
 } as const

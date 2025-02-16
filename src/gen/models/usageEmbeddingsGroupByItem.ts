@@ -10,8 +10,8 @@ export type UsageEmbeddingsGroupByItem = typeof UsageEmbeddingsGroupByItem[keyof
 
 // eslint-disable-next-line ts/no-redeclare
 export const UsageEmbeddingsGroupByItem = {
-  project_id: 'project_id',
-  user_id: 'user_id',
-  api_key_id: 'api_key_id',
-  model: 'model',
+    project_id: 'project_id',
+    user_id: 'user_id',
+    api_key_id: 'api_key_id',
+    model: 'model',
 } as const

@@ -13,6 +13,6 @@ export type ProjectServiceAccountRole = typeof ProjectServiceAccountRole[keyof t
 
 // eslint-disable-next-line ts/no-redeclare
 export const ProjectServiceAccountRole = {
-  owner: 'owner',
-  member: 'member',
+    owner: 'owner',
+    member: 'member',
 } as const

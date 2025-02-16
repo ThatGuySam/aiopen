@@ -9,9 +9,9 @@ import type { ProjectServiceAccount } from './projectServiceAccount'
 import type { ProjectServiceAccountListResponseObject } from './projectServiceAccountListResponseObject'
 
 export interface ProjectServiceAccountListResponse {
-  object: ProjectServiceAccountListResponseObject
-  data: ProjectServiceAccount[]
-  first_id: string
-  last_id: string
-  has_more: boolean
+    object: ProjectServiceAccountListResponseObject
+    data: ProjectServiceAccount[]
+    first_id: string
+    last_id: string
+    has_more: boolean
 }

@@ -13,6 +13,6 @@ export type UserRole = typeof UserRole[keyof typeof UserRole]
 
 // eslint-disable-next-line ts/no-redeclare
 export const UserRole = {
-  owner: 'owner',
-  reader: 'reader',
+    owner: 'owner',
+    reader: 'reader',
 } as const

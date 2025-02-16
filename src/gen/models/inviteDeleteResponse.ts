@@ -8,8 +8,8 @@
 import type { InviteDeleteResponseObject } from './inviteDeleteResponseObject'
 
 export interface InviteDeleteResponse {
-  /** The object type, which is always `organization.invite.deleted` */
-  object: InviteDeleteResponseObject
-  id: string
-  deleted: boolean
+    /** The object type, which is always `organization.invite.deleted` */
+    object: InviteDeleteResponseObject
+    id: string
+    deleted: boolean
 }

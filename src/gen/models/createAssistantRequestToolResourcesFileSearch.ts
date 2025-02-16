@@ -10,29 +10,29 @@
 import type { CreateAssistantRequestToolResourcesFileSearchVectorStoresItem } from './createAssistantRequestToolResourcesFileSearchVectorStoresItem'
 
 export type CreateAssistantRequestToolResourcesFileSearch = (unknown & {
-  /**
+    /**
    * The [vector store](/docs/api-reference/vector-stores/object) attached to this assistant. There can be a maximum of 1 vector store attached to the assistant.
 
    * @maxItems 1
    */
-  vector_store_ids?: string[]
-  /**
+    vector_store_ids?: string[]
+    /**
    * A helper to create a [vector store](/docs/api-reference/vector-stores/object) with file_ids and attach it to this assistant. There can be a maximum of 1 vector store attached to the assistant.
 
    * @maxItems 1
    */
-  vector_stores?: CreateAssistantRequestToolResourcesFileSearchVectorStoresItem[]
+    vector_stores?: CreateAssistantRequestToolResourcesFileSearchVectorStoresItem[]
 }) | (unknown & {
-  /**
+    /**
    * The [vector store](/docs/api-reference/vector-stores/object) attached to this assistant. There can be a maximum of 1 vector store attached to the assistant.
 
    * @maxItems 1
    */
-  vector_store_ids?: string[]
-  /**
+    vector_store_ids?: string[]
+    /**
    * A helper to create a [vector store](/docs/api-reference/vector-stores/object) with file_ids and attach it to this assistant. There can be a maximum of 1 vector store attached to the assistant.
 
    * @maxItems 1
    */
-  vector_stores?: CreateAssistantRequestToolResourcesFileSearchVectorStoresItem[]
+    vector_stores?: CreateAssistantRequestToolResourcesFileSearchVectorStoresItem[]
 })

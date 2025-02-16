@@ -17,5 +17,5 @@ export type RealtimeServerEventConversationItemInputAudioTranscriptionCompletedT
 
 // eslint-disable-next-line ts/no-redeclare
 export const RealtimeServerEventConversationItemInputAudioTranscriptionCompletedType = {
-  conversationiteminput_audio_transcriptioncompleted: 'conversation.item.input_audio_transcription.completed',
+    conversationiteminput_audio_transcriptioncompleted: 'conversation.item.input_audio_transcription.completed',
 } as const

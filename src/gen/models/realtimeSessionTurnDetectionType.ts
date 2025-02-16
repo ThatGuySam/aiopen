@@ -16,5 +16,5 @@ export type RealtimeSessionTurnDetectionType = typeof RealtimeSessionTurnDetecti
 
 // eslint-disable-next-line ts/no-redeclare
 export const RealtimeSessionTurnDetectionType = {
-  server_vad: 'server_vad',
+    server_vad: 'server_vad',
 } as const

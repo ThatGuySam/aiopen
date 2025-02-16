@@ -13,5 +13,5 @@ export type VectorStoreFileBatchObjectObject = typeof VectorStoreFileBatchObject
 
 // eslint-disable-next-line ts/no-redeclare
 export const VectorStoreFileBatchObjectObject = {
-  vector_storefiles_batch: 'vector_store.files_batch',
+    vector_storefiles_batch: 'vector_store.files_batch',
 } as const

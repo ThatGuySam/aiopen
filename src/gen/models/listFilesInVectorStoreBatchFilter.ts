@@ -10,8 +10,8 @@ export type ListFilesInVectorStoreBatchFilter = typeof ListFilesInVectorStoreBat
 
 // eslint-disable-next-line ts/no-redeclare
 export const ListFilesInVectorStoreBatchFilter = {
-  in_progress: 'in_progress',
-  completed: 'completed',
-  failed: 'failed',
-  cancelled: 'cancelled',
+    in_progress: 'in_progress',
+    completed: 'completed',
+    failed: 'failed',
+    cancelled: 'cancelled',
 } as const

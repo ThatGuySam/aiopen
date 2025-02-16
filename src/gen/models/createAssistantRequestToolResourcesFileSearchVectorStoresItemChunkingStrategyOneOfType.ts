@@ -13,5 +13,5 @@ export type CreateAssistantRequestToolResourcesFileSearchVectorStoresItemChunkin
 
 // eslint-disable-next-line ts/no-redeclare
 export const CreateAssistantRequestToolResourcesFileSearchVectorStoresItemChunkingStrategyOneOfType = {
-  auto: 'auto',
+    auto: 'auto',
 } as const

@@ -13,5 +13,5 @@ export type ChatCompletionRequestAssistantMessageRole = typeof ChatCompletionReq
 
 // eslint-disable-next-line ts/no-redeclare
 export const ChatCompletionRequestAssistantMessageRole = {
-  assistant: 'assistant',
+    assistant: 'assistant',
 } as const

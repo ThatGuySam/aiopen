@@ -11,8 +11,8 @@ import type { AuditLogRateLimitUpdatedChangesRequested } from './auditLogRateLim
  * The details for events with this `type`.
  */
 export interface AuditLogRateLimitUpdated {
-  /** The rate limit ID */
-  id?: string
-  /** The payload used to update the rate limits. */
-  changes_requested?: AuditLogRateLimitUpdatedChangesRequested
+    /** The rate limit ID */
+    id?: string
+    /** The payload used to update the rate limits. */
+    changes_requested?: AuditLogRateLimitUpdatedChangesRequested
 }

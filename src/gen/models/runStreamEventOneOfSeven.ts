@@ -12,6 +12,6 @@ import type { RunStreamEventOneOfSevenEvent } from './runStreamEventOneOfSevenEv
  * Occurs when a [run](/docs/api-reference/runs/object) moves to a `requires_action` status.
  */
 export interface RunStreamEventOneOfSeven {
-  event: RunStreamEventOneOfSevenEvent
-  data: RunObject
+    event: RunStreamEventOneOfSevenEvent
+    data: RunObject
 }

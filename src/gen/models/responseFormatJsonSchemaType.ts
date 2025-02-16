@@ -13,5 +13,5 @@ export type ResponseFormatJsonSchemaType = typeof ResponseFormatJsonSchemaType[k
 
 // eslint-disable-next-line ts/no-redeclare
 export const ResponseFormatJsonSchemaType = {
-  json_schema: 'json_schema',
+    json_schema: 'json_schema',
 } as const

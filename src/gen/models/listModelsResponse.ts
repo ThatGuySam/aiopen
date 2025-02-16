@@ -9,6 +9,6 @@ import type { ListModelsResponseObject } from './listModelsResponseObject'
 import type { Model } from './model'
 
 export interface ListModelsResponse {
-  object: ListModelsResponseObject
-  data: Model[]
+    object: ListModelsResponseObject
+    data: Model[]
 }

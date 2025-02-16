@@ -8,9 +8,9 @@
 import type { ProjectUser } from './projectUser'
 
 export interface ProjectUserListResponse {
-  object: string
-  data: ProjectUser[]
-  first_id: string
-  last_id: string
-  has_more: boolean
+    object: string
+    data: ProjectUser[]
+    first_id: string
+    last_id: string
+    has_more: boolean
 }

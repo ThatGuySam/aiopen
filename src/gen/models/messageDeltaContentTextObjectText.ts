@@ -8,7 +8,7 @@
 import type { MessageDeltaContentTextObjectTextAnnotationsItem } from './messageDeltaContentTextObjectTextAnnotationsItem'
 
 export interface MessageDeltaContentTextObjectText {
-  /** The data that makes up the text. */
-  value?: string
-  annotations?: MessageDeltaContentTextObjectTextAnnotationsItem[]
+    /** The data that makes up the text. */
+    value?: string
+    annotations?: MessageDeltaContentTextObjectTextAnnotationsItem[]
 }

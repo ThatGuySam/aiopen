@@ -10,9 +10,9 @@ export type UsageCompletionsGroupByItem = typeof UsageCompletionsGroupByItem[key
 
 // eslint-disable-next-line ts/no-redeclare
 export const UsageCompletionsGroupByItem = {
-  project_id: 'project_id',
-  user_id: 'user_id',
-  api_key_id: 'api_key_id',
-  model: 'model',
-  batch: 'batch',
+    project_id: 'project_id',
+    user_id: 'user_id',
+    api_key_id: 'api_key_id',
+    model: 'model',
+    batch: 'batch',
 } as const

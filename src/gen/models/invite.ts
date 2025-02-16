@@ -14,22 +14,22 @@ import type { InviteStatus } from './inviteStatus'
  * Represents an individual `invite` to the organization.
  */
 export interface Invite {
-  /** The object type, which is always `organization.invite` */
-  object: InviteObject
-  /** The identifier, which can be referenced in API endpoints */
-  id: string
-  /** The email address of the individual to whom the invite was sent */
-  email: string
-  /** `owner` or `reader` */
-  role: InviteRole
-  /** `accepted`,`expired`, or `pending` */
-  status: InviteStatus
-  /** The Unix timestamp (in seconds) of when the invite was sent. */
-  invited_at: number
-  /** The Unix timestamp (in seconds) of when the invite expires. */
-  expires_at: number
-  /** The Unix timestamp (in seconds) of when the invite was accepted. */
-  accepted_at?: number
-  /** The projects that were granted membership upon acceptance of the invite. */
-  projects?: InviteProjectsItem[]
+    /** The object type, which is always `organization.invite` */
+    object: InviteObject
+    /** The identifier, which can be referenced in API endpoints */
+    id: string
+    /** The email address of the individual to whom the invite was sent */
+    email: string
+    /** `owner` or `reader` */
+    role: InviteRole
+    /** `accepted`,`expired`, or `pending` */
+    status: InviteStatus
+    /** The Unix timestamp (in seconds) of when the invite was sent. */
+    invited_at: number
+    /** The Unix timestamp (in seconds) of when the invite expires. */
+    expires_at: number
+    /** The Unix timestamp (in seconds) of when the invite was accepted. */
+    accepted_at?: number
+    /** The projects that were granted membership upon acceptance of the invite. */
+    projects?: InviteProjectsItem[]
 }

@@ -13,12 +13,12 @@ export type BatchStatus = typeof BatchStatus[keyof typeof BatchStatus]
 
 // eslint-disable-next-line ts/no-redeclare
 export const BatchStatus = {
-  validating: 'validating',
-  failed: 'failed',
-  in_progress: 'in_progress',
-  finalizing: 'finalizing',
-  completed: 'completed',
-  expired: 'expired',
-  cancelling: 'cancelling',
-  cancelled: 'cancelled',
+    validating: 'validating',
+    failed: 'failed',
+    in_progress: 'in_progress',
+    finalizing: 'finalizing',
+    completed: 'completed',
+    expired: 'expired',
+    cancelling: 'cancelling',
+    cancelled: 'cancelled',
 } as const

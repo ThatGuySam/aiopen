@@ -15,7 +15,7 @@ import type { ChatCompletionRequestMessageContentPartAudioType } from './chatCom
 
  */
 export interface ChatCompletionRequestMessageContentPartAudio {
-  /** The type of the content part. Always `input_audio`. */
-  type: ChatCompletionRequestMessageContentPartAudioType
-  input_audio: ChatCompletionRequestMessageContentPartAudioInputAudio
+    /** The type of the content part. Always `input_audio`. */
+    type: ChatCompletionRequestMessageContentPartAudioType
+    input_audio: ChatCompletionRequestMessageContentPartAudioInputAudio
 }

@@ -10,7 +10,7 @@ export type UsageCompletionsBucketWidth = typeof UsageCompletionsBucketWidth[key
 
 // eslint-disable-next-line ts/no-redeclare
 export const UsageCompletionsBucketWidth = {
-  '1m': '1m',
-  '1h': '1h',
-  '1d': '1d',
+    '1m': '1m',
+    '1h': '1h',
+    '1d': '1d',
 } as const

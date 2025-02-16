@@ -11,6 +11,6 @@ import type { FineTuneDPOMethodHyperparameters } from './fineTuneDPOMethodHyperp
  * Configuration for the DPO fine-tuning method.
  */
 export interface FineTuneDPOMethod {
-  /** The hyperparameters used for the fine-tuning job. */
-  hyperparameters?: FineTuneDPOMethodHyperparameters
+    /** The hyperparameters used for the fine-tuning job. */
+    hyperparameters?: FineTuneDPOMethodHyperparameters
 }

@@ -12,7 +12,7 @@ import type { MessageContentTextObjectType } from './messageContentTextObjectTyp
  * The text content that is part of a message.
  */
 export interface MessageContentTextObject {
-  /** Always `text`. */
-  type: MessageContentTextObjectType
-  text: MessageContentTextObjectText
+    /** Always `text`. */
+    type: MessageContentTextObjectType
+    text: MessageContentTextObjectText
 }

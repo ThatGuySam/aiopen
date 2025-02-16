@@ -10,14 +10,14 @@
 import type { RealtimeServerEventRateLimitsUpdatedRateLimitsItemName } from './realtimeServerEventRateLimitsUpdatedRateLimitsItemName'
 
 export interface RealtimeServerEventRateLimitsUpdatedRateLimitsItem {
-  /**
+    /**
   The name of the rate limit (`requests`, `tokens`).
  */
-  name?: RealtimeServerEventRateLimitsUpdatedRateLimitsItemName
-  /** The maximum allowed value for the rate limit. */
-  limit?: number
-  /** The remaining value before the limit is reached. */
-  remaining?: number
-  /** Seconds until the rate limit resets. */
-  reset_seconds?: number
+    name?: RealtimeServerEventRateLimitsUpdatedRateLimitsItemName
+    /** The maximum allowed value for the rate limit. */
+    limit?: number
+    /** The remaining value before the limit is reached. */
+    remaining?: number
+    /** Seconds until the rate limit resets. */
+    reset_seconds?: number
 }

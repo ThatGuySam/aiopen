@@ -19,16 +19,16 @@ to ensure there is no text in the context that hasn't been heard by the user.
 
  */
 export interface RealtimeServerEventConversationItemTruncated {
-  /** The unique ID of the server event. */
-  event_id: string
-  /** The event type, must be `conversation.item.truncated`. */
-  type: RealtimeServerEventConversationItemTruncatedType
-  /** The ID of the assistant message item that was truncated. */
-  item_id: string
-  /** The index of the content part that was truncated. */
-  content_index: number
-  /**
+    /** The unique ID of the server event. */
+    event_id: string
+    /** The event type, must be `conversation.item.truncated`. */
+    type: RealtimeServerEventConversationItemTruncatedType
+    /** The ID of the assistant message item that was truncated. */
+    item_id: string
+    /** The index of the content part that was truncated. */
+    content_index: number
+    /**
   The duration up to which the audio was truncated, in milliseconds.
  */
-  audio_end_ms: number
+    audio_end_ms: number
 }

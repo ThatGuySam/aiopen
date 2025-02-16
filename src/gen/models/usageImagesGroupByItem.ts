@@ -10,10 +10,10 @@ export type UsageImagesGroupByItem = typeof UsageImagesGroupByItem[keyof typeof 
 
 // eslint-disable-next-line ts/no-redeclare
 export const UsageImagesGroupByItem = {
-  project_id: 'project_id',
-  user_id: 'user_id',
-  api_key_id: 'api_key_id',
-  model: 'model',
-  size: 'size',
-  source: 'source',
+    project_id: 'project_id',
+    user_id: 'user_id',
+    api_key_id: 'api_key_id',
+    model: 'model',
+    size: 'size',
+    source: 'source',
 } as const

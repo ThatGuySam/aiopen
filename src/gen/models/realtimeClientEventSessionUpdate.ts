@@ -20,9 +20,9 @@ field like "instructions" is to pass an empty string.
 
  */
 export interface RealtimeClientEventSessionUpdate {
-  /** Optional client-generated ID used to identify this event. */
-  event_id?: string
-  /** The event type, must be `session.update`. */
-  type: RealtimeClientEventSessionUpdateType
-  session: RealtimeSessionCreateRequest
+    /** Optional client-generated ID used to identify this event. */
+    event_id?: string
+    /** The event type, must be `session.update`. */
+    type: RealtimeClientEventSessionUpdateType
+    session: RealtimeSessionCreateRequest
 }

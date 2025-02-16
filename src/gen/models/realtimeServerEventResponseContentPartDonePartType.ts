@@ -13,6 +13,6 @@ export type RealtimeServerEventResponseContentPartDonePartType = typeof Realtime
 
 // eslint-disable-next-line ts/no-redeclare
 export const RealtimeServerEventResponseContentPartDonePartType = {
-  audio: 'audio',
-  text: 'text',
+    audio: 'audio',
+    text: 'text',
 } as const

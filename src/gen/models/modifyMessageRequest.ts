@@ -8,5 +8,5 @@
 import type { Metadata } from './metadata'
 
 export interface ModifyMessageRequest {
-  metadata?: Metadata
+    metadata?: Metadata
 }

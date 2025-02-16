@@ -16,10 +16,10 @@ server's understanding of the conversation history with the client's view.
 
  */
 export interface RealtimeServerEventConversationItemDeleted {
-  /** The unique ID of the server event. */
-  event_id: string
-  /** The event type, must be `conversation.item.deleted`. */
-  type: RealtimeServerEventConversationItemDeletedType
-  /** The ID of the item that was deleted. */
-  item_id: string
+    /** The unique ID of the server event. */
+    event_id: string
+    /** The event type, must be `conversation.item.deleted`. */
+    type: RealtimeServerEventConversationItemDeletedType
+    /** The ID of the item that was deleted. */
+    item_id: string
 }

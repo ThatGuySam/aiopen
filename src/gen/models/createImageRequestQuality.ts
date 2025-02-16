@@ -13,6 +13,6 @@ export type CreateImageRequestQuality = typeof CreateImageRequestQuality[keyof t
 
 // eslint-disable-next-line ts/no-redeclare
 export const CreateImageRequestQuality = {
-  standard: 'standard',
-  hd: 'hd',
+    standard: 'standard',
+    hd: 'hd',
 } as const

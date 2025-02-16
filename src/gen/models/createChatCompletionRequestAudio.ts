@@ -17,13 +17,13 @@ import type { CreateChatCompletionRequestAudioVoice } from './createChatCompleti
  * @nullable
  */
 export type CreateChatCompletionRequestAudio = {
-  /**
+    /**
   The voice the model uses to respond. Supported voices are `ash`, `ballad`, `coral`, `sage`, and `verse` (also supported but not recommended are `alloy`, `echo`, and `shimmer`; these voices are less expressive).
  */
-  voice: CreateChatCompletionRequestAudioVoice
-  /**
+    voice: CreateChatCompletionRequestAudioVoice
+    /**
  Specifies the output audio format. Must be one of `wav`, `mp3`, `flac`,
 `opus`, or `pcm16`.
  */
-  format: CreateChatCompletionRequestAudioFormat
+    format: CreateChatCompletionRequestAudioFormat
 } | null

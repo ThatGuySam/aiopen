@@ -13,5 +13,5 @@ export type RealtimeResponseObject = typeof RealtimeResponseObject[keyof typeof 
 
 // eslint-disable-next-line ts/no-redeclare
 export const RealtimeResponseObject = {
-  realtimeresponse: 'realtime.response',
+    realtimeresponse: 'realtime.response',
 } as const

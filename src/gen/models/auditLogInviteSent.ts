@@ -11,8 +11,8 @@ import type { AuditLogInviteSentData } from './auditLogInviteSentData'
  * The details for events with this `type`.
  */
 export interface AuditLogInviteSent {
-  /** The ID of the invite. */
-  id?: string
-  /** The payload used to create the invite. */
-  data?: AuditLogInviteSentData
+    /** The ID of the invite. */
+    id?: string
+    /** The payload used to create the invite. */
+    data?: AuditLogInviteSentData
 }

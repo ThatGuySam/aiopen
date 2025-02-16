@@ -13,5 +13,5 @@ export type ChatCompletionRequestMessageContentPartTextType = typeof ChatComplet
 
 // eslint-disable-next-line ts/no-redeclare
 export const ChatCompletionRequestMessageContentPartTextType = {
-  text: 'text',
+    text: 'text',
 } as const

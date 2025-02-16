@@ -11,12 +11,12 @@ import type { UsageCodeInterpreterSessionsResultObject } from './usageCodeInterp
  * The aggregated code interpreter sessions usage details of the specific time bucket.
  */
 export interface UsageCodeInterpreterSessionsResult {
-  object: UsageCodeInterpreterSessionsResultObject
-  /** The number of code interpreter sessions. */
-  num_sessions?: number
-  /**
-   * When `group_by=project_id`, this field provides the project ID of the grouped usage result.
-   * @nullable
-   */
-  project_id?: string | null
+    object: UsageCodeInterpreterSessionsResultObject
+    /** The number of code interpreter sessions. */
+    num_sessions?: number
+    /**
+     * When `group_by=project_id`, this field provides the project ID of the grouped usage result.
+     * @nullable
+     */
+    project_id?: string | null
 }

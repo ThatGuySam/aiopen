@@ -13,5 +13,5 @@ export type ResponseFormatJsonObjectType = typeof ResponseFormatJsonObjectType[k
 
 // eslint-disable-next-line ts/no-redeclare
 export const ResponseFormatJsonObjectType = {
-  json_object: 'json_object',
+    json_object: 'json_object',
 } as const

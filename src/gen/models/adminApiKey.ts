@@ -8,11 +8,11 @@
 import type { AdminApiKeyOwner } from './adminApiKeyOwner'
 
 export interface AdminApiKey {
-  object?: string
-  id?: string
-  name?: string
-  redacted_value?: string
-  value?: string
-  created_at?: number
-  owner?: AdminApiKeyOwner
+    object?: string
+    id?: string
+    name?: string
+    redacted_value?: string
+    value?: string
+    created_at?: number
+    owner?: AdminApiKeyOwner
 }

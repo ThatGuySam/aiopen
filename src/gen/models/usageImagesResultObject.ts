@@ -10,5 +10,5 @@ export type UsageImagesResultObject = typeof UsageImagesResultObject[keyof typeo
 
 // eslint-disable-next-line ts/no-redeclare
 export const UsageImagesResultObject = {
-  organizationusageimagesresult: 'organization.usage.images.result',
+    organizationusageimagesresult: 'organization.usage.images.result',
 } as const

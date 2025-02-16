@@ -9,7 +9,7 @@ import type { FineTuningJobEvent } from './fineTuningJobEvent'
 import type { ListFineTuningJobEventsResponseObject } from './listFineTuningJobEventsResponseObject'
 
 export interface ListFineTuningJobEventsResponse {
-  data: FineTuningJobEvent[]
-  object: ListFineTuningJobEventsResponseObject
-  has_more: boolean
+    data: FineTuningJobEvent[]
+    object: ListFineTuningJobEventsResponseObject
+    has_more: boolean
 }

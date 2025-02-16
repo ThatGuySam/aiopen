@@ -9,12 +9,12 @@ import type { RunStepDeltaStepDetailsToolCallsFunctionObjectFunction } from './r
 import type { RunStepDeltaStepDetailsToolCallsFunctionObjectType } from './runStepDeltaStepDetailsToolCallsFunctionObjectType'
 
 export interface RunStepDeltaStepDetailsToolCallsFunctionObject {
-  /** The index of the tool call in the tool calls array. */
-  index: number
-  /** The ID of the tool call object. */
-  id?: string
-  /** The type of tool call. This is always going to be `function` for this type of tool call. */
-  type: RunStepDeltaStepDetailsToolCallsFunctionObjectType
-  /** The definition of the function that was called. */
-  function?: RunStepDeltaStepDetailsToolCallsFunctionObjectFunction
+    /** The index of the tool call in the tool calls array. */
+    index: number
+    /** The ID of the tool call object. */
+    id?: string
+    /** The type of tool call. This is always going to be `function` for this type of tool call. */
+    type: RunStepDeltaStepDetailsToolCallsFunctionObjectType
+    /** The definition of the function that was called. */
+    function?: RunStepDeltaStepDetailsToolCallsFunctionObjectFunction
 }

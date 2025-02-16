@@ -10,5 +10,5 @@ export type CreateModerationResponseResultsItemCategoryAppliedInputTypesSexualMi
 
 // eslint-disable-next-line ts/no-redeclare
 export const CreateModerationResponseResultsItemCategoryAppliedInputTypesSexualMinorsItem = {
-  text: 'text',
+    text: 'text',
 } as const

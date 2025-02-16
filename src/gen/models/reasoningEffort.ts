@@ -23,7 +23,7 @@ export type ReasoningEffort = typeof ReasoningEffort[keyof typeof ReasoningEffor
 
 // eslint-disable-next-line ts/no-redeclare
 export const ReasoningEffort = {
-  low: 'low',
-  medium: 'medium',
-  high: 'high',
+    low: 'low',
+    medium: 'medium',
+    high: 'high',
 } as const

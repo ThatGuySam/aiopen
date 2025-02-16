@@ -14,30 +14,30 @@ export interface UsageCostsParams {
 /**
  * Start time (Unix seconds) of the query time range, inclusive.
  */
-  start_time: number
-  /**
+    start_time: number
+    /**
  * End time (Unix seconds) of the query time range, exclusive.
  */
-  end_time?: number
-  /**
+    end_time?: number
+    /**
  * Width of each time bucket in response. Currently only `1d` is supported, default to `1d`.
  */
-  bucket_width?: UsageCostsBucketWidth
-  /**
+    bucket_width?: UsageCostsBucketWidth
+    /**
  * Return only costs for these projects.
  */
-  project_ids?: string[]
-  /**
+    project_ids?: string[]
+    /**
  * Group the costs by the specified fields. Support fields include `project_id`, `line_item` and any combination of them.
  */
-  group_by?: UsageCostsGroupByItem[]
-  /**
+    group_by?: UsageCostsGroupByItem[]
+    /**
  * A limit on the number of buckets to be returned. Limit can range between 1 and 180, and the default is 7.
 
  */
-  limit?: number
-  /**
+    limit?: number
+    /**
  * A cursor for use in pagination. Corresponding to the `next_page` field from the previous response.
  */
-  page?: string
+    page?: string
 }

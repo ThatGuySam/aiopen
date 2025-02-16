@@ -13,7 +13,7 @@ export type MessageObjectStatus = typeof MessageObjectStatus[keyof typeof Messag
 
 // eslint-disable-next-line ts/no-redeclare
 export const MessageObjectStatus = {
-  in_progress: 'in_progress',
-  incomplete: 'incomplete',
-  completed: 'completed',
+    in_progress: 'in_progress',
+    incomplete: 'incomplete',
+    completed: 'completed',
 } as const

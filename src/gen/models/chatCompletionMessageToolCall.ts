@@ -9,10 +9,10 @@ import type { ChatCompletionMessageToolCallFunction } from './chatCompletionMess
 import type { ChatCompletionMessageToolCallType } from './chatCompletionMessageToolCallType'
 
 export interface ChatCompletionMessageToolCall {
-  /** The ID of the tool call. */
-  id: string
-  /** The type of the tool. Currently, only `function` is supported. */
-  type: ChatCompletionMessageToolCallType
-  /** The function that the model called. */
-  function: ChatCompletionMessageToolCallFunction
+    /** The ID of the tool call. */
+    id: string
+    /** The type of the tool. Currently, only `function` is supported. */
+    type: ChatCompletionMessageToolCallType
+    /** The function that the model called. */
+    function: ChatCompletionMessageToolCallFunction
 }

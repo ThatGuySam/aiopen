@@ -13,5 +13,5 @@ export type RealtimeServerEventResponseTextDeltaType = typeof RealtimeServerEven
 
 // eslint-disable-next-line ts/no-redeclare
 export const RealtimeServerEventResponseTextDeltaType = {
-  responsetextdelta: 'response.text.delta',
+    responsetextdelta: 'response.text.delta',
 } as const

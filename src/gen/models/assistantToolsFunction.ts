@@ -9,7 +9,7 @@ import type { AssistantToolsFunctionType } from './assistantToolsFunctionType'
 import type { FunctionObject } from './functionObject'
 
 export interface AssistantToolsFunction {
-  /** The type of tool being defined: `function` */
-  type: AssistantToolsFunctionType
-  function: FunctionObject
+    /** The type of tool being defined: `function` */
+    type: AssistantToolsFunctionType
+    function: FunctionObject
 }

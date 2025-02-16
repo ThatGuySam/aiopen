@@ -13,10 +13,10 @@ export type CreateSpeechRequestResponseFormat = typeof CreateSpeechRequestRespon
 
 // eslint-disable-next-line ts/no-redeclare
 export const CreateSpeechRequestResponseFormat = {
-  mp3: 'mp3',
-  opus: 'opus',
-  aac: 'aac',
-  flac: 'flac',
-  wav: 'wav',
-  pcm: 'pcm',
+    mp3: 'mp3',
+    opus: 'opus',
+    aac: 'aac',
+    flac: 'flac',
+    wav: 'wav',
+    pcm: 'pcm',
 } as const

@@ -12,6 +12,6 @@ import type { RunStreamEventOneOfNineEvent } from './runStreamEventOneOfNineEven
  * Occurs when a [run](/docs/api-reference/runs/object) is completed.
  */
 export interface RunStreamEventOneOfNine {
-  event: RunStreamEventOneOfNineEvent
-  data: RunObject
+    event: RunStreamEventOneOfNineEvent
+    data: RunObject
 }

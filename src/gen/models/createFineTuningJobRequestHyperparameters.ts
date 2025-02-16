@@ -18,19 +18,19 @@ This value is now deprecated in favor of `method`, and should be passed in under
  * @deprecated
  */
 export interface CreateFineTuningJobRequestHyperparameters {
-  /**
+    /**
  Number of examples in each batch. A larger batch size means that model parameters
 are updated less frequently, but with lower variance.
  */
-  batch_size?: CreateFineTuningJobRequestHyperparametersBatchSize
-  /**
+    batch_size?: CreateFineTuningJobRequestHyperparametersBatchSize
+    /**
  Scaling factor for the learning rate. A smaller learning rate may be useful to avoid
 overfitting.
  */
-  learning_rate_multiplier?: CreateFineTuningJobRequestHyperparametersLearningRateMultiplier
-  /**
+    learning_rate_multiplier?: CreateFineTuningJobRequestHyperparametersLearningRateMultiplier
+    /**
  The number of epochs to train the model for. An epoch refers to one full cycle
 through the training dataset.
  */
-  n_epochs?: CreateFineTuningJobRequestHyperparametersNEpochs
+    n_epochs?: CreateFineTuningJobRequestHyperparametersNEpochs
 }

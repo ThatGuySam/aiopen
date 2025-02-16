@@ -13,5 +13,5 @@ export type BatchRequestInputMethod = typeof BatchRequestInputMethod[keyof typeo
 
 // eslint-disable-next-line ts/no-redeclare
 export const BatchRequestInputMethod = {
-  POST: 'POST',
+    POST: 'POST',
 } as const

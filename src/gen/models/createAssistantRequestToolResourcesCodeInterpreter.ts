@@ -9,10 +9,10 @@
  */
 
 export interface CreateAssistantRequestToolResourcesCodeInterpreter {
-  /**
+    /**
    * A list of [file](/docs/api-reference/files) IDs made available to the `code_interpreter` tool. There can be a maximum of 20 files associated with the tool.
 
    * @maxItems 20
    */
-  file_ids?: string[]
+    file_ids?: string[]
 }

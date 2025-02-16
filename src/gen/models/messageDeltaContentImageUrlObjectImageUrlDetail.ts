@@ -13,7 +13,7 @@ export type MessageDeltaContentImageUrlObjectImageUrlDetail = typeof MessageDelt
 
 // eslint-disable-next-line ts/no-redeclare
 export const MessageDeltaContentImageUrlObjectImageUrlDetail = {
-  auto: 'auto',
-  low: 'low',
-  high: 'high',
+    auto: 'auto',
+    low: 'low',
+    high: 'high',
 } as const

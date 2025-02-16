@@ -9,10 +9,10 @@
  */
 
 export interface AssistantObjectToolResourcesFileSearch {
-  /**
+    /**
    * The ID of the [vector store](/docs/api-reference/vector-stores/object) attached to this assistant. There can be a maximum of 1 vector store attached to the assistant.
 
    * @maxItems 1
    */
-  vector_store_ids?: string[]
+    vector_store_ids?: string[]
 }

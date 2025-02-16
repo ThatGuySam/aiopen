@@ -13,5 +13,5 @@ export type ChatCompletionRequestMessageContentPartAudioType = typeof ChatComple
 
 // eslint-disable-next-line ts/no-redeclare
 export const ChatCompletionRequestMessageContentPartAudioType = {
-  input_audio: 'input_audio',
+    input_audio: 'input_audio',
 } as const

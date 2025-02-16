@@ -9,7 +9,7 @@ import type { CreateThreadRequestToolResourcesFileSearchVectorStoresItemChunking
 import type { CreateThreadRequestToolResourcesFileSearchVectorStoresItemChunkingStrategyOneOfThreeType } from './createThreadRequestToolResourcesFileSearchVectorStoresItemChunkingStrategyOneOfThreeType'
 
 export interface CreateThreadRequestToolResourcesFileSearchVectorStoresItemChunkingStrategyOneOfThree {
-  /** Always `static`. */
-  type: CreateThreadRequestToolResourcesFileSearchVectorStoresItemChunkingStrategyOneOfThreeType
-  static: CreateThreadRequestToolResourcesFileSearchVectorStoresItemChunkingStrategyOneOfThreeStatic
+    /** Always `static`. */
+    type: CreateThreadRequestToolResourcesFileSearchVectorStoresItemChunkingStrategyOneOfThreeType
+    static: CreateThreadRequestToolResourcesFileSearchVectorStoresItemChunkingStrategyOneOfThreeStatic
 }

@@ -13,5 +13,5 @@ export type RealtimeServerEventConversationItemCreatedType = typeof RealtimeServ
 
 // eslint-disable-next-line ts/no-redeclare
 export const RealtimeServerEventConversationItemCreatedType = {
-  conversationitemcreated: 'conversation.item.created',
+    conversationitemcreated: 'conversation.item.created',
 } as const

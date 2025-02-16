@@ -8,9 +8,9 @@
 import type { AssistantObject } from './assistantObject'
 
 export interface ListAssistantsResponse {
-  object: string
-  data: AssistantObject[]
-  first_id: string
-  last_id: string
-  has_more: boolean
+    object: string
+    data: AssistantObject[]
+    first_id: string
+    last_id: string
+    has_more: boolean
 }

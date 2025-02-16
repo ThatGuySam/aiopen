@@ -7,7 +7,7 @@
  */
 
 export interface AdminApiKeysDelete200 {
-  id?: string
-  object?: string
-  deleted?: boolean
+    id?: string
+    object?: string
+    deleted?: boolean
 }

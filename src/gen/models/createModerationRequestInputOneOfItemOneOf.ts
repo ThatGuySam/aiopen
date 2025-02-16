@@ -12,8 +12,8 @@ import type { CreateModerationRequestInputOneOfItemOneOfType } from './createMod
  * An object describing an image to classify.
  */
 export interface CreateModerationRequestInputOneOfItemOneOf {
-  /** Always `image_url`. */
-  type: CreateModerationRequestInputOneOfItemOneOfType
-  /** Contains either an image URL or a data URL for a base64 encoded image. */
-  image_url: CreateModerationRequestInputOneOfItemOneOfImageUrl
+    /** Always `image_url`. */
+    type: CreateModerationRequestInputOneOfItemOneOfType
+    /** Contains either an image URL or a data URL for a base64 encoded image. */
+    image_url: CreateModerationRequestInputOneOfItemOneOfImageUrl
 }

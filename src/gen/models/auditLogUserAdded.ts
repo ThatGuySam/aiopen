@@ -11,8 +11,8 @@ import type { AuditLogUserAddedData } from './auditLogUserAddedData'
  * The details for events with this `type`.
  */
 export interface AuditLogUserAdded {
-  /** The user ID. */
-  id?: string
-  /** The payload used to add the user to the project. */
-  data?: AuditLogUserAddedData
+    /** The user ID. */
+    id?: string
+    /** The payload used to add the user to the project. */
+    data?: AuditLogUserAddedData
 }

@@ -13,5 +13,5 @@ export type RealtimeServerEventInputAudioBufferCommittedType = typeof RealtimeSe
 
 // eslint-disable-next-line ts/no-redeclare
 export const RealtimeServerEventInputAudioBufferCommittedType = {
-  input_audio_buffercommitted: 'input_audio_buffer.committed',
+    input_audio_buffercommitted: 'input_audio_buffer.committed',
 } as const

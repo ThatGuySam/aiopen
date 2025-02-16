@@ -13,5 +13,5 @@ export type CreateModerationRequestInputOneOfItemOneOfType = typeof CreateModera
 
 // eslint-disable-next-line ts/no-redeclare
 export const CreateModerationRequestInputOneOfItemOneOfType = {
-  image_url: 'image_url',
+    image_url: 'image_url',
 } as const

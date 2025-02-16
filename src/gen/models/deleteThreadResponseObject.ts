@@ -10,5 +10,5 @@ export type DeleteThreadResponseObject = typeof DeleteThreadResponseObject[keyof
 
 // eslint-disable-next-line ts/no-redeclare
 export const DeleteThreadResponseObject = {
-  threaddeleted: 'thread.deleted',
+    threaddeleted: 'thread.deleted',
 } as const

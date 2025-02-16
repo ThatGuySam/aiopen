@@ -13,7 +13,7 @@ export type RunObjectLastErrorCode = typeof RunObjectLastErrorCode[keyof typeof 
 
 // eslint-disable-next-line ts/no-redeclare
 export const RunObjectLastErrorCode = {
-  server_error: 'server_error',
-  rate_limit_exceeded: 'rate_limit_exceeded',
-  invalid_prompt: 'invalid_prompt',
+    server_error: 'server_error',
+    rate_limit_exceeded: 'rate_limit_exceeded',
+    invalid_prompt: 'invalid_prompt',
 } as const

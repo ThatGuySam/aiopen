@@ -13,6 +13,6 @@ export type FineTuningJobEventType = typeof FineTuningJobEventType[keyof typeof 
 
 // eslint-disable-next-line ts/no-redeclare
 export const FineTuningJobEventType = {
-  message: 'message',
-  metrics: 'metrics',
+    message: 'message',
+    metrics: 'metrics',
 } as const

@@ -11,8 +11,8 @@ import type { AuditLogApiKeyCreatedData } from './auditLogApiKeyCreatedData'
  * The details for events with this `type`.
  */
 export interface AuditLogApiKeyCreated {
-  /** The tracking ID of the API key. */
-  id?: string
-  /** The payload used to create the API key. */
-  data?: AuditLogApiKeyCreatedData
+    /** The tracking ID of the API key. */
+    id?: string
+    /** The payload used to create the API key. */
+    data?: AuditLogApiKeyCreatedData
 }

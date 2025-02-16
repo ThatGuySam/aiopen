@@ -12,6 +12,6 @@ import type { RunStreamEventOneOfOnethreeEvent } from './runStreamEventOneOfOnet
  * Occurs when a [run](/docs/api-reference/runs/object) fails.
  */
 export interface RunStreamEventOneOfOnethree {
-  event: RunStreamEventOneOfOnethreeEvent
-  data: RunObject
+    event: RunStreamEventOneOfOnethreeEvent
+    data: RunObject
 }

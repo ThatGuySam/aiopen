@@ -12,7 +12,7 @@ import type { AssistantsNamedToolChoiceType } from './assistantsNamedToolChoiceT
  * Specifies a tool the model should use. Use to force the model to call a specific tool.
  */
 export interface AssistantsNamedToolChoice {
-  /** The type of the tool. If type is `function`, the function name must be set */
-  type: AssistantsNamedToolChoiceType
-  function?: AssistantsNamedToolChoiceFunction
+    /** The type of the tool. If type is `function`, the function name must be set */
+    type: AssistantsNamedToolChoiceType
+    function?: AssistantsNamedToolChoiceFunction
 }

@@ -10,5 +10,5 @@ export type MessageStreamEventOneOfThreeEvent = typeof MessageStreamEventOneOfTh
 
 // eslint-disable-next-line ts/no-redeclare
 export const MessageStreamEventOneOfThreeEvent = {
-  threadmessagein_progress: 'thread.message.in_progress',
+    threadmessagein_progress: 'thread.message.in_progress',
 } as const

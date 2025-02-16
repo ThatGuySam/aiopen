@@ -8,8 +8,8 @@
 import type { MessageObjectAttachmentsItemToolsItem } from './messageObjectAttachmentsItemToolsItem'
 
 export interface MessageObjectAttachmentsItem {
-  /** The ID of the file to attach to the message. */
-  file_id?: string
-  /** The tools to add this file to. */
-  tools?: MessageObjectAttachmentsItemToolsItem[]
+    /** The ID of the file to attach to the message. */
+    file_id?: string
+    /** The tools to add this file to. */
+    tools?: MessageObjectAttachmentsItemToolsItem[]
 }

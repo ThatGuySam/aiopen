@@ -13,5 +13,5 @@ export type AssistantToolsFileSearchType = typeof AssistantToolsFileSearchType[k
 
 // eslint-disable-next-line ts/no-redeclare
 export const AssistantToolsFileSearchType = {
-  file_search: 'file_search',
+    file_search: 'file_search',
 } as const

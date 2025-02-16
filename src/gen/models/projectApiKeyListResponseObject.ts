@@ -10,5 +10,5 @@ export type ProjectApiKeyListResponseObject = typeof ProjectApiKeyListResponseOb
 
 // eslint-disable-next-line ts/no-redeclare
 export const ProjectApiKeyListResponseObject = {
-  list: 'list',
+    list: 'list',
 } as const

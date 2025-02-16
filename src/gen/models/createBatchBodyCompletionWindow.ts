@@ -13,5 +13,5 @@ export type CreateBatchBodyCompletionWindow = typeof CreateBatchBodyCompletionWi
 
 // eslint-disable-next-line ts/no-redeclare
 export const CreateBatchBodyCompletionWindow = {
-  '24h': '24h',
+    '24h': '24h',
 } as const

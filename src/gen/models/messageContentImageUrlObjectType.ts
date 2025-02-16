@@ -13,5 +13,5 @@ export type MessageContentImageUrlObjectType = typeof MessageContentImageUrlObje
 
 // eslint-disable-next-line ts/no-redeclare
 export const MessageContentImageUrlObjectType = {
-  image_url: 'image_url',
+    image_url: 'image_url',
 } as const

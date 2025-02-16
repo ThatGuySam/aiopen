@@ -11,6 +11,6 @@ import type { CreateAssistantRequestToolResourcesFileSearchVectorStoresItemChunk
  * The default strategy. This strategy currently uses a `max_chunk_size_tokens` of `800` and `chunk_overlap_tokens` of `400`.
  */
 export interface CreateAssistantRequestToolResourcesFileSearchVectorStoresItemChunkingStrategyOneOf {
-  /** Always `auto`. */
-  type: CreateAssistantRequestToolResourcesFileSearchVectorStoresItemChunkingStrategyOneOfType
+    /** Always `auto`. */
+    type: CreateAssistantRequestToolResourcesFileSearchVectorStoresItemChunkingStrategyOneOfType
 }

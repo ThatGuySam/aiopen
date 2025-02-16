@@ -15,8 +15,8 @@
  * @nullable
  */
 export type ChatCompletionRequestAssistantMessageAudio = {
-  /**
+    /**
   Unique identifier for a previous audio response from the model.
  */
-  id: string
+    id: string
 } | null

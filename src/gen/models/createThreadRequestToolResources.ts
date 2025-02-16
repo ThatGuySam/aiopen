@@ -16,6 +16,6 @@ import type { CreateThreadRequestToolResourcesFileSearch } from './createThreadR
  * @nullable
  */
 export type CreateThreadRequestToolResources = {
-  code_interpreter?: CreateThreadRequestToolResourcesCodeInterpreter
-  file_search?: CreateThreadRequestToolResourcesFileSearch
+    code_interpreter?: CreateThreadRequestToolResourcesCodeInterpreter
+    file_search?: CreateThreadRequestToolResourcesFileSearch
 } | null

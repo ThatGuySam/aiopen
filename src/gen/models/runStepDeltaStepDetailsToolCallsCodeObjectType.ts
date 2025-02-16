@@ -13,5 +13,5 @@ export type RunStepDeltaStepDetailsToolCallsCodeObjectType = typeof RunStepDelta
 
 // eslint-disable-next-line ts/no-redeclare
 export const RunStepDeltaStepDetailsToolCallsCodeObjectType = {
-  code_interpreter: 'code_interpreter',
+    code_interpreter: 'code_interpreter',
 } as const

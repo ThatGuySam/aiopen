@@ -9,10 +9,10 @@ import type { RunStepDetailsToolCallsFunctionObjectFunction } from './runStepDet
 import type { RunStepDetailsToolCallsFunctionObjectType } from './runStepDetailsToolCallsFunctionObjectType'
 
 export interface RunStepDetailsToolCallsFunctionObject {
-  /** The ID of the tool call object. */
-  id: string
-  /** The type of tool call. This is always going to be `function` for this type of tool call. */
-  type: RunStepDetailsToolCallsFunctionObjectType
-  /** The definition of the function that was called. */
-  function: RunStepDetailsToolCallsFunctionObjectFunction
+    /** The ID of the tool call object. */
+    id: string
+    /** The type of tool call. This is always going to be `function` for this type of tool call. */
+    type: RunStepDetailsToolCallsFunctionObjectType
+    /** The definition of the function that was called. */
+    function: RunStepDetailsToolCallsFunctionObjectFunction
 }

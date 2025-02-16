@@ -12,15 +12,15 @@ import type { MessageDeltaContentTextAnnotationsFilePathObjectType } from './mes
  * A URL for the file that's generated when the assistant used the `code_interpreter` tool to generate a file.
  */
 export interface MessageDeltaContentTextAnnotationsFilePathObject {
-  /** The index of the annotation in the text content part. */
-  index: number
-  /** Always `file_path`. */
-  type: MessageDeltaContentTextAnnotationsFilePathObjectType
-  /** The text in the message content that needs to be replaced. */
-  text?: string
-  file_path?: MessageDeltaContentTextAnnotationsFilePathObjectFilePath
-  /** @minimum 0 */
-  start_index?: number
-  /** @minimum 0 */
-  end_index?: number
+    /** The index of the annotation in the text content part. */
+    index: number
+    /** Always `file_path`. */
+    type: MessageDeltaContentTextAnnotationsFilePathObjectType
+    /** The text in the message content that needs to be replaced. */
+    text?: string
+    file_path?: MessageDeltaContentTextAnnotationsFilePathObjectFilePath
+    /** @minimum 0 */
+    start_index?: number
+    /** @minimum 0 */
+    end_index?: number
 }

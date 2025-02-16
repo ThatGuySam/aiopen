@@ -13,5 +13,5 @@ export type MessageDeltaContentTextObjectType = typeof MessageDeltaContentTextOb
 
 // eslint-disable-next-line ts/no-redeclare
 export const MessageDeltaContentTextObjectType = {
-  text: 'text',
+    text: 'text',
 } as const

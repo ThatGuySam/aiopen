@@ -21,17 +21,17 @@ event, otherwise an `error` event will be sent.
 
  */
 export interface RealtimeClientEventConversationItemCreate {
-  /** Optional client-generated ID used to identify this event. */
-  event_id?: string
-  /** The event type, must be `conversation.item.create`. */
-  type: RealtimeClientEventConversationItemCreateType
-  /**
+    /** Optional client-generated ID used to identify this event. */
+    event_id?: string
+    /** The event type, must be `conversation.item.create`. */
+    type: RealtimeClientEventConversationItemCreateType
+    /**
  The ID of the preceding item after which the new item will be inserted.
 If not set, the new item will be appended to the end of the conversation.
 If set to `root`, the new item will be added to the beginning of the conversation.
 If set to an existing ID, it allows an item to be inserted mid-conversation. If the
 ID cannot be found, an error will be returned and the item will not be added.
  */
-  previous_item_id?: string
-  item: RealtimeConversationItem
+    previous_item_id?: string
+    item: RealtimeConversationItem
 }

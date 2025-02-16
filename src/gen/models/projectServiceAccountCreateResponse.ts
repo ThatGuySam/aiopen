@@ -10,11 +10,11 @@ import type { ProjectServiceAccountCreateResponseObject } from './projectService
 import type { ProjectServiceAccountCreateResponseRole } from './projectServiceAccountCreateResponseRole'
 
 export interface ProjectServiceAccountCreateResponse {
-  object: ProjectServiceAccountCreateResponseObject
-  id: string
-  name: string
-  /** Service accounts can only have one role of type `member` */
-  role: ProjectServiceAccountCreateResponseRole
-  created_at: number
-  api_key: ProjectServiceAccountApiKey
+    object: ProjectServiceAccountCreateResponseObject
+    id: string
+    name: string
+    /** Service accounts can only have one role of type `member` */
+    role: ProjectServiceAccountCreateResponseRole
+    created_at: number
+    api_key: ProjectServiceAccountApiKey
 }

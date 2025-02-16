@@ -8,12 +8,12 @@
 import type { TranscriptionSegment } from './transcriptionSegment'
 
 export interface CreateTranslationResponseVerboseJson {
-  /** The language of the output translation (always `english`). */
-  language: string
-  /** The duration of the input audio. */
-  duration: number
-  /** The translated text. */
-  text: string
-  /** Segments of the translated text and their corresponding details. */
-  segments?: TranscriptionSegment[]
+    /** The language of the output translation (always `english`). */
+    language: string
+    /** The duration of the input audio. */
+    duration: number
+    /** The translated text. */
+    text: string
+    /** Segments of the translated text and their corresponding details. */
+    segments?: TranscriptionSegment[]
 }

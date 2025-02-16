@@ -13,5 +13,5 @@ export type RealtimeServerEventResponseOutputItemAddedType = typeof RealtimeServ
 
 // eslint-disable-next-line ts/no-redeclare
 export const RealtimeServerEventResponseOutputItemAddedType = {
-  responseoutput_itemadded: 'response.output_item.added',
+    responseoutput_itemadded: 'response.output_item.added',
 } as const

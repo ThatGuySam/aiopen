@@ -8,6 +8,6 @@
 import type { Image } from './image'
 
 export interface ImagesResponse {
-  created: number
-  data: Image[]
+    created: number
+    data: Image[]
 }

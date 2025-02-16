@@ -12,6 +12,6 @@ import type { RunStreamEventOneOfOneoneEvent } from './runStreamEventOneOfOneone
  * Occurs when a [run](/docs/api-reference/runs/object) ends with status `incomplete`.
  */
 export interface RunStreamEventOneOfOneone {
-  event: RunStreamEventOneOfOneoneEvent
-  data: RunObject
+    event: RunStreamEventOneOfOneoneEvent
+    data: RunObject
 }

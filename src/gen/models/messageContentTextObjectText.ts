@@ -8,7 +8,7 @@
 import type { MessageContentTextObjectTextAnnotationsItem } from './messageContentTextObjectTextAnnotationsItem'
 
 export interface MessageContentTextObjectText {
-  /** The data that makes up the text. */
-  value: string
-  annotations: MessageContentTextObjectTextAnnotationsItem[]
+    /** The data that makes up the text. */
+    value: string
+    annotations: MessageContentTextObjectTextAnnotationsItem[]
 }

@@ -12,6 +12,6 @@ import type { MessageStreamEventOneOfNineEvent } from './messageStreamEventOneOf
  * Occurs when a [message](/docs/api-reference/messages/object) ends before it is completed.
  */
 export interface MessageStreamEventOneOfNine {
-  event: MessageStreamEventOneOfNineEvent
-  data: MessageObject
+    event: MessageStreamEventOneOfNineEvent
+    data: MessageObject
 }

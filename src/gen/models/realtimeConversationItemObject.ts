@@ -16,5 +16,5 @@ export type RealtimeConversationItemObject = typeof RealtimeConversationItemObje
 
 // eslint-disable-next-line ts/no-redeclare
 export const RealtimeConversationItemObject = {
-  realtimeitem: 'realtime.item',
+    realtimeitem: 'realtime.item',
 } as const

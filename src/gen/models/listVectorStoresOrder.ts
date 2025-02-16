@@ -10,6 +10,6 @@ export type ListVectorStoresOrder = typeof ListVectorStoresOrder[keyof typeof Li
 
 // eslint-disable-next-line ts/no-redeclare
 export const ListVectorStoresOrder = {
-  asc: 'asc',
-  desc: 'desc',
+    asc: 'asc',
+    desc: 'desc',
 } as const

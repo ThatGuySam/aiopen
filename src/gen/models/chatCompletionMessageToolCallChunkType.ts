@@ -13,5 +13,5 @@ export type ChatCompletionMessageToolCallChunkType = typeof ChatCompletionMessag
 
 // eslint-disable-next-line ts/no-redeclare
 export const ChatCompletionMessageToolCallChunkType = {
-  function: 'function',
+    function: 'function',
 } as const

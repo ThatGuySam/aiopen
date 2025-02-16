@@ -8,8 +8,8 @@
 import type { RunStepDetailsToolCallsFileSearchResultObjectContentItemType } from './runStepDetailsToolCallsFileSearchResultObjectContentItemType'
 
 export interface RunStepDetailsToolCallsFileSearchResultObjectContentItem {
-  /** The type of the content. */
-  type?: RunStepDetailsToolCallsFileSearchResultObjectContentItemType
-  /** The text content of the file. */
-  text?: string
+    /** The type of the content. */
+    type?: RunStepDetailsToolCallsFileSearchResultObjectContentItemType
+    /** The text content of the file. */
+    text?: string
 }

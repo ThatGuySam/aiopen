@@ -17,9 +17,9 @@ the default Session configuration.
 
  */
 export interface RealtimeServerEventSessionCreated {
-  /** The unique ID of the server event. */
-  event_id: string
-  /** The event type, must be `session.created`. */
-  type: RealtimeServerEventSessionCreatedType
-  session: RealtimeSession
+    /** The unique ID of the server event. */
+    event_id: string
+    /** The event type, must be `session.created`. */
+    type: RealtimeServerEventSessionCreatedType
+    session: RealtimeSession
 }

@@ -21,6 +21,6 @@ export type CreateChatCompletionRequestServiceTier = typeof CreateChatCompletion
 
 // eslint-disable-next-line ts/no-redeclare
 export const CreateChatCompletionRequestServiceTier = {
-  auto: 'auto',
-  default: 'default',
+    auto: 'auto',
+    default: 'default',
 } as const

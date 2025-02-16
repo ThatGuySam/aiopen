@@ -10,15 +10,15 @@ import type { Metadata } from './metadata'
 import type { VectorStoreExpirationAfter } from './vectorStoreExpirationAfter'
 
 export interface CreateVectorStoreRequest {
-  /**
-   * A list of [File](/docs/api-reference/files) IDs that the vector store should use. Useful for tools like `file_search` that can access files.
-   * @maxItems 500
-   */
-  file_ids?: string[]
-  /** The name of the vector store. */
-  name?: string
-  expires_after?: VectorStoreExpirationAfter
-  /** The chunking strategy used to chunk the file(s). If not set, will use the `auto` strategy. Only applicable if `file_ids` is non-empty. */
-  chunking_strategy?: CreateVectorStoreRequestChunkingStrategy
-  metadata?: Metadata
+    /**
+     * A list of [File](/docs/api-reference/files) IDs that the vector store should use. Useful for tools like `file_search` that can access files.
+     * @maxItems 500
+     */
+    file_ids?: string[]
+    /** The name of the vector store. */
+    name?: string
+    expires_after?: VectorStoreExpirationAfter
+    /** The chunking strategy used to chunk the file(s). If not set, will use the `auto` strategy. Only applicable if `file_ids` is non-empty. */
+    chunking_strategy?: CreateVectorStoreRequestChunkingStrategy
+    metadata?: Metadata
 }

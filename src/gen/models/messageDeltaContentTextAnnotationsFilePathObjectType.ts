@@ -13,5 +13,5 @@ export type MessageDeltaContentTextAnnotationsFilePathObjectType = typeof Messag
 
 // eslint-disable-next-line ts/no-redeclare
 export const MessageDeltaContentTextAnnotationsFilePathObjectType = {
-  file_path: 'file_path',
+    file_path: 'file_path',
 } as const

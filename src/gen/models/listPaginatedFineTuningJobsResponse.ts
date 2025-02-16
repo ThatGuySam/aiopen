@@ -9,7 +9,7 @@ import type { FineTuningJob } from './fineTuningJob'
 import type { ListPaginatedFineTuningJobsResponseObject } from './listPaginatedFineTuningJobsResponseObject'
 
 export interface ListPaginatedFineTuningJobsResponse {
-  data: FineTuningJob[]
-  has_more: boolean
-  object: ListPaginatedFineTuningJobsResponseObject
+    data: FineTuningJob[]
+    has_more: boolean
+    object: ListPaginatedFineTuningJobsResponseObject
 }

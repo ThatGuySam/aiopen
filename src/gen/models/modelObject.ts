@@ -13,5 +13,5 @@ export type ModelObject = typeof ModelObject[keyof typeof ModelObject]
 
 // eslint-disable-next-line ts/no-redeclare
 export const ModelObject = {
-  model: 'model',
+    model: 'model',
 } as const

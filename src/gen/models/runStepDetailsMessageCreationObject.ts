@@ -12,7 +12,7 @@ import type { RunStepDetailsMessageCreationObjectType } from './runStepDetailsMe
  * Details of the message creation by the run step.
  */
 export interface RunStepDetailsMessageCreationObject {
-  /** Always `message_creation`. */
-  type: RunStepDetailsMessageCreationObjectType
-  message_creation: RunStepDetailsMessageCreationObjectMessageCreation
+    /** Always `message_creation`. */
+    type: RunStepDetailsMessageCreationObjectType
+    message_creation: RunStepDetailsMessageCreationObjectMessageCreation
 }

@@ -10,5 +10,5 @@ export type UsageAudioTranscriptionsResultObject = typeof UsageAudioTranscriptio
 
 // eslint-disable-next-line ts/no-redeclare
 export const UsageAudioTranscriptionsResultObject = {
-  organizationusageaudio_transcriptionsresult: 'organization.usage.audio_transcriptions.result',
+    organizationusageaudio_transcriptionsresult: 'organization.usage.audio_transcriptions.result',
 } as const

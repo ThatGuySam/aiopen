@@ -17,5 +17,5 @@ export type PredictionContentType = typeof PredictionContentType[keyof typeof Pr
 
 // eslint-disable-next-line ts/no-redeclare
 export const PredictionContentType = {
-  content: 'content',
+    content: 'content',
 } as const

@@ -8,9 +8,9 @@
 import type { AdminApiKey } from './adminApiKey'
 
 export interface ApiKeyList {
-  object?: string
-  data?: AdminApiKey[]
-  has_more?: boolean
-  first_id?: string
-  last_id?: string
+    object?: string
+    data?: AdminApiKey[]
+    has_more?: boolean
+    first_id?: string
+    last_id?: string
 }

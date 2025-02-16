@@ -8,7 +8,7 @@
 import type { DeleteFileResponseObject } from './deleteFileResponseObject'
 
 export interface DeleteFileResponse {
-  id: string
-  object: DeleteFileResponseObject
-  deleted: boolean
+    id: string
+    object: DeleteFileResponseObject
+    deleted: boolean
 }

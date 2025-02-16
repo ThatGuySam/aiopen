@@ -18,8 +18,8 @@ export type CreateUploadRequestPurpose = typeof CreateUploadRequestPurpose[keyof
 
 // eslint-disable-next-line ts/no-redeclare
 export const CreateUploadRequestPurpose = {
-  'assistants': 'assistants',
-  'batch': 'batch',
-  'fine-tune': 'fine-tune',
-  'vision': 'vision',
+    'assistants': 'assistants',
+    'batch': 'batch',
+    'fine-tune': 'fine-tune',
+    'vision': 'vision',
 } as const

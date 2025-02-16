@@ -11,13 +11,13 @@ import type { CreateAssistantRequestToolResourcesFileSearchVectorStoresItemChunk
 import type { Metadata } from './metadata'
 
 export interface CreateAssistantRequestToolResourcesFileSearchVectorStoresItem {
-  /**
+    /**
    * A list of [file](/docs/api-reference/files) IDs to add to the vector store. There can be a maximum of 10000 files in a vector store.
 
    * @maxItems 10000
    */
-  file_ids?: string[]
-  /** The chunking strategy used to chunk the file(s). If not set, will use the `auto` strategy. */
-  chunking_strategy?: CreateAssistantRequestToolResourcesFileSearchVectorStoresItemChunkingStrategy
-  metadata?: Metadata
+    file_ids?: string[]
+    /** The chunking strategy used to chunk the file(s). If not set, will use the `auto` strategy. */
+    chunking_strategy?: CreateAssistantRequestToolResourcesFileSearchVectorStoresItemChunkingStrategy
+    metadata?: Metadata
 }

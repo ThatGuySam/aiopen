@@ -13,6 +13,6 @@ export type FileSearchRankingOptionsRanker = typeof FileSearchRankingOptionsRank
 
 // eslint-disable-next-line ts/no-redeclare
 export const FileSearchRankingOptionsRanker = {
-  auto: 'auto',
-  default_2024_08_21: 'default_2024_08_21',
+    auto: 'auto',
+    default_2024_08_21: 'default_2024_08_21',
 } as const

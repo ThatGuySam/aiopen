@@ -13,5 +13,5 @@ export type ProjectServiceAccountObject = typeof ProjectServiceAccountObject[key
 
 // eslint-disable-next-line ts/no-redeclare
 export const ProjectServiceAccountObject = {
-  organizationprojectservice_account: 'organization.project.service_account',
+    organizationprojectservice_account: 'organization.project.service_account',
 } as const

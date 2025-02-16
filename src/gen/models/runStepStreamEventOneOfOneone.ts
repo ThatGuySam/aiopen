@@ -12,6 +12,6 @@ import type { RunStepStreamEventOneOfOneoneEvent } from './runStepStreamEventOne
  * Occurs when a [run step](/docs/api-reference/run-steps/step-object) is cancelled.
  */
 export interface RunStepStreamEventOneOfOneone {
-  event: RunStepStreamEventOneOfOneoneEvent
-  data: RunStepObject
+    event: RunStepStreamEventOneOfOneoneEvent
+    data: RunStepObject
 }

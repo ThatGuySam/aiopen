@@ -20,8 +20,8 @@ export type RealtimeResponseStatusDetailsReason = typeof RealtimeResponseStatusD
 
 // eslint-disable-next-line ts/no-redeclare
 export const RealtimeResponseStatusDetailsReason = {
-  turn_detected: 'turn_detected',
-  client_cancelled: 'client_cancelled',
-  max_output_tokens: 'max_output_tokens',
-  content_filter: 'content_filter',
+    turn_detected: 'turn_detected',
+    client_cancelled: 'client_cancelled',
+    max_output_tokens: 'max_output_tokens',
+    content_filter: 'content_filter',
 } as const

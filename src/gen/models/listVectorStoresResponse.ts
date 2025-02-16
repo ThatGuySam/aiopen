@@ -8,9 +8,9 @@
 import type { VectorStoreObject } from './vectorStoreObject'
 
 export interface ListVectorStoresResponse {
-  object: string
-  data: VectorStoreObject[]
-  first_id: string
-  last_id: string
-  has_more: boolean
+    object: string
+    data: VectorStoreObject[]
+    first_id: string
+    last_id: string
+    has_more: boolean
 }

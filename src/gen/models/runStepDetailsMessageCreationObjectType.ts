@@ -13,5 +13,5 @@ export type RunStepDetailsMessageCreationObjectType = typeof RunStepDetailsMessa
 
 // eslint-disable-next-line ts/no-redeclare
 export const RunStepDetailsMessageCreationObjectType = {
-  message_creation: 'message_creation',
+    message_creation: 'message_creation',
 } as const

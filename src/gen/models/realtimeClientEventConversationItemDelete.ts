@@ -17,10 +17,10 @@ server will respond with an error.
 
  */
 export interface RealtimeClientEventConversationItemDelete {
-  /** Optional client-generated ID used to identify this event. */
-  event_id?: string
-  /** The event type, must be `conversation.item.delete`. */
-  type: RealtimeClientEventConversationItemDeleteType
-  /** The ID of the item to delete. */
-  item_id: string
+    /** Optional client-generated ID used to identify this event. */
+    event_id?: string
+    /** The event type, must be `conversation.item.delete`. */
+    type: RealtimeClientEventConversationItemDeleteType
+    /** The ID of the item to delete. */
+    item_id: string
 }

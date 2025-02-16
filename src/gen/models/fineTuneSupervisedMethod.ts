@@ -11,6 +11,6 @@ import type { FineTuneSupervisedMethodHyperparameters } from './fineTuneSupervis
  * Configuration for the supervised fine-tuning method.
  */
 export interface FineTuneSupervisedMethod {
-  /** The hyperparameters used for the fine-tuning job. */
-  hyperparameters?: FineTuneSupervisedMethodHyperparameters
+    /** The hyperparameters used for the fine-tuning job. */
+    hyperparameters?: FineTuneSupervisedMethodHyperparameters
 }

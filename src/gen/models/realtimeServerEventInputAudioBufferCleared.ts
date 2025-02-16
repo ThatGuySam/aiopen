@@ -15,8 +15,8 @@ import type { RealtimeServerEventInputAudioBufferClearedType } from './realtimeS
 
  */
 export interface RealtimeServerEventInputAudioBufferCleared {
-  /** The unique ID of the server event. */
-  event_id: string
-  /** The event type, must be `input_audio_buffer.cleared`. */
-  type: RealtimeServerEventInputAudioBufferClearedType
+    /** The unique ID of the server event. */
+    event_id: string
+    /** The event type, must be `input_audio_buffer.cleared`. */
+    type: RealtimeServerEventInputAudioBufferClearedType
 }

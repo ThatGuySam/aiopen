@@ -13,5 +13,5 @@ export type InviteObject = typeof InviteObject[keyof typeof InviteObject]
 
 // eslint-disable-next-line ts/no-redeclare
 export const InviteObject = {
-  organizationinvite: 'organization.invite',
+    organizationinvite: 'organization.invite',
 } as const

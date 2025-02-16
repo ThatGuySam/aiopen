@@ -12,8 +12,8 @@ import type { RunStepObjectLastErrorCode } from './runStepObjectLastErrorCode'
  * @nullable
  */
 export type RunStepObjectLastError = {
-  /** One of `server_error` or `rate_limit_exceeded`. */
-  code: RunStepObjectLastErrorCode
-  /** A human-readable description of the error. */
-  message: string
+    /** One of `server_error` or `rate_limit_exceeded`. */
+    code: RunStepObjectLastErrorCode
+    /** A human-readable description of the error. */
+    message: string
 } | null

@@ -12,6 +12,6 @@ import type { MessageStreamEventOneOfThreeEvent } from './messageStreamEventOneO
  * Occurs when a [message](/docs/api-reference/messages/object) moves to an `in_progress` state.
  */
 export interface MessageStreamEventOneOfThree {
-  event: MessageStreamEventOneOfThreeEvent
-  data: MessageObject
+    event: MessageStreamEventOneOfThreeEvent
+    data: MessageObject
 }

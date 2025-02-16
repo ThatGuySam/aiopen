@@ -14,23 +14,23 @@ import type { VectorStoreFileObjectStatus } from './vectorStoreFileObjectStatus'
  * A list of files attached to a vector store.
  */
 export interface VectorStoreFileObject {
-  /** The identifier, which can be referenced in API endpoints. */
-  id: string
-  /** The object type, which is always `vector_store.file`. */
-  object: VectorStoreFileObjectObject
-  /** The total vector store usage in bytes. Note that this may be different from the original file size. */
-  usage_bytes: number
-  /** The Unix timestamp (in seconds) for when the vector store file was created. */
-  created_at: number
-  /** The ID of the [vector store](/docs/api-reference/vector-stores/object) that the [File](/docs/api-reference/files) is attached to. */
-  vector_store_id: string
-  /** The status of the vector store file, which can be either `in_progress`, `completed`, `cancelled`, or `failed`. The status `completed` indicates that the vector store file is ready for use. */
-  status: VectorStoreFileObjectStatus
-  /**
-   * The last error associated with this vector store file. Will be `null` if there are no errors.
-   * @nullable
-   */
-  last_error: VectorStoreFileObjectLastError
-  /** The strategy used to chunk the file. */
-  chunking_strategy?: VectorStoreFileObjectChunkingStrategy
+    /** The identifier, which can be referenced in API endpoints. */
+    id: string
+    /** The object type, which is always `vector_store.file`. */
+    object: VectorStoreFileObjectObject
+    /** The total vector store usage in bytes. Note that this may be different from the original file size. */
+    usage_bytes: number
+    /** The Unix timestamp (in seconds) for when the vector store file was created. */
+    created_at: number
+    /** The ID of the [vector store](/docs/api-reference/vector-stores/object) that the [File](/docs/api-reference/files) is attached to. */
+    vector_store_id: string
+    /** The status of the vector store file, which can be either `in_progress`, `completed`, `cancelled`, or `failed`. The status `completed` indicates that the vector store file is ready for use. */
+    status: VectorStoreFileObjectStatus
+    /**
+     * The last error associated with this vector store file. Will be `null` if there are no errors.
+     * @nullable
+     */
+    last_error: VectorStoreFileObjectLastError
+    /** The strategy used to chunk the file. */
+    chunking_strategy?: VectorStoreFileObjectChunkingStrategy
 }

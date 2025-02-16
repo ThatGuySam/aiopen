@@ -14,10 +14,10 @@ import type { RunStepDeltaStepDetailsToolCallsObjectType } from './runStepDeltaS
  * Details of the tool call.
  */
 export interface RunStepDeltaStepDetailsToolCallsObject {
-  /** Always `tool_calls`. */
-  type: RunStepDeltaStepDetailsToolCallsObjectType
-  /**
+    /** Always `tool_calls`. */
+    type: RunStepDeltaStepDetailsToolCallsObjectType
+    /**
   An array of tool calls the run step was involved in. These can be associated with one of three types of tools: `code_interpreter`, `file_search`, or `function`.
  */
-  tool_calls?: RunStepDeltaStepDetailsToolCallsObjectToolCallsItem[]
+    tool_calls?: RunStepDeltaStepDetailsToolCallsObjectToolCallsItem[]
 }

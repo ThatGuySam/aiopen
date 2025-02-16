@@ -13,5 +13,5 @@ export type RunStepDetailsToolCallsObjectType = typeof RunStepDetailsToolCallsOb
 
 // eslint-disable-next-line ts/no-redeclare
 export const RunStepDetailsToolCallsObjectType = {
-  tool_calls: 'tool_calls',
+    tool_calls: 'tool_calls',
 } as const

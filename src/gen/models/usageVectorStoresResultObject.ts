@@ -10,5 +10,5 @@ export type UsageVectorStoresResultObject = typeof UsageVectorStoresResultObject
 
 // eslint-disable-next-line ts/no-redeclare
 export const UsageVectorStoresResultObject = {
-  organizationusagevector_storesresult: 'organization.usage.vector_stores.result',
+    organizationusagevector_storesresult: 'organization.usage.vector_stores.result',
 } as const

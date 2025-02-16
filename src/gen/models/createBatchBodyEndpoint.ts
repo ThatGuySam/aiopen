@@ -13,7 +13,7 @@ export type CreateBatchBodyEndpoint = typeof CreateBatchBodyEndpoint[keyof typeo
 
 // eslint-disable-next-line ts/no-redeclare
 export const CreateBatchBodyEndpoint = {
-  '/v1/chat/completions': '/v1/chat/completions',
-  '/v1/embeddings': '/v1/embeddings',
-  '/v1/completions': '/v1/completions',
+    '/v1/chat/completions': '/v1/chat/completions',
+    '/v1/embeddings': '/v1/embeddings',
+    '/v1/completions': '/v1/completions',
 } as const

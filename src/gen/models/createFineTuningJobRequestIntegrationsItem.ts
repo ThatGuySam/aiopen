@@ -10,14 +10,14 @@
 import type { CreateFineTuningJobRequestIntegrationsItemWandb } from './createFineTuningJobRequestIntegrationsItemWandb'
 
 export interface CreateFineTuningJobRequestIntegrationsItem {
-  /**
+    /**
   The type of integration to enable. Currently, only "wandb" (Weights and Biases) is supported.
  */
-  type: 'wandb'
-  /**
+    type: 'wandb'
+    /**
  The settings for your integration with Weights and Biases. This payload specifies the project that
 metrics will be sent to. Optionally, you can set an explicit display name for your run, add tags
 to your run, and set a default entity (team, username, etc) to be associated with your run.
  */
-  wandb: CreateFineTuningJobRequestIntegrationsItemWandb
+    wandb: CreateFineTuningJobRequestIntegrationsItemWandb
 }

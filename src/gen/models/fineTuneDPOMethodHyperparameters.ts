@@ -16,20 +16,20 @@ import type { FineTuneDPOMethodHyperparametersNEpochs } from './fineTuneDPOMetho
  * The hyperparameters used for the fine-tuning job.
  */
 export interface FineTuneDPOMethodHyperparameters {
-  /**
+    /**
   The beta value for the DPO method. A higher beta value will increase the weight of the penalty between the policy and reference model.
  */
-  beta?: FineTuneDPOMethodHyperparametersBeta
-  /**
+    beta?: FineTuneDPOMethodHyperparametersBeta
+    /**
   Number of examples in each batch. A larger batch size means that model parameters are updated less frequently, but with lower variance.
  */
-  batch_size?: FineTuneDPOMethodHyperparametersBatchSize
-  /**
+    batch_size?: FineTuneDPOMethodHyperparametersBatchSize
+    /**
   Scaling factor for the learning rate. A smaller learning rate may be useful to avoid overfitting.
  */
-  learning_rate_multiplier?: FineTuneDPOMethodHyperparametersLearningRateMultiplier
-  /**
+    learning_rate_multiplier?: FineTuneDPOMethodHyperparametersLearningRateMultiplier
+    /**
   The number of epochs to train the model for. An epoch refers to one full cycle through the training dataset.
  */
-  n_epochs?: FineTuneDPOMethodHyperparametersNEpochs
+    n_epochs?: FineTuneDPOMethodHyperparametersNEpochs
 }

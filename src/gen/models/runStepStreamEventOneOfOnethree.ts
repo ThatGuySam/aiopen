@@ -12,6 +12,6 @@ import type { RunStepStreamEventOneOfOnethreeEvent } from './runStepStreamEventO
  * Occurs when a [run step](/docs/api-reference/run-steps/step-object) expires.
  */
 export interface RunStepStreamEventOneOfOnethree {
-  event: RunStepStreamEventOneOfOnethreeEvent
-  data: RunStepObject
+    event: RunStepStreamEventOneOfOnethreeEvent
+    data: RunStepObject
 }

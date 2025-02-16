@@ -10,6 +10,6 @@
  * The details for events with this `type`.
  */
 export interface AuditLogInviteDeleted {
-  /** The ID of the invite. */
-  id?: string
+    /** The ID of the invite. */
+    id?: string
 }

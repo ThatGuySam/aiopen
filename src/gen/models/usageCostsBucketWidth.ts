@@ -10,5 +10,5 @@ export type UsageCostsBucketWidth = typeof UsageCostsBucketWidth[keyof typeof Us
 
 // eslint-disable-next-line ts/no-redeclare
 export const UsageCostsBucketWidth = {
-  '1d': '1d',
+    '1d': '1d',
 } as const

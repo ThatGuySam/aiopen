@@ -7,6 +7,6 @@
  */
 
 export interface ChatCompletionNamedToolChoiceFunction {
-  /** The name of the function to call. */
-  name: string
+    /** The name of the function to call. */
+    name: string
 }

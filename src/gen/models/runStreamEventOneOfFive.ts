@@ -12,6 +12,6 @@ import type { RunStreamEventOneOfFiveEvent } from './runStreamEventOneOfFiveEven
  * Occurs when a [run](/docs/api-reference/runs/object) moves to an `in_progress` status.
  */
 export interface RunStreamEventOneOfFive {
-  event: RunStreamEventOneOfFiveEvent
-  data: RunObject
+    event: RunStreamEventOneOfFiveEvent
+    data: RunObject
 }

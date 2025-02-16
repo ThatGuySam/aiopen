@@ -13,5 +13,5 @@ export type ProjectServiceAccountApiKeyObject = typeof ProjectServiceAccountApiK
 
 // eslint-disable-next-line ts/no-redeclare
 export const ProjectServiceAccountApiKeyObject = {
-  organizationprojectservice_accountapi_key: 'organization.project.service_account.api_key',
+    organizationprojectservice_accountapi_key: 'organization.project.service_account.api_key',
 } as const

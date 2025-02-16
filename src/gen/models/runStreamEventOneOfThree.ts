@@ -12,6 +12,6 @@ import type { RunStreamEventOneOfThreeEvent } from './runStreamEventOneOfThreeEv
  * Occurs when a [run](/docs/api-reference/runs/object) moves to a `queued` status.
  */
 export interface RunStreamEventOneOfThree {
-  event: RunStreamEventOneOfThreeEvent
-  data: RunObject
+    event: RunStreamEventOneOfThreeEvent
+    data: RunObject
 }

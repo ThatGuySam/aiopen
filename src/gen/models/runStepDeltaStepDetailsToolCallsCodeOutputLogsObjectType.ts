@@ -13,5 +13,5 @@ export type RunStepDeltaStepDetailsToolCallsCodeOutputLogsObjectType = typeof Ru
 
 // eslint-disable-next-line ts/no-redeclare
 export const RunStepDeltaStepDetailsToolCallsCodeOutputLogsObjectType = {
-  logs: 'logs',
+    logs: 'logs',
 } as const

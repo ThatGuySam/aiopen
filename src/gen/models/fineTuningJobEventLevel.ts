@@ -13,7 +13,7 @@ export type FineTuningJobEventLevel = typeof FineTuningJobEventLevel[keyof typeo
 
 // eslint-disable-next-line ts/no-redeclare
 export const FineTuningJobEventLevel = {
-  info: 'info',
-  warn: 'warn',
-  error: 'error',
+    info: 'info',
+    warn: 'warn',
+    error: 'error',
 } as const

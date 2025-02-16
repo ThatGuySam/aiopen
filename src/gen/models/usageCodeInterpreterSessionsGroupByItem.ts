@@ -10,5 +10,5 @@ export type UsageCodeInterpreterSessionsGroupByItem = typeof UsageCodeInterprete
 
 // eslint-disable-next-line ts/no-redeclare
 export const UsageCodeInterpreterSessionsGroupByItem = {
-  project_id: 'project_id',
+    project_id: 'project_id',
 } as const

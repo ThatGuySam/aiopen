@@ -10,5 +10,5 @@ export type CostsResultObject = typeof CostsResultObject[keyof typeof CostsResul
 
 // eslint-disable-next-line ts/no-redeclare
 export const CostsResultObject = {
-  organizationcostsresult: 'organization.costs.result',
+    organizationcostsresult: 'organization.costs.result',
 } as const

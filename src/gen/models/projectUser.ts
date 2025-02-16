@@ -12,16 +12,16 @@ import type { ProjectUserRole } from './projectUserRole'
  * Represents an individual user in a project.
  */
 export interface ProjectUser {
-  /** The object type, which is always `organization.project.user` */
-  object: ProjectUserObject
-  /** The identifier, which can be referenced in API endpoints */
-  id: string
-  /** The name of the user */
-  name: string
-  /** The email address of the user */
-  email: string
-  /** `owner` or `member` */
-  role: ProjectUserRole
-  /** The Unix timestamp (in seconds) of when the project was added. */
-  added_at: number
+    /** The object type, which is always `organization.project.user` */
+    object: ProjectUserObject
+    /** The identifier, which can be referenced in API endpoints */
+    id: string
+    /** The name of the user */
+    name: string
+    /** The email address of the user */
+    email: string
+    /** `owner` or `member` */
+    role: ProjectUserRole
+    /** The Unix timestamp (in seconds) of when the project was added. */
+    added_at: number
 }

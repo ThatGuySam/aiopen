@@ -10,5 +10,5 @@ export type UsageTimeBucketObject = typeof UsageTimeBucketObject[keyof typeof Us
 
 // eslint-disable-next-line ts/no-redeclare
 export const UsageTimeBucketObject = {
-  bucket: 'bucket',
+    bucket: 'bucket',
 } as const

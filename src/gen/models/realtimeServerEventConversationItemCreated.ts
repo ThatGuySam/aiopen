@@ -24,14 +24,14 @@ produce this event:
 
  */
 export interface RealtimeServerEventConversationItemCreated {
-  /** The unique ID of the server event. */
-  event_id: string
-  /** The event type, must be `conversation.item.created`. */
-  type: RealtimeServerEventConversationItemCreatedType
-  /**
+    /** The unique ID of the server event. */
+    event_id: string
+    /** The event type, must be `conversation.item.created`. */
+    type: RealtimeServerEventConversationItemCreatedType
+    /**
  The ID of the preceding item in the Conversation context, allows the
 client to understand the order of the conversation.
  */
-  previous_item_id: string
-  item: RealtimeConversationItem
+    previous_item_id: string
+    item: RealtimeConversationItem
 }

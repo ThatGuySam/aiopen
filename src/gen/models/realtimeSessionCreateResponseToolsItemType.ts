@@ -13,5 +13,5 @@ export type RealtimeSessionCreateResponseToolsItemType = typeof RealtimeSessionC
 
 // eslint-disable-next-line ts/no-redeclare
 export const RealtimeSessionCreateResponseToolsItemType = {
-  function: 'function',
+    function: 'function',
 } as const

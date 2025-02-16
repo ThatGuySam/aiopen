@@ -10,5 +10,5 @@ export type ProjectListResponseObject = typeof ProjectListResponseObject[keyof t
 
 // eslint-disable-next-line ts/no-redeclare
 export const ProjectListResponseObject = {
-  list: 'list',
+    list: 'list',
 } as const

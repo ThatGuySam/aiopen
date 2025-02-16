@@ -12,6 +12,6 @@ import type { RunStepStreamEventOneOfThreeEvent } from './runStepStreamEventOneO
  * Occurs when a [run step](/docs/api-reference/run-steps/step-object) moves to an `in_progress` state.
  */
 export interface RunStepStreamEventOneOfThree {
-  event: RunStepStreamEventOneOfThreeEvent
-  data: RunStepObject
+    event: RunStepStreamEventOneOfThreeEvent
+    data: RunStepObject
 }

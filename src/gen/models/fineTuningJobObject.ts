@@ -13,5 +13,5 @@ export type FineTuningJobObject = typeof FineTuningJobObject[keyof typeof FineTu
 
 // eslint-disable-next-line ts/no-redeclare
 export const FineTuningJobObject = {
-  fine_tuningjob: 'fine_tuning.job',
+    fine_tuningjob: 'fine_tuning.job',
 } as const

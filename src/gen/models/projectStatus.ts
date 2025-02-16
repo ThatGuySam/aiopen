@@ -13,6 +13,6 @@ export type ProjectStatus = typeof ProjectStatus[keyof typeof ProjectStatus]
 
 // eslint-disable-next-line ts/no-redeclare
 export const ProjectStatus = {
-  active: 'active',
-  archived: 'archived',
+    active: 'active',
+    archived: 'archived',
 } as const

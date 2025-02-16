@@ -12,8 +12,8 @@ import type { MessageDeltaObjectDeltaRole } from './messageDeltaObjectDeltaRole'
  * The delta containing the fields that have changed on the Message.
  */
 export interface MessageDeltaObjectDelta {
-  /** The entity that produced the message. One of `user` or `assistant`. */
-  role?: MessageDeltaObjectDeltaRole
-  /** The content of the message in array of text and/or images. */
-  content?: MessageDeltaObjectDeltaContentItem[]
+    /** The entity that produced the message. One of `user` or `assistant`. */
+    role?: MessageDeltaObjectDeltaRole
+    /** The content of the message in array of text and/or images. */
+    content?: MessageDeltaObjectDeltaContentItem[]
 }

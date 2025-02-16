@@ -16,12 +16,12 @@ information.
 
  */
 export interface ChatCompletionRequestUserMessage {
-  /**
+    /**
   The contents of the user message.
  */
-  content: ChatCompletionRequestUserMessageContent
-  /** The role of the messages author, in this case `user`. */
-  role: ChatCompletionRequestUserMessageRole
-  /** An optional name for the participant. Provides the model information to differentiate between participants of the same role. */
-  name?: string
+    content: ChatCompletionRequestUserMessageContent
+    /** The role of the messages author, in this case `user`. */
+    role: ChatCompletionRequestUserMessageRole
+    /** An optional name for the participant. Provides the model information to differentiate between participants of the same role. */
+    name?: string
 }

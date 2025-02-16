@@ -17,7 +17,7 @@ export type RealtimeSessionCreateRequestOutputAudioFormat = typeof RealtimeSessi
 
 // eslint-disable-next-line ts/no-redeclare
 export const RealtimeSessionCreateRequestOutputAudioFormat = {
-  pcm16: 'pcm16',
-  g711_ulaw: 'g711_ulaw',
-  g711_alaw: 'g711_alaw',
+    pcm16: 'pcm16',
+    g711_ulaw: 'g711_ulaw',
+    g711_alaw: 'g711_alaw',
 } as const

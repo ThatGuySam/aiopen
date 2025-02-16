@@ -13,8 +13,8 @@ export type VectorStoreFileBatchObjectStatus = typeof VectorStoreFileBatchObject
 
 // eslint-disable-next-line ts/no-redeclare
 export const VectorStoreFileBatchObjectStatus = {
-  in_progress: 'in_progress',
-  completed: 'completed',
-  cancelled: 'cancelled',
-  failed: 'failed',
+    in_progress: 'in_progress',
+    completed: 'completed',
+    cancelled: 'cancelled',
+    failed: 'failed',
 } as const

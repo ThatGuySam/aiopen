@@ -13,5 +13,5 @@ export type RealtimeClientEventSessionUpdateType = typeof RealtimeClientEventSes
 
 // eslint-disable-next-line ts/no-redeclare
 export const RealtimeClientEventSessionUpdateType = {
-  sessionupdate: 'session.update',
+    sessionupdate: 'session.update',
 } as const

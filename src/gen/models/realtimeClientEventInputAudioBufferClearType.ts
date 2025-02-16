@@ -13,5 +13,5 @@ export type RealtimeClientEventInputAudioBufferClearType = typeof RealtimeClient
 
 // eslint-disable-next-line ts/no-redeclare
 export const RealtimeClientEventInputAudioBufferClearType = {
-  input_audio_bufferclear: 'input_audio_buffer.clear',
+    input_audio_bufferclear: 'input_audio_buffer.clear',
 } as const

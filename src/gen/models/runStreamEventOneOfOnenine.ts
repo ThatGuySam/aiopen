@@ -12,6 +12,6 @@ import type { RunStreamEventOneOfOnenineEvent } from './runStreamEventOneOfOneni
  * Occurs when a [run](/docs/api-reference/runs/object) expires.
  */
 export interface RunStreamEventOneOfOnenine {
-  event: RunStreamEventOneOfOnenineEvent
-  data: RunObject
+    event: RunStreamEventOneOfOnenineEvent
+    data: RunObject
 }

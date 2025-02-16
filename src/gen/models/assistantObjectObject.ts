@@ -13,5 +13,5 @@ export type AssistantObjectObject = typeof AssistantObjectObject[keyof typeof As
 
 // eslint-disable-next-line ts/no-redeclare
 export const AssistantObjectObject = {
-  assistant: 'assistant',
+    assistant: 'assistant',
 } as const

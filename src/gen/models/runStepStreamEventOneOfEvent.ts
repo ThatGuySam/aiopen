@@ -10,5 +10,5 @@ export type RunStepStreamEventOneOfEvent = typeof RunStepStreamEventOneOfEvent[k
 
 // eslint-disable-next-line ts/no-redeclare
 export const RunStepStreamEventOneOfEvent = {
-  threadrunstepcreated: 'thread.run.step.created',
+    threadrunstepcreated: 'thread.run.step.created',
 } as const

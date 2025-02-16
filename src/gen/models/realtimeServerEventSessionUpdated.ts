@@ -16,9 +16,9 @@ there is an error.
 
  */
 export interface RealtimeServerEventSessionUpdated {
-  /** The unique ID of the server event. */
-  event_id: string
-  /** The event type, must be `session.updated`. */
-  type: RealtimeServerEventSessionUpdatedType
-  session: RealtimeSession
+    /** The unique ID of the server event. */
+    event_id: string
+    /** The event type, must be `session.updated`. */
+    type: RealtimeServerEventSessionUpdatedType
+    session: RealtimeSession
 }

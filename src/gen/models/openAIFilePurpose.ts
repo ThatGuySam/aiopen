@@ -13,11 +13,11 @@ export type OpenAIFilePurpose = typeof OpenAIFilePurpose[keyof typeof OpenAIFile
 
 // eslint-disable-next-line ts/no-redeclare
 export const OpenAIFilePurpose = {
-  'assistants': 'assistants',
-  'assistants_output': 'assistants_output',
-  'batch': 'batch',
-  'batch_output': 'batch_output',
-  'fine-tune': 'fine-tune',
-  'fine-tune-results': 'fine-tune-results',
-  'vision': 'vision',
+    'assistants': 'assistants',
+    'assistants_output': 'assistants_output',
+    'batch': 'batch',
+    'batch_output': 'batch_output',
+    'fine-tune': 'fine-tune',
+    'fine-tune-results': 'fine-tune-results',
+    'vision': 'vision',
 } as const

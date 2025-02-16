@@ -17,7 +17,7 @@ export type RealtimeConversationItemRole = typeof RealtimeConversationItemRole[k
 
 // eslint-disable-next-line ts/no-redeclare
 export const RealtimeConversationItemRole = {
-  user: 'user',
-  assistant: 'assistant',
-  system: 'system',
+    user: 'user',
+    assistant: 'assistant',
+    system: 'system',
 } as const

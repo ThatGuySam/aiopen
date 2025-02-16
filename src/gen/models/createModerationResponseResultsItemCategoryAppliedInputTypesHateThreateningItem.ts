@@ -10,5 +10,5 @@ export type CreateModerationResponseResultsItemCategoryAppliedInputTypesHateThre
 
 // eslint-disable-next-line ts/no-redeclare
 export const CreateModerationResponseResultsItemCategoryAppliedInputTypesHateThreateningItem = {
-  text: 'text',
+    text: 'text',
 } as const

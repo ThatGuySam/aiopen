@@ -13,5 +13,5 @@ export type ProjectObject = typeof ProjectObject[keyof typeof ProjectObject]
 
 // eslint-disable-next-line ts/no-redeclare
 export const ProjectObject = {
-  organizationproject: 'organization.project',
+    organizationproject: 'organization.project',
 } as const

@@ -12,8 +12,8 @@ import type { ThreadStreamEventOneOfEvent } from './threadStreamEventOneOfEvent'
  * Occurs when a new [thread](/docs/api-reference/threads/object) is created.
  */
 export interface ThreadStreamEventOneOf {
-  /** Whether to enable input audio transcription. */
-  enabled?: boolean
-  event: ThreadStreamEventOneOfEvent
-  data: ThreadObject
+    /** Whether to enable input audio transcription. */
+    enabled?: boolean
+    event: ThreadStreamEventOneOfEvent
+    data: ThreadObject
 }

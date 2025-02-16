@@ -13,6 +13,6 @@ export type RunObjectIncompleteDetailsReason = typeof RunObjectIncompleteDetails
 
 // eslint-disable-next-line ts/no-redeclare
 export const RunObjectIncompleteDetailsReason = {
-  max_completion_tokens: 'max_completion_tokens',
-  max_prompt_tokens: 'max_prompt_tokens',
+    max_completion_tokens: 'max_completion_tokens',
+    max_prompt_tokens: 'max_prompt_tokens',
 } as const

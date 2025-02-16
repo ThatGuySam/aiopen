@@ -8,7 +8,7 @@
 import type { DeleteAssistantResponseObject } from './deleteAssistantResponseObject'
 
 export interface DeleteAssistantResponse {
-  id: string
-  deleted: boolean
-  object: DeleteAssistantResponseObject
+    id: string
+    deleted: boolean
+    object: DeleteAssistantResponseObject
 }

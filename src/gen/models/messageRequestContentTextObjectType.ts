@@ -13,5 +13,5 @@ export type MessageRequestContentTextObjectType = typeof MessageRequestContentTe
 
 // eslint-disable-next-line ts/no-redeclare
 export const MessageRequestContentTextObjectType = {
-  text: 'text',
+    text: 'text',
 } as const

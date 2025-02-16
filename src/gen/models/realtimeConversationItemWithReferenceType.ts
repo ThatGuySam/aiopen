@@ -16,7 +16,7 @@ export type RealtimeConversationItemWithReferenceType = typeof RealtimeConversat
 
 // eslint-disable-next-line ts/no-redeclare
 export const RealtimeConversationItemWithReferenceType = {
-  message: 'message',
-  function_call: 'function_call',
-  function_call_output: 'function_call_output',
+    message: 'message',
+    function_call: 'function_call',
+    function_call_output: 'function_call_output',
 } as const

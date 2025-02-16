@@ -8,5 +8,5 @@
 import type { Error } from './error'
 
 export interface ErrorResponse {
-  error: Error
+    error: Error
 }

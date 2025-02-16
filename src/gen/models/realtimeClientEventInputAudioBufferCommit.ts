@@ -23,8 +23,8 @@ event.
 
  */
 export interface RealtimeClientEventInputAudioBufferCommit {
-  /** Optional client-generated ID used to identify this event. */
-  event_id?: string
-  /** The event type, must be `input_audio_buffer.commit`. */
-  type: RealtimeClientEventInputAudioBufferCommitType
+    /** Optional client-generated ID used to identify this event. */
+    event_id?: string
+    /** The event type, must be `input_audio_buffer.commit`. */
+    type: RealtimeClientEventInputAudioBufferCommitType
 }

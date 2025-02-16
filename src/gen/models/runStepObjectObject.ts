@@ -13,5 +13,5 @@ export type RunStepObjectObject = typeof RunStepObjectObject[keyof typeof RunSte
 
 // eslint-disable-next-line ts/no-redeclare
 export const RunStepObjectObject = {
-  threadrunstep: 'thread.run.step',
+    threadrunstep: 'thread.run.step',
 } as const

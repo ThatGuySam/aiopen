@@ -16,6 +16,6 @@ import type { CreateThreadAndRunRequestToolResourcesFileSearch } from './createT
  * @nullable
  */
 export type CreateThreadAndRunRequestToolResources = {
-  code_interpreter?: CreateThreadAndRunRequestToolResourcesCodeInterpreter
-  file_search?: CreateThreadAndRunRequestToolResourcesFileSearch
+    code_interpreter?: CreateThreadAndRunRequestToolResourcesCodeInterpreter
+    file_search?: CreateThreadAndRunRequestToolResourcesFileSearch
 } | null

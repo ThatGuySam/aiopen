@@ -11,9 +11,9 @@ import type { MessageDeltaContentRefusalObjectType } from './messageDeltaContent
  * The refusal content that is part of a message.
  */
 export interface MessageDeltaContentRefusalObject {
-  /** The index of the refusal part in the message. */
-  index: number
-  /** Always `refusal`. */
-  type: MessageDeltaContentRefusalObjectType
-  refusal?: string
+    /** The index of the refusal part in the message. */
+    index: number
+    /** Always `refusal`. */
+    type: MessageDeltaContentRefusalObjectType
+    refusal?: string
 }

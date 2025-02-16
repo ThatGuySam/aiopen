@@ -14,18 +14,18 @@ import type { FineTuningJobEventType } from './fineTuningJobEventType'
  * Fine-tuning job event object
  */
 export interface FineTuningJobEvent {
-  /** The object type, which is always "fine_tuning.job.event". */
-  object: FineTuningJobEventObject
-  /** The object identifier. */
-  id: string
-  /** The Unix timestamp (in seconds) for when the fine-tuning job was created. */
-  created_at: number
-  /** The log level of the event. */
-  level: FineTuningJobEventLevel
-  /** The message of the event. */
-  message: string
-  /** The type of event. */
-  type?: FineTuningJobEventType
-  /** The data associated with the event. */
-  data?: FineTuningJobEventData
+    /** The object type, which is always "fine_tuning.job.event". */
+    object: FineTuningJobEventObject
+    /** The object identifier. */
+    id: string
+    /** The Unix timestamp (in seconds) for when the fine-tuning job was created. */
+    created_at: number
+    /** The log level of the event. */
+    level: FineTuningJobEventLevel
+    /** The message of the event. */
+    message: string
+    /** The type of event. */
+    type?: FineTuningJobEventType
+    /** The data associated with the event. */
+    data?: FineTuningJobEventData
 }

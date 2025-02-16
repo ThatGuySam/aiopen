@@ -16,9 +16,9 @@ export type AudioResponseFormat = typeof AudioResponseFormat[keyof typeof AudioR
 
 // eslint-disable-next-line ts/no-redeclare
 export const AudioResponseFormat = {
-  json: 'json',
-  text: 'text',
-  srt: 'srt',
-  verbose_json: 'verbose_json',
-  vtt: 'vtt',
+    json: 'json',
+    text: 'text',
+    srt: 'srt',
+    verbose_json: 'verbose_json',
+    vtt: 'vtt',
 } as const

@@ -12,9 +12,9 @@ import type { MessageDeltaContentImageUrlObjectType } from './messageDeltaConten
  * References an image URL in the content of a message.
  */
 export interface MessageDeltaContentImageUrlObject {
-  /** The index of the content part in the message. */
-  index: number
-  /** Always `image_url`. */
-  type: MessageDeltaContentImageUrlObjectType
-  image_url?: MessageDeltaContentImageUrlObjectImageUrl
+    /** The index of the content part in the message. */
+    index: number
+    /** Always `image_url`. */
+    type: MessageDeltaContentImageUrlObjectType
+    image_url?: MessageDeltaContentImageUrlObjectImageUrl
 }

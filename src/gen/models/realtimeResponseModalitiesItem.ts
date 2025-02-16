@@ -10,6 +10,6 @@ export type RealtimeResponseModalitiesItem = typeof RealtimeResponseModalitiesIt
 
 // eslint-disable-next-line ts/no-redeclare
 export const RealtimeResponseModalitiesItem = {
-  text: 'text',
-  audio: 'audio',
+    text: 'text',
+    audio: 'audio',
 } as const

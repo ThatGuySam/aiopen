@@ -10,5 +10,5 @@ export type RunStreamEventOneOfOneoneEvent = typeof RunStreamEventOneOfOneoneEve
 
 // eslint-disable-next-line ts/no-redeclare
 export const RunStreamEventOneOfOneoneEvent = {
-  threadrunincomplete: 'thread.run.incomplete',
+    threadrunincomplete: 'thread.run.incomplete',
 } as const

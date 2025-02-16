@@ -10,12 +10,12 @@ import type { CreateModerationResponseResultsItemCategoryAppliedInputTypes } fro
 import type { CreateModerationResponseResultsItemCategoryScores } from './createModerationResponseResultsItemCategoryScores'
 
 export interface CreateModerationResponseResultsItem {
-  /** Whether any of the below categories are flagged. */
-  flagged: boolean
-  /** A list of the categories, and whether they are flagged or not. */
-  categories: CreateModerationResponseResultsItemCategories
-  /** A list of the categories along with their scores as predicted by model. */
-  category_scores: CreateModerationResponseResultsItemCategoryScores
-  /** A list of the categories along with the input type(s) that the score applies to. */
-  category_applied_input_types: CreateModerationResponseResultsItemCategoryAppliedInputTypes
+    /** Whether any of the below categories are flagged. */
+    flagged: boolean
+    /** A list of the categories, and whether they are flagged or not. */
+    categories: CreateModerationResponseResultsItemCategories
+    /** A list of the categories along with their scores as predicted by model. */
+    category_scores: CreateModerationResponseResultsItemCategoryScores
+    /** A list of the categories along with the input type(s) that the score applies to. */
+    category_applied_input_types: CreateModerationResponseResultsItemCategoryAppliedInputTypes
 }

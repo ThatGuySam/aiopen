@@ -13,10 +13,10 @@ export type ChatCompletionRole = typeof ChatCompletionRole[keyof typeof ChatComp
 
 // eslint-disable-next-line ts/no-redeclare
 export const ChatCompletionRole = {
-  developer: 'developer',
-  system: 'system',
-  user: 'user',
-  assistant: 'assistant',
-  tool: 'tool',
-  function: 'function',
+    developer: 'developer',
+    system: 'system',
+    user: 'user',
+    assistant: 'assistant',
+    tool: 'tool',
+    function: 'function',
 } as const

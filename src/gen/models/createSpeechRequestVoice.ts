@@ -13,13 +13,13 @@ export type CreateSpeechRequestVoice = typeof CreateSpeechRequestVoice[keyof typ
 
 // eslint-disable-next-line ts/no-redeclare
 export const CreateSpeechRequestVoice = {
-  alloy: 'alloy',
-  ash: 'ash',
-  coral: 'coral',
-  echo: 'echo',
-  fable: 'fable',
-  onyx: 'onyx',
-  nova: 'nova',
-  sage: 'sage',
-  shimmer: 'shimmer',
+    alloy: 'alloy',
+    ash: 'ash',
+    coral: 'coral',
+    echo: 'echo',
+    fable: 'fable',
+    onyx: 'onyx',
+    nova: 'nova',
+    sage: 'sage',
+    shimmer: 'shimmer',
 } as const

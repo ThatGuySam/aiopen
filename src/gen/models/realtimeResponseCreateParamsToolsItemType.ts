@@ -13,5 +13,5 @@ export type RealtimeResponseCreateParamsToolsItemType = typeof RealtimeResponseC
 
 // eslint-disable-next-line ts/no-redeclare
 export const RealtimeResponseCreateParamsToolsItemType = {
-  function: 'function',
+    function: 'function',
 } as const

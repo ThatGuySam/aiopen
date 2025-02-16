@@ -8,9 +8,9 @@
 import type { MessageObject } from './messageObject'
 
 export interface ListMessagesResponse {
-  object: string
-  data: MessageObject[]
-  first_id: string
-  last_id: string
-  has_more: boolean
+    object: string
+    data: MessageObject[]
+    first_id: string
+    last_id: string
+    has_more: boolean
 }

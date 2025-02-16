@@ -10,5 +10,5 @@ export type ListFineTuningJobEventsResponseObject = typeof ListFineTuningJobEven
 
 // eslint-disable-next-line ts/no-redeclare
 export const ListFineTuningJobEventsResponseObject = {
-  list: 'list',
+    list: 'list',
 } as const

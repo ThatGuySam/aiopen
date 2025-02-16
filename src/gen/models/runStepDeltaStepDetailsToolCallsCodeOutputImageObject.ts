@@ -9,9 +9,9 @@ import type { RunStepDeltaStepDetailsToolCallsCodeOutputImageObjectImage } from 
 import type { RunStepDeltaStepDetailsToolCallsCodeOutputImageObjectType } from './runStepDeltaStepDetailsToolCallsCodeOutputImageObjectType'
 
 export interface RunStepDeltaStepDetailsToolCallsCodeOutputImageObject {
-  /** The index of the output in the outputs array. */
-  index: number
-  /** Always `image`. */
-  type: RunStepDeltaStepDetailsToolCallsCodeOutputImageObjectType
-  image?: RunStepDeltaStepDetailsToolCallsCodeOutputImageObjectImage
+    /** The index of the output in the outputs array. */
+    index: number
+    /** Always `image`. */
+    type: RunStepDeltaStepDetailsToolCallsCodeOutputImageObjectType
+    image?: RunStepDeltaStepDetailsToolCallsCodeOutputImageObjectImage
 }

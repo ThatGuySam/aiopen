@@ -14,12 +14,12 @@ import type { EmbeddingObject } from './embeddingObject'
 
  */
 export interface Embedding {
-  /** The index of the embedding in the list of embeddings. */
-  index: number
-  /**
+    /** The index of the embedding in the list of embeddings. */
+    index: number
+    /**
   The embedding vector, which is a list of floats. The length of vector depends on the model as listed in the [embedding guide](/docs/guides/embeddings).
  */
-  embedding: number[]
-  /** The object type, which is always "embedding". */
-  object: EmbeddingObject
+    embedding: number[]
+    /** The object type, which is always "embedding". */
+    object: EmbeddingObject
 }

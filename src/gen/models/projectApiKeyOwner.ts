@@ -10,8 +10,8 @@ import type { ProjectServiceAccount } from './projectServiceAccount'
 import type { ProjectUser } from './projectUser'
 
 export interface ProjectApiKeyOwner {
-  /** `user` or `service_account` */
-  type?: ProjectApiKeyOwnerType
-  user?: ProjectUser
-  service_account?: ProjectServiceAccount
+    /** `user` or `service_account` */
+    type?: ProjectApiKeyOwnerType
+    user?: ProjectUser
+    service_account?: ProjectServiceAccount
 }

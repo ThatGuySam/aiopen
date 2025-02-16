@@ -15,10 +15,10 @@ import type { RealtimeServerEventConversationCreatedType } from './realtimeServe
 
  */
 export interface RealtimeServerEventConversationCreated {
-  /** The unique ID of the server event. */
-  event_id: string
-  /** The event type, must be `conversation.created`. */
-  type: RealtimeServerEventConversationCreatedType
-  /** The conversation resource. */
-  conversation: RealtimeServerEventConversationCreatedConversation
+    /** The unique ID of the server event. */
+    event_id: string
+    /** The event type, must be `conversation.created`. */
+    type: RealtimeServerEventConversationCreatedType
+    /** The conversation resource. */
+    conversation: RealtimeServerEventConversationCreatedConversation
 }

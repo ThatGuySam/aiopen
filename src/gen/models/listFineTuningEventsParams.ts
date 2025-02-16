@@ -10,9 +10,9 @@ export interface ListFineTuningEventsParams {
 /**
  * Identifier for the last event from the previous pagination request.
  */
-  after?: string
-  /**
-   * Number of events to retrieve.
-   */
-  limit?: number
+    after?: string
+    /**
+     * Number of events to retrieve.
+     */
+    limit?: number
 }

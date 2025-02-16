@@ -9,10 +9,10 @@ import type { RunStepDetailsToolCallsFileSearchObjectFileSearch } from './runSte
 import type { RunStepDetailsToolCallsFileSearchObjectType } from './runStepDetailsToolCallsFileSearchObjectType'
 
 export interface RunStepDetailsToolCallsFileSearchObject {
-  /** The ID of the tool call object. */
-  id: string
-  /** The type of tool call. This is always going to be `file_search` for this type of tool call. */
-  type: RunStepDetailsToolCallsFileSearchObjectType
-  /** For now, this is always going to be an empty object. */
-  file_search: RunStepDetailsToolCallsFileSearchObjectFileSearch
+    /** The ID of the tool call object. */
+    id: string
+    /** The type of tool call. This is always going to be `file_search` for this type of tool call. */
+    type: RunStepDetailsToolCallsFileSearchObjectType
+    /** For now, this is always going to be an empty object. */
+    file_search: RunStepDetailsToolCallsFileSearchObjectFileSearch
 }

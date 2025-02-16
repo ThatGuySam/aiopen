@@ -14,7 +14,7 @@ export type OpenAIFileStatus = typeof OpenAIFileStatus[keyof typeof OpenAIFileSt
 
 // eslint-disable-next-line ts/no-redeclare
 export const OpenAIFileStatus = {
-  uploaded: 'uploaded',
-  processed: 'processed',
-  error: 'error',
+    uploaded: 'uploaded',
+    processed: 'processed',
+    error: 'error',
 } as const

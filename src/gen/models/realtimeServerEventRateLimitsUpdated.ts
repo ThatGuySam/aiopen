@@ -18,10 +18,10 @@ adjusted accordingly once the Response is completed.
 
  */
 export interface RealtimeServerEventRateLimitsUpdated {
-  /** The unique ID of the server event. */
-  event_id: string
-  /** The event type, must be `rate_limits.updated`. */
-  type: RealtimeServerEventRateLimitsUpdatedType
-  /** List of rate limit information. */
-  rate_limits: RealtimeServerEventRateLimitsUpdatedRateLimitsItem[]
+    /** The unique ID of the server event. */
+    event_id: string
+    /** The event type, must be `rate_limits.updated`. */
+    type: RealtimeServerEventRateLimitsUpdatedType
+    /** List of rate limit information. */
+    rate_limits: RealtimeServerEventRateLimitsUpdatedRateLimitsItem[]
 }

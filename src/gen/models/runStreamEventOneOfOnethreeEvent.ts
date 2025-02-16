@@ -10,5 +10,5 @@ export type RunStreamEventOneOfOnethreeEvent = typeof RunStreamEventOneOfOnethre
 
 // eslint-disable-next-line ts/no-redeclare
 export const RunStreamEventOneOfOnethreeEvent = {
-  threadrunfailed: 'thread.run.failed',
+    threadrunfailed: 'thread.run.failed',
 } as const

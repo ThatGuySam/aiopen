@@ -8,7 +8,7 @@
 import type { ProjectApiKeyDeleteResponseObject } from './projectApiKeyDeleteResponseObject'
 
 export interface ProjectApiKeyDeleteResponse {
-  object: ProjectApiKeyDeleteResponseObject
-  id: string
-  deleted: boolean
+    object: ProjectApiKeyDeleteResponseObject
+    id: string
+    deleted: boolean
 }

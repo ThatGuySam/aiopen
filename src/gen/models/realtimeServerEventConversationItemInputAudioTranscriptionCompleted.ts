@@ -23,17 +23,17 @@ the model's interpretation, and should be treated as a rough guide.
 
  */
 export interface RealtimeServerEventConversationItemInputAudioTranscriptionCompleted {
-  /** The unique ID of the server event. */
-  event_id: string
-  /**
+    /** The unique ID of the server event. */
+    event_id: string
+    /**
  The event type, must be
 `conversation.item.input_audio_transcription.completed`.
  */
-  type: RealtimeServerEventConversationItemInputAudioTranscriptionCompletedType
-  /** The ID of the user message item containing the audio. */
-  item_id: string
-  /** The index of the content part containing the audio. */
-  content_index: number
-  /** The transcribed text. */
-  transcript: string
+    type: RealtimeServerEventConversationItemInputAudioTranscriptionCompletedType
+    /** The ID of the user message item containing the audio. */
+    item_id: string
+    /** The index of the content part containing the audio. */
+    content_index: number
+    /** The transcribed text. */
+    transcript: string
 }

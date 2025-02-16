@@ -15,16 +15,16 @@ import type { FineTuneSupervisedMethodHyperparametersNEpochs } from './fineTuneS
  * The hyperparameters used for the fine-tuning job.
  */
 export interface FineTuneSupervisedMethodHyperparameters {
-  /**
+    /**
   Number of examples in each batch. A larger batch size means that model parameters are updated less frequently, but with lower variance.
  */
-  batch_size?: FineTuneSupervisedMethodHyperparametersBatchSize
-  /**
+    batch_size?: FineTuneSupervisedMethodHyperparametersBatchSize
+    /**
   Scaling factor for the learning rate. A smaller learning rate may be useful to avoid overfitting.
  */
-  learning_rate_multiplier?: FineTuneSupervisedMethodHyperparametersLearningRateMultiplier
-  /**
+    learning_rate_multiplier?: FineTuneSupervisedMethodHyperparametersLearningRateMultiplier
+    /**
   The number of epochs to train the model for. An epoch refers to one full cycle through the training dataset.
  */
-  n_epochs?: FineTuneSupervisedMethodHyperparametersNEpochs
+    n_epochs?: FineTuneSupervisedMethodHyperparametersNEpochs
 }

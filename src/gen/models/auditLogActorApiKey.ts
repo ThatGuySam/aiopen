@@ -13,10 +13,10 @@ import type { AuditLogActorUser } from './auditLogActorUser'
  * The API Key used to perform the audit logged action.
  */
 export interface AuditLogActorApiKey {
-  /** The tracking id of the API key. */
-  id?: string
-  /** The type of API key. Can be either `user` or `service_account`. */
-  type?: AuditLogActorApiKeyType
-  user?: AuditLogActorUser
-  service_account?: AuditLogActorServiceAccount
+    /** The tracking id of the API key. */
+    id?: string
+    /** The type of API key. Can be either `user` or `service_account`. */
+    type?: AuditLogActorApiKeyType
+    user?: AuditLogActorUser
+    service_account?: AuditLogActorServiceAccount
 }

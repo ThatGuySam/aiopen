@@ -18,12 +18,12 @@ export type RealtimeResponseVoice = typeof RealtimeResponseVoice[keyof typeof Re
 
 // eslint-disable-next-line ts/no-redeclare
 export const RealtimeResponseVoice = {
-  alloy: 'alloy',
-  ash: 'ash',
-  ballad: 'ballad',
-  coral: 'coral',
-  echo: 'echo',
-  sage: 'sage',
-  shimmer: 'shimmer',
-  verse: 'verse',
+    alloy: 'alloy',
+    ash: 'ash',
+    ballad: 'ballad',
+    coral: 'coral',
+    echo: 'echo',
+    sage: 'sage',
+    shimmer: 'shimmer',
+    verse: 'verse',
 } as const

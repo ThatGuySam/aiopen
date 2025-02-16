@@ -16,12 +16,12 @@ See the [file search tool documentation](/docs/assistants/tools/file-search#cust
 
  */
 export interface FileSearchRankingOptions {
-  /** The ranker to use for the file search. If not specified will use the `auto` ranker. */
-  ranker?: FileSearchRankingOptionsRanker
-  /**
+    /** The ranker to use for the file search. If not specified will use the `auto` ranker. */
+    ranker?: FileSearchRankingOptionsRanker
+    /**
    * The score threshold for the file search. All values must be a floating point number between 0 and 1.
    * @minimum 0
    * @maximum 1
    */
-  score_threshold: number
+    score_threshold: number
 }

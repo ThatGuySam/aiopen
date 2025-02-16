@@ -10,5 +10,5 @@ export type RunStreamEventOneOfSevenEvent = typeof RunStreamEventOneOfSevenEvent
 
 // eslint-disable-next-line ts/no-redeclare
 export const RunStreamEventOneOfSevenEvent = {
-  threadrunrequires_action: 'thread.run.requires_action',
+    threadrunrequires_action: 'thread.run.requires_action',
 } as const

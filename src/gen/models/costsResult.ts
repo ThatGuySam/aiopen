@@ -12,17 +12,17 @@ import type { CostsResultObject } from './costsResultObject'
  * The aggregated costs details of the specific time bucket.
  */
 export interface CostsResult {
-  object: CostsResultObject
-  /** The monetary value in its associated currency. */
-  amount?: CostsResultAmount
-  /**
-   * When `group_by=line_item`, this field provides the line item of the grouped costs result.
-   * @nullable
-   */
-  line_item?: string | null
-  /**
-   * When `group_by=project_id`, this field provides the project ID of the grouped costs result.
-   * @nullable
-   */
-  project_id?: string | null
+    object: CostsResultObject
+    /** The monetary value in its associated currency. */
+    amount?: CostsResultAmount
+    /**
+     * When `group_by=line_item`, this field provides the line item of the grouped costs result.
+     * @nullable
+     */
+    line_item?: string | null
+    /**
+     * When `group_by=project_id`, this field provides the project ID of the grouped costs result.
+     * @nullable
+     */
+    project_id?: string | null
 }

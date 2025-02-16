@@ -13,5 +13,5 @@ export type VectorStoreFileObjectObject = typeof VectorStoreFileObjectObject[key
 
 // eslint-disable-next-line ts/no-redeclare
 export const VectorStoreFileObjectObject = {
-  vector_storefile: 'vector_store.file',
+    vector_storefile: 'vector_store.file',
 } as const

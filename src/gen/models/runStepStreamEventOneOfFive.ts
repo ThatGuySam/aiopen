@@ -12,6 +12,6 @@ import type { RunStepStreamEventOneOfFiveEvent } from './runStepStreamEventOneOf
  * Occurs when parts of a [run step](/docs/api-reference/run-steps/step-object) are being streamed.
  */
 export interface RunStepStreamEventOneOfFive {
-  event: RunStepStreamEventOneOfFiveEvent
-  data: RunStepDeltaObject
+    event: RunStepStreamEventOneOfFiveEvent
+    data: RunStepDeltaObject
 }

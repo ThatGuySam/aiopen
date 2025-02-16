@@ -13,5 +13,5 @@ export type ProjectUserObject = typeof ProjectUserObject[keyof typeof ProjectUse
 
 // eslint-disable-next-line ts/no-redeclare
 export const ProjectUserObject = {
-  organizationprojectuser: 'organization.project.user',
+    organizationprojectuser: 'organization.project.user',
 } as const

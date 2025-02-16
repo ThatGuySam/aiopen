@@ -8,7 +8,7 @@
 import type { DeleteVectorStoreFileResponseObject } from './deleteVectorStoreFileResponseObject'
 
 export interface DeleteVectorStoreFileResponse {
-  id: string
-  deleted: boolean
-  object: DeleteVectorStoreFileResponseObject
+    id: string
+    deleted: boolean
+    object: DeleteVectorStoreFileResponseObject
 }

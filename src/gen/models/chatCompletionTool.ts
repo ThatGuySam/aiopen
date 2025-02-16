@@ -9,7 +9,7 @@ import type { ChatCompletionToolType } from './chatCompletionToolType'
 import type { FunctionObject } from './functionObject'
 
 export interface ChatCompletionTool {
-  /** The type of the tool. Currently, only `function` is supported. */
-  type: ChatCompletionToolType
-  function: FunctionObject
+    /** The type of the tool. Currently, only `function` is supported. */
+    type: ChatCompletionToolType
+    function: FunctionObject
 }

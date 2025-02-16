@@ -13,5 +13,5 @@ export type MessageDeltaObjectObject = typeof MessageDeltaObjectObject[keyof typ
 
 // eslint-disable-next-line ts/no-redeclare
 export const MessageDeltaObjectObject = {
-  threadmessagedelta: 'thread.message.delta',
+    threadmessagedelta: 'thread.message.delta',
 } as const

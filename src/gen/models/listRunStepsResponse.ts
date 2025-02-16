@@ -8,9 +8,9 @@
 import type { RunStepObject } from './runStepObject'
 
 export interface ListRunStepsResponse {
-  object: string
-  data: RunStepObject[]
-  first_id: string
-  last_id: string
-  has_more: boolean
+    object: string
+    data: RunStepObject[]
+    first_id: string
+    last_id: string
+    has_more: boolean
 }

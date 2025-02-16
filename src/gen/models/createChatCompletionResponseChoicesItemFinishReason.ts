@@ -19,9 +19,9 @@ export type CreateChatCompletionResponseChoicesItemFinishReason = typeof CreateC
 
 // eslint-disable-next-line ts/no-redeclare
 export const CreateChatCompletionResponseChoicesItemFinishReason = {
-  stop: 'stop',
-  length: 'length',
-  tool_calls: 'tool_calls',
-  content_filter: 'content_filter',
-  function_call: 'function_call',
+    stop: 'stop',
+    length: 'length',
+    tool_calls: 'tool_calls',
+    content_filter: 'content_filter',
+    function_call: 'function_call',
 } as const

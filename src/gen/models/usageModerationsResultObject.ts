@@ -10,5 +10,5 @@ export type UsageModerationsResultObject = typeof UsageModerationsResultObject[k
 
 // eslint-disable-next-line ts/no-redeclare
 export const UsageModerationsResultObject = {
-  organizationusagemoderationsresult: 'organization.usage.moderations.result',
+    organizationusagemoderationsresult: 'organization.usage.moderations.result',
 } as const

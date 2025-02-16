@@ -16,6 +16,6 @@ import type { CreateAssistantRequestToolResourcesFileSearch } from './createAssi
  * @nullable
  */
 export type CreateAssistantRequestToolResources = {
-  code_interpreter?: CreateAssistantRequestToolResourcesCodeInterpreter
-  file_search?: CreateAssistantRequestToolResourcesFileSearch
+    code_interpreter?: CreateAssistantRequestToolResourcesCodeInterpreter
+    file_search?: CreateAssistantRequestToolResourcesFileSearch
 } | null

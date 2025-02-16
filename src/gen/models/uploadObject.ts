@@ -13,5 +13,5 @@ export type UploadObject = typeof UploadObject[keyof typeof UploadObject]
 
 // eslint-disable-next-line ts/no-redeclare
 export const UploadObject = {
-  upload: 'upload',
+    upload: 'upload',
 } as const

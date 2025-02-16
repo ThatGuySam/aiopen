@@ -10,6 +10,6 @@ export type UsageCostsGroupByItem = typeof UsageCostsGroupByItem[keyof typeof Us
 
 // eslint-disable-next-line ts/no-redeclare
 export const UsageCostsGroupByItem = {
-  project_id: 'project_id',
-  line_item: 'line_item',
+    project_id: 'project_id',
+    line_item: 'line_item',
 } as const

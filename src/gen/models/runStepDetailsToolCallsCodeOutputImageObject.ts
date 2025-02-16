@@ -9,7 +9,7 @@ import type { RunStepDetailsToolCallsCodeOutputImageObjectImage } from './runSte
 import type { RunStepDetailsToolCallsCodeOutputImageObjectType } from './runStepDetailsToolCallsCodeOutputImageObjectType'
 
 export interface RunStepDetailsToolCallsCodeOutputImageObject {
-  /** Always `image`. */
-  type: RunStepDetailsToolCallsCodeOutputImageObjectType
-  image: RunStepDetailsToolCallsCodeOutputImageObjectImage
+    /** Always `image`. */
+    type: RunStepDetailsToolCallsCodeOutputImageObjectType
+    image: RunStepDetailsToolCallsCodeOutputImageObjectImage
 }

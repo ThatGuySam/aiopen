@@ -10,5 +10,5 @@ export type ProjectServiceAccountDeleteResponseObject = typeof ProjectServiceAcc
 
 // eslint-disable-next-line ts/no-redeclare
 export const ProjectServiceAccountDeleteResponseObject = {
-  organizationprojectservice_accountdeleted: 'organization.project.service_account.deleted',
+    organizationprojectservice_accountdeleted: 'organization.project.service_account.deleted',
 } as const

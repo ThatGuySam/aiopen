@@ -9,11 +9,11 @@ import type { FineTuningJobCheckpoint } from './fineTuningJobCheckpoint'
 import type { ListFineTuningJobCheckpointsResponseObject } from './listFineTuningJobCheckpointsResponseObject'
 
 export interface ListFineTuningJobCheckpointsResponse {
-  data: FineTuningJobCheckpoint[]
-  object: ListFineTuningJobCheckpointsResponseObject
-  /** @nullable */
-  first_id?: string | null
-  /** @nullable */
-  last_id?: string | null
-  has_more: boolean
+    data: FineTuningJobCheckpoint[]
+    object: ListFineTuningJobCheckpointsResponseObject
+    /** @nullable */
+    first_id?: string | null
+    /** @nullable */
+    last_id?: string | null
+    has_more: boolean
 }

@@ -13,5 +13,5 @@ export type ChatCompletionNamedToolChoiceType = typeof ChatCompletionNamedToolCh
 
 // eslint-disable-next-line ts/no-redeclare
 export const ChatCompletionNamedToolChoiceType = {
-  function: 'function',
+    function: 'function',
 } as const

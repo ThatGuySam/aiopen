@@ -10,29 +10,29 @@
 import type { CreateThreadRequestToolResourcesFileSearchVectorStoresItem } from './createThreadRequestToolResourcesFileSearchVectorStoresItem'
 
 export type CreateThreadRequestToolResourcesFileSearch = (unknown & {
-  /**
+    /**
    * The [vector store](/docs/api-reference/vector-stores/object) attached to this thread. There can be a maximum of 1 vector store attached to the thread.
 
    * @maxItems 1
    */
-  vector_store_ids?: string[]
-  /**
+    vector_store_ids?: string[]
+    /**
    * A helper to create a [vector store](/docs/api-reference/vector-stores/object) with file_ids and attach it to this thread. There can be a maximum of 1 vector store attached to the thread.
 
    * @maxItems 1
    */
-  vector_stores?: CreateThreadRequestToolResourcesFileSearchVectorStoresItem[]
+    vector_stores?: CreateThreadRequestToolResourcesFileSearchVectorStoresItem[]
 }) | (unknown & {
-  /**
+    /**
    * The [vector store](/docs/api-reference/vector-stores/object) attached to this thread. There can be a maximum of 1 vector store attached to the thread.
 
    * @maxItems 1
    */
-  vector_store_ids?: string[]
-  /**
+    vector_store_ids?: string[]
+    /**
    * A helper to create a [vector store](/docs/api-reference/vector-stores/object) with file_ids and attach it to this thread. There can be a maximum of 1 vector store attached to the thread.
 
    * @maxItems 1
    */
-  vector_stores?: CreateThreadRequestToolResourcesFileSearchVectorStoresItem[]
+    vector_stores?: CreateThreadRequestToolResourcesFileSearchVectorStoresItem[]
 })

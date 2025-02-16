@@ -13,5 +13,5 @@ export type RunStepDetailsToolCallsFileSearchObjectType = typeof RunStepDetailsT
 
 // eslint-disable-next-line ts/no-redeclare
 export const RunStepDetailsToolCallsFileSearchObjectType = {
-  file_search: 'file_search',
+    file_search: 'file_search',
 } as const

@@ -9,9 +9,9 @@ import type { ProjectRateLimit } from './projectRateLimit'
 import type { ProjectRateLimitListResponseObject } from './projectRateLimitListResponseObject'
 
 export interface ProjectRateLimitListResponse {
-  object: ProjectRateLimitListResponseObject
-  data: ProjectRateLimit[]
-  first_id: string
-  last_id: string
-  has_more: boolean
+    object: ProjectRateLimitListResponseObject
+    data: ProjectRateLimit[]
+    first_id: string
+    last_id: string
+    has_more: boolean
 }

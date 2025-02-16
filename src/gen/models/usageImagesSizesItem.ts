@@ -10,9 +10,9 @@ export type UsageImagesSizesItem = typeof UsageImagesSizesItem[keyof typeof Usag
 
 // eslint-disable-next-line ts/no-redeclare
 export const UsageImagesSizesItem = {
-  '256x256': '256x256',
-  '512x512': '512x512',
-  '1024x1024': '1024x1024',
-  '1792x1792': '1792x1792',
-  '1024x1792': '1024x1792',
+    '256x256': '256x256',
+    '512x512': '512x512',
+    '1024x1024': '1024x1024',
+    '1792x1792': '1792x1792',
+    '1024x1792': '1024x1792',
 } as const

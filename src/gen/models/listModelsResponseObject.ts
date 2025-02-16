@@ -10,5 +10,5 @@ export type ListModelsResponseObject = typeof ListModelsResponseObject[keyof typ
 
 // eslint-disable-next-line ts/no-redeclare
 export const ListModelsResponseObject = {
-  list: 'list',
+    list: 'list',
 } as const

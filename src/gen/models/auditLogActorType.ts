@@ -13,6 +13,6 @@ export type AuditLogActorType = typeof AuditLogActorType[keyof typeof AuditLogAc
 
 // eslint-disable-next-line ts/no-redeclare
 export const AuditLogActorType = {
-  session: 'session',
-  api_key: 'api_key',
+    session: 'session',
+    api_key: 'api_key',
 } as const

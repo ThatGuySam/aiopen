@@ -12,7 +12,7 @@ import type { MessageContentImageUrlObjectType } from './messageContentImageUrlO
  * References an image URL in the content of a message.
  */
 export interface MessageContentImageUrlObject {
-  /** The type of the content part. */
-  type: MessageContentImageUrlObjectType
-  image_url: MessageContentImageUrlObjectImageUrl
+    /** The type of the content part. */
+    type: MessageContentImageUrlObjectType
+    image_url: MessageContentImageUrlObjectImageUrl
 }

@@ -13,8 +13,8 @@ export type VectorStoreFileObjectStatus = typeof VectorStoreFileObjectStatus[key
 
 // eslint-disable-next-line ts/no-redeclare
 export const VectorStoreFileObjectStatus = {
-  in_progress: 'in_progress',
-  completed: 'completed',
-  cancelled: 'cancelled',
-  failed: 'failed',
+    in_progress: 'in_progress',
+    completed: 'completed',
+    cancelled: 'cancelled',
+    failed: 'failed',
 } as const

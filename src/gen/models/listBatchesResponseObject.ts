@@ -10,5 +10,5 @@ export type ListBatchesResponseObject = typeof ListBatchesResponseObject[keyof t
 
 // eslint-disable-next-line ts/no-redeclare
 export const ListBatchesResponseObject = {
-  list: 'list',
+    list: 'list',
 } as const

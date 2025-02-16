@@ -13,6 +13,6 @@ export type RunStepObjectLastErrorCode = typeof RunStepObjectLastErrorCode[keyof
 
 // eslint-disable-next-line ts/no-redeclare
 export const RunStepObjectLastErrorCode = {
-  server_error: 'server_error',
-  rate_limit_exceeded: 'rate_limit_exceeded',
+    server_error: 'server_error',
+    rate_limit_exceeded: 'rate_limit_exceeded',
 } as const

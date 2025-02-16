@@ -7,5 +7,5 @@
  */
 
 export interface AdminApiKeysCreateBody {
-  name: string
+    name: string
 }

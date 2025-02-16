@@ -13,5 +13,5 @@ export type RealtimeServerEventErrorType = typeof RealtimeServerEventErrorType[k
 
 // eslint-disable-next-line ts/no-redeclare
 export const RealtimeServerEventErrorType = {
-  error: 'error',
+    error: 'error',
 } as const

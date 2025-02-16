@@ -13,9 +13,9 @@ export type MessageObjectIncompleteDetailsReason = typeof MessageObjectIncomplet
 
 // eslint-disable-next-line ts/no-redeclare
 export const MessageObjectIncompleteDetailsReason = {
-  content_filter: 'content_filter',
-  max_tokens: 'max_tokens',
-  run_cancelled: 'run_cancelled',
-  run_expired: 'run_expired',
-  run_failed: 'run_failed',
+    content_filter: 'content_filter',
+    max_tokens: 'max_tokens',
+    run_cancelled: 'run_cancelled',
+    run_expired: 'run_expired',
+    run_failed: 'run_failed',
 } as const

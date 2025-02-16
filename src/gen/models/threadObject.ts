@@ -15,17 +15,17 @@ import type { ThreadObjectToolResources } from './threadObjectToolResources'
  * Represents a thread that contains [messages](/docs/api-reference/messages).
  */
 export interface ThreadObject {
-  /** The identifier, which can be referenced in API endpoints. */
-  id: string
-  /** The object type, which is always `thread`. */
-  object: ThreadObjectObject
-  /** The Unix timestamp (in seconds) for when the thread was created. */
-  created_at: number
-  /**
+    /** The identifier, which can be referenced in API endpoints. */
+    id: string
+    /** The object type, which is always `thread`. */
+    object: ThreadObjectObject
+    /** The Unix timestamp (in seconds) for when the thread was created. */
+    created_at: number
+    /**
    * A set of resources that are made available to the assistant's tools in this thread. The resources are specific to the type of tool. For example, the `code_interpreter` tool requires a list of file IDs, while the `file_search` tool requires a list of vector store IDs.
 
    * @nullable
    */
-  tool_resources: ThreadObjectToolResources
-  metadata: Metadata
+    tool_resources: ThreadObjectToolResources
+    metadata: Metadata
 }

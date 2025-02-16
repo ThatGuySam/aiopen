@@ -10,6 +10,6 @@ export type ChatCompletionModalitiesItem = typeof ChatCompletionModalitiesItem[k
 
 // eslint-disable-next-line ts/no-redeclare
 export const ChatCompletionModalitiesItem = {
-  text: 'text',
-  audio: 'audio',
+    text: 'text',
+    audio: 'audio',
 } as const

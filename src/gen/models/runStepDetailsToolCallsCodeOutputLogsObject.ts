@@ -11,8 +11,8 @@ import type { RunStepDetailsToolCallsCodeOutputLogsObjectType } from './runStepD
  * Text output from the Code Interpreter tool call as part of a run step.
  */
 export interface RunStepDetailsToolCallsCodeOutputLogsObject {
-  /** Always `logs`. */
-  type: RunStepDetailsToolCallsCodeOutputLogsObjectType
-  /** The text output from the Code Interpreter tool call. */
-  logs: string
+    /** Always `logs`. */
+    type: RunStepDetailsToolCallsCodeOutputLogsObjectType
+    /** The text output from the Code Interpreter tool call. */
+    logs: string
 }

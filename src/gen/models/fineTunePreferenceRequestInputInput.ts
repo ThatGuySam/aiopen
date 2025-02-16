@@ -10,9 +10,9 @@ import type { FineTunePreferenceRequestInputInputMessagesItem } from './fineTune
 import type { ParallelToolCalls } from './parallelToolCalls'
 
 export interface FineTunePreferenceRequestInputInput {
-  /** @minItems 1 */
-  messages?: FineTunePreferenceRequestInputInputMessagesItem[]
-  /** A list of tools the model may generate JSON inputs for. */
-  tools?: ChatCompletionTool[]
-  parallel_tool_calls?: ParallelToolCalls
+    /** @minItems 1 */
+    messages?: FineTunePreferenceRequestInputInputMessagesItem[]
+    /** A list of tools the model may generate JSON inputs for. */
+    tools?: ChatCompletionTool[]
+    parallel_tool_calls?: ParallelToolCalls
 }

@@ -11,8 +11,8 @@ import type { CreateModerationRequestInputOneOfItemOneOfFourType } from './creat
  * An object describing text to classify.
  */
 export interface CreateModerationRequestInputOneOfItemOneOfFour {
-  /** Always `text`. */
-  type: CreateModerationRequestInputOneOfItemOneOfFourType
-  /** A string of text to classify. */
-  text: string
+    /** Always `text`. */
+    type: CreateModerationRequestInputOneOfItemOneOfFourType
+    /** A string of text to classify. */
+    text: string
 }

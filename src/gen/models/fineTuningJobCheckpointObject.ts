@@ -13,5 +13,5 @@ export type FineTuningJobCheckpointObject = typeof FineTuningJobCheckpointObject
 
 // eslint-disable-next-line ts/no-redeclare
 export const FineTuningJobCheckpointObject = {
-  fine_tuningjobcheckpoint: 'fine_tuning.job.checkpoint',
+    fine_tuningjobcheckpoint: 'fine_tuning.job.checkpoint',
 } as const

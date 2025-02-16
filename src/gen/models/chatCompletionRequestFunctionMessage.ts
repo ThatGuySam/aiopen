@@ -11,13 +11,13 @@ import type { ChatCompletionRequestFunctionMessageRole } from './chatCompletionR
  * @deprecated
  */
 export interface ChatCompletionRequestFunctionMessage {
-  /** The role of the messages author, in this case `function`. */
-  role: ChatCompletionRequestFunctionMessageRole
-  /**
-   * The contents of the function message.
-   * @nullable
-   */
-  content: string | null
-  /** The name of the function to call. */
-  name: string
+    /** The role of the messages author, in this case `function`. */
+    role: ChatCompletionRequestFunctionMessageRole
+    /**
+     * The contents of the function message.
+     * @nullable
+     */
+    content: string | null
+    /** The name of the function to call. */
+    name: string
 }

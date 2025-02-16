@@ -13,5 +13,5 @@ export type AutoChunkingStrategyRequestParamType = typeof AutoChunkingStrategyRe
 
 // eslint-disable-next-line ts/no-redeclare
 export const AutoChunkingStrategyRequestParamType = {
-  auto: 'auto',
+    auto: 'auto',
 } as const

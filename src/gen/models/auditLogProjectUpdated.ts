@@ -11,8 +11,8 @@ import type { AuditLogProjectUpdatedChangesRequested } from './auditLogProjectUp
  * The details for events with this `type`.
  */
 export interface AuditLogProjectUpdated {
-  /** The project ID. */
-  id?: string
-  /** The payload used to update the project. */
-  changes_requested?: AuditLogProjectUpdatedChangesRequested
+    /** The project ID. */
+    id?: string
+    /** The payload used to update the project. */
+    changes_requested?: AuditLogProjectUpdatedChangesRequested
 }

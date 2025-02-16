@@ -11,8 +11,8 @@ import type { AuditLogServiceAccountUpdatedChangesRequested } from './auditLogSe
  * The details for events with this `type`.
  */
 export interface AuditLogServiceAccountUpdated {
-  /** The service account ID. */
-  id?: string
-  /** The payload used to updated the service account. */
-  changes_requested?: AuditLogServiceAccountUpdatedChangesRequested
+    /** The service account ID. */
+    id?: string
+    /** The payload used to updated the service account. */
+    changes_requested?: AuditLogServiceAccountUpdatedChangesRequested
 }

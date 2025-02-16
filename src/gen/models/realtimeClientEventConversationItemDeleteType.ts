@@ -13,5 +13,5 @@ export type RealtimeClientEventConversationItemDeleteType = typeof RealtimeClien
 
 // eslint-disable-next-line ts/no-redeclare
 export const RealtimeClientEventConversationItemDeleteType = {
-  conversationitemdelete: 'conversation.item.delete',
+    conversationitemdelete: 'conversation.item.delete',
 } as const

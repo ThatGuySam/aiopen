@@ -16,6 +16,6 @@ import type { ModifyAssistantRequestToolResourcesFileSearch } from './modifyAssi
  * @nullable
  */
 export type ModifyAssistantRequestToolResources = {
-  code_interpreter?: ModifyAssistantRequestToolResourcesCodeInterpreter
-  file_search?: ModifyAssistantRequestToolResourcesFileSearch
+    code_interpreter?: ModifyAssistantRequestToolResourcesCodeInterpreter
+    file_search?: ModifyAssistantRequestToolResourcesFileSearch
 } | null

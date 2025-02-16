@@ -10,9 +10,9 @@ export interface ListPaginatedFineTuningJobsParams {
 /**
  * Identifier for the last job from the previous pagination request.
  */
-  after?: string
-  /**
-   * Number of fine-tuning jobs to retrieve.
-   */
-  limit?: number
+    after?: string
+    /**
+     * Number of fine-tuning jobs to retrieve.
+     */
+    limit?: number
 }

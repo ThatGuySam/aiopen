@@ -13,6 +13,6 @@ export type ProjectApiKeyOwnerType = typeof ProjectApiKeyOwnerType[keyof typeof 
 
 // eslint-disable-next-line ts/no-redeclare
 export const ProjectApiKeyOwnerType = {
-  user: 'user',
-  service_account: 'service_account',
+    user: 'user',
+    service_account: 'service_account',
 } as const

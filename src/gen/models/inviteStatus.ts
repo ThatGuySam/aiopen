@@ -13,7 +13,7 @@ export type InviteStatus = typeof InviteStatus[keyof typeof InviteStatus]
 
 // eslint-disable-next-line ts/no-redeclare
 export const InviteStatus = {
-  accepted: 'accepted',
-  expired: 'expired',
-  pending: 'pending',
+    accepted: 'accepted',
+    expired: 'expired',
+    pending: 'pending',
 } as const

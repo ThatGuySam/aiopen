@@ -12,15 +12,15 @@ import type { FineTunePreferenceRequestInputInput } from './fineTunePreferenceRe
  * The per-line training example of a fine-tuning input file for chat models using the dpo method.
  */
 export interface FineTunePreferenceRequestInput {
-  input?: FineTunePreferenceRequestInputInput
-  /**
-   * The preferred completion message for the output.
-   * @maxItems 1
-   */
-  preferred_completion?: ChatCompletionRequestAssistantMessage[]
-  /**
-   * The non-preferred completion message for the output.
-   * @maxItems 1
-   */
-  non_preferred_completion?: ChatCompletionRequestAssistantMessage[]
+    input?: FineTunePreferenceRequestInputInput
+    /**
+     * The preferred completion message for the output.
+     * @maxItems 1
+     */
+    preferred_completion?: ChatCompletionRequestAssistantMessage[]
+    /**
+     * The non-preferred completion message for the output.
+     * @maxItems 1
+     */
+    non_preferred_completion?: ChatCompletionRequestAssistantMessage[]
 }

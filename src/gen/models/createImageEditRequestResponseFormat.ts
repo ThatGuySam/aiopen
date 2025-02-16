@@ -14,6 +14,6 @@ export type CreateImageEditRequestResponseFormat = typeof CreateImageEditRequest
 
 // eslint-disable-next-line ts/no-redeclare
 export const CreateImageEditRequestResponseFormat = {
-  url: 'url',
-  b64_json: 'b64_json',
+    url: 'url',
+    b64_json: 'b64_json',
 } as const

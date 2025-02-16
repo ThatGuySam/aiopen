@@ -8,7 +8,7 @@
 import type { BatchErrorsDataItem } from './batchErrorsDataItem'
 
 export interface BatchErrors {
-  /** The object type, which is always `list`. */
-  object?: string
-  data?: BatchErrorsDataItem[]
+    /** The object type, which is always `list`. */
+    object?: string
+    data?: BatchErrorsDataItem[]
 }

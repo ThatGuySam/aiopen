@@ -10,5 +10,5 @@ export type UsageCodeInterpreterSessionsResultObject = typeof UsageCodeInterpret
 
 // eslint-disable-next-line ts/no-redeclare
 export const UsageCodeInterpreterSessionsResultObject = {
-  organizationusagecode_interpreter_sessionsresult: 'organization.usage.code_interpreter_sessions.result',
+    organizationusagecode_interpreter_sessionsresult: 'organization.usage.code_interpreter_sessions.result',
 } as const

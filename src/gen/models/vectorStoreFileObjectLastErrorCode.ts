@@ -13,7 +13,7 @@ export type VectorStoreFileObjectLastErrorCode = typeof VectorStoreFileObjectLas
 
 // eslint-disable-next-line ts/no-redeclare
 export const VectorStoreFileObjectLastErrorCode = {
-  server_error: 'server_error',
-  unsupported_file: 'unsupported_file',
-  invalid_file: 'invalid_file',
+    server_error: 'server_error',
+    unsupported_file: 'unsupported_file',
+    invalid_file: 'invalid_file',
 } as const

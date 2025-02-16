@@ -10,5 +10,5 @@ export type ProjectServiceAccountListResponseObject = typeof ProjectServiceAccou
 
 // eslint-disable-next-line ts/no-redeclare
 export const ProjectServiceAccountListResponseObject = {
-  list: 'list',
+    list: 'list',
 } as const

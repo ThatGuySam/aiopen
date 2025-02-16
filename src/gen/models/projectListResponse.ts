@@ -9,9 +9,9 @@ import type { Project } from './project'
 import type { ProjectListResponseObject } from './projectListResponseObject'
 
 export interface ProjectListResponse {
-  object: ProjectListResponseObject
-  data: Project[]
-  first_id: string
-  last_id: string
-  has_more: boolean
+    object: ProjectListResponseObject
+    data: Project[]
+    first_id: string
+    last_id: string
+    has_more: boolean
 }

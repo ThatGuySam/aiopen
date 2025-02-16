@@ -13,5 +13,5 @@ export type RealtimeServerEventResponseOutputItemDoneType = typeof RealtimeServe
 
 // eslint-disable-next-line ts/no-redeclare
 export const RealtimeServerEventResponseOutputItemDoneType = {
-  responseoutput_itemdone: 'response.output_item.done',
+    responseoutput_itemdone: 'response.output_item.done',
 } as const

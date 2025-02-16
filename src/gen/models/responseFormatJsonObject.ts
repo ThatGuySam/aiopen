@@ -8,6 +8,6 @@
 import type { ResponseFormatJsonObjectType } from './responseFormatJsonObjectType'
 
 export interface ResponseFormatJsonObject {
-  /** The type of response format being defined: `json_object` */
-  type: ResponseFormatJsonObjectType
+    /** The type of response format being defined: `json_object` */
+    type: ResponseFormatJsonObjectType
 }

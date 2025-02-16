@@ -8,9 +8,9 @@
 import type { OpenAIFile } from './openAIFile'
 
 export interface ListFilesResponse {
-  object: string
-  data: OpenAIFile[]
-  first_id: string
-  last_id: string
-  has_more: boolean
+    object: string
+    data: OpenAIFile[]
+    first_id: string
+    last_id: string
+    has_more: boolean
 }

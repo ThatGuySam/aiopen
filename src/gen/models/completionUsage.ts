@@ -12,14 +12,14 @@ import type { CompletionUsagePromptTokensDetails } from './completionUsagePrompt
  * Usage statistics for the completion request.
  */
 export interface CompletionUsage {
-  /** Number of tokens in the generated completion. */
-  completion_tokens: number
-  /** Number of tokens in the prompt. */
-  prompt_tokens: number
-  /** Total number of tokens used in the request (prompt + completion). */
-  total_tokens: number
-  /** Breakdown of tokens used in a completion. */
-  completion_tokens_details?: CompletionUsageCompletionTokensDetails
-  /** Breakdown of tokens used in the prompt. */
-  prompt_tokens_details?: CompletionUsagePromptTokensDetails
+    /** Number of tokens in the generated completion. */
+    completion_tokens: number
+    /** Number of tokens in the prompt. */
+    prompt_tokens: number
+    /** Total number of tokens used in the request (prompt + completion). */
+    total_tokens: number
+    /** Breakdown of tokens used in a completion. */
+    completion_tokens_details?: CompletionUsageCompletionTokensDetails
+    /** Breakdown of tokens used in the prompt. */
+    prompt_tokens_details?: CompletionUsagePromptTokensDetails
 }

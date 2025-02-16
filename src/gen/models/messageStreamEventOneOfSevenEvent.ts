@@ -10,5 +10,5 @@ export type MessageStreamEventOneOfSevenEvent = typeof MessageStreamEventOneOfSe
 
 // eslint-disable-next-line ts/no-redeclare
 export const MessageStreamEventOneOfSevenEvent = {
-  threadmessagecompleted: 'thread.message.completed',
+    threadmessagecompleted: 'thread.message.completed',
 } as const

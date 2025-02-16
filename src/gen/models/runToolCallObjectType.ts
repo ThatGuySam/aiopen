@@ -13,5 +13,5 @@ export type RunToolCallObjectType = typeof RunToolCallObjectType[keyof typeof Ru
 
 // eslint-disable-next-line ts/no-redeclare
 export const RunToolCallObjectType = {
-  function: 'function',
+    function: 'function',
 } as const

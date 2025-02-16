@@ -10,5 +10,5 @@ export type RunStepStreamEventOneOfSevenEvent = typeof RunStepStreamEventOneOfSe
 
 // eslint-disable-next-line ts/no-redeclare
 export const RunStepStreamEventOneOfSevenEvent = {
-  threadrunstepcompleted: 'thread.run.step.completed',
+    threadrunstepcompleted: 'thread.run.step.completed',
 } as const

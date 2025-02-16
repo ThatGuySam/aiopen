@@ -12,6 +12,6 @@ import type { MessageStreamEventOneOfEvent } from './messageStreamEventOneOfEven
  * Occurs when a [message](/docs/api-reference/messages/object) is created.
  */
 export interface MessageStreamEventOneOf {
-  event: MessageStreamEventOneOfEvent
-  data: MessageObject
+    event: MessageStreamEventOneOfEvent
+    data: MessageObject
 }

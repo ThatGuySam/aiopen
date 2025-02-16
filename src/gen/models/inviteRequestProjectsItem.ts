@@ -8,8 +8,8 @@
 import type { InviteRequestProjectsItemRole } from './inviteRequestProjectsItemRole'
 
 export interface InviteRequestProjectsItem {
-  /** Project's public ID */
-  id: string
-  /** Project membership role */
-  role: InviteRequestProjectsItemRole
+    /** Project's public ID */
+    id: string
+    /** Project membership role */
+    role: InviteRequestProjectsItemRole
 }

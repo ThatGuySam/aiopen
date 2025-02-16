@@ -13,5 +13,5 @@ export type ProjectRateLimitObject = typeof ProjectRateLimitObject[keyof typeof 
 
 // eslint-disable-next-line ts/no-redeclare
 export const ProjectRateLimitObject = {
-  projectrate_limit: 'project.rate_limit',
+    projectrate_limit: 'project.rate_limit',
 } as const

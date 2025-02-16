@@ -13,5 +13,5 @@ export type MessageDeltaContentRefusalObjectType = typeof MessageDeltaContentRef
 
 // eslint-disable-next-line ts/no-redeclare
 export const MessageDeltaContentRefusalObjectType = {
-  refusal: 'refusal',
+    refusal: 'refusal',
 } as const

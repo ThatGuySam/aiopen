@@ -13,6 +13,6 @@ export type AuditLogActorApiKeyType = typeof AuditLogActorApiKeyType[keyof typeo
 
 // eslint-disable-next-line ts/no-redeclare
 export const AuditLogActorApiKeyType = {
-  user: 'user',
-  service_account: 'service_account',
+    user: 'user',
+    service_account: 'service_account',
 } as const

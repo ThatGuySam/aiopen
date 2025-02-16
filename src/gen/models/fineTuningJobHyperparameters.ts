@@ -15,19 +15,19 @@ import type { FineTuningJobHyperparametersNEpochs } from './fineTuningJobHyperpa
  * The hyperparameters used for the fine-tuning job. This value will only be returned when running `supervised` jobs.
  */
 export interface FineTuningJobHyperparameters {
-  /**
+    /**
  Number of examples in each batch. A larger batch size means that model parameters
 are updated less frequently, but with lower variance.
  */
-  batch_size?: FineTuningJobHyperparametersBatchSize
-  /**
+    batch_size?: FineTuningJobHyperparametersBatchSize
+    /**
  Scaling factor for the learning rate. A smaller learning rate may be useful to avoid
 overfitting.
  */
-  learning_rate_multiplier?: FineTuningJobHyperparametersLearningRateMultiplier
-  /**
+    learning_rate_multiplier?: FineTuningJobHyperparametersLearningRateMultiplier
+    /**
  The number of epochs to train the model for. An epoch refers to one full cycle
 through the training dataset.
  */
-  n_epochs?: FineTuningJobHyperparametersNEpochs
+    n_epochs?: FineTuningJobHyperparametersNEpochs
 }

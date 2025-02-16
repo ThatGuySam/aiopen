@@ -12,6 +12,6 @@ import type { MessageStreamEventOneOfFiveEvent } from './messageStreamEventOneOf
  * Occurs when parts of a [Message](/docs/api-reference/messages/object) are being streamed.
  */
 export interface MessageStreamEventOneOfFive {
-  event: MessageStreamEventOneOfFiveEvent
-  data: MessageDeltaObject
+    event: MessageStreamEventOneOfFiveEvent
+    data: MessageDeltaObject
 }

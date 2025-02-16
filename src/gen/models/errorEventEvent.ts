@@ -10,5 +10,5 @@ export type ErrorEventEvent = typeof ErrorEventEvent[keyof typeof ErrorEventEven
 
 // eslint-disable-next-line ts/no-redeclare
 export const ErrorEventEvent = {
-  error: 'error',
+    error: 'error',
 } as const

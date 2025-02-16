@@ -8,7 +8,7 @@
 import type { AdminApiKeysListOrder } from './adminApiKeysListOrder'
 
 export interface AdminApiKeysListParams {
-  after?: string | null
-  order?: AdminApiKeysListOrder
-  limit?: number
+    after?: string | null
+    order?: AdminApiKeysListOrder
+    limit?: number
 }

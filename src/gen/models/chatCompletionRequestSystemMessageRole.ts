@@ -13,5 +13,5 @@ export type ChatCompletionRequestSystemMessageRole = typeof ChatCompletionReques
 
 // eslint-disable-next-line ts/no-redeclare
 export const ChatCompletionRequestSystemMessageRole = {
-  system: 'system',
+    system: 'system',
 } as const

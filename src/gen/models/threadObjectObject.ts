@@ -13,5 +13,5 @@ export type ThreadObjectObject = typeof ThreadObjectObject[keyof typeof ThreadOb
 
 // eslint-disable-next-line ts/no-redeclare
 export const ThreadObjectObject = {
-  thread: 'thread',
+    thread: 'thread',
 } as const

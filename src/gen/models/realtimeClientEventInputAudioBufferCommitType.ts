@@ -13,5 +13,5 @@ export type RealtimeClientEventInputAudioBufferCommitType = typeof RealtimeClien
 
 // eslint-disable-next-line ts/no-redeclare
 export const RealtimeClientEventInputAudioBufferCommitType = {
-  input_audio_buffercommit: 'input_audio_buffer.commit',
+    input_audio_buffercommit: 'input_audio_buffer.commit',
 } as const

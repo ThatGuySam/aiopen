@@ -13,5 +13,5 @@ export type ChatCompletionRequestMessageContentPartRefusalType = typeof ChatComp
 
 // eslint-disable-next-line ts/no-redeclare
 export const ChatCompletionRequestMessageContentPartRefusalType = {
-  refusal: 'refusal',
+    refusal: 'refusal',
 } as const

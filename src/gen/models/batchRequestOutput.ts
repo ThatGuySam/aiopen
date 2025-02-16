@@ -12,14 +12,14 @@ import type { BatchRequestOutputResponse } from './batchRequestOutputResponse'
  * The per-line object of the batch output and error files
  */
 export interface BatchRequestOutput {
-  id?: string
-  /** A developer-provided per-request id that will be used to match outputs to inputs. */
-  custom_id?: string
-  /** @nullable */
-  response?: BatchRequestOutputResponse
-  /**
-   * For requests that failed with a non-HTTP error, this will contain more information on the cause of the failure.
-   * @nullable
-   */
-  error?: BatchRequestOutputError
+    id?: string
+    /** A developer-provided per-request id that will be used to match outputs to inputs. */
+    custom_id?: string
+    /** @nullable */
+    response?: BatchRequestOutputResponse
+    /**
+     * For requests that failed with a non-HTTP error, this will contain more information on the cause of the failure.
+     * @nullable
+     */
+    error?: BatchRequestOutputError
 }

@@ -33,52 +33,52 @@ import type { AuditLogUserUpdated } from './auditLogUserUpdated'
  * A log of a user action or configuration change within this organization.
  */
 export interface AuditLog {
-  /** The ID of this log. */
-  'id': string
-  'type': AuditLogEventType
-  /** The Unix timestamp (in seconds) of the event. */
-  'effective_at': number
-  /** The project that the action was scoped to. Absent for actions not scoped to projects. */
-  'project'?: AuditLogProject
-  'actor': AuditLogActor
-  /** The details for events with this `type`. */
-  'api_key.created'?: AuditLogApiKeyCreated
-  /** The details for events with this `type`. */
-  'api_key.updated'?: AuditLogApiKeyUpdated
-  /** The details for events with this `type`. */
-  'api_key.deleted'?: AuditLogApiKeyDeleted
-  /** The details for events with this `type`. */
-  'invite.sent'?: AuditLogInviteSent
-  /** The details for events with this `type`. */
-  'invite.accepted'?: AuditLogInviteAccepted
-  /** The details for events with this `type`. */
-  'invite.deleted'?: AuditLogInviteDeleted
-  /** The details for events with this `type`. */
-  'login.failed'?: AuditLogLoginFailed
-  /** The details for events with this `type`. */
-  'logout.failed'?: AuditLogLogoutFailed
-  /** The details for events with this `type`. */
-  'organization.updated'?: AuditLogOrganizationUpdated
-  /** The details for events with this `type`. */
-  'project.created'?: AuditLogProjectCreated
-  /** The details for events with this `type`. */
-  'project.updated'?: AuditLogProjectUpdated
-  /** The details for events with this `type`. */
-  'project.archived'?: AuditLogProjectArchived
-  /** The details for events with this `type`. */
-  'rate_limit.updated'?: AuditLogRateLimitUpdated
-  /** The details for events with this `type`. */
-  'rate_limit.deleted'?: AuditLogRateLimitDeleted
-  /** The details for events with this `type`. */
-  'service_account.created'?: AuditLogServiceAccountCreated
-  /** The details for events with this `type`. */
-  'service_account.updated'?: AuditLogServiceAccountUpdated
-  /** The details for events with this `type`. */
-  'service_account.deleted'?: AuditLogServiceAccountDeleted
-  /** The details for events with this `type`. */
-  'user.added'?: AuditLogUserAdded
-  /** The details for events with this `type`. */
-  'user.updated'?: AuditLogUserUpdated
-  /** The details for events with this `type`. */
-  'user.deleted'?: AuditLogUserDeleted
+    /** The ID of this log. */
+    'id': string
+    'type': AuditLogEventType
+    /** The Unix timestamp (in seconds) of the event. */
+    'effective_at': number
+    /** The project that the action was scoped to. Absent for actions not scoped to projects. */
+    'project'?: AuditLogProject
+    'actor': AuditLogActor
+    /** The details for events with this `type`. */
+    'api_key.created'?: AuditLogApiKeyCreated
+    /** The details for events with this `type`. */
+    'api_key.updated'?: AuditLogApiKeyUpdated
+    /** The details for events with this `type`. */
+    'api_key.deleted'?: AuditLogApiKeyDeleted
+    /** The details for events with this `type`. */
+    'invite.sent'?: AuditLogInviteSent
+    /** The details for events with this `type`. */
+    'invite.accepted'?: AuditLogInviteAccepted
+    /** The details for events with this `type`. */
+    'invite.deleted'?: AuditLogInviteDeleted
+    /** The details for events with this `type`. */
+    'login.failed'?: AuditLogLoginFailed
+    /** The details for events with this `type`. */
+    'logout.failed'?: AuditLogLogoutFailed
+    /** The details for events with this `type`. */
+    'organization.updated'?: AuditLogOrganizationUpdated
+    /** The details for events with this `type`. */
+    'project.created'?: AuditLogProjectCreated
+    /** The details for events with this `type`. */
+    'project.updated'?: AuditLogProjectUpdated
+    /** The details for events with this `type`. */
+    'project.archived'?: AuditLogProjectArchived
+    /** The details for events with this `type`. */
+    'rate_limit.updated'?: AuditLogRateLimitUpdated
+    /** The details for events with this `type`. */
+    'rate_limit.deleted'?: AuditLogRateLimitDeleted
+    /** The details for events with this `type`. */
+    'service_account.created'?: AuditLogServiceAccountCreated
+    /** The details for events with this `type`. */
+    'service_account.updated'?: AuditLogServiceAccountUpdated
+    /** The details for events with this `type`. */
+    'service_account.deleted'?: AuditLogServiceAccountDeleted
+    /** The details for events with this `type`. */
+    'user.added'?: AuditLogUserAdded
+    /** The details for events with this `type`. */
+    'user.updated'?: AuditLogUserUpdated
+    /** The details for events with this `type`. */
+    'user.deleted'?: AuditLogUserDeleted
 }

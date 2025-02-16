@@ -7,6 +7,6 @@
  */
 
 export interface DefaultProjectErrorResponse {
-  code: number
-  message: string
+    code: number
+    message: string
 }

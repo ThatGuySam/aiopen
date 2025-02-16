@@ -13,5 +13,5 @@ export type RealtimeServerEventResponseContentPartAddedType = typeof RealtimeSer
 
 // eslint-disable-next-line ts/no-redeclare
 export const RealtimeServerEventResponseContentPartAddedType = {
-  responsecontent_partadded: 'response.content_part.added',
+    responsecontent_partadded: 'response.content_part.added',
 } as const

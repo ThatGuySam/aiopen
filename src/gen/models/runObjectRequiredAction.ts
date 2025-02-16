@@ -13,8 +13,8 @@ import type { RunObjectRequiredActionType } from './runObjectRequiredActionType'
  * @nullable
  */
 export type RunObjectRequiredAction = {
-  /** For now, this is always `submit_tool_outputs`. */
-  type: RunObjectRequiredActionType
-  /** Details on the tool outputs needed for this run to continue. */
-  submit_tool_outputs: RunObjectRequiredActionSubmitToolOutputs
+    /** For now, this is always `submit_tool_outputs`. */
+    type: RunObjectRequiredActionType
+    /** Details on the tool outputs needed for this run to continue. */
+    submit_tool_outputs: RunObjectRequiredActionSubmitToolOutputs
 } | null

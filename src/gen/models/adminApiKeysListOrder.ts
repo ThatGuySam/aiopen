@@ -10,6 +10,6 @@ export type AdminApiKeysListOrder = typeof AdminApiKeysListOrder[keyof typeof Ad
 
 // eslint-disable-next-line ts/no-redeclare
 export const AdminApiKeysListOrder = {
-  asc: 'asc',
-  desc: 'desc',
+    asc: 'asc',
+    desc: 'desc',
 } as const

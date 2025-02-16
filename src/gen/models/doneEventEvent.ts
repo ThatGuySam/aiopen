@@ -10,5 +10,5 @@ export type DoneEventEvent = typeof DoneEventEvent[keyof typeof DoneEventEvent]
 
 // eslint-disable-next-line ts/no-redeclare
 export const DoneEventEvent = {
-  done: 'done',
+    done: 'done',
 } as const

@@ -10,6 +10,6 @@ export type RealtimeResponseCreateParamsModalitiesItem = typeof RealtimeResponse
 
 // eslint-disable-next-line ts/no-redeclare
 export const RealtimeResponseCreateParamsModalitiesItem = {
-  text: 'text',
-  audio: 'audio',
+    text: 'text',
+    audio: 'audio',
 } as const

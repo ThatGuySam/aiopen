@@ -18,8 +18,8 @@ export type RealtimeResponseStatusDetailsType = typeof RealtimeResponseStatusDet
 
 // eslint-disable-next-line ts/no-redeclare
 export const RealtimeResponseStatusDetailsType = {
-  completed: 'completed',
-  cancelled: 'cancelled',
-  failed: 'failed',
-  incomplete: 'incomplete',
+    completed: 'completed',
+    cancelled: 'cancelled',
+    failed: 'failed',
+    incomplete: 'incomplete',
 } as const

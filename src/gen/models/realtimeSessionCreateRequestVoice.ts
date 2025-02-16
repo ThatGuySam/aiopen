@@ -19,12 +19,12 @@ export type RealtimeSessionCreateRequestVoice = typeof RealtimeSessionCreateRequ
 
 // eslint-disable-next-line ts/no-redeclare
 export const RealtimeSessionCreateRequestVoice = {
-  alloy: 'alloy',
-  ash: 'ash',
-  ballad: 'ballad',
-  coral: 'coral',
-  echo: 'echo',
-  sage: 'sage',
-  shimmer: 'shimmer',
-  verse: 'verse',
+    alloy: 'alloy',
+    ash: 'ash',
+    ballad: 'ballad',
+    coral: 'coral',
+    echo: 'echo',
+    sage: 'sage',
+    shimmer: 'shimmer',
+    verse: 'verse',
 } as const

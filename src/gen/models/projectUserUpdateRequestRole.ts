@@ -13,6 +13,6 @@ export type ProjectUserUpdateRequestRole = typeof ProjectUserUpdateRequestRole[k
 
 // eslint-disable-next-line ts/no-redeclare
 export const ProjectUserUpdateRequestRole = {
-  owner: 'owner',
-  member: 'member',
+    owner: 'owner',
+    member: 'member',
 } as const

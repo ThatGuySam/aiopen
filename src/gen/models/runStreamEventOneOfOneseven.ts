@@ -12,6 +12,6 @@ import type { RunStreamEventOneOfOnesevenEvent } from './runStreamEventOneOfOnes
  * Occurs when a [run](/docs/api-reference/runs/object) is cancelled.
  */
 export interface RunStreamEventOneOfOneseven {
-  event: RunStreamEventOneOfOnesevenEvent
-  data: RunObject
+    event: RunStreamEventOneOfOnesevenEvent
+    data: RunObject
 }

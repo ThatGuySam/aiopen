@@ -10,7 +10,7 @@ export type UsageCodeInterpreterSessionsBucketWidth = typeof UsageCodeInterprete
 
 // eslint-disable-next-line ts/no-redeclare
 export const UsageCodeInterpreterSessionsBucketWidth = {
-  '1m': '1m',
-  '1h': '1h',
-  '1d': '1d',
+    '1m': '1m',
+    '1h': '1h',
+    '1d': '1d',
 } as const

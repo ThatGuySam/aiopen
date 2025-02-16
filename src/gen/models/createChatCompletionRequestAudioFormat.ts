@@ -17,9 +17,9 @@ export type CreateChatCompletionRequestAudioFormat = typeof CreateChatCompletion
 
 // eslint-disable-next-line ts/no-redeclare
 export const CreateChatCompletionRequestAudioFormat = {
-  wav: 'wav',
-  mp3: 'mp3',
-  flac: 'flac',
-  opus: 'opus',
-  pcm16: 'pcm16',
+    wav: 'wav',
+    mp3: 'mp3',
+    flac: 'flac',
+    opus: 'opus',
+    pcm16: 'pcm16',
 } as const

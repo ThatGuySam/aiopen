@@ -10,5 +10,5 @@ export type RunStepStreamEventOneOfFiveEvent = typeof RunStepStreamEventOneOfFiv
 
 // eslint-disable-next-line ts/no-redeclare
 export const RunStepStreamEventOneOfFiveEvent = {
-  threadrunstepdelta: 'thread.run.step.delta',
+    threadrunstepdelta: 'thread.run.step.delta',
 } as const

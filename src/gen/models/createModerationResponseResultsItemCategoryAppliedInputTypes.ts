@@ -23,30 +23,30 @@ import type { CreateModerationResponseResultsItemCategoryAppliedInputTypesViolen
  * A list of the categories along with the input type(s) that the score applies to.
  */
 export interface CreateModerationResponseResultsItemCategoryAppliedInputTypes {
-  /** The applied input type(s) for the category 'hate'. */
-  'hate': CreateModerationResponseResultsItemCategoryAppliedInputTypesHateItem[]
-  /** The applied input type(s) for the category 'hate/threatening'. */
-  'hate/threatening': CreateModerationResponseResultsItemCategoryAppliedInputTypesHateThreateningItem[]
-  /** The applied input type(s) for the category 'harassment'. */
-  'harassment': CreateModerationResponseResultsItemCategoryAppliedInputTypesHarassmentItem[]
-  /** The applied input type(s) for the category 'harassment/threatening'. */
-  'harassment/threatening': CreateModerationResponseResultsItemCategoryAppliedInputTypesHarassmentThreateningItem[]
-  /** The applied input type(s) for the category 'illicit'. */
-  'illicit': CreateModerationResponseResultsItemCategoryAppliedInputTypesIllicitItem[]
-  /** The applied input type(s) for the category 'illicit/violent'. */
-  'illicit/violent': CreateModerationResponseResultsItemCategoryAppliedInputTypesIllicitViolentItem[]
-  /** The applied input type(s) for the category 'self-harm'. */
-  'self-harm': CreateModerationResponseResultsItemCategoryAppliedInputTypesSelfHarmItem[]
-  /** The applied input type(s) for the category 'self-harm/intent'. */
-  'self-harm/intent': CreateModerationResponseResultsItemCategoryAppliedInputTypesSelfHarmIntentItem[]
-  /** The applied input type(s) for the category 'self-harm/instructions'. */
-  'self-harm/instructions': CreateModerationResponseResultsItemCategoryAppliedInputTypesSelfHarmInstructionsItem[]
-  /** The applied input type(s) for the category 'sexual'. */
-  'sexual': CreateModerationResponseResultsItemCategoryAppliedInputTypesSexualItem[]
-  /** The applied input type(s) for the category 'sexual/minors'. */
-  'sexual/minors': CreateModerationResponseResultsItemCategoryAppliedInputTypesSexualMinorsItem[]
-  /** The applied input type(s) for the category 'violence'. */
-  'violence': CreateModerationResponseResultsItemCategoryAppliedInputTypesViolenceItem[]
-  /** The applied input type(s) for the category 'violence/graphic'. */
-  'violence/graphic': CreateModerationResponseResultsItemCategoryAppliedInputTypesViolenceGraphicItem[]
+    /** The applied input type(s) for the category 'hate'. */
+    'hate': CreateModerationResponseResultsItemCategoryAppliedInputTypesHateItem[]
+    /** The applied input type(s) for the category 'hate/threatening'. */
+    'hate/threatening': CreateModerationResponseResultsItemCategoryAppliedInputTypesHateThreateningItem[]
+    /** The applied input type(s) for the category 'harassment'. */
+    'harassment': CreateModerationResponseResultsItemCategoryAppliedInputTypesHarassmentItem[]
+    /** The applied input type(s) for the category 'harassment/threatening'. */
+    'harassment/threatening': CreateModerationResponseResultsItemCategoryAppliedInputTypesHarassmentThreateningItem[]
+    /** The applied input type(s) for the category 'illicit'. */
+    'illicit': CreateModerationResponseResultsItemCategoryAppliedInputTypesIllicitItem[]
+    /** The applied input type(s) for the category 'illicit/violent'. */
+    'illicit/violent': CreateModerationResponseResultsItemCategoryAppliedInputTypesIllicitViolentItem[]
+    /** The applied input type(s) for the category 'self-harm'. */
+    'self-harm': CreateModerationResponseResultsItemCategoryAppliedInputTypesSelfHarmItem[]
+    /** The applied input type(s) for the category 'self-harm/intent'. */
+    'self-harm/intent': CreateModerationResponseResultsItemCategoryAppliedInputTypesSelfHarmIntentItem[]
+    /** The applied input type(s) for the category 'self-harm/instructions'. */
+    'self-harm/instructions': CreateModerationResponseResultsItemCategoryAppliedInputTypesSelfHarmInstructionsItem[]
+    /** The applied input type(s) for the category 'sexual'. */
+    'sexual': CreateModerationResponseResultsItemCategoryAppliedInputTypesSexualItem[]
+    /** The applied input type(s) for the category 'sexual/minors'. */
+    'sexual/minors': CreateModerationResponseResultsItemCategoryAppliedInputTypesSexualMinorsItem[]
+    /** The applied input type(s) for the category 'violence'. */
+    'violence': CreateModerationResponseResultsItemCategoryAppliedInputTypesViolenceItem[]
+    /** The applied input type(s) for the category 'violence/graphic'. */
+    'violence/graphic': CreateModerationResponseResultsItemCategoryAppliedInputTypesViolenceGraphicItem[]
 }

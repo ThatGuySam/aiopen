@@ -9,13 +9,13 @@ import type { Invite } from './invite'
 import type { InviteListResponseObject } from './inviteListResponseObject'
 
 export interface InviteListResponse {
-  /** The object type, which is always `list` */
-  object: InviteListResponseObject
-  data: Invite[]
-  /** The first `invite_id` in the retrieved `list` */
-  first_id?: string
-  /** The last `invite_id` in the retrieved `list` */
-  last_id?: string
-  /** The `has_more` property is used for pagination to indicate there are additional results. */
-  has_more?: boolean
+    /** The object type, which is always `list` */
+    object: InviteListResponseObject
+    data: Invite[]
+    /** The first `invite_id` in the retrieved `list` */
+    first_id?: string
+    /** The last `invite_id` in the retrieved `list` */
+    last_id?: string
+    /** The `has_more` property is used for pagination to indicate there are additional results. */
+    has_more?: boolean
 }

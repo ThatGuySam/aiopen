@@ -12,6 +12,6 @@ import type { DoneEventEvent } from './doneEventEvent'
  * Occurs when a stream ends.
  */
 export interface DoneEvent {
-  event: DoneEventEvent
-  data: DoneEventData
+    event: DoneEventEvent
+    data: DoneEventData
 }

@@ -13,8 +13,8 @@ import type { AuditLogActorType } from './auditLogActorType'
  * The actor who performed the audit logged action.
  */
 export interface AuditLogActor {
-  /** The type of actor. Is either `session` or `api_key`. */
-  type?: AuditLogActorType
-  session?: AuditLogActorSession
-  api_key?: AuditLogActorApiKey
+    /** The type of actor. Is either `session` or `api_key`. */
+    type?: AuditLogActorType
+    session?: AuditLogActorSession
+    api_key?: AuditLogActorApiKey
 }

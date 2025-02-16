@@ -11,8 +11,8 @@ import type { AuditLogApiKeyUpdatedChangesRequested } from './auditLogApiKeyUpda
  * The details for events with this `type`.
  */
 export interface AuditLogApiKeyUpdated {
-  /** The tracking ID of the API key. */
-  id?: string
-  /** The payload used to update the API key. */
-  changes_requested?: AuditLogApiKeyUpdatedChangesRequested
+    /** The tracking ID of the API key. */
+    id?: string
+    /** The payload used to update the API key. */
+    changes_requested?: AuditLogApiKeyUpdatedChangesRequested
 }

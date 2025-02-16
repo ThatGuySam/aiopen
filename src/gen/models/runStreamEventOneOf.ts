@@ -12,6 +12,6 @@ import type { RunStreamEventOneOfEvent } from './runStreamEventOneOfEvent'
  * Occurs when a new [run](/docs/api-reference/runs/object) is created.
  */
 export interface RunStreamEventOneOf {
-  event: RunStreamEventOneOfEvent
-  data: RunObject
+    event: RunStreamEventOneOfEvent
+    data: RunObject
 }

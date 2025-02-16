@@ -9,8 +9,8 @@ const server = setupServer(...handlers)
 
 // Log intercepted endpoints
 server.events.on('request:start', ({ request }) => {
-  // eslint-disable-next-line no-console
-  console.log(`▸ ${request.method} ${request.url}`)
+    // eslint-disable-next-line no-console
+    console.log(`▸ ${request.method} ${request.url}`)
 })
 
 // Start server on default port 3000
@@ -27,10 +27,10 @@ setInterval(() => {}, 1000)
 
 // Handle shutdown
 process.on('SIGINT', () => {
-  server.close()
-  process.exit(0)
+    server.close()
+    process.exit(0)
 })
 process.on('SIGTERM', () => {
-  server.close()
-  process.exit(0)
+    server.close()
+    process.exit(0)
 })

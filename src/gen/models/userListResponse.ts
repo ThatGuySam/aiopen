@@ -9,9 +9,9 @@ import type { User } from './user'
 import type { UserListResponseObject } from './userListResponseObject'
 
 export interface UserListResponse {
-  object: UserListResponseObject
-  data: User[]
-  first_id: string
-  last_id: string
-  has_more: boolean
+    object: UserListResponseObject
+    data: User[]
+    first_id: string
+    last_id: string
+    has_more: boolean
 }

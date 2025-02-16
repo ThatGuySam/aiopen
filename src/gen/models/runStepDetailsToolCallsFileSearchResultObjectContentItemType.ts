@@ -13,5 +13,5 @@ export type RunStepDetailsToolCallsFileSearchResultObjectContentItemType = typeo
 
 // eslint-disable-next-line ts/no-redeclare
 export const RunStepDetailsToolCallsFileSearchResultObjectContentItemType = {
-  text: 'text',
+    text: 'text',
 } as const

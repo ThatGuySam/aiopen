@@ -10,5 +10,5 @@ export type UsageVectorStoresGroupByItem = typeof UsageVectorStoresGroupByItem[k
 
 // eslint-disable-next-line ts/no-redeclare
 export const UsageVectorStoresGroupByItem = {
-  project_id: 'project_id',
+    project_id: 'project_id',
 } as const

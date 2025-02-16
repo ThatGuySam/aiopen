@@ -10,5 +10,5 @@ export type ProjectServiceAccountCreateResponseObject = typeof ProjectServiceAcc
 
 // eslint-disable-next-line ts/no-redeclare
 export const ProjectServiceAccountCreateResponseObject = {
-  organizationprojectservice_account: 'organization.project.service_account',
+    organizationprojectservice_account: 'organization.project.service_account',
 } as const

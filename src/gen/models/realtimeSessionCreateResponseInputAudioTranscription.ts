@@ -17,9 +17,9 @@ rather than the representation understood by the model.
 
  */
 export interface RealtimeSessionCreateResponseInputAudioTranscription {
-  /**
+    /**
  The model to use for transcription, `whisper-1` is the only currently
 supported model.
  */
-  model?: string
+    model?: string
 }

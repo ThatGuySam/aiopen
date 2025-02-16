@@ -13,5 +13,5 @@ export type RunStepDetailsToolCallsFileSearchRankingOptionsObjectRanker = typeof
 
 // eslint-disable-next-line ts/no-redeclare
 export const RunStepDetailsToolCallsFileSearchRankingOptionsObjectRanker = {
-  default_2024_08_21: 'default_2024_08_21',
+    default_2024_08_21: 'default_2024_08_21',
 } as const

@@ -16,6 +16,6 @@ import type { ModifyThreadRequestToolResourcesFileSearch } from './modifyThreadR
  * @nullable
  */
 export type ModifyThreadRequestToolResources = {
-  code_interpreter?: ModifyThreadRequestToolResourcesCodeInterpreter
-  file_search?: ModifyThreadRequestToolResourcesFileSearch
+    code_interpreter?: ModifyThreadRequestToolResourcesCodeInterpreter
+    file_search?: ModifyThreadRequestToolResourcesFileSearch
 } | null

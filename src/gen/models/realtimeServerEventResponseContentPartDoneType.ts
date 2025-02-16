@@ -13,5 +13,5 @@ export type RealtimeServerEventResponseContentPartDoneType = typeof RealtimeServ
 
 // eslint-disable-next-line ts/no-redeclare
 export const RealtimeServerEventResponseContentPartDoneType = {
-  responsecontent_partdone: 'response.content_part.done',
+    responsecontent_partdone: 'response.content_part.done',
 } as const

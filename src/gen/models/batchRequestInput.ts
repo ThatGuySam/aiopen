@@ -11,10 +11,10 @@ import type { BatchRequestInputMethod } from './batchRequestInputMethod'
  * The per-line object of the batch input file
  */
 export interface BatchRequestInput {
-  /** A developer-provided per-request id that will be used to match outputs to inputs. Must be unique for each request in a batch. */
-  custom_id?: string
-  /** The HTTP method to be used for the request. Currently only `POST` is supported. */
-  method?: BatchRequestInputMethod
-  /** The OpenAI API relative URL to be used for the request. Currently `/v1/chat/completions`, `/v1/embeddings`, and `/v1/completions` are supported. */
-  url?: string
+    /** A developer-provided per-request id that will be used to match outputs to inputs. Must be unique for each request in a batch. */
+    custom_id?: string
+    /** The HTTP method to be used for the request. Currently only `POST` is supported. */
+    method?: BatchRequestInputMethod
+    /** The OpenAI API relative URL to be used for the request. Currently `/v1/chat/completions`, `/v1/embeddings`, and `/v1/completions` are supported. */
+    url?: string
 }

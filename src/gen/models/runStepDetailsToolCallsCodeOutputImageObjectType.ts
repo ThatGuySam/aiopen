@@ -13,5 +13,5 @@ export type RunStepDetailsToolCallsCodeOutputImageObjectType = typeof RunStepDet
 
 // eslint-disable-next-line ts/no-redeclare
 export const RunStepDetailsToolCallsCodeOutputImageObjectType = {
-  image: 'image',
+    image: 'image',
 } as const

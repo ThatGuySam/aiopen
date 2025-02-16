@@ -13,9 +13,9 @@ export type RunStepObjectStatus = typeof RunStepObjectStatus[keyof typeof RunSte
 
 // eslint-disable-next-line ts/no-redeclare
 export const RunStepObjectStatus = {
-  in_progress: 'in_progress',
-  cancelled: 'cancelled',
-  failed: 'failed',
-  completed: 'completed',
-  expired: 'expired',
+    in_progress: 'in_progress',
+    cancelled: 'cancelled',
+    failed: 'failed',
+    completed: 'completed',
+    expired: 'expired',
 } as const

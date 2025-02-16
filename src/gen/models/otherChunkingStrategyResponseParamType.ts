@@ -13,5 +13,5 @@ export type OtherChunkingStrategyResponseParamType = typeof OtherChunkingStrateg
 
 // eslint-disable-next-line ts/no-redeclare
 export const OtherChunkingStrategyResponseParamType = {
-  other: 'other',
+    other: 'other',
 } as const

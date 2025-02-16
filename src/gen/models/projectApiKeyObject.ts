@@ -13,5 +13,5 @@ export type ProjectApiKeyObject = typeof ProjectApiKeyObject[keyof typeof Projec
 
 // eslint-disable-next-line ts/no-redeclare
 export const ProjectApiKeyObject = {
-  organizationprojectapi_key: 'organization.project.api_key',
+    organizationprojectapi_key: 'organization.project.api_key',
 } as const

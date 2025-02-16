@@ -11,8 +11,8 @@
  * @nullable
  */
 export type BatchRequestOutputError = {
-  /** A machine-readable error code. */
-  code?: string
-  /** A human-readable error message. */
-  message?: string
+    /** A machine-readable error code. */
+    code?: string
+    /** A human-readable error message. */
+    message?: string
 } | null

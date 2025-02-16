@@ -13,5 +13,5 @@ export type RealtimeServerEventSessionUpdatedType = typeof RealtimeServerEventSe
 
 // eslint-disable-next-line ts/no-redeclare
 export const RealtimeServerEventSessionUpdatedType = {
-  sessionupdated: 'session.updated',
+    sessionupdated: 'session.updated',
 } as const

@@ -8,7 +8,7 @@
 import type { DeleteThreadResponseObject } from './deleteThreadResponseObject'
 
 export interface DeleteThreadResponse {
-  id: string
-  deleted: boolean
-  object: DeleteThreadResponseObject
+    id: string
+    deleted: boolean
+    object: DeleteThreadResponseObject
 }

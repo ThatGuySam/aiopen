@@ -9,7 +9,7 @@ import type { ResponseFormatJsonSchemaJsonSchema } from './responseFormatJsonSch
 import type { ResponseFormatJsonSchemaType } from './responseFormatJsonSchemaType'
 
 export interface ResponseFormatJsonSchema {
-  /** The type of response format being defined: `json_schema` */
-  type: ResponseFormatJsonSchemaType
-  json_schema: ResponseFormatJsonSchemaJsonSchema
+    /** The type of response format being defined: `json_schema` */
+    type: ResponseFormatJsonSchemaType
+    json_schema: ResponseFormatJsonSchemaJsonSchema
 }

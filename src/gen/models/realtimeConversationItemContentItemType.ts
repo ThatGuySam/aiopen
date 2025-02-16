@@ -16,8 +16,8 @@ export type RealtimeConversationItemContentItemType = typeof RealtimeConversatio
 
 // eslint-disable-next-line ts/no-redeclare
 export const RealtimeConversationItemContentItemType = {
-  input_audio: 'input_audio',
-  input_text: 'input_text',
-  item_reference: 'item_reference',
-  text: 'text',
+    input_audio: 'input_audio',
+    input_text: 'input_text',
+    item_reference: 'item_reference',
+    text: 'text',
 } as const

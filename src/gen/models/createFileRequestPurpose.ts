@@ -18,8 +18,8 @@ export type CreateFileRequestPurpose = typeof CreateFileRequestPurpose[keyof typ
 
 // eslint-disable-next-line ts/no-redeclare
 export const CreateFileRequestPurpose = {
-  'assistants': 'assistants',
-  'batch': 'batch',
-  'fine-tune': 'fine-tune',
-  'vision': 'vision',
+    'assistants': 'assistants',
+    'batch': 'batch',
+    'fine-tune': 'fine-tune',
+    'vision': 'vision',
 } as const

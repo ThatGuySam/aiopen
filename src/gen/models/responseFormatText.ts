@@ -8,6 +8,6 @@
 import type { ResponseFormatTextType } from './responseFormatTextType'
 
 export interface ResponseFormatText {
-  /** The type of response format being defined: `text` */
-  type: ResponseFormatTextType
+    /** The type of response format being defined: `text` */
+    type: ResponseFormatTextType
 }

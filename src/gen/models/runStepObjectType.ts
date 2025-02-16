@@ -13,6 +13,6 @@ export type RunStepObjectType = typeof RunStepObjectType[keyof typeof RunStepObj
 
 // eslint-disable-next-line ts/no-redeclare
 export const RunStepObjectType = {
-  message_creation: 'message_creation',
-  tool_calls: 'tool_calls',
+    message_creation: 'message_creation',
+    tool_calls: 'tool_calls',
 } as const

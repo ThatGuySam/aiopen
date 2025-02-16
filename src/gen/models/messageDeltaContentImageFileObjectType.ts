@@ -13,5 +13,5 @@ export type MessageDeltaContentImageFileObjectType = typeof MessageDeltaContentI
 
 // eslint-disable-next-line ts/no-redeclare
 export const MessageDeltaContentImageFileObjectType = {
-  image_file: 'image_file',
+    image_file: 'image_file',
 } as const

@@ -17,59 +17,59 @@ import type { Metadata } from './metadata'
  * Represents an `assistant` that can call the model and use tools.
  */
 export interface AssistantObject {
-  /** The identifier, which can be referenced in API endpoints. */
-  id: string
-  /** The object type, which is always `assistant`. */
-  object: AssistantObjectObject
-  /** The Unix timestamp (in seconds) for when the assistant was created. */
-  created_at: number
-  /**
+    /** The identifier, which can be referenced in API endpoints. */
+    id: string
+    /** The object type, which is always `assistant`. */
+    object: AssistantObjectObject
+    /** The Unix timestamp (in seconds) for when the assistant was created. */
+    created_at: number
+    /**
    * The name of the assistant. The maximum length is 256 characters.
 
    * @maxLength 256
    * @nullable
    */
-  name: string | null
-  /**
+    name: string | null
+    /**
    * The description of the assistant. The maximum length is 512 characters.
 
    * @maxLength 512
    * @nullable
    */
-  description: string | null
-  /**
+    description: string | null
+    /**
   ID of the model to use. You can use the [List models](/docs/api-reference/models/list) API to see all of your available models, or see our [Model overview](/docs/models) for descriptions of them.
  */
-  model: string
-  /**
+    model: string
+    /**
    * The system instructions that the assistant uses. The maximum length is 256,000 characters.
 
    * @maxLength 256000
    * @nullable
    */
-  instructions: string | null
-  /**
+    instructions: string | null
+    /**
    * A list of tool enabled on the assistant. There can be a maximum of 128 tools per assistant. Tools can be of types `code_interpreter`, `file_search`, or `function`.
 
    * @maxItems 128
    */
-  tools: AssistantObjectToolsItem[]
-  /**
+    tools: AssistantObjectToolsItem[]
+    /**
    * A set of resources that are used by the assistant's tools. The resources are specific to the type of tool. For example, the `code_interpreter` tool requires a list of file IDs, while the `file_search` tool requires a list of vector store IDs.
 
    * @nullable
    */
-  tool_resources?: AssistantObjectToolResources
-  metadata: Metadata
-  /**
+    tool_resources?: AssistantObjectToolResources
+    metadata: Metadata
+    /**
    * What sampling temperature to use, between 0 and 2. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic.
 
    * @minimum 0
    * @maximum 2
    * @nullable
    */
-  temperature?: number | null
-  /**
+    temperature?: number | null
+    /**
    * An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with top_p probability mass. So 0.1 means only the tokens comprising the top 10% probability mass are considered.
 
 We generally recommend altering this or temperature but not both.
@@ -78,6 +78,6 @@ We generally recommend altering this or temperature but not both.
    * @maximum 1
    * @nullable
    */
-  top_p?: number | null
-  response_format?: AssistantObjectResponseFormat
+    top_p?: number | null
+    response_format?: AssistantObjectResponseFormat
 }

@@ -8,7 +8,7 @@
 import type { ProjectUserDeleteResponseObject } from './projectUserDeleteResponseObject'
 
 export interface ProjectUserDeleteResponse {
-  object: ProjectUserDeleteResponseObject
-  id: string
-  deleted: boolean
+    object: ProjectUserDeleteResponseObject
+    id: string
+    deleted: boolean
 }

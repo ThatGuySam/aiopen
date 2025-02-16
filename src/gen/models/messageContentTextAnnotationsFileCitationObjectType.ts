@@ -13,5 +13,5 @@ export type MessageContentTextAnnotationsFileCitationObjectType = typeof Message
 
 // eslint-disable-next-line ts/no-redeclare
 export const MessageContentTextAnnotationsFileCitationObjectType = {
-  file_citation: 'file_citation',
+    file_citation: 'file_citation',
 } as const

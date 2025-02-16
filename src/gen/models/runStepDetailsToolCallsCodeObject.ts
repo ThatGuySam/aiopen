@@ -12,10 +12,10 @@ import type { RunStepDetailsToolCallsCodeObjectType } from './runStepDetailsTool
  * Details of the Code Interpreter tool call the run step was involved in.
  */
 export interface RunStepDetailsToolCallsCodeObject {
-  /** The ID of the tool call. */
-  id: string
-  /** The type of tool call. This is always going to be `code_interpreter` for this type of tool call. */
-  type: RunStepDetailsToolCallsCodeObjectType
-  /** The Code Interpreter tool call definition. */
-  code_interpreter: RunStepDetailsToolCallsCodeObjectCodeInterpreter
+    /** The ID of the tool call. */
+    id: string
+    /** The type of tool call. This is always going to be `code_interpreter` for this type of tool call. */
+    type: RunStepDetailsToolCallsCodeObjectType
+    /** The Code Interpreter tool call definition. */
+    code_interpreter: RunStepDetailsToolCallsCodeObjectCodeInterpreter
 }

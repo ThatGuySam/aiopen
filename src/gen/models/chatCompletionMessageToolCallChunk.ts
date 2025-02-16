@@ -9,10 +9,10 @@ import type { ChatCompletionMessageToolCallChunkFunction } from './chatCompletio
 import type { ChatCompletionMessageToolCallChunkType } from './chatCompletionMessageToolCallChunkType'
 
 export interface ChatCompletionMessageToolCallChunk {
-  index: number
-  /** The ID of the tool call. */
-  id?: string
-  /** The type of the tool. Currently, only `function` is supported. */
-  type?: ChatCompletionMessageToolCallChunkType
-  function?: ChatCompletionMessageToolCallChunkFunction
+    index: number
+    /** The ID of the tool call. */
+    id?: string
+    /** The type of the tool. Currently, only `function` is supported. */
+    type?: ChatCompletionMessageToolCallChunkType
+    function?: ChatCompletionMessageToolCallChunkFunction
 }

@@ -10,5 +10,5 @@ export type ThreadStreamEventOneOfEvent = typeof ThreadStreamEventOneOfEvent[key
 
 // eslint-disable-next-line ts/no-redeclare
 export const ThreadStreamEventOneOfEvent = {
-  threadcreated: 'thread.created',
+    threadcreated: 'thread.created',
 } as const

@@ -10,5 +10,5 @@ export type UsageResponseObject = typeof UsageResponseObject[keyof typeof UsageR
 
 // eslint-disable-next-line ts/no-redeclare
 export const UsageResponseObject = {
-  page: 'page',
+    page: 'page',
 } as const

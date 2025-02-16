@@ -13,5 +13,5 @@ export type RunStepDeltaObjectObject = typeof RunStepDeltaObjectObject[keyof typ
 
 // eslint-disable-next-line ts/no-redeclare
 export const RunStepDeltaObjectObject = {
-  threadrunstepdelta: 'thread.run.step.delta',
+    threadrunstepdelta: 'thread.run.step.delta',
 } as const
