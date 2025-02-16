@@ -6,6 +6,21 @@ export default defineConfig({
     input: {
       target: './openapi.yaml',
       validation: false,
+      filters: {
+        mode: 'exclude',
+        tags: [
+          // Lot's of type errors with this tag
+          'Assistants',
+        ],
+        // schemas: [
+        //   'Assistant',
+        //   'AssistantObject',
+        //   /List.*Response/,
+        //   /.*Request/,
+        //   /.*DeleteResponse/,
+        //   'ErrorResponse',
+        // ],
+      },
     },
     output: {
       mode: 'tags-split',
