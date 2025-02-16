@@ -40,7 +40,8 @@
   "dependencies": {
     "@faker-js/faker": "^9.5.0",
     "axios": "^1.7.9",
-    "msw": "^2.7.0"
+    "msw": "^2.7.0",
+    "pathe": "^2.0.3"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.1.1",
