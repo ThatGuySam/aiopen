@@ -8,6 +8,11 @@
 
 Portable Mock Server for OpenAI's API, Synced with Official OpenAI Spec Daily
 
+## How to use
+```bash
+npx aiopen@latest
+```
+
 ## Purpose
 - 💸 **Cost Prevention** - Eliminate API charges during testing
 - 🔑 **Token Free** - Test without having to maintain real tokens
