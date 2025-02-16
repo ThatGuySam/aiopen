@@ -17,7 +17,9 @@ import { genDir } from '@/config'
 const startTime = process.hrtime.bigint()
 
 async function processFiles(dir: string) {
-    const files = await readdir(dir, { withFileTypes: true })
+    const files = await readdir(dir, {
+        withFileTypes: true,
+    })
 
     for (const file of files) {
         const fullPath = join(dir, file.name)
@@ -33,7 +35,8 @@ async function processFiles(dir: string) {
                 // Define patterns that need error suppression
                 const prependRules = [
                     {
-                        keyword: 'const getCreateChatCompletionResponseMock',
+                        path: 'src/gen/chat/chat.msw.ts',
+                        keyword: 'return faker.helpers.arrayElement([',
                         prepend: '// @ts-expect-error - Working fine for now', // Suppress TS errors for mock helpers
                     },
                 ]
@@ -42,9 +45,10 @@ async function processFiles(dir: string) {
                 const lines = replaced.split('\n')
                 const processedLines = []
                 for (const line of lines) {
-                    // Check all rules for matches in current line
+                    // Check all rules that match current file path
                     const matchingRules = prependRules.filter(rule =>
-                        line.includes(rule.keyword),
+                        fullPath.endsWith(rule.path)
+                        && line.includes(rule.keyword),
                     )
                     // Add all matching suppression comments
                     processedLines.push(...matchingRules.map(r => r.prepend))
