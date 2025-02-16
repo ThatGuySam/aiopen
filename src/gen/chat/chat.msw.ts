@@ -21,7 +21,6 @@ import {
 } from 'msw'
 
 export function getCreateChatCompletionResponseMock(overrideResponse: Partial< CreateChatCompletionResponse | CreateChatCompletionStreamResponse > = {}): CreateChatCompletionResponse | CreateChatCompletionStreamResponse {
-// @ts-expect-error - Working fine for now
     return faker.helpers.arrayElement([
         {
             id: faker.string.alpha(20),

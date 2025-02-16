@@ -78,6 +78,7 @@ export function getCreateUploadResponseMock(overrideResponse: Partial< Upload > 
                     faker.string.alpha(20),
                     undefined,
                 ]),
+
             },
             undefined,
         ]),
@@ -143,6 +144,7 @@ export function getCancelUploadResponseMock(overrideResponse: Partial< Upload > 
                     faker.string.alpha(20),
                     undefined,
                 ]),
+
             },
             undefined,
         ]),
@@ -208,6 +210,7 @@ export function getCompleteUploadResponseMock(overrideResponse: Partial< Upload 
                     faker.string.alpha(20),
                     undefined,
                 ]),
+
             },
             undefined,
         ]),

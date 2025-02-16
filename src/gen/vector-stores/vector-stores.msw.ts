@@ -104,6 +104,7 @@ export function getListVectorStoresResponseMock(overrideResponse: Partial< ListV
             metadata: {
                 [faker.string.alphanumeric(5)]: faker.string.alpha(20),
             },
+
         })),
         first_id: faker.string.alpha(20),
         last_id: faker.string.alpha(20),
