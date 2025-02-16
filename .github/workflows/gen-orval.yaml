@@ -29,6 +29,7 @@ jobs:
         with:
           run_install: false
 
+      - run: pnpm i -g @antfu/ni
       - run: nci
 
       - name: Generate Orval
