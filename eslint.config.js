@@ -10,12 +10,6 @@ export default antfu(
         stylistic: {
             indent   : DEFAULT_SPACE_INDENT,
             overrides: {
-                '@stylistic/max-len': [
-                    'error',
-                    {
-                        code: 60,
-                    },
-                ],
                 '@stylistic/object-curly-newline': [
                     'error',
                     {
