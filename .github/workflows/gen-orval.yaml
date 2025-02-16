@@ -38,6 +38,18 @@ jobs:
       - name: Generate Orval
         run: pnpm generate-orval
 
+      - name: Check for changes
+        id: get_changed_files
+        uses: trilom/file-changes-action@a6ca26c14274c33b15e6499323aac178af06ad4b
+        with:
+          output: ', '
+
+      - name: Early exit if no changes
+        if: steps.get_changed_files.outputs.files == ''
+        run: |
+          echo '✅ No changes to the OpenAPI spec or Orval config'
+          exit 0
+
       - name: Commit any API Client Updates
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
