@@ -8,7 +8,7 @@ export default defineConfig({
       validation: false,
     },
     output: {
-      mode: 'split',
+      mode: 'tags-split',
       target: `${genDir}/client.ts`,
       schemas: `${genDir}/models`,
       client: 'axios',
