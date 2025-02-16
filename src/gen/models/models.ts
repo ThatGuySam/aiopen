@@ -54,7 +54,11 @@ export function getModels() {
             options,
         )
     }
-    return { listModels, retrieveModel, deleteModel }
+    return {
+        listModels,
+        retrieveModel,
+        deleteModel,
+    }
 }
 export type ListModelsResult = AxiosResponse<ListModelsResponse>
 export type RetrieveModelResult = AxiosResponse<Model>

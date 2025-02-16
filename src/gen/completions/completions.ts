@@ -31,6 +31,8 @@ export function getCompletions() {
             options,
         )
     }
-    return { createCompletion }
+    return {
+        createCompletion,
+    }
 }
 export type CreateCompletionResult = AxiosResponse<CreateCompletionResponse>

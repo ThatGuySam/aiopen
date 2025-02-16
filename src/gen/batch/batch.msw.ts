@@ -21,27 +21,644 @@ import {
 } from 'msw'
 
 export function getCreateBatchResponseMock(overrideResponse: Partial< Batch > = {}): Batch {
-    return { id: faker.string.alpha(20), object: faker.helpers.arrayElement(['batch'] as const), endpoint: faker.string.alpha(20), errors: faker.helpers.arrayElement([{ object: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), data: faker.helpers.arrayElement([Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => ({ code: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), message: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), param: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), line: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), null]), undefined]) })), undefined]) }, undefined]), input_file_id: faker.string.alpha(20), completion_window: faker.string.alpha(20), status: faker.helpers.arrayElement(['validating', 'failed', 'in_progress', 'finalizing', 'completed', 'expired', 'cancelling', 'cancelled'] as const), output_file_id: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), error_file_id: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), created_at: faker.number.int({ min: undefined, max: undefined }), in_progress_at: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), expires_at: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), finalizing_at: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), completed_at: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), failed_at: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), expired_at: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), cancelling_at: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), cancelled_at: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), request_counts: faker.helpers.arrayElement([{ total: faker.number.int({ min: undefined, max: undefined }), completed: faker.number.int({ min: undefined, max: undefined }), failed: faker.number.int({ min: undefined, max: undefined }) }, undefined]), metadata: faker.helpers.arrayElement([{
-        [faker.string.alphanumeric(5)]: faker.string.alpha(20),
-    }, undefined]), ...overrideResponse }
+    return {
+        id: faker.string.alpha(20),
+        object: faker.helpers.arrayElement(['batch'] as const),
+        endpoint: faker.string.alpha(20),
+        errors: faker.helpers.arrayElement([
+            {
+                object: faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    undefined,
+                ]),
+                data: faker.helpers.arrayElement([
+                    Array.from({
+                        length: faker.number.int({
+                            min: 1,
+                            max: 10,
+                        }),
+                    }, (_, i) => i + 1).map(() => ({
+                        code: faker.helpers.arrayElement([
+                            faker.string.alpha(20),
+                            undefined,
+                        ]),
+                        message: faker.helpers.arrayElement([
+                            faker.string.alpha(20),
+                            undefined,
+                        ]),
+                        param: faker.helpers.arrayElement([
+                            faker.helpers.arrayElement([
+                                faker.string.alpha(20),
+                                null,
+                            ]),
+                            undefined,
+                        ]),
+                        line: faker.helpers.arrayElement([
+                            faker.helpers.arrayElement([
+                                faker.number.int({
+                                    min: undefined,
+                                    max: undefined,
+                                }),
+                                null,
+                            ]),
+                            undefined,
+                        ]),
+                    })),
+                    undefined,
+                ]),
+            },
+            undefined,
+        ]),
+        input_file_id: faker.string.alpha(20),
+        completion_window: faker.string.alpha(20),
+        status: faker.helpers.arrayElement([
+            'validating',
+            'failed',
+            'in_progress',
+            'finalizing',
+            'completed',
+            'expired',
+            'cancelling',
+            'cancelled',
+        ] as const),
+        output_file_id: faker.helpers.arrayElement([
+            faker.string.alpha(20),
+            undefined,
+        ]),
+        error_file_id: faker.helpers.arrayElement([
+            faker.string.alpha(20),
+            undefined,
+        ]),
+        created_at: faker.number.int({
+            min: undefined,
+            max: undefined,
+        }),
+        in_progress_at: faker.helpers.arrayElement([
+            faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            undefined,
+        ]),
+        expires_at: faker.helpers.arrayElement([
+            faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            undefined,
+        ]),
+        finalizing_at: faker.helpers.arrayElement([
+            faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            undefined,
+        ]),
+        completed_at: faker.helpers.arrayElement([
+            faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            undefined,
+        ]),
+        failed_at: faker.helpers.arrayElement([
+            faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            undefined,
+        ]),
+        expired_at: faker.helpers.arrayElement([
+            faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            undefined,
+        ]),
+        cancelling_at: faker.helpers.arrayElement([
+            faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            undefined,
+        ]),
+        cancelled_at: faker.helpers.arrayElement([
+            faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            undefined,
+        ]),
+        request_counts: faker.helpers.arrayElement([
+            {
+                total: faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                completed: faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                failed: faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+            },
+            undefined,
+        ]),
+        metadata: faker.helpers.arrayElement([
+            {
+                [faker.string.alphanumeric(5)]: faker.string.alpha(20),
+            },
+            undefined,
+        ]),
+        ...overrideResponse,
+    }
 }
 
 export function getListBatchesResponseMock(overrideResponse: Partial< ListBatchesResponse > = {}): ListBatchesResponse {
-    return { data: Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => ({ id: faker.string.alpha(20), object: faker.helpers.arrayElement(['batch'] as const), endpoint: faker.string.alpha(20), errors: faker.helpers.arrayElement([{ object: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), data: faker.helpers.arrayElement([Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => ({ code: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), message: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), param: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), line: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), null]), undefined]) })), undefined]) }, undefined]), input_file_id: faker.string.alpha(20), completion_window: faker.string.alpha(20), status: faker.helpers.arrayElement(['validating', 'failed', 'in_progress', 'finalizing', 'completed', 'expired', 'cancelling', 'cancelled'] as const), output_file_id: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), error_file_id: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), created_at: faker.number.int({ min: undefined, max: undefined }), in_progress_at: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), expires_at: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), finalizing_at: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), completed_at: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), failed_at: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), expired_at: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), cancelling_at: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), cancelled_at: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), request_counts: faker.helpers.arrayElement([{ total: faker.number.int({ min: undefined, max: undefined }), completed: faker.number.int({ min: undefined, max: undefined }), failed: faker.number.int({ min: undefined, max: undefined }) }, undefined]), metadata: faker.helpers.arrayElement([{
-        [faker.string.alphanumeric(5)]: faker.string.alpha(20),
-    }, undefined]) })), first_id: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), last_id: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), has_more: faker.datatype.boolean(), object: faker.helpers.arrayElement(['list'] as const), ...overrideResponse }
+    return {
+        data: Array.from({
+            length: faker.number.int({
+                min: 1,
+                max: 10,
+            }),
+        }, (_, i) => i + 1).map(() => ({
+            id: faker.string.alpha(20),
+            object: faker.helpers.arrayElement(['batch'] as const),
+            endpoint: faker.string.alpha(20),
+            errors: faker.helpers.arrayElement([
+                {
+                    object: faker.helpers.arrayElement([
+                        faker.string.alpha(20),
+                        undefined,
+                    ]),
+                    data: faker.helpers.arrayElement([
+                        Array.from({
+                            length: faker.number.int({
+                                min: 1,
+                                max: 10,
+                            }),
+                        }, (_, i) => i + 1).map(() => ({
+                            code: faker.helpers.arrayElement([
+                                faker.string.alpha(20),
+                                undefined,
+                            ]),
+                            message: faker.helpers.arrayElement([
+                                faker.string.alpha(20),
+                                undefined,
+                            ]),
+                            param: faker.helpers.arrayElement([
+                                faker.helpers.arrayElement([
+                                    faker.string.alpha(20),
+                                    null,
+                                ]),
+                                undefined,
+                            ]),
+                            line: faker.helpers.arrayElement([
+                                faker.helpers.arrayElement([
+                                    faker.number.int({
+                                        min: undefined,
+                                        max: undefined,
+                                    }),
+                                    null,
+                                ]),
+                                undefined,
+                            ]),
+                        })),
+                        undefined,
+                    ]),
+                },
+                undefined,
+            ]),
+            input_file_id: faker.string.alpha(20),
+            completion_window: faker.string.alpha(20),
+            status: faker.helpers.arrayElement([
+                'validating',
+                'failed',
+                'in_progress',
+                'finalizing',
+                'completed',
+                'expired',
+                'cancelling',
+                'cancelled',
+            ] as const),
+            output_file_id: faker.helpers.arrayElement([
+                faker.string.alpha(20),
+                undefined,
+            ]),
+            error_file_id: faker.helpers.arrayElement([
+                faker.string.alpha(20),
+                undefined,
+            ]),
+            created_at: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            in_progress_at: faker.helpers.arrayElement([
+                faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                undefined,
+            ]),
+            expires_at: faker.helpers.arrayElement([
+                faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                undefined,
+            ]),
+            finalizing_at: faker.helpers.arrayElement([
+                faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                undefined,
+            ]),
+            completed_at: faker.helpers.arrayElement([
+                faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                undefined,
+            ]),
+            failed_at: faker.helpers.arrayElement([
+                faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                undefined,
+            ]),
+            expired_at: faker.helpers.arrayElement([
+                faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                undefined,
+            ]),
+            cancelling_at: faker.helpers.arrayElement([
+                faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                undefined,
+            ]),
+            cancelled_at: faker.helpers.arrayElement([
+                faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                undefined,
+            ]),
+            request_counts: faker.helpers.arrayElement([
+                {
+                    total: faker.number.int({
+                        min: undefined,
+                        max: undefined,
+                    }),
+                    completed: faker.number.int({
+                        min: undefined,
+                        max: undefined,
+                    }),
+                    failed: faker.number.int({
+                        min: undefined,
+                        max: undefined,
+                    }),
+                },
+                undefined,
+            ]),
+            metadata: faker.helpers.arrayElement([
+                {
+                    [faker.string.alphanumeric(5)]: faker.string.alpha(20),
+                },
+                undefined,
+            ]),
+        })),
+        first_id: faker.helpers.arrayElement([
+            faker.string.alpha(20),
+            undefined,
+        ]),
+        last_id: faker.helpers.arrayElement([
+            faker.string.alpha(20),
+            undefined,
+        ]),
+        has_more: faker.datatype.boolean(),
+        object: faker.helpers.arrayElement(['list'] as const),
+        ...overrideResponse,
+    }
 }
 
 export function getRetrieveBatchResponseMock(overrideResponse: Partial< Batch > = {}): Batch {
-    return { id: faker.string.alpha(20), object: faker.helpers.arrayElement(['batch'] as const), endpoint: faker.string.alpha(20), errors: faker.helpers.arrayElement([{ object: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), data: faker.helpers.arrayElement([Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => ({ code: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), message: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), param: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), line: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), null]), undefined]) })), undefined]) }, undefined]), input_file_id: faker.string.alpha(20), completion_window: faker.string.alpha(20), status: faker.helpers.arrayElement(['validating', 'failed', 'in_progress', 'finalizing', 'completed', 'expired', 'cancelling', 'cancelled'] as const), output_file_id: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), error_file_id: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), created_at: faker.number.int({ min: undefined, max: undefined }), in_progress_at: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), expires_at: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), finalizing_at: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), completed_at: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), failed_at: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), expired_at: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), cancelling_at: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), cancelled_at: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), request_counts: faker.helpers.arrayElement([{ total: faker.number.int({ min: undefined, max: undefined }), completed: faker.number.int({ min: undefined, max: undefined }), failed: faker.number.int({ min: undefined, max: undefined }) }, undefined]), metadata: faker.helpers.arrayElement([{
-        [faker.string.alphanumeric(5)]: faker.string.alpha(20),
-    }, undefined]), ...overrideResponse }
+    return {
+        id: faker.string.alpha(20),
+        object: faker.helpers.arrayElement(['batch'] as const),
+        endpoint: faker.string.alpha(20),
+        errors: faker.helpers.arrayElement([
+            {
+                object: faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    undefined,
+                ]),
+                data: faker.helpers.arrayElement([
+                    Array.from({
+                        length: faker.number.int({
+                            min: 1,
+                            max: 10,
+                        }),
+                    }, (_, i) => i + 1).map(() => ({
+                        code: faker.helpers.arrayElement([
+                            faker.string.alpha(20),
+                            undefined,
+                        ]),
+                        message: faker.helpers.arrayElement([
+                            faker.string.alpha(20),
+                            undefined,
+                        ]),
+                        param: faker.helpers.arrayElement([
+                            faker.helpers.arrayElement([
+                                faker.string.alpha(20),
+                                null,
+                            ]),
+                            undefined,
+                        ]),
+                        line: faker.helpers.arrayElement([
+                            faker.helpers.arrayElement([
+                                faker.number.int({
+                                    min: undefined,
+                                    max: undefined,
+                                }),
+                                null,
+                            ]),
+                            undefined,
+                        ]),
+                    })),
+                    undefined,
+                ]),
+            },
+            undefined,
+        ]),
+        input_file_id: faker.string.alpha(20),
+        completion_window: faker.string.alpha(20),
+        status: faker.helpers.arrayElement([
+            'validating',
+            'failed',
+            'in_progress',
+            'finalizing',
+            'completed',
+            'expired',
+            'cancelling',
+            'cancelled',
+        ] as const),
+        output_file_id: faker.helpers.arrayElement([
+            faker.string.alpha(20),
+            undefined,
+        ]),
+        error_file_id: faker.helpers.arrayElement([
+            faker.string.alpha(20),
+            undefined,
+        ]),
+        created_at: faker.number.int({
+            min: undefined,
+            max: undefined,
+        }),
+        in_progress_at: faker.helpers.arrayElement([
+            faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            undefined,
+        ]),
+        expires_at: faker.helpers.arrayElement([
+            faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            undefined,
+        ]),
+        finalizing_at: faker.helpers.arrayElement([
+            faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            undefined,
+        ]),
+        completed_at: faker.helpers.arrayElement([
+            faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            undefined,
+        ]),
+        failed_at: faker.helpers.arrayElement([
+            faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            undefined,
+        ]),
+        expired_at: faker.helpers.arrayElement([
+            faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            undefined,
+        ]),
+        cancelling_at: faker.helpers.arrayElement([
+            faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            undefined,
+        ]),
+        cancelled_at: faker.helpers.arrayElement([
+            faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            undefined,
+        ]),
+        request_counts: faker.helpers.arrayElement([
+            {
+                total: faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                completed: faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                failed: faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+            },
+            undefined,
+        ]),
+        metadata: faker.helpers.arrayElement([
+            {
+                [faker.string.alphanumeric(5)]: faker.string.alpha(20),
+            },
+            undefined,
+        ]),
+        ...overrideResponse,
+    }
 }
 
 export function getCancelBatchResponseMock(overrideResponse: Partial< Batch > = {}): Batch {
-    return { id: faker.string.alpha(20), object: faker.helpers.arrayElement(['batch'] as const), endpoint: faker.string.alpha(20), errors: faker.helpers.arrayElement([{ object: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), data: faker.helpers.arrayElement([Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => ({ code: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), message: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), param: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), line: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), null]), undefined]) })), undefined]) }, undefined]), input_file_id: faker.string.alpha(20), completion_window: faker.string.alpha(20), status: faker.helpers.arrayElement(['validating', 'failed', 'in_progress', 'finalizing', 'completed', 'expired', 'cancelling', 'cancelled'] as const), output_file_id: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), error_file_id: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), created_at: faker.number.int({ min: undefined, max: undefined }), in_progress_at: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), expires_at: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), finalizing_at: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), completed_at: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), failed_at: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), expired_at: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), cancelling_at: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), cancelled_at: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), request_counts: faker.helpers.arrayElement([{ total: faker.number.int({ min: undefined, max: undefined }), completed: faker.number.int({ min: undefined, max: undefined }), failed: faker.number.int({ min: undefined, max: undefined }) }, undefined]), metadata: faker.helpers.arrayElement([{
-        [faker.string.alphanumeric(5)]: faker.string.alpha(20),
-    }, undefined]), ...overrideResponse }
+    return {
+        id: faker.string.alpha(20),
+        object: faker.helpers.arrayElement(['batch'] as const),
+        endpoint: faker.string.alpha(20),
+        errors: faker.helpers.arrayElement([
+            {
+                object: faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    undefined,
+                ]),
+                data: faker.helpers.arrayElement([
+                    Array.from({
+                        length: faker.number.int({
+                            min: 1,
+                            max: 10,
+                        }),
+                    }, (_, i) => i + 1).map(() => ({
+                        code: faker.helpers.arrayElement([
+                            faker.string.alpha(20),
+                            undefined,
+                        ]),
+                        message: faker.helpers.arrayElement([
+                            faker.string.alpha(20),
+                            undefined,
+                        ]),
+                        param: faker.helpers.arrayElement([
+                            faker.helpers.arrayElement([
+                                faker.string.alpha(20),
+                                null,
+                            ]),
+                            undefined,
+                        ]),
+                        line: faker.helpers.arrayElement([
+                            faker.helpers.arrayElement([
+                                faker.number.int({
+                                    min: undefined,
+                                    max: undefined,
+                                }),
+                                null,
+                            ]),
+                            undefined,
+                        ]),
+                    })),
+                    undefined,
+                ]),
+            },
+            undefined,
+        ]),
+        input_file_id: faker.string.alpha(20),
+        completion_window: faker.string.alpha(20),
+        status: faker.helpers.arrayElement([
+            'validating',
+            'failed',
+            'in_progress',
+            'finalizing',
+            'completed',
+            'expired',
+            'cancelling',
+            'cancelled',
+        ] as const),
+        output_file_id: faker.helpers.arrayElement([
+            faker.string.alpha(20),
+            undefined,
+        ]),
+        error_file_id: faker.helpers.arrayElement([
+            faker.string.alpha(20),
+            undefined,
+        ]),
+        created_at: faker.number.int({
+            min: undefined,
+            max: undefined,
+        }),
+        in_progress_at: faker.helpers.arrayElement([
+            faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            undefined,
+        ]),
+        expires_at: faker.helpers.arrayElement([
+            faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            undefined,
+        ]),
+        finalizing_at: faker.helpers.arrayElement([
+            faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            undefined,
+        ]),
+        completed_at: faker.helpers.arrayElement([
+            faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            undefined,
+        ]),
+        failed_at: faker.helpers.arrayElement([
+            faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            undefined,
+        ]),
+        expired_at: faker.helpers.arrayElement([
+            faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            undefined,
+        ]),
+        cancelling_at: faker.helpers.arrayElement([
+            faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            undefined,
+        ]),
+        cancelled_at: faker.helpers.arrayElement([
+            faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            undefined,
+        ]),
+        request_counts: faker.helpers.arrayElement([
+            {
+                total: faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                completed: faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                failed: faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+            },
+            undefined,
+        ]),
+        metadata: faker.helpers.arrayElement([
+            {
+                [faker.string.alphanumeric(5)]: faker.string.alpha(20),
+            },
+            undefined,
+        ]),
+        ...overrideResponse,
+    }
 }
 
 export function getCreateBatchMockHandler(overrideResponse?: Batch | ((info: Parameters<Parameters<typeof http.post>[1]>[0]) => Promise<Batch> | Batch)) {
@@ -50,7 +667,11 @@ export function getCreateBatchMockHandler(overrideResponse?: Batch | ((info: Par
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getCreateBatchResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getCreateBatchResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }
@@ -61,7 +682,11 @@ export function getListBatchesMockHandler(overrideResponse?: ListBatchesResponse
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getListBatchesResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getListBatchesResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }
@@ -72,7 +697,11 @@ export function getRetrieveBatchMockHandler(overrideResponse?: Batch | ((info: P
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getRetrieveBatchResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getRetrieveBatchResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }
@@ -83,7 +712,11 @@ export function getCancelBatchMockHandler(overrideResponse?: Batch | ((info: Par
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getCancelBatchResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getCancelBatchResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }

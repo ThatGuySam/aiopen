@@ -31,6 +31,8 @@ export function getEmbeddings() {
             options,
         )
     }
-    return { createEmbedding }
+    return {
+        createEmbedding,
+    }
 }
 export type CreateEmbeddingResult = AxiosResponse<CreateEmbeddingResponse>

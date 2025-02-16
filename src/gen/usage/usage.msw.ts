@@ -28,185 +28,4091 @@ import {
     HttpResponse,
 } from 'msw'
 
-export const getUsageCostsResponseUsageCompletionsResultMock = (overrideResponse: Partial<UsageCompletionsResult> = {}): UsageCompletionsResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.completions.result'] as const), input_tokens: faker.number.int({ min: undefined, max: undefined }), input_cached_tokens: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), output_tokens: faker.number.int({ min: undefined, max: undefined }), input_audio_tokens: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), output_audio_tokens: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), num_model_requests: faker.number.int({ min: undefined, max: undefined }), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), user_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), api_key_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), model: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), batch: faker.helpers.arrayElement([faker.datatype.boolean(), undefined]) }, ...overrideResponse })
-
-export const getUsageCostsResponseUsageEmbeddingsResultMock = (overrideResponse: Partial<UsageEmbeddingsResult> = {}): UsageEmbeddingsResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.embeddings.result'] as const), input_tokens: faker.number.int({ min: undefined, max: undefined }), num_model_requests: faker.number.int({ min: undefined, max: undefined }), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), user_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), api_key_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), model: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageCostsResponseUsageModerationsResultMock = (overrideResponse: Partial<UsageModerationsResult> = {}): UsageModerationsResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.moderations.result'] as const), input_tokens: faker.number.int({ min: undefined, max: undefined }), num_model_requests: faker.number.int({ min: undefined, max: undefined }), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), user_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), api_key_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), model: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageCostsResponseUsageImagesResultMock = (overrideResponse: Partial<UsageImagesResult> = {}): UsageImagesResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.images.result'] as const), images: faker.number.int({ min: undefined, max: undefined }), num_model_requests: faker.number.int({ min: undefined, max: undefined }), source: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), size: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), user_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), api_key_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), model: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageCostsResponseUsageAudioSpeechesResultMock = (overrideResponse: Partial<UsageAudioSpeechesResult> = {}): UsageAudioSpeechesResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.audio_speeches.result'] as const), characters: faker.number.int({ min: undefined, max: undefined }), num_model_requests: faker.number.int({ min: undefined, max: undefined }), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), user_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), api_key_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), model: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageCostsResponseUsageAudioTranscriptionsResultMock = (overrideResponse: Partial<UsageAudioTranscriptionsResult> = {}): UsageAudioTranscriptionsResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.audio_transcriptions.result'] as const), seconds: faker.number.int({ min: undefined, max: undefined }), num_model_requests: faker.number.int({ min: undefined, max: undefined }), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), user_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), api_key_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), model: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageCostsResponseUsageVectorStoresResultMock = (overrideResponse: Partial<UsageVectorStoresResult> = {}): UsageVectorStoresResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.vector_stores.result'] as const), usage_bytes: faker.number.int({ min: undefined, max: undefined }), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageCostsResponseUsageCodeInterpreterSessionsResultMock = (overrideResponse: Partial<UsageCodeInterpreterSessionsResult> = {}): UsageCodeInterpreterSessionsResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.code_interpreter_sessions.result'] as const), num_sessions: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageCostsResponseCostsResultMock = (overrideResponse: Partial<CostsResult> = {}): CostsResult => ({ ...{ object: faker.helpers.arrayElement(['organization.costs.result'] as const), amount: faker.helpers.arrayElement([{ value: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), currency: faker.helpers.arrayElement([faker.string.alpha(20), undefined]) }, undefined]), line_item: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageCostsResponseMock = (overrideResponse: Partial< UsageResponse > = {}): UsageResponse => ({ object: faker.helpers.arrayElement(['page'] as const), data: Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => ({ object: faker.helpers.arrayElement(['bucket'] as const), start_time: faker.number.int({ min: undefined, max: undefined }), end_time: faker.number.int({ min: undefined, max: undefined }), result: Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => (faker.helpers.arrayElement([{ ...getUsageCostsResponseUsageCompletionsResultMock() }, { ...getUsageCostsResponseUsageEmbeddingsResultMock() }, { ...getUsageCostsResponseUsageModerationsResultMock() }, { ...getUsageCostsResponseUsageImagesResultMock() }, { ...getUsageCostsResponseUsageAudioSpeechesResultMock() }, { ...getUsageCostsResponseUsageAudioTranscriptionsResultMock() }, { ...getUsageCostsResponseUsageVectorStoresResultMock() }, { ...getUsageCostsResponseUsageCodeInterpreterSessionsResultMock() }, { ...getUsageCostsResponseCostsResultMock() }]))) })), has_more: faker.datatype.boolean(), next_page: faker.string.alpha(20), ...overrideResponse })
-
-export const getUsageAudioSpeechesResponseUsageCompletionsResultMock = (overrideResponse: Partial<UsageCompletionsResult> = {}): UsageCompletionsResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.completions.result'] as const), input_tokens: faker.number.int({ min: undefined, max: undefined }), input_cached_tokens: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), output_tokens: faker.number.int({ min: undefined, max: undefined }), input_audio_tokens: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), output_audio_tokens: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), num_model_requests: faker.number.int({ min: undefined, max: undefined }), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), user_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), api_key_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), model: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), batch: faker.helpers.arrayElement([faker.datatype.boolean(), undefined]) }, ...overrideResponse })
-
-export const getUsageAudioSpeechesResponseUsageEmbeddingsResultMock = (overrideResponse: Partial<UsageEmbeddingsResult> = {}): UsageEmbeddingsResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.embeddings.result'] as const), input_tokens: faker.number.int({ min: undefined, max: undefined }), num_model_requests: faker.number.int({ min: undefined, max: undefined }), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), user_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), api_key_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), model: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageAudioSpeechesResponseUsageModerationsResultMock = (overrideResponse: Partial<UsageModerationsResult> = {}): UsageModerationsResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.moderations.result'] as const), input_tokens: faker.number.int({ min: undefined, max: undefined }), num_model_requests: faker.number.int({ min: undefined, max: undefined }), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), user_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), api_key_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), model: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageAudioSpeechesResponseUsageImagesResultMock = (overrideResponse: Partial<UsageImagesResult> = {}): UsageImagesResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.images.result'] as const), images: faker.number.int({ min: undefined, max: undefined }), num_model_requests: faker.number.int({ min: undefined, max: undefined }), source: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), size: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), user_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), api_key_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), model: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageAudioSpeechesResponseUsageAudioSpeechesResultMock = (overrideResponse: Partial<UsageAudioSpeechesResult> = {}): UsageAudioSpeechesResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.audio_speeches.result'] as const), characters: faker.number.int({ min: undefined, max: undefined }), num_model_requests: faker.number.int({ min: undefined, max: undefined }), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), user_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), api_key_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), model: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageAudioSpeechesResponseUsageAudioTranscriptionsResultMock = (overrideResponse: Partial<UsageAudioTranscriptionsResult> = {}): UsageAudioTranscriptionsResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.audio_transcriptions.result'] as const), seconds: faker.number.int({ min: undefined, max: undefined }), num_model_requests: faker.number.int({ min: undefined, max: undefined }), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), user_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), api_key_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), model: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageAudioSpeechesResponseUsageVectorStoresResultMock = (overrideResponse: Partial<UsageVectorStoresResult> = {}): UsageVectorStoresResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.vector_stores.result'] as const), usage_bytes: faker.number.int({ min: undefined, max: undefined }), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageAudioSpeechesResponseUsageCodeInterpreterSessionsResultMock = (overrideResponse: Partial<UsageCodeInterpreterSessionsResult> = {}): UsageCodeInterpreterSessionsResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.code_interpreter_sessions.result'] as const), num_sessions: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageAudioSpeechesResponseCostsResultMock = (overrideResponse: Partial<CostsResult> = {}): CostsResult => ({ ...{ object: faker.helpers.arrayElement(['organization.costs.result'] as const), amount: faker.helpers.arrayElement([{ value: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), currency: faker.helpers.arrayElement([faker.string.alpha(20), undefined]) }, undefined]), line_item: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageAudioSpeechesResponseMock = (overrideResponse: Partial< UsageResponse > = {}): UsageResponse => ({ object: faker.helpers.arrayElement(['page'] as const), data: Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => ({ object: faker.helpers.arrayElement(['bucket'] as const), start_time: faker.number.int({ min: undefined, max: undefined }), end_time: faker.number.int({ min: undefined, max: undefined }), result: Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => (faker.helpers.arrayElement([{ ...getUsageAudioSpeechesResponseUsageCompletionsResultMock() }, { ...getUsageAudioSpeechesResponseUsageEmbeddingsResultMock() }, { ...getUsageAudioSpeechesResponseUsageModerationsResultMock() }, { ...getUsageAudioSpeechesResponseUsageImagesResultMock() }, { ...getUsageAudioSpeechesResponseUsageAudioSpeechesResultMock() }, { ...getUsageAudioSpeechesResponseUsageAudioTranscriptionsResultMock() }, { ...getUsageAudioSpeechesResponseUsageVectorStoresResultMock() }, { ...getUsageAudioSpeechesResponseUsageCodeInterpreterSessionsResultMock() }, { ...getUsageAudioSpeechesResponseCostsResultMock() }]))) })), has_more: faker.datatype.boolean(), next_page: faker.string.alpha(20), ...overrideResponse })
-
-export const getUsageAudioTranscriptionsResponseUsageCompletionsResultMock = (overrideResponse: Partial<UsageCompletionsResult> = {}): UsageCompletionsResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.completions.result'] as const), input_tokens: faker.number.int({ min: undefined, max: undefined }), input_cached_tokens: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), output_tokens: faker.number.int({ min: undefined, max: undefined }), input_audio_tokens: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), output_audio_tokens: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), num_model_requests: faker.number.int({ min: undefined, max: undefined }), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), user_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), api_key_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), model: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), batch: faker.helpers.arrayElement([faker.datatype.boolean(), undefined]) }, ...overrideResponse })
-
-export const getUsageAudioTranscriptionsResponseUsageEmbeddingsResultMock = (overrideResponse: Partial<UsageEmbeddingsResult> = {}): UsageEmbeddingsResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.embeddings.result'] as const), input_tokens: faker.number.int({ min: undefined, max: undefined }), num_model_requests: faker.number.int({ min: undefined, max: undefined }), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), user_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), api_key_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), model: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageAudioTranscriptionsResponseUsageModerationsResultMock = (overrideResponse: Partial<UsageModerationsResult> = {}): UsageModerationsResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.moderations.result'] as const), input_tokens: faker.number.int({ min: undefined, max: undefined }), num_model_requests: faker.number.int({ min: undefined, max: undefined }), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), user_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), api_key_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), model: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageAudioTranscriptionsResponseUsageImagesResultMock = (overrideResponse: Partial<UsageImagesResult> = {}): UsageImagesResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.images.result'] as const), images: faker.number.int({ min: undefined, max: undefined }), num_model_requests: faker.number.int({ min: undefined, max: undefined }), source: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), size: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), user_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), api_key_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), model: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageAudioTranscriptionsResponseUsageAudioSpeechesResultMock = (overrideResponse: Partial<UsageAudioSpeechesResult> = {}): UsageAudioSpeechesResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.audio_speeches.result'] as const), characters: faker.number.int({ min: undefined, max: undefined }), num_model_requests: faker.number.int({ min: undefined, max: undefined }), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), user_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), api_key_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), model: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageAudioTranscriptionsResponseUsageAudioTranscriptionsResultMock = (overrideResponse: Partial<UsageAudioTranscriptionsResult> = {}): UsageAudioTranscriptionsResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.audio_transcriptions.result'] as const), seconds: faker.number.int({ min: undefined, max: undefined }), num_model_requests: faker.number.int({ min: undefined, max: undefined }), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), user_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), api_key_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), model: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageAudioTranscriptionsResponseUsageVectorStoresResultMock = (overrideResponse: Partial<UsageVectorStoresResult> = {}): UsageVectorStoresResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.vector_stores.result'] as const), usage_bytes: faker.number.int({ min: undefined, max: undefined }), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageAudioTranscriptionsResponseUsageCodeInterpreterSessionsResultMock = (overrideResponse: Partial<UsageCodeInterpreterSessionsResult> = {}): UsageCodeInterpreterSessionsResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.code_interpreter_sessions.result'] as const), num_sessions: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageAudioTranscriptionsResponseCostsResultMock = (overrideResponse: Partial<CostsResult> = {}): CostsResult => ({ ...{ object: faker.helpers.arrayElement(['organization.costs.result'] as const), amount: faker.helpers.arrayElement([{ value: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), currency: faker.helpers.arrayElement([faker.string.alpha(20), undefined]) }, undefined]), line_item: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageAudioTranscriptionsResponseMock = (overrideResponse: Partial< UsageResponse > = {}): UsageResponse => ({ object: faker.helpers.arrayElement(['page'] as const), data: Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => ({ object: faker.helpers.arrayElement(['bucket'] as const), start_time: faker.number.int({ min: undefined, max: undefined }), end_time: faker.number.int({ min: undefined, max: undefined }), result: Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => (faker.helpers.arrayElement([{ ...getUsageAudioTranscriptionsResponseUsageCompletionsResultMock() }, { ...getUsageAudioTranscriptionsResponseUsageEmbeddingsResultMock() }, { ...getUsageAudioTranscriptionsResponseUsageModerationsResultMock() }, { ...getUsageAudioTranscriptionsResponseUsageImagesResultMock() }, { ...getUsageAudioTranscriptionsResponseUsageAudioSpeechesResultMock() }, { ...getUsageAudioTranscriptionsResponseUsageAudioTranscriptionsResultMock() }, { ...getUsageAudioTranscriptionsResponseUsageVectorStoresResultMock() }, { ...getUsageAudioTranscriptionsResponseUsageCodeInterpreterSessionsResultMock() }, { ...getUsageAudioTranscriptionsResponseCostsResultMock() }]))) })), has_more: faker.datatype.boolean(), next_page: faker.string.alpha(20), ...overrideResponse })
-
-export const getUsageCodeInterpreterSessionsResponseUsageCompletionsResultMock = (overrideResponse: Partial<UsageCompletionsResult> = {}): UsageCompletionsResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.completions.result'] as const), input_tokens: faker.number.int({ min: undefined, max: undefined }), input_cached_tokens: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), output_tokens: faker.number.int({ min: undefined, max: undefined }), input_audio_tokens: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), output_audio_tokens: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), num_model_requests: faker.number.int({ min: undefined, max: undefined }), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), user_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), api_key_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), model: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), batch: faker.helpers.arrayElement([faker.datatype.boolean(), undefined]) }, ...overrideResponse })
-
-export const getUsageCodeInterpreterSessionsResponseUsageEmbeddingsResultMock = (overrideResponse: Partial<UsageEmbeddingsResult> = {}): UsageEmbeddingsResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.embeddings.result'] as const), input_tokens: faker.number.int({ min: undefined, max: undefined }), num_model_requests: faker.number.int({ min: undefined, max: undefined }), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), user_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), api_key_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), model: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageCodeInterpreterSessionsResponseUsageModerationsResultMock = (overrideResponse: Partial<UsageModerationsResult> = {}): UsageModerationsResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.moderations.result'] as const), input_tokens: faker.number.int({ min: undefined, max: undefined }), num_model_requests: faker.number.int({ min: undefined, max: undefined }), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), user_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), api_key_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), model: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageCodeInterpreterSessionsResponseUsageImagesResultMock = (overrideResponse: Partial<UsageImagesResult> = {}): UsageImagesResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.images.result'] as const), images: faker.number.int({ min: undefined, max: undefined }), num_model_requests: faker.number.int({ min: undefined, max: undefined }), source: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), size: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), user_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), api_key_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), model: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageCodeInterpreterSessionsResponseUsageAudioSpeechesResultMock = (overrideResponse: Partial<UsageAudioSpeechesResult> = {}): UsageAudioSpeechesResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.audio_speeches.result'] as const), characters: faker.number.int({ min: undefined, max: undefined }), num_model_requests: faker.number.int({ min: undefined, max: undefined }), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), user_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), api_key_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), model: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageCodeInterpreterSessionsResponseUsageAudioTranscriptionsResultMock = (overrideResponse: Partial<UsageAudioTranscriptionsResult> = {}): UsageAudioTranscriptionsResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.audio_transcriptions.result'] as const), seconds: faker.number.int({ min: undefined, max: undefined }), num_model_requests: faker.number.int({ min: undefined, max: undefined }), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), user_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), api_key_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), model: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageCodeInterpreterSessionsResponseUsageVectorStoresResultMock = (overrideResponse: Partial<UsageVectorStoresResult> = {}): UsageVectorStoresResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.vector_stores.result'] as const), usage_bytes: faker.number.int({ min: undefined, max: undefined }), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageCodeInterpreterSessionsResponseUsageCodeInterpreterSessionsResultMock = (overrideResponse: Partial<UsageCodeInterpreterSessionsResult> = {}): UsageCodeInterpreterSessionsResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.code_interpreter_sessions.result'] as const), num_sessions: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageCodeInterpreterSessionsResponseCostsResultMock = (overrideResponse: Partial<CostsResult> = {}): CostsResult => ({ ...{ object: faker.helpers.arrayElement(['organization.costs.result'] as const), amount: faker.helpers.arrayElement([{ value: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), currency: faker.helpers.arrayElement([faker.string.alpha(20), undefined]) }, undefined]), line_item: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageCodeInterpreterSessionsResponseMock = (overrideResponse: Partial< UsageResponse > = {}): UsageResponse => ({ object: faker.helpers.arrayElement(['page'] as const), data: Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => ({ object: faker.helpers.arrayElement(['bucket'] as const), start_time: faker.number.int({ min: undefined, max: undefined }), end_time: faker.number.int({ min: undefined, max: undefined }), result: Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => (faker.helpers.arrayElement([{ ...getUsageCodeInterpreterSessionsResponseUsageCompletionsResultMock() }, { ...getUsageCodeInterpreterSessionsResponseUsageEmbeddingsResultMock() }, { ...getUsageCodeInterpreterSessionsResponseUsageModerationsResultMock() }, { ...getUsageCodeInterpreterSessionsResponseUsageImagesResultMock() }, { ...getUsageCodeInterpreterSessionsResponseUsageAudioSpeechesResultMock() }, { ...getUsageCodeInterpreterSessionsResponseUsageAudioTranscriptionsResultMock() }, { ...getUsageCodeInterpreterSessionsResponseUsageVectorStoresResultMock() }, { ...getUsageCodeInterpreterSessionsResponseUsageCodeInterpreterSessionsResultMock() }, { ...getUsageCodeInterpreterSessionsResponseCostsResultMock() }]))) })), has_more: faker.datatype.boolean(), next_page: faker.string.alpha(20), ...overrideResponse })
-
-export const getUsageCompletionsResponseUsageCompletionsResultMock = (overrideResponse: Partial<UsageCompletionsResult> = {}): UsageCompletionsResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.completions.result'] as const), input_tokens: faker.number.int({ min: undefined, max: undefined }), input_cached_tokens: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), output_tokens: faker.number.int({ min: undefined, max: undefined }), input_audio_tokens: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), output_audio_tokens: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), num_model_requests: faker.number.int({ min: undefined, max: undefined }), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), user_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), api_key_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), model: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), batch: faker.helpers.arrayElement([faker.datatype.boolean(), undefined]) }, ...overrideResponse })
-
-export const getUsageCompletionsResponseUsageEmbeddingsResultMock = (overrideResponse: Partial<UsageEmbeddingsResult> = {}): UsageEmbeddingsResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.embeddings.result'] as const), input_tokens: faker.number.int({ min: undefined, max: undefined }), num_model_requests: faker.number.int({ min: undefined, max: undefined }), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), user_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), api_key_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), model: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageCompletionsResponseUsageModerationsResultMock = (overrideResponse: Partial<UsageModerationsResult> = {}): UsageModerationsResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.moderations.result'] as const), input_tokens: faker.number.int({ min: undefined, max: undefined }), num_model_requests: faker.number.int({ min: undefined, max: undefined }), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), user_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), api_key_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), model: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageCompletionsResponseUsageImagesResultMock = (overrideResponse: Partial<UsageImagesResult> = {}): UsageImagesResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.images.result'] as const), images: faker.number.int({ min: undefined, max: undefined }), num_model_requests: faker.number.int({ min: undefined, max: undefined }), source: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), size: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), user_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), api_key_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), model: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageCompletionsResponseUsageAudioSpeechesResultMock = (overrideResponse: Partial<UsageAudioSpeechesResult> = {}): UsageAudioSpeechesResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.audio_speeches.result'] as const), characters: faker.number.int({ min: undefined, max: undefined }), num_model_requests: faker.number.int({ min: undefined, max: undefined }), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), user_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), api_key_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), model: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageCompletionsResponseUsageAudioTranscriptionsResultMock = (overrideResponse: Partial<UsageAudioTranscriptionsResult> = {}): UsageAudioTranscriptionsResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.audio_transcriptions.result'] as const), seconds: faker.number.int({ min: undefined, max: undefined }), num_model_requests: faker.number.int({ min: undefined, max: undefined }), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), user_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), api_key_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), model: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageCompletionsResponseUsageVectorStoresResultMock = (overrideResponse: Partial<UsageVectorStoresResult> = {}): UsageVectorStoresResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.vector_stores.result'] as const), usage_bytes: faker.number.int({ min: undefined, max: undefined }), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageCompletionsResponseUsageCodeInterpreterSessionsResultMock = (overrideResponse: Partial<UsageCodeInterpreterSessionsResult> = {}): UsageCodeInterpreterSessionsResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.code_interpreter_sessions.result'] as const), num_sessions: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageCompletionsResponseCostsResultMock = (overrideResponse: Partial<CostsResult> = {}): CostsResult => ({ ...{ object: faker.helpers.arrayElement(['organization.costs.result'] as const), amount: faker.helpers.arrayElement([{ value: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), currency: faker.helpers.arrayElement([faker.string.alpha(20), undefined]) }, undefined]), line_item: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageCompletionsResponseMock = (overrideResponse: Partial< UsageResponse > = {}): UsageResponse => ({ object: faker.helpers.arrayElement(['page'] as const), data: Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => ({ object: faker.helpers.arrayElement(['bucket'] as const), start_time: faker.number.int({ min: undefined, max: undefined }), end_time: faker.number.int({ min: undefined, max: undefined }), result: Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => (faker.helpers.arrayElement([{ ...getUsageCompletionsResponseUsageCompletionsResultMock() }, { ...getUsageCompletionsResponseUsageEmbeddingsResultMock() }, { ...getUsageCompletionsResponseUsageModerationsResultMock() }, { ...getUsageCompletionsResponseUsageImagesResultMock() }, { ...getUsageCompletionsResponseUsageAudioSpeechesResultMock() }, { ...getUsageCompletionsResponseUsageAudioTranscriptionsResultMock() }, { ...getUsageCompletionsResponseUsageVectorStoresResultMock() }, { ...getUsageCompletionsResponseUsageCodeInterpreterSessionsResultMock() }, { ...getUsageCompletionsResponseCostsResultMock() }]))) })), has_more: faker.datatype.boolean(), next_page: faker.string.alpha(20), ...overrideResponse })
-
-export const getUsageEmbeddingsResponseUsageCompletionsResultMock = (overrideResponse: Partial<UsageCompletionsResult> = {}): UsageCompletionsResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.completions.result'] as const), input_tokens: faker.number.int({ min: undefined, max: undefined }), input_cached_tokens: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), output_tokens: faker.number.int({ min: undefined, max: undefined }), input_audio_tokens: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), output_audio_tokens: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), num_model_requests: faker.number.int({ min: undefined, max: undefined }), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), user_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), api_key_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), model: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), batch: faker.helpers.arrayElement([faker.datatype.boolean(), undefined]) }, ...overrideResponse })
-
-export const getUsageEmbeddingsResponseUsageEmbeddingsResultMock = (overrideResponse: Partial<UsageEmbeddingsResult> = {}): UsageEmbeddingsResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.embeddings.result'] as const), input_tokens: faker.number.int({ min: undefined, max: undefined }), num_model_requests: faker.number.int({ min: undefined, max: undefined }), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), user_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), api_key_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), model: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageEmbeddingsResponseUsageModerationsResultMock = (overrideResponse: Partial<UsageModerationsResult> = {}): UsageModerationsResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.moderations.result'] as const), input_tokens: faker.number.int({ min: undefined, max: undefined }), num_model_requests: faker.number.int({ min: undefined, max: undefined }), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), user_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), api_key_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), model: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageEmbeddingsResponseUsageImagesResultMock = (overrideResponse: Partial<UsageImagesResult> = {}): UsageImagesResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.images.result'] as const), images: faker.number.int({ min: undefined, max: undefined }), num_model_requests: faker.number.int({ min: undefined, max: undefined }), source: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), size: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), user_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), api_key_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), model: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageEmbeddingsResponseUsageAudioSpeechesResultMock = (overrideResponse: Partial<UsageAudioSpeechesResult> = {}): UsageAudioSpeechesResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.audio_speeches.result'] as const), characters: faker.number.int({ min: undefined, max: undefined }), num_model_requests: faker.number.int({ min: undefined, max: undefined }), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), user_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), api_key_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), model: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageEmbeddingsResponseUsageAudioTranscriptionsResultMock = (overrideResponse: Partial<UsageAudioTranscriptionsResult> = {}): UsageAudioTranscriptionsResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.audio_transcriptions.result'] as const), seconds: faker.number.int({ min: undefined, max: undefined }), num_model_requests: faker.number.int({ min: undefined, max: undefined }), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), user_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), api_key_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), model: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageEmbeddingsResponseUsageVectorStoresResultMock = (overrideResponse: Partial<UsageVectorStoresResult> = {}): UsageVectorStoresResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.vector_stores.result'] as const), usage_bytes: faker.number.int({ min: undefined, max: undefined }), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageEmbeddingsResponseUsageCodeInterpreterSessionsResultMock = (overrideResponse: Partial<UsageCodeInterpreterSessionsResult> = {}): UsageCodeInterpreterSessionsResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.code_interpreter_sessions.result'] as const), num_sessions: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageEmbeddingsResponseCostsResultMock = (overrideResponse: Partial<CostsResult> = {}): CostsResult => ({ ...{ object: faker.helpers.arrayElement(['organization.costs.result'] as const), amount: faker.helpers.arrayElement([{ value: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), currency: faker.helpers.arrayElement([faker.string.alpha(20), undefined]) }, undefined]), line_item: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageEmbeddingsResponseMock = (overrideResponse: Partial< UsageResponse > = {}): UsageResponse => ({ object: faker.helpers.arrayElement(['page'] as const), data: Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => ({ object: faker.helpers.arrayElement(['bucket'] as const), start_time: faker.number.int({ min: undefined, max: undefined }), end_time: faker.number.int({ min: undefined, max: undefined }), result: Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => (faker.helpers.arrayElement([{ ...getUsageEmbeddingsResponseUsageCompletionsResultMock() }, { ...getUsageEmbeddingsResponseUsageEmbeddingsResultMock() }, { ...getUsageEmbeddingsResponseUsageModerationsResultMock() }, { ...getUsageEmbeddingsResponseUsageImagesResultMock() }, { ...getUsageEmbeddingsResponseUsageAudioSpeechesResultMock() }, { ...getUsageEmbeddingsResponseUsageAudioTranscriptionsResultMock() }, { ...getUsageEmbeddingsResponseUsageVectorStoresResultMock() }, { ...getUsageEmbeddingsResponseUsageCodeInterpreterSessionsResultMock() }, { ...getUsageEmbeddingsResponseCostsResultMock() }]))) })), has_more: faker.datatype.boolean(), next_page: faker.string.alpha(20), ...overrideResponse })
-
-export const getUsageImagesResponseUsageCompletionsResultMock = (overrideResponse: Partial<UsageCompletionsResult> = {}): UsageCompletionsResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.completions.result'] as const), input_tokens: faker.number.int({ min: undefined, max: undefined }), input_cached_tokens: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), output_tokens: faker.number.int({ min: undefined, max: undefined }), input_audio_tokens: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), output_audio_tokens: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), num_model_requests: faker.number.int({ min: undefined, max: undefined }), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), user_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), api_key_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), model: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), batch: faker.helpers.arrayElement([faker.datatype.boolean(), undefined]) }, ...overrideResponse })
-
-export const getUsageImagesResponseUsageEmbeddingsResultMock = (overrideResponse: Partial<UsageEmbeddingsResult> = {}): UsageEmbeddingsResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.embeddings.result'] as const), input_tokens: faker.number.int({ min: undefined, max: undefined }), num_model_requests: faker.number.int({ min: undefined, max: undefined }), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), user_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), api_key_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), model: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageImagesResponseUsageModerationsResultMock = (overrideResponse: Partial<UsageModerationsResult> = {}): UsageModerationsResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.moderations.result'] as const), input_tokens: faker.number.int({ min: undefined, max: undefined }), num_model_requests: faker.number.int({ min: undefined, max: undefined }), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), user_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), api_key_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), model: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageImagesResponseUsageImagesResultMock = (overrideResponse: Partial<UsageImagesResult> = {}): UsageImagesResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.images.result'] as const), images: faker.number.int({ min: undefined, max: undefined }), num_model_requests: faker.number.int({ min: undefined, max: undefined }), source: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), size: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), user_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), api_key_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), model: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageImagesResponseUsageAudioSpeechesResultMock = (overrideResponse: Partial<UsageAudioSpeechesResult> = {}): UsageAudioSpeechesResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.audio_speeches.result'] as const), characters: faker.number.int({ min: undefined, max: undefined }), num_model_requests: faker.number.int({ min: undefined, max: undefined }), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), user_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), api_key_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), model: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageImagesResponseUsageAudioTranscriptionsResultMock = (overrideResponse: Partial<UsageAudioTranscriptionsResult> = {}): UsageAudioTranscriptionsResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.audio_transcriptions.result'] as const), seconds: faker.number.int({ min: undefined, max: undefined }), num_model_requests: faker.number.int({ min: undefined, max: undefined }), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), user_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), api_key_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), model: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageImagesResponseUsageVectorStoresResultMock = (overrideResponse: Partial<UsageVectorStoresResult> = {}): UsageVectorStoresResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.vector_stores.result'] as const), usage_bytes: faker.number.int({ min: undefined, max: undefined }), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageImagesResponseUsageCodeInterpreterSessionsResultMock = (overrideResponse: Partial<UsageCodeInterpreterSessionsResult> = {}): UsageCodeInterpreterSessionsResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.code_interpreter_sessions.result'] as const), num_sessions: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageImagesResponseCostsResultMock = (overrideResponse: Partial<CostsResult> = {}): CostsResult => ({ ...{ object: faker.helpers.arrayElement(['organization.costs.result'] as const), amount: faker.helpers.arrayElement([{ value: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), currency: faker.helpers.arrayElement([faker.string.alpha(20), undefined]) }, undefined]), line_item: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageImagesResponseMock = (overrideResponse: Partial< UsageResponse > = {}): UsageResponse => ({ object: faker.helpers.arrayElement(['page'] as const), data: Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => ({ object: faker.helpers.arrayElement(['bucket'] as const), start_time: faker.number.int({ min: undefined, max: undefined }), end_time: faker.number.int({ min: undefined, max: undefined }), result: Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => (faker.helpers.arrayElement([{ ...getUsageImagesResponseUsageCompletionsResultMock() }, { ...getUsageImagesResponseUsageEmbeddingsResultMock() }, { ...getUsageImagesResponseUsageModerationsResultMock() }, { ...getUsageImagesResponseUsageImagesResultMock() }, { ...getUsageImagesResponseUsageAudioSpeechesResultMock() }, { ...getUsageImagesResponseUsageAudioTranscriptionsResultMock() }, { ...getUsageImagesResponseUsageVectorStoresResultMock() }, { ...getUsageImagesResponseUsageCodeInterpreterSessionsResultMock() }, { ...getUsageImagesResponseCostsResultMock() }]))) })), has_more: faker.datatype.boolean(), next_page: faker.string.alpha(20), ...overrideResponse })
-
-export const getUsageModerationsResponseUsageCompletionsResultMock = (overrideResponse: Partial<UsageCompletionsResult> = {}): UsageCompletionsResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.completions.result'] as const), input_tokens: faker.number.int({ min: undefined, max: undefined }), input_cached_tokens: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), output_tokens: faker.number.int({ min: undefined, max: undefined }), input_audio_tokens: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), output_audio_tokens: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), num_model_requests: faker.number.int({ min: undefined, max: undefined }), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), user_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), api_key_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), model: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), batch: faker.helpers.arrayElement([faker.datatype.boolean(), undefined]) }, ...overrideResponse })
-
-export const getUsageModerationsResponseUsageEmbeddingsResultMock = (overrideResponse: Partial<UsageEmbeddingsResult> = {}): UsageEmbeddingsResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.embeddings.result'] as const), input_tokens: faker.number.int({ min: undefined, max: undefined }), num_model_requests: faker.number.int({ min: undefined, max: undefined }), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), user_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), api_key_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), model: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageModerationsResponseUsageModerationsResultMock = (overrideResponse: Partial<UsageModerationsResult> = {}): UsageModerationsResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.moderations.result'] as const), input_tokens: faker.number.int({ min: undefined, max: undefined }), num_model_requests: faker.number.int({ min: undefined, max: undefined }), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), user_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), api_key_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), model: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageModerationsResponseUsageImagesResultMock = (overrideResponse: Partial<UsageImagesResult> = {}): UsageImagesResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.images.result'] as const), images: faker.number.int({ min: undefined, max: undefined }), num_model_requests: faker.number.int({ min: undefined, max: undefined }), source: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), size: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), user_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), api_key_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), model: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageModerationsResponseUsageAudioSpeechesResultMock = (overrideResponse: Partial<UsageAudioSpeechesResult> = {}): UsageAudioSpeechesResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.audio_speeches.result'] as const), characters: faker.number.int({ min: undefined, max: undefined }), num_model_requests: faker.number.int({ min: undefined, max: undefined }), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), user_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), api_key_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), model: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageModerationsResponseUsageAudioTranscriptionsResultMock = (overrideResponse: Partial<UsageAudioTranscriptionsResult> = {}): UsageAudioTranscriptionsResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.audio_transcriptions.result'] as const), seconds: faker.number.int({ min: undefined, max: undefined }), num_model_requests: faker.number.int({ min: undefined, max: undefined }), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), user_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), api_key_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), model: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageModerationsResponseUsageVectorStoresResultMock = (overrideResponse: Partial<UsageVectorStoresResult> = {}): UsageVectorStoresResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.vector_stores.result'] as const), usage_bytes: faker.number.int({ min: undefined, max: undefined }), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageModerationsResponseUsageCodeInterpreterSessionsResultMock = (overrideResponse: Partial<UsageCodeInterpreterSessionsResult> = {}): UsageCodeInterpreterSessionsResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.code_interpreter_sessions.result'] as const), num_sessions: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageModerationsResponseCostsResultMock = (overrideResponse: Partial<CostsResult> = {}): CostsResult => ({ ...{ object: faker.helpers.arrayElement(['organization.costs.result'] as const), amount: faker.helpers.arrayElement([{ value: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), currency: faker.helpers.arrayElement([faker.string.alpha(20), undefined]) }, undefined]), line_item: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageModerationsResponseMock = (overrideResponse: Partial< UsageResponse > = {}): UsageResponse => ({ object: faker.helpers.arrayElement(['page'] as const), data: Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => ({ object: faker.helpers.arrayElement(['bucket'] as const), start_time: faker.number.int({ min: undefined, max: undefined }), end_time: faker.number.int({ min: undefined, max: undefined }), result: Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => (faker.helpers.arrayElement([{ ...getUsageModerationsResponseUsageCompletionsResultMock() }, { ...getUsageModerationsResponseUsageEmbeddingsResultMock() }, { ...getUsageModerationsResponseUsageModerationsResultMock() }, { ...getUsageModerationsResponseUsageImagesResultMock() }, { ...getUsageModerationsResponseUsageAudioSpeechesResultMock() }, { ...getUsageModerationsResponseUsageAudioTranscriptionsResultMock() }, { ...getUsageModerationsResponseUsageVectorStoresResultMock() }, { ...getUsageModerationsResponseUsageCodeInterpreterSessionsResultMock() }, { ...getUsageModerationsResponseCostsResultMock() }]))) })), has_more: faker.datatype.boolean(), next_page: faker.string.alpha(20), ...overrideResponse })
-
-export const getUsageVectorStoresResponseUsageCompletionsResultMock = (overrideResponse: Partial<UsageCompletionsResult> = {}): UsageCompletionsResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.completions.result'] as const), input_tokens: faker.number.int({ min: undefined, max: undefined }), input_cached_tokens: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), output_tokens: faker.number.int({ min: undefined, max: undefined }), input_audio_tokens: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), output_audio_tokens: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), num_model_requests: faker.number.int({ min: undefined, max: undefined }), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), user_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), api_key_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), model: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), batch: faker.helpers.arrayElement([faker.datatype.boolean(), undefined]) }, ...overrideResponse })
-
-export const getUsageVectorStoresResponseUsageEmbeddingsResultMock = (overrideResponse: Partial<UsageEmbeddingsResult> = {}): UsageEmbeddingsResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.embeddings.result'] as const), input_tokens: faker.number.int({ min: undefined, max: undefined }), num_model_requests: faker.number.int({ min: undefined, max: undefined }), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), user_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), api_key_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), model: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageVectorStoresResponseUsageModerationsResultMock = (overrideResponse: Partial<UsageModerationsResult> = {}): UsageModerationsResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.moderations.result'] as const), input_tokens: faker.number.int({ min: undefined, max: undefined }), num_model_requests: faker.number.int({ min: undefined, max: undefined }), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), user_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), api_key_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), model: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageVectorStoresResponseUsageImagesResultMock = (overrideResponse: Partial<UsageImagesResult> = {}): UsageImagesResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.images.result'] as const), images: faker.number.int({ min: undefined, max: undefined }), num_model_requests: faker.number.int({ min: undefined, max: undefined }), source: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), size: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), user_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), api_key_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), model: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageVectorStoresResponseUsageAudioSpeechesResultMock = (overrideResponse: Partial<UsageAudioSpeechesResult> = {}): UsageAudioSpeechesResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.audio_speeches.result'] as const), characters: faker.number.int({ min: undefined, max: undefined }), num_model_requests: faker.number.int({ min: undefined, max: undefined }), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), user_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), api_key_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), model: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageVectorStoresResponseUsageAudioTranscriptionsResultMock = (overrideResponse: Partial<UsageAudioTranscriptionsResult> = {}): UsageAudioTranscriptionsResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.audio_transcriptions.result'] as const), seconds: faker.number.int({ min: undefined, max: undefined }), num_model_requests: faker.number.int({ min: undefined, max: undefined }), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), user_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), api_key_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), model: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageVectorStoresResponseUsageVectorStoresResultMock = (overrideResponse: Partial<UsageVectorStoresResult> = {}): UsageVectorStoresResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.vector_stores.result'] as const), usage_bytes: faker.number.int({ min: undefined, max: undefined }), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageVectorStoresResponseUsageCodeInterpreterSessionsResultMock = (overrideResponse: Partial<UsageCodeInterpreterSessionsResult> = {}): UsageCodeInterpreterSessionsResult => ({ ...{ object: faker.helpers.arrayElement(['organization.usage.code_interpreter_sessions.result'] as const), num_sessions: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageVectorStoresResponseCostsResultMock = (overrideResponse: Partial<CostsResult> = {}): CostsResult => ({ ...{ object: faker.helpers.arrayElement(['organization.costs.result'] as const), amount: faker.helpers.arrayElement([{ value: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), currency: faker.helpers.arrayElement([faker.string.alpha(20), undefined]) }, undefined]), line_item: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), project_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]) }, ...overrideResponse })
-
-export const getUsageVectorStoresResponseMock = (overrideResponse: Partial< UsageResponse > = {}): UsageResponse => ({ object: faker.helpers.arrayElement(['page'] as const), data: Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => ({ object: faker.helpers.arrayElement(['bucket'] as const), start_time: faker.number.int({ min: undefined, max: undefined }), end_time: faker.number.int({ min: undefined, max: undefined }), result: Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => (faker.helpers.arrayElement([{ ...getUsageVectorStoresResponseUsageCompletionsResultMock() }, { ...getUsageVectorStoresResponseUsageEmbeddingsResultMock() }, { ...getUsageVectorStoresResponseUsageModerationsResultMock() }, { ...getUsageVectorStoresResponseUsageImagesResultMock() }, { ...getUsageVectorStoresResponseUsageAudioSpeechesResultMock() }, { ...getUsageVectorStoresResponseUsageAudioTranscriptionsResultMock() }, { ...getUsageVectorStoresResponseUsageVectorStoresResultMock() }, { ...getUsageVectorStoresResponseUsageCodeInterpreterSessionsResultMock() }, { ...getUsageVectorStoresResponseCostsResultMock() }]))) })), has_more: faker.datatype.boolean(), next_page: faker.string.alpha(20), ...overrideResponse })
+export function getUsageCostsResponseUsageCompletionsResultMock(overrideResponse: Partial<UsageCompletionsResult> = {}): UsageCompletionsResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.completions.result'] as const),
+            input_tokens: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            input_cached_tokens: faker.helpers.arrayElement([
+                faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                undefined,
+            ]),
+            output_tokens: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            input_audio_tokens: faker.helpers.arrayElement([
+                faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                undefined,
+            ]),
+            output_audio_tokens: faker.helpers.arrayElement([
+                faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                undefined,
+            ]),
+            num_model_requests: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            user_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            api_key_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            model: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            batch: faker.helpers.arrayElement([
+                faker.datatype.boolean(),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageCostsResponseUsageEmbeddingsResultMock(overrideResponse: Partial<UsageEmbeddingsResult> = {}): UsageEmbeddingsResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.embeddings.result'] as const),
+            input_tokens: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            num_model_requests: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            user_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            api_key_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            model: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageCostsResponseUsageModerationsResultMock(overrideResponse: Partial<UsageModerationsResult> = {}): UsageModerationsResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.moderations.result'] as const),
+            input_tokens: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            num_model_requests: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            user_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            api_key_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            model: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageCostsResponseUsageImagesResultMock(overrideResponse: Partial<UsageImagesResult> = {}): UsageImagesResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.images.result'] as const),
+            images: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            num_model_requests: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            source: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            size: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            user_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            api_key_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            model: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageCostsResponseUsageAudioSpeechesResultMock(overrideResponse: Partial<UsageAudioSpeechesResult> = {}): UsageAudioSpeechesResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.audio_speeches.result'] as const),
+            characters: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            num_model_requests: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            user_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            api_key_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            model: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageCostsResponseUsageAudioTranscriptionsResultMock(overrideResponse: Partial<UsageAudioTranscriptionsResult> = {}): UsageAudioTranscriptionsResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.audio_transcriptions.result'] as const),
+            seconds: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            num_model_requests: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            user_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            api_key_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            model: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageCostsResponseUsageVectorStoresResultMock(overrideResponse: Partial<UsageVectorStoresResult> = {}): UsageVectorStoresResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.vector_stores.result'] as const),
+            usage_bytes: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageCostsResponseUsageCodeInterpreterSessionsResultMock(overrideResponse: Partial<UsageCodeInterpreterSessionsResult> = {}): UsageCodeInterpreterSessionsResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.code_interpreter_sessions.result'] as const),
+            num_sessions: faker.helpers.arrayElement([
+                faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                undefined,
+            ]),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageCostsResponseCostsResultMock(overrideResponse: Partial<CostsResult> = {}): CostsResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.costs.result'] as const),
+            amount: faker.helpers.arrayElement([
+                {
+                    value: faker.helpers.arrayElement([
+                        faker.number.int({
+                            min: undefined,
+                            max: undefined,
+                        }),
+                        undefined,
+                    ]),
+                    currency: faker.helpers.arrayElement([
+                        faker.string.alpha(20),
+                        undefined,
+                    ]),
+                },
+                undefined,
+            ]),
+            line_item: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageCostsResponseMock(overrideResponse: Partial< UsageResponse > = {}): UsageResponse {
+    return {
+        object: faker.helpers.arrayElement(['page'] as const),
+        data: Array.from({
+            length: faker.number.int({
+                min: 1,
+                max: 10,
+            }),
+        }, (_, i) => i + 1).map(() => ({
+            object: faker.helpers.arrayElement(['bucket'] as const),
+            start_time: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            end_time: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            result: Array.from({
+                length: faker.number.int({
+                    min: 1,
+                    max: 10,
+                }),
+            }, (_, i) => i + 1).map(() => (faker.helpers.arrayElement([
+                {
+                    ...getUsageCostsResponseUsageCompletionsResultMock(),
+                },
+                {
+                    ...getUsageCostsResponseUsageEmbeddingsResultMock(),
+                },
+                {
+                    ...getUsageCostsResponseUsageModerationsResultMock(),
+                },
+                {
+                    ...getUsageCostsResponseUsageImagesResultMock(),
+                },
+                {
+                    ...getUsageCostsResponseUsageAudioSpeechesResultMock(),
+                },
+                {
+                    ...getUsageCostsResponseUsageAudioTranscriptionsResultMock(),
+                },
+                {
+                    ...getUsageCostsResponseUsageVectorStoresResultMock(),
+                },
+                {
+                    ...getUsageCostsResponseUsageCodeInterpreterSessionsResultMock(),
+                },
+                {
+                    ...getUsageCostsResponseCostsResultMock(),
+                },
+            ]))),
+        })),
+        has_more: faker.datatype.boolean(),
+        next_page: faker.string.alpha(20),
+        ...overrideResponse,
+    }
+}
+
+export function getUsageAudioSpeechesResponseUsageCompletionsResultMock(overrideResponse: Partial<UsageCompletionsResult> = {}): UsageCompletionsResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.completions.result'] as const),
+            input_tokens: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            input_cached_tokens: faker.helpers.arrayElement([
+                faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                undefined,
+            ]),
+            output_tokens: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            input_audio_tokens: faker.helpers.arrayElement([
+                faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                undefined,
+            ]),
+            output_audio_tokens: faker.helpers.arrayElement([
+                faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                undefined,
+            ]),
+            num_model_requests: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            user_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            api_key_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            model: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            batch: faker.helpers.arrayElement([
+                faker.datatype.boolean(),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageAudioSpeechesResponseUsageEmbeddingsResultMock(overrideResponse: Partial<UsageEmbeddingsResult> = {}): UsageEmbeddingsResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.embeddings.result'] as const),
+            input_tokens: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            num_model_requests: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            user_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            api_key_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            model: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageAudioSpeechesResponseUsageModerationsResultMock(overrideResponse: Partial<UsageModerationsResult> = {}): UsageModerationsResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.moderations.result'] as const),
+            input_tokens: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            num_model_requests: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            user_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            api_key_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            model: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageAudioSpeechesResponseUsageImagesResultMock(overrideResponse: Partial<UsageImagesResult> = {}): UsageImagesResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.images.result'] as const),
+            images: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            num_model_requests: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            source: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            size: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            user_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            api_key_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            model: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageAudioSpeechesResponseUsageAudioSpeechesResultMock(overrideResponse: Partial<UsageAudioSpeechesResult> = {}): UsageAudioSpeechesResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.audio_speeches.result'] as const),
+            characters: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            num_model_requests: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            user_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            api_key_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            model: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageAudioSpeechesResponseUsageAudioTranscriptionsResultMock(overrideResponse: Partial<UsageAudioTranscriptionsResult> = {}): UsageAudioTranscriptionsResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.audio_transcriptions.result'] as const),
+            seconds: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            num_model_requests: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            user_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            api_key_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            model: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageAudioSpeechesResponseUsageVectorStoresResultMock(overrideResponse: Partial<UsageVectorStoresResult> = {}): UsageVectorStoresResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.vector_stores.result'] as const),
+            usage_bytes: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageAudioSpeechesResponseUsageCodeInterpreterSessionsResultMock(overrideResponse: Partial<UsageCodeInterpreterSessionsResult> = {}): UsageCodeInterpreterSessionsResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.code_interpreter_sessions.result'] as const),
+            num_sessions: faker.helpers.arrayElement([
+                faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                undefined,
+            ]),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageAudioSpeechesResponseCostsResultMock(overrideResponse: Partial<CostsResult> = {}): CostsResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.costs.result'] as const),
+            amount: faker.helpers.arrayElement([
+                {
+                    value: faker.helpers.arrayElement([
+                        faker.number.int({
+                            min: undefined,
+                            max: undefined,
+                        }),
+                        undefined,
+                    ]),
+                    currency: faker.helpers.arrayElement([
+                        faker.string.alpha(20),
+                        undefined,
+                    ]),
+                },
+                undefined,
+            ]),
+            line_item: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageAudioSpeechesResponseMock(overrideResponse: Partial< UsageResponse > = {}): UsageResponse {
+    return {
+        object: faker.helpers.arrayElement(['page'] as const),
+        data: Array.from({
+            length: faker.number.int({
+                min: 1,
+                max: 10,
+            }),
+        }, (_, i) => i + 1).map(() => ({
+            object: faker.helpers.arrayElement(['bucket'] as const),
+            start_time: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            end_time: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            result: Array.from({
+                length: faker.number.int({
+                    min: 1,
+                    max: 10,
+                }),
+            }, (_, i) => i + 1).map(() => (faker.helpers.arrayElement([
+                {
+                    ...getUsageAudioSpeechesResponseUsageCompletionsResultMock(),
+                },
+                {
+                    ...getUsageAudioSpeechesResponseUsageEmbeddingsResultMock(),
+                },
+                {
+                    ...getUsageAudioSpeechesResponseUsageModerationsResultMock(),
+                },
+                {
+                    ...getUsageAudioSpeechesResponseUsageImagesResultMock(),
+                },
+                {
+                    ...getUsageAudioSpeechesResponseUsageAudioSpeechesResultMock(),
+                },
+                {
+                    ...getUsageAudioSpeechesResponseUsageAudioTranscriptionsResultMock(),
+                },
+                {
+                    ...getUsageAudioSpeechesResponseUsageVectorStoresResultMock(),
+                },
+                {
+                    ...getUsageAudioSpeechesResponseUsageCodeInterpreterSessionsResultMock(),
+                },
+                {
+                    ...getUsageAudioSpeechesResponseCostsResultMock(),
+                },
+            ]))),
+        })),
+        has_more: faker.datatype.boolean(),
+        next_page: faker.string.alpha(20),
+        ...overrideResponse,
+    }
+}
+
+export function getUsageAudioTranscriptionsResponseUsageCompletionsResultMock(overrideResponse: Partial<UsageCompletionsResult> = {}): UsageCompletionsResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.completions.result'] as const),
+            input_tokens: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            input_cached_tokens: faker.helpers.arrayElement([
+                faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                undefined,
+            ]),
+            output_tokens: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            input_audio_tokens: faker.helpers.arrayElement([
+                faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                undefined,
+            ]),
+            output_audio_tokens: faker.helpers.arrayElement([
+                faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                undefined,
+            ]),
+            num_model_requests: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            user_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            api_key_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            model: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            batch: faker.helpers.arrayElement([
+                faker.datatype.boolean(),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageAudioTranscriptionsResponseUsageEmbeddingsResultMock(overrideResponse: Partial<UsageEmbeddingsResult> = {}): UsageEmbeddingsResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.embeddings.result'] as const),
+            input_tokens: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            num_model_requests: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            user_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            api_key_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            model: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageAudioTranscriptionsResponseUsageModerationsResultMock(overrideResponse: Partial<UsageModerationsResult> = {}): UsageModerationsResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.moderations.result'] as const),
+            input_tokens: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            num_model_requests: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            user_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            api_key_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            model: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageAudioTranscriptionsResponseUsageImagesResultMock(overrideResponse: Partial<UsageImagesResult> = {}): UsageImagesResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.images.result'] as const),
+            images: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            num_model_requests: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            source: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            size: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            user_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            api_key_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            model: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageAudioTranscriptionsResponseUsageAudioSpeechesResultMock(overrideResponse: Partial<UsageAudioSpeechesResult> = {}): UsageAudioSpeechesResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.audio_speeches.result'] as const),
+            characters: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            num_model_requests: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            user_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            api_key_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            model: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageAudioTranscriptionsResponseUsageAudioTranscriptionsResultMock(overrideResponse: Partial<UsageAudioTranscriptionsResult> = {}): UsageAudioTranscriptionsResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.audio_transcriptions.result'] as const),
+            seconds: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            num_model_requests: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            user_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            api_key_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            model: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageAudioTranscriptionsResponseUsageVectorStoresResultMock(overrideResponse: Partial<UsageVectorStoresResult> = {}): UsageVectorStoresResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.vector_stores.result'] as const),
+            usage_bytes: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageAudioTranscriptionsResponseUsageCodeInterpreterSessionsResultMock(overrideResponse: Partial<UsageCodeInterpreterSessionsResult> = {}): UsageCodeInterpreterSessionsResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.code_interpreter_sessions.result'] as const),
+            num_sessions: faker.helpers.arrayElement([
+                faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                undefined,
+            ]),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageAudioTranscriptionsResponseCostsResultMock(overrideResponse: Partial<CostsResult> = {}): CostsResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.costs.result'] as const),
+            amount: faker.helpers.arrayElement([
+                {
+                    value: faker.helpers.arrayElement([
+                        faker.number.int({
+                            min: undefined,
+                            max: undefined,
+                        }),
+                        undefined,
+                    ]),
+                    currency: faker.helpers.arrayElement([
+                        faker.string.alpha(20),
+                        undefined,
+                    ]),
+                },
+                undefined,
+            ]),
+            line_item: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageAudioTranscriptionsResponseMock(overrideResponse: Partial< UsageResponse > = {}): UsageResponse {
+    return {
+        object: faker.helpers.arrayElement(['page'] as const),
+        data: Array.from({
+            length: faker.number.int({
+                min: 1,
+                max: 10,
+            }),
+        }, (_, i) => i + 1).map(() => ({
+            object: faker.helpers.arrayElement(['bucket'] as const),
+            start_time: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            end_time: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            result: Array.from({
+                length: faker.number.int({
+                    min: 1,
+                    max: 10,
+                }),
+            }, (_, i) => i + 1).map(() => (faker.helpers.arrayElement([
+                {
+                    ...getUsageAudioTranscriptionsResponseUsageCompletionsResultMock(),
+                },
+                {
+                    ...getUsageAudioTranscriptionsResponseUsageEmbeddingsResultMock(),
+                },
+                {
+                    ...getUsageAudioTranscriptionsResponseUsageModerationsResultMock(),
+                },
+                {
+                    ...getUsageAudioTranscriptionsResponseUsageImagesResultMock(),
+                },
+                {
+                    ...getUsageAudioTranscriptionsResponseUsageAudioSpeechesResultMock(),
+                },
+                {
+                    ...getUsageAudioTranscriptionsResponseUsageAudioTranscriptionsResultMock(),
+                },
+                {
+                    ...getUsageAudioTranscriptionsResponseUsageVectorStoresResultMock(),
+                },
+                {
+                    ...getUsageAudioTranscriptionsResponseUsageCodeInterpreterSessionsResultMock(),
+                },
+                {
+                    ...getUsageAudioTranscriptionsResponseCostsResultMock(),
+                },
+            ]))),
+        })),
+        has_more: faker.datatype.boolean(),
+        next_page: faker.string.alpha(20),
+        ...overrideResponse,
+    }
+}
+
+export function getUsageCodeInterpreterSessionsResponseUsageCompletionsResultMock(overrideResponse: Partial<UsageCompletionsResult> = {}): UsageCompletionsResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.completions.result'] as const),
+            input_tokens: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            input_cached_tokens: faker.helpers.arrayElement([
+                faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                undefined,
+            ]),
+            output_tokens: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            input_audio_tokens: faker.helpers.arrayElement([
+                faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                undefined,
+            ]),
+            output_audio_tokens: faker.helpers.arrayElement([
+                faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                undefined,
+            ]),
+            num_model_requests: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            user_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            api_key_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            model: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            batch: faker.helpers.arrayElement([
+                faker.datatype.boolean(),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageCodeInterpreterSessionsResponseUsageEmbeddingsResultMock(overrideResponse: Partial<UsageEmbeddingsResult> = {}): UsageEmbeddingsResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.embeddings.result'] as const),
+            input_tokens: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            num_model_requests: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            user_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            api_key_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            model: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageCodeInterpreterSessionsResponseUsageModerationsResultMock(overrideResponse: Partial<UsageModerationsResult> = {}): UsageModerationsResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.moderations.result'] as const),
+            input_tokens: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            num_model_requests: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            user_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            api_key_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            model: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageCodeInterpreterSessionsResponseUsageImagesResultMock(overrideResponse: Partial<UsageImagesResult> = {}): UsageImagesResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.images.result'] as const),
+            images: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            num_model_requests: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            source: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            size: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            user_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            api_key_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            model: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageCodeInterpreterSessionsResponseUsageAudioSpeechesResultMock(overrideResponse: Partial<UsageAudioSpeechesResult> = {}): UsageAudioSpeechesResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.audio_speeches.result'] as const),
+            characters: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            num_model_requests: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            user_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            api_key_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            model: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageCodeInterpreterSessionsResponseUsageAudioTranscriptionsResultMock(overrideResponse: Partial<UsageAudioTranscriptionsResult> = {}): UsageAudioTranscriptionsResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.audio_transcriptions.result'] as const),
+            seconds: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            num_model_requests: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            user_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            api_key_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            model: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageCodeInterpreterSessionsResponseUsageVectorStoresResultMock(overrideResponse: Partial<UsageVectorStoresResult> = {}): UsageVectorStoresResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.vector_stores.result'] as const),
+            usage_bytes: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageCodeInterpreterSessionsResponseUsageCodeInterpreterSessionsResultMock(overrideResponse: Partial<UsageCodeInterpreterSessionsResult> = {}): UsageCodeInterpreterSessionsResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.code_interpreter_sessions.result'] as const),
+            num_sessions: faker.helpers.arrayElement([
+                faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                undefined,
+            ]),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageCodeInterpreterSessionsResponseCostsResultMock(overrideResponse: Partial<CostsResult> = {}): CostsResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.costs.result'] as const),
+            amount: faker.helpers.arrayElement([
+                {
+                    value: faker.helpers.arrayElement([
+                        faker.number.int({
+                            min: undefined,
+                            max: undefined,
+                        }),
+                        undefined,
+                    ]),
+                    currency: faker.helpers.arrayElement([
+                        faker.string.alpha(20),
+                        undefined,
+                    ]),
+                },
+                undefined,
+            ]),
+            line_item: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageCodeInterpreterSessionsResponseMock(overrideResponse: Partial< UsageResponse > = {}): UsageResponse {
+    return {
+        object: faker.helpers.arrayElement(['page'] as const),
+        data: Array.from({
+            length: faker.number.int({
+                min: 1,
+                max: 10,
+            }),
+        }, (_, i) => i + 1).map(() => ({
+            object: faker.helpers.arrayElement(['bucket'] as const),
+            start_time: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            end_time: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            result: Array.from({
+                length: faker.number.int({
+                    min: 1,
+                    max: 10,
+                }),
+            }, (_, i) => i + 1).map(() => (faker.helpers.arrayElement([
+                {
+                    ...getUsageCodeInterpreterSessionsResponseUsageCompletionsResultMock(),
+                },
+                {
+                    ...getUsageCodeInterpreterSessionsResponseUsageEmbeddingsResultMock(),
+                },
+                {
+                    ...getUsageCodeInterpreterSessionsResponseUsageModerationsResultMock(),
+                },
+                {
+                    ...getUsageCodeInterpreterSessionsResponseUsageImagesResultMock(),
+                },
+                {
+                    ...getUsageCodeInterpreterSessionsResponseUsageAudioSpeechesResultMock(),
+                },
+                {
+                    ...getUsageCodeInterpreterSessionsResponseUsageAudioTranscriptionsResultMock(),
+                },
+                {
+                    ...getUsageCodeInterpreterSessionsResponseUsageVectorStoresResultMock(),
+                },
+                {
+                    ...getUsageCodeInterpreterSessionsResponseUsageCodeInterpreterSessionsResultMock(),
+                },
+                {
+                    ...getUsageCodeInterpreterSessionsResponseCostsResultMock(),
+                },
+            ]))),
+        })),
+        has_more: faker.datatype.boolean(),
+        next_page: faker.string.alpha(20),
+        ...overrideResponse,
+    }
+}
+
+export function getUsageCompletionsResponseUsageCompletionsResultMock(overrideResponse: Partial<UsageCompletionsResult> = {}): UsageCompletionsResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.completions.result'] as const),
+            input_tokens: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            input_cached_tokens: faker.helpers.arrayElement([
+                faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                undefined,
+            ]),
+            output_tokens: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            input_audio_tokens: faker.helpers.arrayElement([
+                faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                undefined,
+            ]),
+            output_audio_tokens: faker.helpers.arrayElement([
+                faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                undefined,
+            ]),
+            num_model_requests: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            user_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            api_key_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            model: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            batch: faker.helpers.arrayElement([
+                faker.datatype.boolean(),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageCompletionsResponseUsageEmbeddingsResultMock(overrideResponse: Partial<UsageEmbeddingsResult> = {}): UsageEmbeddingsResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.embeddings.result'] as const),
+            input_tokens: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            num_model_requests: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            user_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            api_key_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            model: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageCompletionsResponseUsageModerationsResultMock(overrideResponse: Partial<UsageModerationsResult> = {}): UsageModerationsResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.moderations.result'] as const),
+            input_tokens: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            num_model_requests: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            user_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            api_key_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            model: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageCompletionsResponseUsageImagesResultMock(overrideResponse: Partial<UsageImagesResult> = {}): UsageImagesResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.images.result'] as const),
+            images: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            num_model_requests: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            source: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            size: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            user_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            api_key_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            model: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageCompletionsResponseUsageAudioSpeechesResultMock(overrideResponse: Partial<UsageAudioSpeechesResult> = {}): UsageAudioSpeechesResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.audio_speeches.result'] as const),
+            characters: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            num_model_requests: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            user_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            api_key_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            model: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageCompletionsResponseUsageAudioTranscriptionsResultMock(overrideResponse: Partial<UsageAudioTranscriptionsResult> = {}): UsageAudioTranscriptionsResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.audio_transcriptions.result'] as const),
+            seconds: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            num_model_requests: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            user_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            api_key_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            model: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageCompletionsResponseUsageVectorStoresResultMock(overrideResponse: Partial<UsageVectorStoresResult> = {}): UsageVectorStoresResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.vector_stores.result'] as const),
+            usage_bytes: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageCompletionsResponseUsageCodeInterpreterSessionsResultMock(overrideResponse: Partial<UsageCodeInterpreterSessionsResult> = {}): UsageCodeInterpreterSessionsResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.code_interpreter_sessions.result'] as const),
+            num_sessions: faker.helpers.arrayElement([
+                faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                undefined,
+            ]),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageCompletionsResponseCostsResultMock(overrideResponse: Partial<CostsResult> = {}): CostsResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.costs.result'] as const),
+            amount: faker.helpers.arrayElement([
+                {
+                    value: faker.helpers.arrayElement([
+                        faker.number.int({
+                            min: undefined,
+                            max: undefined,
+                        }),
+                        undefined,
+                    ]),
+                    currency: faker.helpers.arrayElement([
+                        faker.string.alpha(20),
+                        undefined,
+                    ]),
+                },
+                undefined,
+            ]),
+            line_item: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageCompletionsResponseMock(overrideResponse: Partial< UsageResponse > = {}): UsageResponse {
+    return {
+        object: faker.helpers.arrayElement(['page'] as const),
+        data: Array.from({
+            length: faker.number.int({
+                min: 1,
+                max: 10,
+            }),
+        }, (_, i) => i + 1).map(() => ({
+            object: faker.helpers.arrayElement(['bucket'] as const),
+            start_time: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            end_time: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            result: Array.from({
+                length: faker.number.int({
+                    min: 1,
+                    max: 10,
+                }),
+            }, (_, i) => i + 1).map(() => (faker.helpers.arrayElement([
+                {
+                    ...getUsageCompletionsResponseUsageCompletionsResultMock(),
+                },
+                {
+                    ...getUsageCompletionsResponseUsageEmbeddingsResultMock(),
+                },
+                {
+                    ...getUsageCompletionsResponseUsageModerationsResultMock(),
+                },
+                {
+                    ...getUsageCompletionsResponseUsageImagesResultMock(),
+                },
+                {
+                    ...getUsageCompletionsResponseUsageAudioSpeechesResultMock(),
+                },
+                {
+                    ...getUsageCompletionsResponseUsageAudioTranscriptionsResultMock(),
+                },
+                {
+                    ...getUsageCompletionsResponseUsageVectorStoresResultMock(),
+                },
+                {
+                    ...getUsageCompletionsResponseUsageCodeInterpreterSessionsResultMock(),
+                },
+                {
+                    ...getUsageCompletionsResponseCostsResultMock(),
+                },
+            ]))),
+        })),
+        has_more: faker.datatype.boolean(),
+        next_page: faker.string.alpha(20),
+        ...overrideResponse,
+    }
+}
+
+export function getUsageEmbeddingsResponseUsageCompletionsResultMock(overrideResponse: Partial<UsageCompletionsResult> = {}): UsageCompletionsResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.completions.result'] as const),
+            input_tokens: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            input_cached_tokens: faker.helpers.arrayElement([
+                faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                undefined,
+            ]),
+            output_tokens: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            input_audio_tokens: faker.helpers.arrayElement([
+                faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                undefined,
+            ]),
+            output_audio_tokens: faker.helpers.arrayElement([
+                faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                undefined,
+            ]),
+            num_model_requests: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            user_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            api_key_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            model: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            batch: faker.helpers.arrayElement([
+                faker.datatype.boolean(),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageEmbeddingsResponseUsageEmbeddingsResultMock(overrideResponse: Partial<UsageEmbeddingsResult> = {}): UsageEmbeddingsResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.embeddings.result'] as const),
+            input_tokens: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            num_model_requests: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            user_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            api_key_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            model: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageEmbeddingsResponseUsageModerationsResultMock(overrideResponse: Partial<UsageModerationsResult> = {}): UsageModerationsResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.moderations.result'] as const),
+            input_tokens: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            num_model_requests: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            user_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            api_key_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            model: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageEmbeddingsResponseUsageImagesResultMock(overrideResponse: Partial<UsageImagesResult> = {}): UsageImagesResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.images.result'] as const),
+            images: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            num_model_requests: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            source: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            size: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            user_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            api_key_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            model: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageEmbeddingsResponseUsageAudioSpeechesResultMock(overrideResponse: Partial<UsageAudioSpeechesResult> = {}): UsageAudioSpeechesResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.audio_speeches.result'] as const),
+            characters: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            num_model_requests: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            user_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            api_key_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            model: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageEmbeddingsResponseUsageAudioTranscriptionsResultMock(overrideResponse: Partial<UsageAudioTranscriptionsResult> = {}): UsageAudioTranscriptionsResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.audio_transcriptions.result'] as const),
+            seconds: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            num_model_requests: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            user_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            api_key_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            model: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageEmbeddingsResponseUsageVectorStoresResultMock(overrideResponse: Partial<UsageVectorStoresResult> = {}): UsageVectorStoresResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.vector_stores.result'] as const),
+            usage_bytes: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageEmbeddingsResponseUsageCodeInterpreterSessionsResultMock(overrideResponse: Partial<UsageCodeInterpreterSessionsResult> = {}): UsageCodeInterpreterSessionsResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.code_interpreter_sessions.result'] as const),
+            num_sessions: faker.helpers.arrayElement([
+                faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                undefined,
+            ]),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageEmbeddingsResponseCostsResultMock(overrideResponse: Partial<CostsResult> = {}): CostsResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.costs.result'] as const),
+            amount: faker.helpers.arrayElement([
+                {
+                    value: faker.helpers.arrayElement([
+                        faker.number.int({
+                            min: undefined,
+                            max: undefined,
+                        }),
+                        undefined,
+                    ]),
+                    currency: faker.helpers.arrayElement([
+                        faker.string.alpha(20),
+                        undefined,
+                    ]),
+                },
+                undefined,
+            ]),
+            line_item: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageEmbeddingsResponseMock(overrideResponse: Partial< UsageResponse > = {}): UsageResponse {
+    return {
+        object: faker.helpers.arrayElement(['page'] as const),
+        data: Array.from({
+            length: faker.number.int({
+                min: 1,
+                max: 10,
+            }),
+        }, (_, i) => i + 1).map(() => ({
+            object: faker.helpers.arrayElement(['bucket'] as const),
+            start_time: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            end_time: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            result: Array.from({
+                length: faker.number.int({
+                    min: 1,
+                    max: 10,
+                }),
+            }, (_, i) => i + 1).map(() => (faker.helpers.arrayElement([
+                {
+                    ...getUsageEmbeddingsResponseUsageCompletionsResultMock(),
+                },
+                {
+                    ...getUsageEmbeddingsResponseUsageEmbeddingsResultMock(),
+                },
+                {
+                    ...getUsageEmbeddingsResponseUsageModerationsResultMock(),
+                },
+                {
+                    ...getUsageEmbeddingsResponseUsageImagesResultMock(),
+                },
+                {
+                    ...getUsageEmbeddingsResponseUsageAudioSpeechesResultMock(),
+                },
+                {
+                    ...getUsageEmbeddingsResponseUsageAudioTranscriptionsResultMock(),
+                },
+                {
+                    ...getUsageEmbeddingsResponseUsageVectorStoresResultMock(),
+                },
+                {
+                    ...getUsageEmbeddingsResponseUsageCodeInterpreterSessionsResultMock(),
+                },
+                {
+                    ...getUsageEmbeddingsResponseCostsResultMock(),
+                },
+            ]))),
+        })),
+        has_more: faker.datatype.boolean(),
+        next_page: faker.string.alpha(20),
+        ...overrideResponse,
+    }
+}
+
+export function getUsageImagesResponseUsageCompletionsResultMock(overrideResponse: Partial<UsageCompletionsResult> = {}): UsageCompletionsResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.completions.result'] as const),
+            input_tokens: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            input_cached_tokens: faker.helpers.arrayElement([
+                faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                undefined,
+            ]),
+            output_tokens: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            input_audio_tokens: faker.helpers.arrayElement([
+                faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                undefined,
+            ]),
+            output_audio_tokens: faker.helpers.arrayElement([
+                faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                undefined,
+            ]),
+            num_model_requests: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            user_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            api_key_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            model: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            batch: faker.helpers.arrayElement([
+                faker.datatype.boolean(),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageImagesResponseUsageEmbeddingsResultMock(overrideResponse: Partial<UsageEmbeddingsResult> = {}): UsageEmbeddingsResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.embeddings.result'] as const),
+            input_tokens: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            num_model_requests: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            user_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            api_key_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            model: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageImagesResponseUsageModerationsResultMock(overrideResponse: Partial<UsageModerationsResult> = {}): UsageModerationsResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.moderations.result'] as const),
+            input_tokens: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            num_model_requests: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            user_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            api_key_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            model: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageImagesResponseUsageImagesResultMock(overrideResponse: Partial<UsageImagesResult> = {}): UsageImagesResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.images.result'] as const),
+            images: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            num_model_requests: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            source: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            size: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            user_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            api_key_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            model: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageImagesResponseUsageAudioSpeechesResultMock(overrideResponse: Partial<UsageAudioSpeechesResult> = {}): UsageAudioSpeechesResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.audio_speeches.result'] as const),
+            characters: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            num_model_requests: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            user_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            api_key_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            model: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageImagesResponseUsageAudioTranscriptionsResultMock(overrideResponse: Partial<UsageAudioTranscriptionsResult> = {}): UsageAudioTranscriptionsResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.audio_transcriptions.result'] as const),
+            seconds: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            num_model_requests: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            user_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            api_key_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            model: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageImagesResponseUsageVectorStoresResultMock(overrideResponse: Partial<UsageVectorStoresResult> = {}): UsageVectorStoresResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.vector_stores.result'] as const),
+            usage_bytes: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageImagesResponseUsageCodeInterpreterSessionsResultMock(overrideResponse: Partial<UsageCodeInterpreterSessionsResult> = {}): UsageCodeInterpreterSessionsResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.code_interpreter_sessions.result'] as const),
+            num_sessions: faker.helpers.arrayElement([
+                faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                undefined,
+            ]),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageImagesResponseCostsResultMock(overrideResponse: Partial<CostsResult> = {}): CostsResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.costs.result'] as const),
+            amount: faker.helpers.arrayElement([
+                {
+                    value: faker.helpers.arrayElement([
+                        faker.number.int({
+                            min: undefined,
+                            max: undefined,
+                        }),
+                        undefined,
+                    ]),
+                    currency: faker.helpers.arrayElement([
+                        faker.string.alpha(20),
+                        undefined,
+                    ]),
+                },
+                undefined,
+            ]),
+            line_item: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageImagesResponseMock(overrideResponse: Partial< UsageResponse > = {}): UsageResponse {
+    return {
+        object: faker.helpers.arrayElement(['page'] as const),
+        data: Array.from({
+            length: faker.number.int({
+                min: 1,
+                max: 10,
+            }),
+        }, (_, i) => i + 1).map(() => ({
+            object: faker.helpers.arrayElement(['bucket'] as const),
+            start_time: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            end_time: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            result: Array.from({
+                length: faker.number.int({
+                    min: 1,
+                    max: 10,
+                }),
+            }, (_, i) => i + 1).map(() => (faker.helpers.arrayElement([
+                {
+                    ...getUsageImagesResponseUsageCompletionsResultMock(),
+                },
+                {
+                    ...getUsageImagesResponseUsageEmbeddingsResultMock(),
+                },
+                {
+                    ...getUsageImagesResponseUsageModerationsResultMock(),
+                },
+                {
+                    ...getUsageImagesResponseUsageImagesResultMock(),
+                },
+                {
+                    ...getUsageImagesResponseUsageAudioSpeechesResultMock(),
+                },
+                {
+                    ...getUsageImagesResponseUsageAudioTranscriptionsResultMock(),
+                },
+                {
+                    ...getUsageImagesResponseUsageVectorStoresResultMock(),
+                },
+                {
+                    ...getUsageImagesResponseUsageCodeInterpreterSessionsResultMock(),
+                },
+                {
+                    ...getUsageImagesResponseCostsResultMock(),
+                },
+            ]))),
+        })),
+        has_more: faker.datatype.boolean(),
+        next_page: faker.string.alpha(20),
+        ...overrideResponse,
+    }
+}
+
+export function getUsageModerationsResponseUsageCompletionsResultMock(overrideResponse: Partial<UsageCompletionsResult> = {}): UsageCompletionsResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.completions.result'] as const),
+            input_tokens: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            input_cached_tokens: faker.helpers.arrayElement([
+                faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                undefined,
+            ]),
+            output_tokens: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            input_audio_tokens: faker.helpers.arrayElement([
+                faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                undefined,
+            ]),
+            output_audio_tokens: faker.helpers.arrayElement([
+                faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                undefined,
+            ]),
+            num_model_requests: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            user_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            api_key_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            model: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            batch: faker.helpers.arrayElement([
+                faker.datatype.boolean(),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageModerationsResponseUsageEmbeddingsResultMock(overrideResponse: Partial<UsageEmbeddingsResult> = {}): UsageEmbeddingsResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.embeddings.result'] as const),
+            input_tokens: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            num_model_requests: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            user_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            api_key_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            model: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageModerationsResponseUsageModerationsResultMock(overrideResponse: Partial<UsageModerationsResult> = {}): UsageModerationsResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.moderations.result'] as const),
+            input_tokens: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            num_model_requests: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            user_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            api_key_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            model: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageModerationsResponseUsageImagesResultMock(overrideResponse: Partial<UsageImagesResult> = {}): UsageImagesResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.images.result'] as const),
+            images: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            num_model_requests: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            source: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            size: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            user_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            api_key_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            model: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageModerationsResponseUsageAudioSpeechesResultMock(overrideResponse: Partial<UsageAudioSpeechesResult> = {}): UsageAudioSpeechesResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.audio_speeches.result'] as const),
+            characters: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            num_model_requests: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            user_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            api_key_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            model: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageModerationsResponseUsageAudioTranscriptionsResultMock(overrideResponse: Partial<UsageAudioTranscriptionsResult> = {}): UsageAudioTranscriptionsResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.audio_transcriptions.result'] as const),
+            seconds: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            num_model_requests: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            user_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            api_key_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            model: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageModerationsResponseUsageVectorStoresResultMock(overrideResponse: Partial<UsageVectorStoresResult> = {}): UsageVectorStoresResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.vector_stores.result'] as const),
+            usage_bytes: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageModerationsResponseUsageCodeInterpreterSessionsResultMock(overrideResponse: Partial<UsageCodeInterpreterSessionsResult> = {}): UsageCodeInterpreterSessionsResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.code_interpreter_sessions.result'] as const),
+            num_sessions: faker.helpers.arrayElement([
+                faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                undefined,
+            ]),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageModerationsResponseCostsResultMock(overrideResponse: Partial<CostsResult> = {}): CostsResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.costs.result'] as const),
+            amount: faker.helpers.arrayElement([
+                {
+                    value: faker.helpers.arrayElement([
+                        faker.number.int({
+                            min: undefined,
+                            max: undefined,
+                        }),
+                        undefined,
+                    ]),
+                    currency: faker.helpers.arrayElement([
+                        faker.string.alpha(20),
+                        undefined,
+                    ]),
+                },
+                undefined,
+            ]),
+            line_item: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageModerationsResponseMock(overrideResponse: Partial< UsageResponse > = {}): UsageResponse {
+    return {
+        object: faker.helpers.arrayElement(['page'] as const),
+        data: Array.from({
+            length: faker.number.int({
+                min: 1,
+                max: 10,
+            }),
+        }, (_, i) => i + 1).map(() => ({
+            object: faker.helpers.arrayElement(['bucket'] as const),
+            start_time: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            end_time: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            result: Array.from({
+                length: faker.number.int({
+                    min: 1,
+                    max: 10,
+                }),
+            }, (_, i) => i + 1).map(() => (faker.helpers.arrayElement([
+                {
+                    ...getUsageModerationsResponseUsageCompletionsResultMock(),
+                },
+                {
+                    ...getUsageModerationsResponseUsageEmbeddingsResultMock(),
+                },
+                {
+                    ...getUsageModerationsResponseUsageModerationsResultMock(),
+                },
+                {
+                    ...getUsageModerationsResponseUsageImagesResultMock(),
+                },
+                {
+                    ...getUsageModerationsResponseUsageAudioSpeechesResultMock(),
+                },
+                {
+                    ...getUsageModerationsResponseUsageAudioTranscriptionsResultMock(),
+                },
+                {
+                    ...getUsageModerationsResponseUsageVectorStoresResultMock(),
+                },
+                {
+                    ...getUsageModerationsResponseUsageCodeInterpreterSessionsResultMock(),
+                },
+                {
+                    ...getUsageModerationsResponseCostsResultMock(),
+                },
+            ]))),
+        })),
+        has_more: faker.datatype.boolean(),
+        next_page: faker.string.alpha(20),
+        ...overrideResponse,
+    }
+}
+
+export function getUsageVectorStoresResponseUsageCompletionsResultMock(overrideResponse: Partial<UsageCompletionsResult> = {}): UsageCompletionsResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.completions.result'] as const),
+            input_tokens: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            input_cached_tokens: faker.helpers.arrayElement([
+                faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                undefined,
+            ]),
+            output_tokens: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            input_audio_tokens: faker.helpers.arrayElement([
+                faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                undefined,
+            ]),
+            output_audio_tokens: faker.helpers.arrayElement([
+                faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                undefined,
+            ]),
+            num_model_requests: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            user_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            api_key_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            model: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            batch: faker.helpers.arrayElement([
+                faker.datatype.boolean(),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageVectorStoresResponseUsageEmbeddingsResultMock(overrideResponse: Partial<UsageEmbeddingsResult> = {}): UsageEmbeddingsResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.embeddings.result'] as const),
+            input_tokens: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            num_model_requests: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            user_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            api_key_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            model: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageVectorStoresResponseUsageModerationsResultMock(overrideResponse: Partial<UsageModerationsResult> = {}): UsageModerationsResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.moderations.result'] as const),
+            input_tokens: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            num_model_requests: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            user_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            api_key_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            model: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageVectorStoresResponseUsageImagesResultMock(overrideResponse: Partial<UsageImagesResult> = {}): UsageImagesResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.images.result'] as const),
+            images: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            num_model_requests: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            source: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            size: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            user_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            api_key_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            model: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageVectorStoresResponseUsageAudioSpeechesResultMock(overrideResponse: Partial<UsageAudioSpeechesResult> = {}): UsageAudioSpeechesResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.audio_speeches.result'] as const),
+            characters: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            num_model_requests: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            user_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            api_key_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            model: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageVectorStoresResponseUsageAudioTranscriptionsResultMock(overrideResponse: Partial<UsageAudioTranscriptionsResult> = {}): UsageAudioTranscriptionsResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.audio_transcriptions.result'] as const),
+            seconds: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            num_model_requests: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            user_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            api_key_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            model: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageVectorStoresResponseUsageVectorStoresResultMock(overrideResponse: Partial<UsageVectorStoresResult> = {}): UsageVectorStoresResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.vector_stores.result'] as const),
+            usage_bytes: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageVectorStoresResponseUsageCodeInterpreterSessionsResultMock(overrideResponse: Partial<UsageCodeInterpreterSessionsResult> = {}): UsageCodeInterpreterSessionsResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.usage.code_interpreter_sessions.result'] as const),
+            num_sessions: faker.helpers.arrayElement([
+                faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                undefined,
+            ]),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageVectorStoresResponseCostsResultMock(overrideResponse: Partial<CostsResult> = {}): CostsResult {
+    return {
+        ...{
+            object: faker.helpers.arrayElement(['organization.costs.result'] as const),
+            amount: faker.helpers.arrayElement([
+                {
+                    value: faker.helpers.arrayElement([
+                        faker.number.int({
+                            min: undefined,
+                            max: undefined,
+                        }),
+                        undefined,
+                    ]),
+                    currency: faker.helpers.arrayElement([
+                        faker.string.alpha(20),
+                        undefined,
+                    ]),
+                },
+                undefined,
+            ]),
+            line_item: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+            project_id: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
+
+export function getUsageVectorStoresResponseMock(overrideResponse: Partial< UsageResponse > = {}): UsageResponse {
+    return {
+        object: faker.helpers.arrayElement(['page'] as const),
+        data: Array.from({
+            length: faker.number.int({
+                min: 1,
+                max: 10,
+            }),
+        }, (_, i) => i + 1).map(() => ({
+            object: faker.helpers.arrayElement(['bucket'] as const),
+            start_time: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            end_time: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            result: Array.from({
+                length: faker.number.int({
+                    min: 1,
+                    max: 10,
+                }),
+            }, (_, i) => i + 1).map(() => (faker.helpers.arrayElement([
+                {
+                    ...getUsageVectorStoresResponseUsageCompletionsResultMock(),
+                },
+                {
+                    ...getUsageVectorStoresResponseUsageEmbeddingsResultMock(),
+                },
+                {
+                    ...getUsageVectorStoresResponseUsageModerationsResultMock(),
+                },
+                {
+                    ...getUsageVectorStoresResponseUsageImagesResultMock(),
+                },
+                {
+                    ...getUsageVectorStoresResponseUsageAudioSpeechesResultMock(),
+                },
+                {
+                    ...getUsageVectorStoresResponseUsageAudioTranscriptionsResultMock(),
+                },
+                {
+                    ...getUsageVectorStoresResponseUsageVectorStoresResultMock(),
+                },
+                {
+                    ...getUsageVectorStoresResponseUsageCodeInterpreterSessionsResultMock(),
+                },
+                {
+                    ...getUsageVectorStoresResponseCostsResultMock(),
+                },
+            ]))),
+        })),
+        has_more: faker.datatype.boolean(),
+        next_page: faker.string.alpha(20),
+        ...overrideResponse,
+    }
+}
 
 export function getUsageCostsMockHandler(overrideResponse?: UsageResponse | ((info: Parameters<Parameters<typeof http.get>[1]>[0]) => Promise<UsageResponse> | UsageResponse)) {
     return http.get('*/organization/costs', async (info) => {
@@ -214,7 +4120,11 @@ export function getUsageCostsMockHandler(overrideResponse?: UsageResponse | ((in
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getUsageCostsResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getUsageCostsResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }
@@ -225,7 +4135,11 @@ export function getUsageAudioSpeechesMockHandler(overrideResponse?: UsageRespons
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getUsageAudioSpeechesResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getUsageAudioSpeechesResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }
@@ -236,7 +4150,11 @@ export function getUsageAudioTranscriptionsMockHandler(overrideResponse?: UsageR
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getUsageAudioTranscriptionsResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getUsageAudioTranscriptionsResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }
@@ -247,7 +4165,11 @@ export function getUsageCodeInterpreterSessionsMockHandler(overrideResponse?: Us
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getUsageCodeInterpreterSessionsResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getUsageCodeInterpreterSessionsResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }
@@ -258,7 +4180,11 @@ export function getUsageCompletionsMockHandler(overrideResponse?: UsageResponse 
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getUsageCompletionsResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getUsageCompletionsResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }
@@ -269,7 +4195,11 @@ export function getUsageEmbeddingsMockHandler(overrideResponse?: UsageResponse |
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getUsageEmbeddingsResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getUsageEmbeddingsResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }
@@ -280,7 +4210,11 @@ export function getUsageImagesMockHandler(overrideResponse?: UsageResponse | ((i
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getUsageImagesResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getUsageImagesResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }
@@ -291,7 +4225,11 @@ export function getUsageModerationsMockHandler(overrideResponse?: UsageResponse 
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getUsageModerationsResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getUsageModerationsResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }
@@ -302,7 +4240,11 @@ export function getUsageVectorStoresMockHandler(overrideResponse?: UsageResponse
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getUsageVectorStoresResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getUsageVectorStoresResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }

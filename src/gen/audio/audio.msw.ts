@@ -26,17 +26,154 @@ import {
 
 export const getCreateSpeechResponseMock = (): Blob => (new Blob(faker.helpers.arrayElements(faker.word.words(10).split(' '))))
 
-export const getCreateTranscriptionResponseCreateTranscriptionResponseJsonMock = (overrideResponse: Partial<CreateTranscriptionResponseJson> = {}): CreateTranscriptionResponseJson => ({ ...{ text: faker.string.alpha(20) }, ...overrideResponse })
+export function getCreateTranscriptionResponseCreateTranscriptionResponseJsonMock(overrideResponse: Partial<CreateTranscriptionResponseJson> = {}): CreateTranscriptionResponseJson {
+    return {
+        ...{
+            text: faker.string.alpha(20),
+        },
+        ...overrideResponse,
+    }
+}
 
-export const getCreateTranscriptionResponseCreateTranscriptionResponseVerboseJsonMock = (overrideResponse: Partial<CreateTranscriptionResponseVerboseJson> = {}): CreateTranscriptionResponseVerboseJson => ({ ...{ language: faker.string.alpha(20), duration: faker.number.int({ min: undefined, max: undefined }), text: faker.string.alpha(20), words: faker.helpers.arrayElement([Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => ({ word: faker.string.alpha(20), start: faker.number.float(), end: faker.number.float() })), undefined]), segments: faker.helpers.arrayElement([Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => ({ id: faker.number.int({ min: undefined, max: undefined }), seek: faker.number.int({ min: undefined, max: undefined }), start: faker.number.float(), end: faker.number.float(), text: faker.string.alpha(20), tokens: Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => (faker.number.int({ min: undefined, max: undefined }))), temperature: faker.number.float(), avg_logprob: faker.number.float(), compression_ratio: faker.number.float(), no_speech_prob: faker.number.float() })), undefined]) }, ...overrideResponse })
+export function getCreateTranscriptionResponseCreateTranscriptionResponseVerboseJsonMock(overrideResponse: Partial<CreateTranscriptionResponseVerboseJson> = {}): CreateTranscriptionResponseVerboseJson {
+    return {
+        ...{
+            language: faker.string.alpha(20),
+            duration: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            text: faker.string.alpha(20),
+            words: faker.helpers.arrayElement([
+                Array.from({
+                    length: faker.number.int({
+                        min: 1,
+                        max: 10,
+                    }),
+                }, (_, i) => i + 1).map(() => ({
+                    word: faker.string.alpha(20),
+                    start: faker.number.float(),
+                    end: faker.number.float(),
+                })),
+                undefined,
+            ]),
+            segments: faker.helpers.arrayElement([
+                Array.from({
+                    length: faker.number.int({
+                        min: 1,
+                        max: 10,
+                    }),
+                }, (_, i) => i + 1).map(() => ({
+                    id: faker.number.int({
+                        min: undefined,
+                        max: undefined,
+                    }),
+                    seek: faker.number.int({
+                        min: undefined,
+                        max: undefined,
+                    }),
+                    start: faker.number.float(),
+                    end: faker.number.float(),
+                    text: faker.string.alpha(20),
+                    tokens: Array.from({
+                        length: faker.number.int({
+                            min: 1,
+                            max: 10,
+                        }),
+                    }, (_, i) => i + 1).map(() => (faker.number.int({
+                        min: undefined,
+                        max: undefined,
+                    }))),
+                    temperature: faker.number.float(),
+                    avg_logprob: faker.number.float(),
+                    compression_ratio: faker.number.float(),
+                    no_speech_prob: faker.number.float(),
+                })),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
 
-export const getCreateTranscriptionResponseMock = (): CreateTranscription200 => (faker.helpers.arrayElement([{ ...getCreateTranscriptionResponseCreateTranscriptionResponseJsonMock() }, { ...getCreateTranscriptionResponseCreateTranscriptionResponseVerboseJsonMock() }]))
+export function getCreateTranscriptionResponseMock(): CreateTranscription200 {
+    return faker.helpers.arrayElement([
+        {
+            ...getCreateTranscriptionResponseCreateTranscriptionResponseJsonMock(),
+        },
+        {
+            ...getCreateTranscriptionResponseCreateTranscriptionResponseVerboseJsonMock(),
+        },
+    ])
+}
 
-export const getCreateTranslationResponseCreateTranslationResponseJsonMock = (overrideResponse: Partial<CreateTranslationResponseJson> = {}): CreateTranslationResponseJson => ({ ...{ text: faker.string.alpha(20) }, ...overrideResponse })
+export function getCreateTranslationResponseCreateTranslationResponseJsonMock(overrideResponse: Partial<CreateTranslationResponseJson> = {}): CreateTranslationResponseJson {
+    return {
+        ...{
+            text: faker.string.alpha(20),
+        },
+        ...overrideResponse,
+    }
+}
 
-export const getCreateTranslationResponseCreateTranslationResponseVerboseJsonMock = (overrideResponse: Partial<CreateTranslationResponseVerboseJson> = {}): CreateTranslationResponseVerboseJson => ({ ...{ language: faker.string.alpha(20), duration: faker.number.int({ min: undefined, max: undefined }), text: faker.string.alpha(20), segments: faker.helpers.arrayElement([Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => ({ id: faker.number.int({ min: undefined, max: undefined }), seek: faker.number.int({ min: undefined, max: undefined }), start: faker.number.float(), end: faker.number.float(), text: faker.string.alpha(20), tokens: Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => (faker.number.int({ min: undefined, max: undefined }))), temperature: faker.number.float(), avg_logprob: faker.number.float(), compression_ratio: faker.number.float(), no_speech_prob: faker.number.float() })), undefined]) }, ...overrideResponse })
+export function getCreateTranslationResponseCreateTranslationResponseVerboseJsonMock(overrideResponse: Partial<CreateTranslationResponseVerboseJson> = {}): CreateTranslationResponseVerboseJson {
+    return {
+        ...{
+            language: faker.string.alpha(20),
+            duration: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            text: faker.string.alpha(20),
+            segments: faker.helpers.arrayElement([
+                Array.from({
+                    length: faker.number.int({
+                        min: 1,
+                        max: 10,
+                    }),
+                }, (_, i) => i + 1).map(() => ({
+                    id: faker.number.int({
+                        min: undefined,
+                        max: undefined,
+                    }),
+                    seek: faker.number.int({
+                        min: undefined,
+                        max: undefined,
+                    }),
+                    start: faker.number.float(),
+                    end: faker.number.float(),
+                    text: faker.string.alpha(20),
+                    tokens: Array.from({
+                        length: faker.number.int({
+                            min: 1,
+                            max: 10,
+                        }),
+                    }, (_, i) => i + 1).map(() => (faker.number.int({
+                        min: undefined,
+                        max: undefined,
+                    }))),
+                    temperature: faker.number.float(),
+                    avg_logprob: faker.number.float(),
+                    compression_ratio: faker.number.float(),
+                    no_speech_prob: faker.number.float(),
+                })),
+                undefined,
+            ]),
+        },
+        ...overrideResponse,
+    }
+}
 
-export const getCreateTranslationResponseMock = (): CreateTranslation200 => (faker.helpers.arrayElement([{ ...getCreateTranslationResponseCreateTranslationResponseJsonMock() }, { ...getCreateTranslationResponseCreateTranslationResponseVerboseJsonMock() }]))
+export function getCreateTranslationResponseMock(): CreateTranslation200 {
+    return faker.helpers.arrayElement([
+        {
+            ...getCreateTranslationResponseCreateTranslationResponseJsonMock(),
+        },
+        {
+            ...getCreateTranslationResponseCreateTranslationResponseVerboseJsonMock(),
+        },
+    ])
+}
 
 export function getCreateSpeechMockHandler(overrideResponse?: Blob | ((info: Parameters<Parameters<typeof http.post>[1]>[0]) => Promise<Blob> | Blob)) {
     return http.post('*/audio/speech', async (info) => {
@@ -44,7 +181,11 @@ export function getCreateSpeechMockHandler(overrideResponse?: Blob | ((info: Par
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getCreateSpeechResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getCreateSpeechResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }
@@ -55,7 +196,11 @@ export function getCreateTranscriptionMockHandler(overrideResponse?: CreateTrans
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getCreateTranscriptionResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getCreateTranscriptionResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }
@@ -66,7 +211,11 @@ export function getCreateTranslationMockHandler(overrideResponse?: CreateTransla
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getCreateTranslationResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getCreateTranslationResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }

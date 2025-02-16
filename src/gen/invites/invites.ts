@@ -32,7 +32,10 @@ export function getInvites() {
             `http://localhost:3000/v1/organization/invites`,
             {
                 ...options,
-                params: { ...params, ...options?.params },
+                params: {
+                    ...params,
+                    ...options?.params,
+                },
             },
         )
     }
@@ -73,7 +76,12 @@ export function getInvites() {
             options,
         )
     }
-    return { listInvites, inviteUser, retrieveInvite, deleteInvite }
+    return {
+        listInvites,
+        inviteUser,
+        retrieveInvite,
+        deleteInvite,
+    }
 }
 export type ListInvitesResult = AxiosResponse<InviteListResponse>
 export type InviteUserResult = AxiosResponse<Invite>

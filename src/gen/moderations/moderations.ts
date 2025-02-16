@@ -34,6 +34,8 @@ more in the [moderation guide](/docs/guides/moderation).
             options,
         )
     }
-    return { createModeration }
+    return {
+        createModeration,
+    }
 }
 export type CreateModerationResult = AxiosResponse<CreateModerationResponse>

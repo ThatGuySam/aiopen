@@ -19,7 +19,44 @@ import {
     HttpResponse,
 } from 'msw'
 
-export const getCreateEmbeddingResponseMock = (overrideResponse: Partial< CreateEmbeddingResponse > = {}): CreateEmbeddingResponse => ({ data: Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => ({ index: faker.number.int({ min: undefined, max: undefined }), embedding: Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => (faker.number.int({ min: undefined, max: undefined }))), object: faker.helpers.arrayElement(['embedding'] as const) })), model: faker.string.alpha(20), object: faker.helpers.arrayElement(['list'] as const), usage: { prompt_tokens: faker.number.int({ min: undefined, max: undefined }), total_tokens: faker.number.int({ min: undefined, max: undefined }) }, ...overrideResponse })
+export function getCreateEmbeddingResponseMock(overrideResponse: Partial< CreateEmbeddingResponse > = {}): CreateEmbeddingResponse {
+    return {
+        data: Array.from({
+            length: faker.number.int({
+                min: 1,
+                max: 10,
+            }),
+        }, (_, i) => i + 1).map(() => ({
+            index: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            embedding: Array.from({
+                length: faker.number.int({
+                    min: 1,
+                    max: 10,
+                }),
+            }, (_, i) => i + 1).map(() => (faker.number.int({
+                min: undefined,
+                max: undefined,
+            }))),
+            object: faker.helpers.arrayElement(['embedding'] as const),
+        })),
+        model: faker.string.alpha(20),
+        object: faker.helpers.arrayElement(['list'] as const),
+        usage: {
+            prompt_tokens: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            total_tokens: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+        },
+        ...overrideResponse,
+    }
+}
 
 export function getCreateEmbeddingMockHandler(overrideResponse?: CreateEmbeddingResponse | ((info: Parameters<Parameters<typeof http.post>[1]>[0]) => Promise<CreateEmbeddingResponse> | CreateEmbeddingResponse)) {
     return http.post('*/embeddings', async (info) => {
@@ -27,12 +64,14 @@ export function getCreateEmbeddingMockHandler(overrideResponse?: CreateEmbedding
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getCreateEmbeddingResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getCreateEmbeddingResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }
 export function getEmbeddingsMock() {
-    return [
-        getCreateEmbeddingMockHandler(),
-    ]
+    return [getCreateEmbeddingMockHandler()]
 }

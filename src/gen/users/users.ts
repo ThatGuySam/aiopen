@@ -32,7 +32,10 @@ export function getUsers() {
             `http://localhost:3000/v1/organization/users`,
             {
                 ...options,
-                params: { ...params, ...options?.params },
+                params: {
+                    ...params,
+                    ...options?.params,
+                },
             },
         )
     }
@@ -74,7 +77,12 @@ export function getUsers() {
             options,
         )
     }
-    return { listUsers, retrieveUser, modifyUser, deleteUser }
+    return {
+        listUsers,
+        retrieveUser,
+        modifyUser,
+        deleteUser,
+    }
 }
 export type ListUsersResult = AxiosResponse<UserListResponse>
 export type RetrieveUserResult = AxiosResponse<User>

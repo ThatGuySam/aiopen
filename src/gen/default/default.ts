@@ -33,7 +33,10 @@ export function getDefault() {
             `http://localhost:3000/v1/organization/admin_api_keys`,
             {
                 ...options,
-                params: { ...params, ...options?.params },
+                params: {
+                    ...params,
+                    ...options?.params,
+                },
             },
         )
     }

@@ -99,7 +99,11 @@ export function getImages() {
             options,
         )
     }
-    return { createImageEdit, createImage, createImageVariation }
+    return {
+        createImageEdit,
+        createImage,
+        createImageVariation,
+    }
 }
 export type CreateImageEditResult = AxiosResponse<ImagesResponse>
 export type CreateImageResult = AxiosResponse<ImagesResponse>

@@ -21,13 +21,79 @@ import {
     HttpResponse,
 } from 'msw'
 
-export const getListUsersResponseMock = (overrideResponse: Partial< UserListResponse > = {}): UserListResponse => ({ object: faker.helpers.arrayElement(['list'] as const), data: Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => ({ object: faker.helpers.arrayElement(['organization.user'] as const), id: faker.string.alpha(20), name: faker.string.alpha(20), email: faker.string.alpha(20), role: faker.helpers.arrayElement(['owner', 'reader'] as const), added_at: faker.number.int({ min: undefined, max: undefined }) })), first_id: faker.string.alpha(20), last_id: faker.string.alpha(20), has_more: faker.datatype.boolean(), ...overrideResponse })
+export function getListUsersResponseMock(overrideResponse: Partial< UserListResponse > = {}): UserListResponse {
+    return {
+        object: faker.helpers.arrayElement(['list'] as const),
+        data: Array.from({
+            length: faker.number.int({
+                min: 1,
+                max: 10,
+            }),
+        }, (_, i) => i + 1).map(() => ({
+            object: faker.helpers.arrayElement(['organization.user'] as const),
+            id: faker.string.alpha(20),
+            name: faker.string.alpha(20),
+            email: faker.string.alpha(20),
+            role: faker.helpers.arrayElement([
+                'owner',
+                'reader',
+            ] as const),
+            added_at: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+        })),
+        first_id: faker.string.alpha(20),
+        last_id: faker.string.alpha(20),
+        has_more: faker.datatype.boolean(),
+        ...overrideResponse,
+    }
+}
 
-export const getRetrieveUserResponseMock = (overrideResponse: Partial< User > = {}): User => ({ object: faker.helpers.arrayElement(['organization.user'] as const), id: faker.string.alpha(20), name: faker.string.alpha(20), email: faker.string.alpha(20), role: faker.helpers.arrayElement(['owner', 'reader'] as const), added_at: faker.number.int({ min: undefined, max: undefined }), ...overrideResponse })
+export function getRetrieveUserResponseMock(overrideResponse: Partial< User > = {}): User {
+    return {
+        object: faker.helpers.arrayElement(['organization.user'] as const),
+        id: faker.string.alpha(20),
+        name: faker.string.alpha(20),
+        email: faker.string.alpha(20),
+        role: faker.helpers.arrayElement([
+            'owner',
+            'reader',
+        ] as const),
+        added_at: faker.number.int({
+            min: undefined,
+            max: undefined,
+        }),
+        ...overrideResponse,
+    }
+}
 
-export const getModifyUserResponseMock = (overrideResponse: Partial< User > = {}): User => ({ object: faker.helpers.arrayElement(['organization.user'] as const), id: faker.string.alpha(20), name: faker.string.alpha(20), email: faker.string.alpha(20), role: faker.helpers.arrayElement(['owner', 'reader'] as const), added_at: faker.number.int({ min: undefined, max: undefined }), ...overrideResponse })
+export function getModifyUserResponseMock(overrideResponse: Partial< User > = {}): User {
+    return {
+        object: faker.helpers.arrayElement(['organization.user'] as const),
+        id: faker.string.alpha(20),
+        name: faker.string.alpha(20),
+        email: faker.string.alpha(20),
+        role: faker.helpers.arrayElement([
+            'owner',
+            'reader',
+        ] as const),
+        added_at: faker.number.int({
+            min: undefined,
+            max: undefined,
+        }),
+        ...overrideResponse,
+    }
+}
 
-export const getDeleteUserResponseMock = (overrideResponse: Partial< UserDeleteResponse > = {}): UserDeleteResponse => ({ object: faker.helpers.arrayElement(['organization.user.deleted'] as const), id: faker.string.alpha(20), deleted: faker.datatype.boolean(), ...overrideResponse })
+export function getDeleteUserResponseMock(overrideResponse: Partial< UserDeleteResponse > = {}): UserDeleteResponse {
+    return {
+        object: faker.helpers.arrayElement(['organization.user.deleted'] as const),
+        id: faker.string.alpha(20),
+        deleted: faker.datatype.boolean(),
+        ...overrideResponse,
+    }
+}
 
 export function getListUsersMockHandler(overrideResponse?: UserListResponse | ((info: Parameters<Parameters<typeof http.get>[1]>[0]) => Promise<UserListResponse> | UserListResponse)) {
     return http.get('*/organization/users', async (info) => {
@@ -35,7 +101,11 @@ export function getListUsersMockHandler(overrideResponse?: UserListResponse | ((
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getListUsersResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getListUsersResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }
@@ -46,7 +116,11 @@ export function getRetrieveUserMockHandler(overrideResponse?: User | ((info: Par
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getRetrieveUserResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getRetrieveUserResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }
@@ -57,7 +131,11 @@ export function getModifyUserMockHandler(overrideResponse?: User | ((info: Param
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getModifyUserResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getModifyUserResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }
@@ -68,7 +146,11 @@ export function getDeleteUserMockHandler(overrideResponse?: UserDeleteResponse |
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getDeleteUserResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getDeleteUserResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }

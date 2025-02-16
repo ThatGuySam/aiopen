@@ -23,25 +23,1164 @@ import {
     HttpResponse,
 } from 'msw'
 
-export const getCreateFineTuningJobResponseFineTuningIntegrationMock = (overrideResponse: Partial<FineTuningIntegration> = {}): FineTuningIntegration => ({ ...{ type: faker.helpers.arrayElement(['wandb'] as const), wandb: { project: faker.string.alpha(20), name: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), entity: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), tags: faker.helpers.arrayElement([Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => (faker.string.alpha(20))), undefined]) } }, ...overrideResponse })
+export function getCreateFineTuningJobResponseFineTuningIntegrationMock(overrideResponse: Partial<FineTuningIntegration> = {}): FineTuningIntegration {
+    return {
+        ...{
+            type: faker.helpers.arrayElement(['wandb'] as const),
+            wandb: {
+                project: faker.string.alpha(20),
+                name: faker.helpers.arrayElement([
+                    faker.helpers.arrayElement([
+                        faker.string.alpha(20),
+                        null,
+                    ]),
+                    undefined,
+                ]),
+                entity: faker.helpers.arrayElement([
+                    faker.helpers.arrayElement([
+                        faker.string.alpha(20),
+                        null,
+                    ]),
+                    undefined,
+                ]),
+                tags: faker.helpers.arrayElement([
+                    Array.from({
+                        length: faker.number.int({
+                            min: 1,
+                            max: 10,
+                        }),
+                    }, (_, i) => i + 1).map(() => (faker.string.alpha(20))),
+                    undefined,
+                ]),
+            },
+        },
+        ...overrideResponse,
+    }
+}
 
-export const getCreateFineTuningJobResponseMock = (overrideResponse: Partial< FineTuningJob > = {}): FineTuningJob => ({ id: faker.string.alpha(20), created_at: faker.number.int({ min: undefined, max: undefined }), error: { code: faker.string.alpha(20), message: faker.string.alpha(20), param: faker.helpers.arrayElement([faker.string.alpha(20), null]) }, fine_tuned_model: faker.helpers.arrayElement([faker.string.alpha(20), null]), finished_at: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), null]), hyperparameters: { batch_size: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.helpers.arrayElement(['auto'] as const), faker.number.int({ min: 1, max: 256 })]), undefined]), learning_rate_multiplier: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.helpers.arrayElement(['auto'] as const), faker.number.int({ min: 0, max: undefined })]), undefined]), n_epochs: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.helpers.arrayElement(['auto'] as const), faker.number.int({ min: 1, max: 50 })]), undefined]) }, model: faker.string.alpha(20), object: faker.helpers.arrayElement(['fine_tuning.job'] as const), organization_id: faker.string.alpha(20), result_files: Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => (faker.string.alpha(20))), status: faker.helpers.arrayElement(['validating_files', 'queued', 'running', 'succeeded', 'failed', 'cancelled'] as const), trained_tokens: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), null]), training_file: faker.string.alpha(20), validation_file: faker.helpers.arrayElement([faker.string.alpha(20), null]), integrations: faker.helpers.arrayElement([Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => (faker.helpers.arrayElement([{ ...getCreateFineTuningJobResponseFineTuningIntegrationMock() }]))), undefined]), seed: faker.number.int({ min: undefined, max: undefined }), estimated_finish: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), null]), undefined]), method: faker.helpers.arrayElement([{ type: faker.helpers.arrayElement([faker.helpers.arrayElement(['supervised', 'dpo'] as const), undefined]), supervised: faker.helpers.arrayElement([{ hyperparameters: faker.helpers.arrayElement([{ batch_size: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.helpers.arrayElement(['auto'] as const), faker.number.int({ min: 1, max: 256 })]), undefined]), learning_rate_multiplier: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.helpers.arrayElement(['auto'] as const), faker.number.int({ min: 0, max: undefined })]), undefined]), n_epochs: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.helpers.arrayElement(['auto'] as const), faker.number.int({ min: 1, max: 50 })]), undefined]) }, undefined]) }, undefined]), dpo: faker.helpers.arrayElement([{ hyperparameters: faker.helpers.arrayElement([{ beta: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.helpers.arrayElement(['auto'] as const), faker.number.int({ min: 0, max: 2 })]), undefined]), batch_size: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.helpers.arrayElement(['auto'] as const), faker.number.int({ min: 1, max: 256 })]), undefined]), learning_rate_multiplier: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.helpers.arrayElement(['auto'] as const), faker.number.int({ min: 0, max: undefined })]), undefined]), n_epochs: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.helpers.arrayElement(['auto'] as const), faker.number.int({ min: 1, max: 50 })]), undefined]) }, undefined]) }, undefined]) }, undefined]), ...overrideResponse })
+export function getCreateFineTuningJobResponseMock(overrideResponse: Partial< FineTuningJob > = {}): FineTuningJob {
+    return {
+        id: faker.string.alpha(20),
+        created_at: faker.number.int({
+            min: undefined,
+            max: undefined,
+        }),
+        error: {
+            code: faker.string.alpha(20),
+            message: faker.string.alpha(20),
+            param: faker.helpers.arrayElement([
+                faker.string.alpha(20),
+                null,
+            ]),
+        },
+        fine_tuned_model: faker.helpers.arrayElement([
+            faker.string.alpha(20),
+            null,
+        ]),
+        finished_at: faker.helpers.arrayElement([
+            faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            null,
+        ]),
+        hyperparameters: {
+            batch_size: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.helpers.arrayElement(['auto'] as const),
+                    faker.number.int({
+                        min: 1,
+                        max: 256,
+                    }),
+                ]),
+                undefined,
+            ]),
+            learning_rate_multiplier: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.helpers.arrayElement(['auto'] as const),
+                    faker.number.int({
+                        min: 0,
+                        max: undefined,
+                    }),
+                ]),
+                undefined,
+            ]),
+            n_epochs: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.helpers.arrayElement(['auto'] as const),
+                    faker.number.int({
+                        min: 1,
+                        max: 50,
+                    }),
+                ]),
+                undefined,
+            ]),
+        },
+        model: faker.string.alpha(20),
+        object: faker.helpers.arrayElement(['fine_tuning.job'] as const),
+        organization_id: faker.string.alpha(20),
+        result_files: Array.from({
+            length: faker.number.int({
+                min: 1,
+                max: 10,
+            }),
+        }, (_, i) => i + 1).map(() => (faker.string.alpha(20))),
+        status: faker.helpers.arrayElement([
+            'validating_files',
+            'queued',
+            'running',
+            'succeeded',
+            'failed',
+            'cancelled',
+        ] as const),
+        trained_tokens: faker.helpers.arrayElement([
+            faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            null,
+        ]),
+        training_file: faker.string.alpha(20),
+        validation_file: faker.helpers.arrayElement([
+            faker.string.alpha(20),
+            null,
+        ]),
+        integrations: faker.helpers.arrayElement([
+            Array.from({
+                length: faker.number.int({
+                    min: 1,
+                    max: 10,
+                }),
+            }, (_, i) => i + 1).map(() => (faker.helpers.arrayElement([
+                {
+                    ...getCreateFineTuningJobResponseFineTuningIntegrationMock(),
+                },
+            ]))),
+            undefined,
+        ]),
+        seed: faker.number.int({
+            min: undefined,
+            max: undefined,
+        }),
+        estimated_finish: faker.helpers.arrayElement([
+            faker.helpers.arrayElement([
+                faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                null,
+            ]),
+            undefined,
+        ]),
+        method: faker.helpers.arrayElement([
+            {
+                type: faker.helpers.arrayElement([
+                    faker.helpers.arrayElement([
+                        'supervised',
+                        'dpo',
+                    ] as const),
+                    undefined,
+                ]),
+                supervised: faker.helpers.arrayElement([
+                    {
+                        hyperparameters: faker.helpers.arrayElement([
+                            {
+                                batch_size: faker.helpers.arrayElement([
+                                    faker.helpers.arrayElement([
+                                        faker.helpers.arrayElement(['auto'] as const),
+                                        faker.number.int({
+                                            min: 1,
+                                            max: 256,
+                                        }),
+                                    ]),
+                                    undefined,
+                                ]),
+                                learning_rate_multiplier: faker.helpers.arrayElement([
+                                    faker.helpers.arrayElement([
+                                        faker.helpers.arrayElement(['auto'] as const),
+                                        faker.number.int({
+                                            min: 0,
+                                            max: undefined,
+                                        }),
+                                    ]),
+                                    undefined,
+                                ]),
+                                n_epochs: faker.helpers.arrayElement([
+                                    faker.helpers.arrayElement([
+                                        faker.helpers.arrayElement(['auto'] as const),
+                                        faker.number.int({
+                                            min: 1,
+                                            max: 50,
+                                        }),
+                                    ]),
+                                    undefined,
+                                ]),
+                            },
+                            undefined,
+                        ]),
+                    },
+                    undefined,
+                ]),
+                dpo: faker.helpers.arrayElement([
+                    {
+                        hyperparameters: faker.helpers.arrayElement([
+                            {
+                                beta: faker.helpers.arrayElement([
+                                    faker.helpers.arrayElement([
+                                        faker.helpers.arrayElement(['auto'] as const),
+                                        faker.number.int({
+                                            min: 0,
+                                            max: 2,
+                                        }),
+                                    ]),
+                                    undefined,
+                                ]),
+                                batch_size: faker.helpers.arrayElement([
+                                    faker.helpers.arrayElement([
+                                        faker.helpers.arrayElement(['auto'] as const),
+                                        faker.number.int({
+                                            min: 1,
+                                            max: 256,
+                                        }),
+                                    ]),
+                                    undefined,
+                                ]),
+                                learning_rate_multiplier: faker.helpers.arrayElement([
+                                    faker.helpers.arrayElement([
+                                        faker.helpers.arrayElement(['auto'] as const),
+                                        faker.number.int({
+                                            min: 0,
+                                            max: undefined,
+                                        }),
+                                    ]),
+                                    undefined,
+                                ]),
+                                n_epochs: faker.helpers.arrayElement([
+                                    faker.helpers.arrayElement([
+                                        faker.helpers.arrayElement(['auto'] as const),
+                                        faker.number.int({
+                                            min: 1,
+                                            max: 50,
+                                        }),
+                                    ]),
+                                    undefined,
+                                ]),
+                            },
+                            undefined,
+                        ]),
+                    },
+                    undefined,
+                ]),
+            },
+            undefined,
+        ]),
+        ...overrideResponse,
+    }
+}
 
-export const getListPaginatedFineTuningJobsResponseFineTuningIntegrationMock = (overrideResponse: Partial<FineTuningIntegration> = {}): FineTuningIntegration => ({ ...{ type: faker.helpers.arrayElement(['wandb'] as const), wandb: { project: faker.string.alpha(20), name: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), entity: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), tags: faker.helpers.arrayElement([Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => (faker.string.alpha(20))), undefined]) } }, ...overrideResponse })
+export function getListPaginatedFineTuningJobsResponseFineTuningIntegrationMock(overrideResponse: Partial<FineTuningIntegration> = {}): FineTuningIntegration {
+    return {
+        ...{
+            type: faker.helpers.arrayElement(['wandb'] as const),
+            wandb: {
+                project: faker.string.alpha(20),
+                name: faker.helpers.arrayElement([
+                    faker.helpers.arrayElement([
+                        faker.string.alpha(20),
+                        null,
+                    ]),
+                    undefined,
+                ]),
+                entity: faker.helpers.arrayElement([
+                    faker.helpers.arrayElement([
+                        faker.string.alpha(20),
+                        null,
+                    ]),
+                    undefined,
+                ]),
+                tags: faker.helpers.arrayElement([
+                    Array.from({
+                        length: faker.number.int({
+                            min: 1,
+                            max: 10,
+                        }),
+                    }, (_, i) => i + 1).map(() => (faker.string.alpha(20))),
+                    undefined,
+                ]),
+            },
+        },
+        ...overrideResponse,
+    }
+}
 
-export const getListPaginatedFineTuningJobsResponseMock = (overrideResponse: Partial< ListPaginatedFineTuningJobsResponse > = {}): ListPaginatedFineTuningJobsResponse => ({ data: Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => ({ id: faker.string.alpha(20), created_at: faker.number.int({ min: undefined, max: undefined }), error: { code: faker.string.alpha(20), message: faker.string.alpha(20), param: faker.helpers.arrayElement([faker.string.alpha(20), null]) }, fine_tuned_model: faker.helpers.arrayElement([faker.string.alpha(20), null]), finished_at: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), null]), hyperparameters: { batch_size: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.helpers.arrayElement(['auto'] as const), faker.number.int({ min: 1, max: 256 })]), undefined]), learning_rate_multiplier: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.helpers.arrayElement(['auto'] as const), faker.number.int({ min: 0, max: undefined })]), undefined]), n_epochs: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.helpers.arrayElement(['auto'] as const), faker.number.int({ min: 1, max: 50 })]), undefined]) }, model: faker.string.alpha(20), object: faker.helpers.arrayElement(['fine_tuning.job'] as const), organization_id: faker.string.alpha(20), result_files: Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => (faker.string.alpha(20))), status: faker.helpers.arrayElement(['validating_files', 'queued', 'running', 'succeeded', 'failed', 'cancelled'] as const), trained_tokens: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), null]), training_file: faker.string.alpha(20), validation_file: faker.helpers.arrayElement([faker.string.alpha(20), null]), integrations: faker.helpers.arrayElement([Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => (faker.helpers.arrayElement([{ ...getListPaginatedFineTuningJobsResponseFineTuningIntegrationMock() }]))), undefined]), seed: faker.number.int({ min: undefined, max: undefined }), estimated_finish: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), null]), undefined]), method: faker.helpers.arrayElement([{ type: faker.helpers.arrayElement([faker.helpers.arrayElement(['supervised', 'dpo'] as const), undefined]), supervised: faker.helpers.arrayElement([{ hyperparameters: faker.helpers.arrayElement([{ batch_size: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.helpers.arrayElement(['auto'] as const), faker.number.int({ min: 1, max: 256 })]), undefined]), learning_rate_multiplier: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.helpers.arrayElement(['auto'] as const), faker.number.int({ min: 0, max: undefined })]), undefined]), n_epochs: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.helpers.arrayElement(['auto'] as const), faker.number.int({ min: 1, max: 50 })]), undefined]) }, undefined]) }, undefined]), dpo: faker.helpers.arrayElement([{ hyperparameters: faker.helpers.arrayElement([{ beta: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.helpers.arrayElement(['auto'] as const), faker.number.int({ min: 0, max: 2 })]), undefined]), batch_size: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.helpers.arrayElement(['auto'] as const), faker.number.int({ min: 1, max: 256 })]), undefined]), learning_rate_multiplier: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.helpers.arrayElement(['auto'] as const), faker.number.int({ min: 0, max: undefined })]), undefined]), n_epochs: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.helpers.arrayElement(['auto'] as const), faker.number.int({ min: 1, max: 50 })]), undefined]) }, undefined]) }, undefined]) }, undefined]) })), has_more: faker.datatype.boolean(), object: faker.helpers.arrayElement(['list'] as const), ...overrideResponse })
+export function getListPaginatedFineTuningJobsResponseMock(overrideResponse: Partial< ListPaginatedFineTuningJobsResponse > = {}): ListPaginatedFineTuningJobsResponse {
+    return {
+        data: Array.from({
+            length: faker.number.int({
+                min: 1,
+                max: 10,
+            }),
+        }, (_, i) => i + 1).map(() => ({
+            id: faker.string.alpha(20),
+            created_at: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            error: {
+                code: faker.string.alpha(20),
+                message: faker.string.alpha(20),
+                param: faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    null,
+                ]),
+            },
+            fine_tuned_model: faker.helpers.arrayElement([
+                faker.string.alpha(20),
+                null,
+            ]),
+            finished_at: faker.helpers.arrayElement([
+                faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                null,
+            ]),
+            hyperparameters: {
+                batch_size: faker.helpers.arrayElement([
+                    faker.helpers.arrayElement([
+                        faker.helpers.arrayElement(['auto'] as const),
+                        faker.number.int({
+                            min: 1,
+                            max: 256,
+                        }),
+                    ]),
+                    undefined,
+                ]),
+                learning_rate_multiplier: faker.helpers.arrayElement([
+                    faker.helpers.arrayElement([
+                        faker.helpers.arrayElement(['auto'] as const),
+                        faker.number.int({
+                            min: 0,
+                            max: undefined,
+                        }),
+                    ]),
+                    undefined,
+                ]),
+                n_epochs: faker.helpers.arrayElement([
+                    faker.helpers.arrayElement([
+                        faker.helpers.arrayElement(['auto'] as const),
+                        faker.number.int({
+                            min: 1,
+                            max: 50,
+                        }),
+                    ]),
+                    undefined,
+                ]),
+            },
+            model: faker.string.alpha(20),
+            object: faker.helpers.arrayElement(['fine_tuning.job'] as const),
+            organization_id: faker.string.alpha(20),
+            result_files: Array.from({
+                length: faker.number.int({
+                    min: 1,
+                    max: 10,
+                }),
+            }, (_, i) => i + 1).map(() => (faker.string.alpha(20))),
+            status: faker.helpers.arrayElement([
+                'validating_files',
+                'queued',
+                'running',
+                'succeeded',
+                'failed',
+                'cancelled',
+            ] as const),
+            trained_tokens: faker.helpers.arrayElement([
+                faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                null,
+            ]),
+            training_file: faker.string.alpha(20),
+            validation_file: faker.helpers.arrayElement([
+                faker.string.alpha(20),
+                null,
+            ]),
+            integrations: faker.helpers.arrayElement([
+                Array.from({
+                    length: faker.number.int({
+                        min: 1,
+                        max: 10,
+                    }),
+                }, (_, i) => i + 1).map(() => (faker.helpers.arrayElement([
+                    {
+                        ...getListPaginatedFineTuningJobsResponseFineTuningIntegrationMock(),
+                    },
+                ]))),
+                undefined,
+            ]),
+            seed: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            estimated_finish: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.number.int({
+                        min: undefined,
+                        max: undefined,
+                    }),
+                    null,
+                ]),
+                undefined,
+            ]),
+            method: faker.helpers.arrayElement([
+                {
+                    type: faker.helpers.arrayElement([
+                        faker.helpers.arrayElement([
+                            'supervised',
+                            'dpo',
+                        ] as const),
+                        undefined,
+                    ]),
+                    supervised: faker.helpers.arrayElement([
+                        {
+                            hyperparameters: faker.helpers.arrayElement([
+                                {
+                                    batch_size: faker.helpers.arrayElement([
+                                        faker.helpers.arrayElement([
+                                            faker.helpers.arrayElement(['auto'] as const),
+                                            faker.number.int({
+                                                min: 1,
+                                                max: 256,
+                                            }),
+                                        ]),
+                                        undefined,
+                                    ]),
+                                    learning_rate_multiplier: faker.helpers.arrayElement([
+                                        faker.helpers.arrayElement([
+                                            faker.helpers.arrayElement(['auto'] as const),
+                                            faker.number.int({
+                                                min: 0,
+                                                max: undefined,
+                                            }),
+                                        ]),
+                                        undefined,
+                                    ]),
+                                    n_epochs: faker.helpers.arrayElement([
+                                        faker.helpers.arrayElement([
+                                            faker.helpers.arrayElement(['auto'] as const),
+                                            faker.number.int({
+                                                min: 1,
+                                                max: 50,
+                                            }),
+                                        ]),
+                                        undefined,
+                                    ]),
+                                },
+                                undefined,
+                            ]),
+                        },
+                        undefined,
+                    ]),
+                    dpo: faker.helpers.arrayElement([
+                        {
+                            hyperparameters: faker.helpers.arrayElement([
+                                {
+                                    beta: faker.helpers.arrayElement([
+                                        faker.helpers.arrayElement([
+                                            faker.helpers.arrayElement(['auto'] as const),
+                                            faker.number.int({
+                                                min: 0,
+                                                max: 2,
+                                            }),
+                                        ]),
+                                        undefined,
+                                    ]),
+                                    batch_size: faker.helpers.arrayElement([
+                                        faker.helpers.arrayElement([
+                                            faker.helpers.arrayElement(['auto'] as const),
+                                            faker.number.int({
+                                                min: 1,
+                                                max: 256,
+                                            }),
+                                        ]),
+                                        undefined,
+                                    ]),
+                                    learning_rate_multiplier: faker.helpers.arrayElement([
+                                        faker.helpers.arrayElement([
+                                            faker.helpers.arrayElement(['auto'] as const),
+                                            faker.number.int({
+                                                min: 0,
+                                                max: undefined,
+                                            }),
+                                        ]),
+                                        undefined,
+                                    ]),
+                                    n_epochs: faker.helpers.arrayElement([
+                                        faker.helpers.arrayElement([
+                                            faker.helpers.arrayElement(['auto'] as const),
+                                            faker.number.int({
+                                                min: 1,
+                                                max: 50,
+                                            }),
+                                        ]),
+                                        undefined,
+                                    ]),
+                                },
+                                undefined,
+                            ]),
+                        },
+                        undefined,
+                    ]),
+                },
+                undefined,
+            ]),
+        })),
+        has_more: faker.datatype.boolean(),
+        object: faker.helpers.arrayElement(['list'] as const),
+        ...overrideResponse,
+    }
+}
 
-export const getRetrieveFineTuningJobResponseFineTuningIntegrationMock = (overrideResponse: Partial<FineTuningIntegration> = {}): FineTuningIntegration => ({ ...{ type: faker.helpers.arrayElement(['wandb'] as const), wandb: { project: faker.string.alpha(20), name: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), entity: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), tags: faker.helpers.arrayElement([Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => (faker.string.alpha(20))), undefined]) } }, ...overrideResponse })
+export function getRetrieveFineTuningJobResponseFineTuningIntegrationMock(overrideResponse: Partial<FineTuningIntegration> = {}): FineTuningIntegration {
+    return {
+        ...{
+            type: faker.helpers.arrayElement(['wandb'] as const),
+            wandb: {
+                project: faker.string.alpha(20),
+                name: faker.helpers.arrayElement([
+                    faker.helpers.arrayElement([
+                        faker.string.alpha(20),
+                        null,
+                    ]),
+                    undefined,
+                ]),
+                entity: faker.helpers.arrayElement([
+                    faker.helpers.arrayElement([
+                        faker.string.alpha(20),
+                        null,
+                    ]),
+                    undefined,
+                ]),
+                tags: faker.helpers.arrayElement([
+                    Array.from({
+                        length: faker.number.int({
+                            min: 1,
+                            max: 10,
+                        }),
+                    }, (_, i) => i + 1).map(() => (faker.string.alpha(20))),
+                    undefined,
+                ]),
+            },
+        },
+        ...overrideResponse,
+    }
+}
 
-export const getRetrieveFineTuningJobResponseMock = (overrideResponse: Partial< FineTuningJob > = {}): FineTuningJob => ({ id: faker.string.alpha(20), created_at: faker.number.int({ min: undefined, max: undefined }), error: { code: faker.string.alpha(20), message: faker.string.alpha(20), param: faker.helpers.arrayElement([faker.string.alpha(20), null]) }, fine_tuned_model: faker.helpers.arrayElement([faker.string.alpha(20), null]), finished_at: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), null]), hyperparameters: { batch_size: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.helpers.arrayElement(['auto'] as const), faker.number.int({ min: 1, max: 256 })]), undefined]), learning_rate_multiplier: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.helpers.arrayElement(['auto'] as const), faker.number.int({ min: 0, max: undefined })]), undefined]), n_epochs: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.helpers.arrayElement(['auto'] as const), faker.number.int({ min: 1, max: 50 })]), undefined]) }, model: faker.string.alpha(20), object: faker.helpers.arrayElement(['fine_tuning.job'] as const), organization_id: faker.string.alpha(20), result_files: Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => (faker.string.alpha(20))), status: faker.helpers.arrayElement(['validating_files', 'queued', 'running', 'succeeded', 'failed', 'cancelled'] as const), trained_tokens: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), null]), training_file: faker.string.alpha(20), validation_file: faker.helpers.arrayElement([faker.string.alpha(20), null]), integrations: faker.helpers.arrayElement([Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => (faker.helpers.arrayElement([{ ...getRetrieveFineTuningJobResponseFineTuningIntegrationMock() }]))), undefined]), seed: faker.number.int({ min: undefined, max: undefined }), estimated_finish: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), null]), undefined]), method: faker.helpers.arrayElement([{ type: faker.helpers.arrayElement([faker.helpers.arrayElement(['supervised', 'dpo'] as const), undefined]), supervised: faker.helpers.arrayElement([{ hyperparameters: faker.helpers.arrayElement([{ batch_size: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.helpers.arrayElement(['auto'] as const), faker.number.int({ min: 1, max: 256 })]), undefined]), learning_rate_multiplier: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.helpers.arrayElement(['auto'] as const), faker.number.int({ min: 0, max: undefined })]), undefined]), n_epochs: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.helpers.arrayElement(['auto'] as const), faker.number.int({ min: 1, max: 50 })]), undefined]) }, undefined]) }, undefined]), dpo: faker.helpers.arrayElement([{ hyperparameters: faker.helpers.arrayElement([{ beta: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.helpers.arrayElement(['auto'] as const), faker.number.int({ min: 0, max: 2 })]), undefined]), batch_size: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.helpers.arrayElement(['auto'] as const), faker.number.int({ min: 1, max: 256 })]), undefined]), learning_rate_multiplier: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.helpers.arrayElement(['auto'] as const), faker.number.int({ min: 0, max: undefined })]), undefined]), n_epochs: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.helpers.arrayElement(['auto'] as const), faker.number.int({ min: 1, max: 50 })]), undefined]) }, undefined]) }, undefined]) }, undefined]), ...overrideResponse })
+export function getRetrieveFineTuningJobResponseMock(overrideResponse: Partial< FineTuningJob > = {}): FineTuningJob {
+    return {
+        id: faker.string.alpha(20),
+        created_at: faker.number.int({
+            min: undefined,
+            max: undefined,
+        }),
+        error: {
+            code: faker.string.alpha(20),
+            message: faker.string.alpha(20),
+            param: faker.helpers.arrayElement([
+                faker.string.alpha(20),
+                null,
+            ]),
+        },
+        fine_tuned_model: faker.helpers.arrayElement([
+            faker.string.alpha(20),
+            null,
+        ]),
+        finished_at: faker.helpers.arrayElement([
+            faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            null,
+        ]),
+        hyperparameters: {
+            batch_size: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.helpers.arrayElement(['auto'] as const),
+                    faker.number.int({
+                        min: 1,
+                        max: 256,
+                    }),
+                ]),
+                undefined,
+            ]),
+            learning_rate_multiplier: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.helpers.arrayElement(['auto'] as const),
+                    faker.number.int({
+                        min: 0,
+                        max: undefined,
+                    }),
+                ]),
+                undefined,
+            ]),
+            n_epochs: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.helpers.arrayElement(['auto'] as const),
+                    faker.number.int({
+                        min: 1,
+                        max: 50,
+                    }),
+                ]),
+                undefined,
+            ]),
+        },
+        model: faker.string.alpha(20),
+        object: faker.helpers.arrayElement(['fine_tuning.job'] as const),
+        organization_id: faker.string.alpha(20),
+        result_files: Array.from({
+            length: faker.number.int({
+                min: 1,
+                max: 10,
+            }),
+        }, (_, i) => i + 1).map(() => (faker.string.alpha(20))),
+        status: faker.helpers.arrayElement([
+            'validating_files',
+            'queued',
+            'running',
+            'succeeded',
+            'failed',
+            'cancelled',
+        ] as const),
+        trained_tokens: faker.helpers.arrayElement([
+            faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            null,
+        ]),
+        training_file: faker.string.alpha(20),
+        validation_file: faker.helpers.arrayElement([
+            faker.string.alpha(20),
+            null,
+        ]),
+        integrations: faker.helpers.arrayElement([
+            Array.from({
+                length: faker.number.int({
+                    min: 1,
+                    max: 10,
+                }),
+            }, (_, i) => i + 1).map(() => (faker.helpers.arrayElement([
+                {
+                    ...getRetrieveFineTuningJobResponseFineTuningIntegrationMock(),
+                },
+            ]))),
+            undefined,
+        ]),
+        seed: faker.number.int({
+            min: undefined,
+            max: undefined,
+        }),
+        estimated_finish: faker.helpers.arrayElement([
+            faker.helpers.arrayElement([
+                faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                null,
+            ]),
+            undefined,
+        ]),
+        method: faker.helpers.arrayElement([
+            {
+                type: faker.helpers.arrayElement([
+                    faker.helpers.arrayElement([
+                        'supervised',
+                        'dpo',
+                    ] as const),
+                    undefined,
+                ]),
+                supervised: faker.helpers.arrayElement([
+                    {
+                        hyperparameters: faker.helpers.arrayElement([
+                            {
+                                batch_size: faker.helpers.arrayElement([
+                                    faker.helpers.arrayElement([
+                                        faker.helpers.arrayElement(['auto'] as const),
+                                        faker.number.int({
+                                            min: 1,
+                                            max: 256,
+                                        }),
+                                    ]),
+                                    undefined,
+                                ]),
+                                learning_rate_multiplier: faker.helpers.arrayElement([
+                                    faker.helpers.arrayElement([
+                                        faker.helpers.arrayElement(['auto'] as const),
+                                        faker.number.int({
+                                            min: 0,
+                                            max: undefined,
+                                        }),
+                                    ]),
+                                    undefined,
+                                ]),
+                                n_epochs: faker.helpers.arrayElement([
+                                    faker.helpers.arrayElement([
+                                        faker.helpers.arrayElement(['auto'] as const),
+                                        faker.number.int({
+                                            min: 1,
+                                            max: 50,
+                                        }),
+                                    ]),
+                                    undefined,
+                                ]),
+                            },
+                            undefined,
+                        ]),
+                    },
+                    undefined,
+                ]),
+                dpo: faker.helpers.arrayElement([
+                    {
+                        hyperparameters: faker.helpers.arrayElement([
+                            {
+                                beta: faker.helpers.arrayElement([
+                                    faker.helpers.arrayElement([
+                                        faker.helpers.arrayElement(['auto'] as const),
+                                        faker.number.int({
+                                            min: 0,
+                                            max: 2,
+                                        }),
+                                    ]),
+                                    undefined,
+                                ]),
+                                batch_size: faker.helpers.arrayElement([
+                                    faker.helpers.arrayElement([
+                                        faker.helpers.arrayElement(['auto'] as const),
+                                        faker.number.int({
+                                            min: 1,
+                                            max: 256,
+                                        }),
+                                    ]),
+                                    undefined,
+                                ]),
+                                learning_rate_multiplier: faker.helpers.arrayElement([
+                                    faker.helpers.arrayElement([
+                                        faker.helpers.arrayElement(['auto'] as const),
+                                        faker.number.int({
+                                            min: 0,
+                                            max: undefined,
+                                        }),
+                                    ]),
+                                    undefined,
+                                ]),
+                                n_epochs: faker.helpers.arrayElement([
+                                    faker.helpers.arrayElement([
+                                        faker.helpers.arrayElement(['auto'] as const),
+                                        faker.number.int({
+                                            min: 1,
+                                            max: 50,
+                                        }),
+                                    ]),
+                                    undefined,
+                                ]),
+                            },
+                            undefined,
+                        ]),
+                    },
+                    undefined,
+                ]),
+            },
+            undefined,
+        ]),
+        ...overrideResponse,
+    }
+}
 
-export const getCancelFineTuningJobResponseFineTuningIntegrationMock = (overrideResponse: Partial<FineTuningIntegration> = {}): FineTuningIntegration => ({ ...{ type: faker.helpers.arrayElement(['wandb'] as const), wandb: { project: faker.string.alpha(20), name: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), entity: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), tags: faker.helpers.arrayElement([Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => (faker.string.alpha(20))), undefined]) } }, ...overrideResponse })
+export function getCancelFineTuningJobResponseFineTuningIntegrationMock(overrideResponse: Partial<FineTuningIntegration> = {}): FineTuningIntegration {
+    return {
+        ...{
+            type: faker.helpers.arrayElement(['wandb'] as const),
+            wandb: {
+                project: faker.string.alpha(20),
+                name: faker.helpers.arrayElement([
+                    faker.helpers.arrayElement([
+                        faker.string.alpha(20),
+                        null,
+                    ]),
+                    undefined,
+                ]),
+                entity: faker.helpers.arrayElement([
+                    faker.helpers.arrayElement([
+                        faker.string.alpha(20),
+                        null,
+                    ]),
+                    undefined,
+                ]),
+                tags: faker.helpers.arrayElement([
+                    Array.from({
+                        length: faker.number.int({
+                            min: 1,
+                            max: 10,
+                        }),
+                    }, (_, i) => i + 1).map(() => (faker.string.alpha(20))),
+                    undefined,
+                ]),
+            },
+        },
+        ...overrideResponse,
+    }
+}
 
-export const getCancelFineTuningJobResponseMock = (overrideResponse: Partial< FineTuningJob > = {}): FineTuningJob => ({ id: faker.string.alpha(20), created_at: faker.number.int({ min: undefined, max: undefined }), error: { code: faker.string.alpha(20), message: faker.string.alpha(20), param: faker.helpers.arrayElement([faker.string.alpha(20), null]) }, fine_tuned_model: faker.helpers.arrayElement([faker.string.alpha(20), null]), finished_at: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), null]), hyperparameters: { batch_size: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.helpers.arrayElement(['auto'] as const), faker.number.int({ min: 1, max: 256 })]), undefined]), learning_rate_multiplier: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.helpers.arrayElement(['auto'] as const), faker.number.int({ min: 0, max: undefined })]), undefined]), n_epochs: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.helpers.arrayElement(['auto'] as const), faker.number.int({ min: 1, max: 50 })]), undefined]) }, model: faker.string.alpha(20), object: faker.helpers.arrayElement(['fine_tuning.job'] as const), organization_id: faker.string.alpha(20), result_files: Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => (faker.string.alpha(20))), status: faker.helpers.arrayElement(['validating_files', 'queued', 'running', 'succeeded', 'failed', 'cancelled'] as const), trained_tokens: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), null]), training_file: faker.string.alpha(20), validation_file: faker.helpers.arrayElement([faker.string.alpha(20), null]), integrations: faker.helpers.arrayElement([Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => (faker.helpers.arrayElement([{ ...getCancelFineTuningJobResponseFineTuningIntegrationMock() }]))), undefined]), seed: faker.number.int({ min: undefined, max: undefined }), estimated_finish: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), null]), undefined]), method: faker.helpers.arrayElement([{ type: faker.helpers.arrayElement([faker.helpers.arrayElement(['supervised', 'dpo'] as const), undefined]), supervised: faker.helpers.arrayElement([{ hyperparameters: faker.helpers.arrayElement([{ batch_size: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.helpers.arrayElement(['auto'] as const), faker.number.int({ min: 1, max: 256 })]), undefined]), learning_rate_multiplier: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.helpers.arrayElement(['auto'] as const), faker.number.int({ min: 0, max: undefined })]), undefined]), n_epochs: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.helpers.arrayElement(['auto'] as const), faker.number.int({ min: 1, max: 50 })]), undefined]) }, undefined]) }, undefined]), dpo: faker.helpers.arrayElement([{ hyperparameters: faker.helpers.arrayElement([{ beta: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.helpers.arrayElement(['auto'] as const), faker.number.int({ min: 0, max: 2 })]), undefined]), batch_size: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.helpers.arrayElement(['auto'] as const), faker.number.int({ min: 1, max: 256 })]), undefined]), learning_rate_multiplier: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.helpers.arrayElement(['auto'] as const), faker.number.int({ min: 0, max: undefined })]), undefined]), n_epochs: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.helpers.arrayElement(['auto'] as const), faker.number.int({ min: 1, max: 50 })]), undefined]) }, undefined]) }, undefined]) }, undefined]), ...overrideResponse })
+export function getCancelFineTuningJobResponseMock(overrideResponse: Partial< FineTuningJob > = {}): FineTuningJob {
+    return {
+        id: faker.string.alpha(20),
+        created_at: faker.number.int({
+            min: undefined,
+            max: undefined,
+        }),
+        error: {
+            code: faker.string.alpha(20),
+            message: faker.string.alpha(20),
+            param: faker.helpers.arrayElement([
+                faker.string.alpha(20),
+                null,
+            ]),
+        },
+        fine_tuned_model: faker.helpers.arrayElement([
+            faker.string.alpha(20),
+            null,
+        ]),
+        finished_at: faker.helpers.arrayElement([
+            faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            null,
+        ]),
+        hyperparameters: {
+            batch_size: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.helpers.arrayElement(['auto'] as const),
+                    faker.number.int({
+                        min: 1,
+                        max: 256,
+                    }),
+                ]),
+                undefined,
+            ]),
+            learning_rate_multiplier: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.helpers.arrayElement(['auto'] as const),
+                    faker.number.int({
+                        min: 0,
+                        max: undefined,
+                    }),
+                ]),
+                undefined,
+            ]),
+            n_epochs: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.helpers.arrayElement(['auto'] as const),
+                    faker.number.int({
+                        min: 1,
+                        max: 50,
+                    }),
+                ]),
+                undefined,
+            ]),
+        },
+        model: faker.string.alpha(20),
+        object: faker.helpers.arrayElement(['fine_tuning.job'] as const),
+        organization_id: faker.string.alpha(20),
+        result_files: Array.from({
+            length: faker.number.int({
+                min: 1,
+                max: 10,
+            }),
+        }, (_, i) => i + 1).map(() => (faker.string.alpha(20))),
+        status: faker.helpers.arrayElement([
+            'validating_files',
+            'queued',
+            'running',
+            'succeeded',
+            'failed',
+            'cancelled',
+        ] as const),
+        trained_tokens: faker.helpers.arrayElement([
+            faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            null,
+        ]),
+        training_file: faker.string.alpha(20),
+        validation_file: faker.helpers.arrayElement([
+            faker.string.alpha(20),
+            null,
+        ]),
+        integrations: faker.helpers.arrayElement([
+            Array.from({
+                length: faker.number.int({
+                    min: 1,
+                    max: 10,
+                }),
+            }, (_, i) => i + 1).map(() => (faker.helpers.arrayElement([
+                {
+                    ...getCancelFineTuningJobResponseFineTuningIntegrationMock(),
+                },
+            ]))),
+            undefined,
+        ]),
+        seed: faker.number.int({
+            min: undefined,
+            max: undefined,
+        }),
+        estimated_finish: faker.helpers.arrayElement([
+            faker.helpers.arrayElement([
+                faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                null,
+            ]),
+            undefined,
+        ]),
+        method: faker.helpers.arrayElement([
+            {
+                type: faker.helpers.arrayElement([
+                    faker.helpers.arrayElement([
+                        'supervised',
+                        'dpo',
+                    ] as const),
+                    undefined,
+                ]),
+                supervised: faker.helpers.arrayElement([
+                    {
+                        hyperparameters: faker.helpers.arrayElement([
+                            {
+                                batch_size: faker.helpers.arrayElement([
+                                    faker.helpers.arrayElement([
+                                        faker.helpers.arrayElement(['auto'] as const),
+                                        faker.number.int({
+                                            min: 1,
+                                            max: 256,
+                                        }),
+                                    ]),
+                                    undefined,
+                                ]),
+                                learning_rate_multiplier: faker.helpers.arrayElement([
+                                    faker.helpers.arrayElement([
+                                        faker.helpers.arrayElement(['auto'] as const),
+                                        faker.number.int({
+                                            min: 0,
+                                            max: undefined,
+                                        }),
+                                    ]),
+                                    undefined,
+                                ]),
+                                n_epochs: faker.helpers.arrayElement([
+                                    faker.helpers.arrayElement([
+                                        faker.helpers.arrayElement(['auto'] as const),
+                                        faker.number.int({
+                                            min: 1,
+                                            max: 50,
+                                        }),
+                                    ]),
+                                    undefined,
+                                ]),
+                            },
+                            undefined,
+                        ]),
+                    },
+                    undefined,
+                ]),
+                dpo: faker.helpers.arrayElement([
+                    {
+                        hyperparameters: faker.helpers.arrayElement([
+                            {
+                                beta: faker.helpers.arrayElement([
+                                    faker.helpers.arrayElement([
+                                        faker.helpers.arrayElement(['auto'] as const),
+                                        faker.number.int({
+                                            min: 0,
+                                            max: 2,
+                                        }),
+                                    ]),
+                                    undefined,
+                                ]),
+                                batch_size: faker.helpers.arrayElement([
+                                    faker.helpers.arrayElement([
+                                        faker.helpers.arrayElement(['auto'] as const),
+                                        faker.number.int({
+                                            min: 1,
+                                            max: 256,
+                                        }),
+                                    ]),
+                                    undefined,
+                                ]),
+                                learning_rate_multiplier: faker.helpers.arrayElement([
+                                    faker.helpers.arrayElement([
+                                        faker.helpers.arrayElement(['auto'] as const),
+                                        faker.number.int({
+                                            min: 0,
+                                            max: undefined,
+                                        }),
+                                    ]),
+                                    undefined,
+                                ]),
+                                n_epochs: faker.helpers.arrayElement([
+                                    faker.helpers.arrayElement([
+                                        faker.helpers.arrayElement(['auto'] as const),
+                                        faker.number.int({
+                                            min: 1,
+                                            max: 50,
+                                        }),
+                                    ]),
+                                    undefined,
+                                ]),
+                            },
+                            undefined,
+                        ]),
+                    },
+                    undefined,
+                ]),
+            },
+            undefined,
+        ]),
+        ...overrideResponse,
+    }
+}
 
-export const getListFineTuningJobCheckpointsResponseMock = (overrideResponse: Partial< ListFineTuningJobCheckpointsResponse > = {}): ListFineTuningJobCheckpointsResponse => ({ data: Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => ({ id: faker.string.alpha(20), created_at: faker.number.int({ min: undefined, max: undefined }), fine_tuned_model_checkpoint: faker.string.alpha(20), step_number: faker.number.int({ min: undefined, max: undefined }), metrics: { step: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), train_loss: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), train_mean_token_accuracy: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), valid_loss: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), valid_mean_token_accuracy: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), full_valid_loss: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), full_valid_mean_token_accuracy: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]) }, fine_tuning_job_id: faker.string.alpha(20), object: faker.helpers.arrayElement(['fine_tuning.job.checkpoint'] as const) })), object: faker.helpers.arrayElement(['list'] as const), first_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), last_id: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.string.alpha(20), null]), undefined]), has_more: faker.datatype.boolean(), ...overrideResponse })
+export function getListFineTuningJobCheckpointsResponseMock(overrideResponse: Partial< ListFineTuningJobCheckpointsResponse > = {}): ListFineTuningJobCheckpointsResponse {
+    return {
+        data: Array.from({
+            length: faker.number.int({
+                min: 1,
+                max: 10,
+            }),
+        }, (_, i) => i + 1).map(() => ({
+            id: faker.string.alpha(20),
+            created_at: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            fine_tuned_model_checkpoint: faker.string.alpha(20),
+            step_number: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            metrics: {
+                step: faker.helpers.arrayElement([
+                    faker.number.int({
+                        min: undefined,
+                        max: undefined,
+                    }),
+                    undefined,
+                ]),
+                train_loss: faker.helpers.arrayElement([
+                    faker.number.int({
+                        min: undefined,
+                        max: undefined,
+                    }),
+                    undefined,
+                ]),
+                train_mean_token_accuracy: faker.helpers.arrayElement([
+                    faker.number.int({
+                        min: undefined,
+                        max: undefined,
+                    }),
+                    undefined,
+                ]),
+                valid_loss: faker.helpers.arrayElement([
+                    faker.number.int({
+                        min: undefined,
+                        max: undefined,
+                    }),
+                    undefined,
+                ]),
+                valid_mean_token_accuracy: faker.helpers.arrayElement([
+                    faker.number.int({
+                        min: undefined,
+                        max: undefined,
+                    }),
+                    undefined,
+                ]),
+                full_valid_loss: faker.helpers.arrayElement([
+                    faker.number.int({
+                        min: undefined,
+                        max: undefined,
+                    }),
+                    undefined,
+                ]),
+                full_valid_mean_token_accuracy: faker.helpers.arrayElement([
+                    faker.number.int({
+                        min: undefined,
+                        max: undefined,
+                    }),
+                    undefined,
+                ]),
+            },
+            fine_tuning_job_id: faker.string.alpha(20),
+            object: faker.helpers.arrayElement(['fine_tuning.job.checkpoint'] as const),
+        })),
+        object: faker.helpers.arrayElement(['list'] as const),
+        first_id: faker.helpers.arrayElement([
+            faker.helpers.arrayElement([
+                faker.string.alpha(20),
+                null,
+            ]),
+            undefined,
+        ]),
+        last_id: faker.helpers.arrayElement([
+            faker.helpers.arrayElement([
+                faker.string.alpha(20),
+                null,
+            ]),
+            undefined,
+        ]),
+        has_more: faker.datatype.boolean(),
+        ...overrideResponse,
+    }
+}
 
-export const getListFineTuningEventsResponseMock = (overrideResponse: Partial< ListFineTuningJobEventsResponse > = {}): ListFineTuningJobEventsResponse => ({ data: Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => ({ object: faker.helpers.arrayElement(['fine_tuning.job.event'] as const), id: faker.string.alpha(20), created_at: faker.number.int({ min: undefined, max: undefined }), level: faker.helpers.arrayElement(['info', 'warn', 'error'] as const), message: faker.string.alpha(20), type: faker.helpers.arrayElement([faker.helpers.arrayElement(['message', 'metrics'] as const), undefined]), data: faker.helpers.arrayElement([{}, undefined]) })), object: faker.helpers.arrayElement(['list'] as const), has_more: faker.datatype.boolean(), ...overrideResponse })
+export function getListFineTuningEventsResponseMock(overrideResponse: Partial< ListFineTuningJobEventsResponse > = {}): ListFineTuningJobEventsResponse {
+    return {
+        data: Array.from({
+            length: faker.number.int({
+                min: 1,
+                max: 10,
+            }),
+        }, (_, i) => i + 1).map(() => ({
+            object: faker.helpers.arrayElement(['fine_tuning.job.event'] as const),
+            id: faker.string.alpha(20),
+            created_at: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            level: faker.helpers.arrayElement([
+                'info',
+                'warn',
+                'error',
+            ] as const),
+            message: faker.string.alpha(20),
+            type: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    'message',
+                    'metrics',
+                ] as const),
+                undefined,
+            ]),
+            data: faker.helpers.arrayElement([
+                {},
+                undefined,
+            ]),
+        })),
+        object: faker.helpers.arrayElement(['list'] as const),
+        has_more: faker.datatype.boolean(),
+        ...overrideResponse,
+    }
+}
 
 export function getCreateFineTuningJobMockHandler(overrideResponse?: FineTuningJob | ((info: Parameters<Parameters<typeof http.post>[1]>[0]) => Promise<FineTuningJob> | FineTuningJob)) {
     return http.post('*/fine_tuning/jobs', async (info) => {
@@ -49,7 +1188,11 @@ export function getCreateFineTuningJobMockHandler(overrideResponse?: FineTuningJ
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getCreateFineTuningJobResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getCreateFineTuningJobResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }
@@ -60,7 +1203,11 @@ export function getListPaginatedFineTuningJobsMockHandler(overrideResponse?: Lis
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getListPaginatedFineTuningJobsResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getListPaginatedFineTuningJobsResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }
@@ -71,7 +1218,11 @@ export function getRetrieveFineTuningJobMockHandler(overrideResponse?: FineTunin
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getRetrieveFineTuningJobResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getRetrieveFineTuningJobResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }
@@ -82,7 +1233,11 @@ export function getCancelFineTuningJobMockHandler(overrideResponse?: FineTuningJ
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getCancelFineTuningJobResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getCancelFineTuningJobResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }
@@ -93,7 +1248,11 @@ export function getListFineTuningJobCheckpointsMockHandler(overrideResponse?: Li
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getListFineTuningJobCheckpointsResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getListFineTuningJobCheckpointsResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }
@@ -104,7 +1263,11 @@ export function getListFineTuningEventsMockHandler(overrideResponse?: ListFineTu
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getListFineTuningEventsResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getListFineTuningEventsResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }

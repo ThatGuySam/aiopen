@@ -29,10 +29,15 @@ export function getAuditLogs() {
             `http://localhost:3000/v1/organization/audit_logs`,
             {
                 ...options,
-                params: { ...params, ...options?.params },
+                params: {
+                    ...params,
+                    ...options?.params,
+                },
             },
         )
     }
-    return { listAuditLogs }
+    return {
+        listAuditLogs,
+    }
 }
 export type ListAuditLogsResult = AxiosResponse<ListAuditLogsResponse>

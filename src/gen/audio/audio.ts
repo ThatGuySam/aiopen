@@ -95,7 +95,11 @@ export function getAudio() {
             options,
         )
     }
-    return { createSpeech, createTranscription, createTranslation }
+    return {
+        createSpeech,
+        createTranscription,
+        createTranslation,
+    }
 }
 export type CreateSpeechResult = AxiosResponse<Blob>
 export type CreateTranscriptionResult = AxiosResponse<CreateTranscription200>

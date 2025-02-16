@@ -55,7 +55,10 @@ Response includes details of the enqueued job including job status and the name 
             `http://localhost:3000/v1/fine_tuning/jobs`,
             {
                 ...options,
-                params: { ...params, ...options?.params },
+                params: {
+                    ...params,
+                    ...options?.params,
+                },
             },
         )
     }
@@ -101,7 +104,10 @@ Response includes details of the enqueued job including job status and the name 
             `http://localhost:3000/v1/fine_tuning/jobs/${fineTuningJobId}/checkpoints`,
             {
                 ...options,
-                params: { ...params, ...options?.params },
+                params: {
+                    ...params,
+                    ...options?.params,
+                },
             },
         )
     }
@@ -118,11 +124,21 @@ Response includes details of the enqueued job including job status and the name 
             `http://localhost:3000/v1/fine_tuning/jobs/${fineTuningJobId}/events`,
             {
                 ...options,
-                params: { ...params, ...options?.params },
+                params: {
+                    ...params,
+                    ...options?.params,
+                },
             },
         )
     }
-    return { createFineTuningJob, listPaginatedFineTuningJobs, retrieveFineTuningJob, cancelFineTuningJob, listFineTuningJobCheckpoints, listFineTuningEvents }
+    return {
+        createFineTuningJob,
+        listPaginatedFineTuningJobs,
+        retrieveFineTuningJob,
+        cancelFineTuningJob,
+        listFineTuningJobCheckpoints,
+        listFineTuningEvents,
+    }
 }
 export type CreateFineTuningJobResult = AxiosResponse<FineTuningJob>
 export type ListPaginatedFineTuningJobsResult = AxiosResponse<ListPaginatedFineTuningJobsResponse>

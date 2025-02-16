@@ -19,7 +19,123 @@ import {
     HttpResponse,
 } from 'msw'
 
-export const getCreateModerationResponseMock = (overrideResponse: Partial< CreateModerationResponse > = {}): CreateModerationResponse => ({ id: faker.string.alpha(20), model: faker.string.alpha(20), results: Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => ({ flagged: faker.datatype.boolean(), categories: { 'hate': faker.datatype.boolean(), 'hate/threatening': faker.datatype.boolean(), 'harassment': faker.datatype.boolean(), 'harassment/threatening': faker.datatype.boolean(), 'illicit': faker.datatype.boolean(), 'illicit/violent': faker.datatype.boolean(), 'self-harm': faker.datatype.boolean(), 'self-harm/intent': faker.datatype.boolean(), 'self-harm/instructions': faker.datatype.boolean(), 'sexual': faker.datatype.boolean(), 'sexual/minors': faker.datatype.boolean(), 'violence': faker.datatype.boolean(), 'violence/graphic': faker.datatype.boolean() }, category_scores: { 'hate': faker.number.int({ min: undefined, max: undefined }), 'hate/threatening': faker.number.int({ min: undefined, max: undefined }), 'harassment': faker.number.int({ min: undefined, max: undefined }), 'harassment/threatening': faker.number.int({ min: undefined, max: undefined }), 'illicit': faker.number.int({ min: undefined, max: undefined }), 'illicit/violent': faker.number.int({ min: undefined, max: undefined }), 'self-harm': faker.number.int({ min: undefined, max: undefined }), 'self-harm/intent': faker.number.int({ min: undefined, max: undefined }), 'self-harm/instructions': faker.number.int({ min: undefined, max: undefined }), 'sexual': faker.number.int({ min: undefined, max: undefined }), 'sexual/minors': faker.number.int({ min: undefined, max: undefined }), 'violence': faker.number.int({ min: undefined, max: undefined }), 'violence/graphic': faker.number.int({ min: undefined, max: undefined }) }, category_applied_input_types: { 'hate': faker.helpers.arrayElements(['text'] as const), 'hate/threatening': faker.helpers.arrayElements(['text'] as const), 'harassment': faker.helpers.arrayElements(['text'] as const), 'harassment/threatening': faker.helpers.arrayElements(['text'] as const), 'illicit': faker.helpers.arrayElements(['text'] as const), 'illicit/violent': faker.helpers.arrayElements(['text'] as const), 'self-harm': faker.helpers.arrayElements(['text', 'image'] as const), 'self-harm/intent': faker.helpers.arrayElements(['text', 'image'] as const), 'self-harm/instructions': faker.helpers.arrayElements(['text', 'image'] as const), 'sexual': faker.helpers.arrayElements(['text', 'image'] as const), 'sexual/minors': faker.helpers.arrayElements(['text'] as const), 'violence': faker.helpers.arrayElements(['text', 'image'] as const), 'violence/graphic': faker.helpers.arrayElements(['text', 'image'] as const) } })), ...overrideResponse })
+export function getCreateModerationResponseMock(overrideResponse: Partial< CreateModerationResponse > = {}): CreateModerationResponse {
+    return {
+        id: faker.string.alpha(20),
+        model: faker.string.alpha(20),
+        results: Array.from({
+            length: faker.number.int({
+                min: 1,
+                max: 10,
+            }),
+        }, (_, i) => i + 1).map(() => ({
+            flagged: faker.datatype.boolean(),
+            categories: {
+                'hate': faker.datatype.boolean(),
+                'hate/threatening': faker.datatype.boolean(),
+                'harassment': faker.datatype.boolean(),
+                'harassment/threatening': faker.datatype.boolean(),
+                'illicit': faker.datatype.boolean(),
+                'illicit/violent': faker.datatype.boolean(),
+                'self-harm': faker.datatype.boolean(),
+                'self-harm/intent': faker.datatype.boolean(),
+                'self-harm/instructions': faker.datatype.boolean(),
+                'sexual': faker.datatype.boolean(),
+                'sexual/minors': faker.datatype.boolean(),
+                'violence': faker.datatype.boolean(),
+                'violence/graphic': faker.datatype.boolean(),
+            },
+            category_scores: {
+                'hate': faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                'hate/threatening': faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                'harassment': faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                'harassment/threatening': faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                'illicit': faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                'illicit/violent': faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                'self-harm': faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                'self-harm/intent': faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                'self-harm/instructions': faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                'sexual': faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                'sexual/minors': faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                'violence': faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                'violence/graphic': faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+            },
+            category_applied_input_types: {
+                'hate': faker.helpers.arrayElements(['text'] as const),
+                'hate/threatening': faker.helpers.arrayElements(['text'] as const),
+                'harassment': faker.helpers.arrayElements(['text'] as const),
+                'harassment/threatening': faker.helpers.arrayElements(['text'] as const),
+                'illicit': faker.helpers.arrayElements(['text'] as const),
+                'illicit/violent': faker.helpers.arrayElements(['text'] as const),
+                'self-harm': faker.helpers.arrayElements([
+                    'text',
+                    'image',
+                ] as const),
+                'self-harm/intent': faker.helpers.arrayElements([
+                    'text',
+                    'image',
+                ] as const),
+                'self-harm/instructions': faker.helpers.arrayElements([
+                    'text',
+                    'image',
+                ] as const),
+                'sexual': faker.helpers.arrayElements([
+                    'text',
+                    'image',
+                ] as const),
+                'sexual/minors': faker.helpers.arrayElements(['text'] as const),
+                'violence': faker.helpers.arrayElements([
+                    'text',
+                    'image',
+                ] as const),
+                'violence/graphic': faker.helpers.arrayElements([
+                    'text',
+                    'image',
+                ] as const),
+            },
+        })),
+        ...overrideResponse,
+    }
+}
 
 export function getCreateModerationMockHandler(overrideResponse?: CreateModerationResponse | ((info: Parameters<Parameters<typeof http.post>[1]>[0]) => Promise<CreateModerationResponse> | CreateModerationResponse)) {
     return http.post('*/moderations', async (info) => {
@@ -27,12 +143,14 @@ export function getCreateModerationMockHandler(overrideResponse?: CreateModerati
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getCreateModerationResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getCreateModerationResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }
 export function getModerationsMock() {
-    return [
-        getCreateModerationMockHandler(),
-    ]
+    return [getCreateModerationMockHandler()]
 }

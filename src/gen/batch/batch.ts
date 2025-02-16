@@ -44,7 +44,10 @@ export function getBatch() {
             `http://localhost:3000/v1/batches`,
             {
                 ...options,
-                params: { ...params, ...options?.params },
+                params: {
+                    ...params,
+                    ...options?.params,
+                },
             },
         )
     }
@@ -73,7 +76,12 @@ export function getBatch() {
             options,
         )
     }
-    return { createBatch, listBatches, retrieveBatch, cancelBatch }
+    return {
+        createBatch,
+        listBatches,
+        retrieveBatch,
+        cancelBatch,
+    }
 }
 export type CreateBatchResult = AxiosResponse<Batch>
 export type ListBatchesResult = AxiosResponse<ListBatchesResponse>

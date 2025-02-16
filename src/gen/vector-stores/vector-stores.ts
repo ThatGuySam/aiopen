@@ -41,7 +41,10 @@ export function getVectorStores() {
             `http://localhost:3000/v1/vector_stores`,
             {
                 ...options,
-                params: { ...params, ...options?.params },
+                params: {
+                    ...params,
+                    ...options?.params,
+                },
             },
         )
     }
@@ -150,7 +153,10 @@ export function getVectorStores() {
             `http://localhost:3000/v1/vector_stores/${vectorStoreId}/file_batches/${batchId}/files`,
             {
                 ...options,
-                params: { ...params, ...options?.params },
+                params: {
+                    ...params,
+                    ...options?.params,
+                },
             },
         )
     }
@@ -166,7 +172,10 @@ export function getVectorStores() {
             `http://localhost:3000/v1/vector_stores/${vectorStoreId}/files`,
             {
                 ...options,
-                params: { ...params, ...options?.params },
+                params: {
+                    ...params,
+                    ...options?.params,
+                },
             },
         )
     }
@@ -210,7 +219,21 @@ export function getVectorStores() {
             options,
         )
     }
-    return { listVectorStores, createVectorStore, getVectorStore, modifyVectorStore, deleteVectorStore, createVectorStoreFileBatch, getVectorStoreFileBatch, cancelVectorStoreFileBatch, listFilesInVectorStoreBatch, listVectorStoreFiles, createVectorStoreFile, getVectorStoreFile, deleteVectorStoreFile }
+    return {
+        listVectorStores,
+        createVectorStore,
+        getVectorStore,
+        modifyVectorStore,
+        deleteVectorStore,
+        createVectorStoreFileBatch,
+        getVectorStoreFileBatch,
+        cancelVectorStoreFileBatch,
+        listFilesInVectorStoreBatch,
+        listVectorStoreFiles,
+        createVectorStoreFile,
+        getVectorStoreFile,
+        deleteVectorStoreFile,
+    }
 }
 export type ListVectorStoresResult = AxiosResponse<ListVectorStoresResponse>
 export type CreateVectorStoreResult = AxiosResponse<VectorStoreObject>

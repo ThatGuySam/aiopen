@@ -28,62 +28,754 @@ import {
 } from 'msw'
 
 export function getListVectorStoresResponseMock(overrideResponse: Partial< ListVectorStoresResponse > = {}): ListVectorStoresResponse {
-    return { object: faker.string.alpha(20), data: Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => ({ id: faker.string.alpha(20), object: faker.helpers.arrayElement(['vector_store'] as const), created_at: faker.number.int({ min: undefined, max: undefined }), name: faker.string.alpha(20), usage_bytes: faker.number.int({ min: undefined, max: undefined }), file_counts: { in_progress: faker.number.int({ min: undefined, max: undefined }), completed: faker.number.int({ min: undefined, max: undefined }), failed: faker.number.int({ min: undefined, max: undefined }), cancelled: faker.number.int({ min: undefined, max: undefined }), total: faker.number.int({ min: undefined, max: undefined }) }, status: faker.helpers.arrayElement(['expired', 'in_progress', 'completed'] as const), expires_after: faker.helpers.arrayElement([{ anchor: faker.helpers.arrayElement(['last_active_at'] as const), days: faker.number.int({ min: 1, max: 365 }) }, undefined]), expires_at: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), null]), undefined]), last_active_at: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), null]), metadata: {
-        [faker.string.alphanumeric(5)]: faker.string.alpha(20),
-    } })), first_id: faker.string.alpha(20), last_id: faker.string.alpha(20), has_more: faker.datatype.boolean(), ...overrideResponse }
+    return {
+        object: faker.string.alpha(20),
+        data: Array.from({
+            length: faker.number.int({
+                min: 1,
+                max: 10,
+            }),
+        }, (_, i) => i + 1).map(() => ({
+            id: faker.string.alpha(20),
+            object: faker.helpers.arrayElement(['vector_store'] as const),
+            created_at: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            name: faker.string.alpha(20),
+            usage_bytes: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            file_counts: {
+                in_progress: faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                completed: faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                failed: faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                cancelled: faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                total: faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+            },
+            status: faker.helpers.arrayElement([
+                'expired',
+                'in_progress',
+                'completed',
+            ] as const),
+            expires_after: faker.helpers.arrayElement([
+                {
+                    anchor: faker.helpers.arrayElement(['last_active_at'] as const),
+                    days: faker.number.int({
+                        min: 1,
+                        max: 365,
+                    }),
+                },
+                undefined,
+            ]),
+            expires_at: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    faker.number.int({
+                        min: undefined,
+                        max: undefined,
+                    }),
+                    null,
+                ]),
+                undefined,
+            ]),
+            last_active_at: faker.helpers.arrayElement([
+                faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                null,
+            ]),
+            metadata: {
+                [faker.string.alphanumeric(5)]: faker.string.alpha(20),
+            },
+        })),
+        first_id: faker.string.alpha(20),
+        last_id: faker.string.alpha(20),
+        has_more: faker.datatype.boolean(),
+        ...overrideResponse,
+    }
 }
 
 export function getCreateVectorStoreResponseMock(overrideResponse: Partial< VectorStoreObject > = {}): VectorStoreObject {
-    return { id: faker.string.alpha(20), object: faker.helpers.arrayElement(['vector_store'] as const), created_at: faker.number.int({ min: undefined, max: undefined }), name: faker.string.alpha(20), usage_bytes: faker.number.int({ min: undefined, max: undefined }), file_counts: { in_progress: faker.number.int({ min: undefined, max: undefined }), completed: faker.number.int({ min: undefined, max: undefined }), failed: faker.number.int({ min: undefined, max: undefined }), cancelled: faker.number.int({ min: undefined, max: undefined }), total: faker.number.int({ min: undefined, max: undefined }) }, status: faker.helpers.arrayElement(['expired', 'in_progress', 'completed'] as const), expires_after: faker.helpers.arrayElement([{ anchor: faker.helpers.arrayElement(['last_active_at'] as const), days: faker.number.int({ min: 1, max: 365 }) }, undefined]), expires_at: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), null]), undefined]), last_active_at: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), null]), metadata: {
-        [faker.string.alphanumeric(5)]: faker.string.alpha(20),
-    }, ...overrideResponse }
+    return {
+        id: faker.string.alpha(20),
+        object: faker.helpers.arrayElement(['vector_store'] as const),
+        created_at: faker.number.int({
+            min: undefined,
+            max: undefined,
+        }),
+        name: faker.string.alpha(20),
+        usage_bytes: faker.number.int({
+            min: undefined,
+            max: undefined,
+        }),
+        file_counts: {
+            in_progress: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            completed: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            failed: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            cancelled: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            total: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+        },
+        status: faker.helpers.arrayElement([
+            'expired',
+            'in_progress',
+            'completed',
+        ] as const),
+        expires_after: faker.helpers.arrayElement([
+            {
+                anchor: faker.helpers.arrayElement(['last_active_at'] as const),
+                days: faker.number.int({
+                    min: 1,
+                    max: 365,
+                }),
+            },
+            undefined,
+        ]),
+        expires_at: faker.helpers.arrayElement([
+            faker.helpers.arrayElement([
+                faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                null,
+            ]),
+            undefined,
+        ]),
+        last_active_at: faker.helpers.arrayElement([
+            faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            null,
+        ]),
+        metadata: {
+            [faker.string.alphanumeric(5)]: faker.string.alpha(20),
+        },
+        ...overrideResponse,
+    }
 }
 
 export function getGetVectorStoreResponseMock(overrideResponse: Partial< VectorStoreObject > = {}): VectorStoreObject {
-    return { id: faker.string.alpha(20), object: faker.helpers.arrayElement(['vector_store'] as const), created_at: faker.number.int({ min: undefined, max: undefined }), name: faker.string.alpha(20), usage_bytes: faker.number.int({ min: undefined, max: undefined }), file_counts: { in_progress: faker.number.int({ min: undefined, max: undefined }), completed: faker.number.int({ min: undefined, max: undefined }), failed: faker.number.int({ min: undefined, max: undefined }), cancelled: faker.number.int({ min: undefined, max: undefined }), total: faker.number.int({ min: undefined, max: undefined }) }, status: faker.helpers.arrayElement(['expired', 'in_progress', 'completed'] as const), expires_after: faker.helpers.arrayElement([{ anchor: faker.helpers.arrayElement(['last_active_at'] as const), days: faker.number.int({ min: 1, max: 365 }) }, undefined]), expires_at: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), null]), undefined]), last_active_at: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), null]), metadata: {
-        [faker.string.alphanumeric(5)]: faker.string.alpha(20),
-    }, ...overrideResponse }
+    return {
+        id: faker.string.alpha(20),
+        object: faker.helpers.arrayElement(['vector_store'] as const),
+        created_at: faker.number.int({
+            min: undefined,
+            max: undefined,
+        }),
+        name: faker.string.alpha(20),
+        usage_bytes: faker.number.int({
+            min: undefined,
+            max: undefined,
+        }),
+        file_counts: {
+            in_progress: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            completed: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            failed: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            cancelled: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            total: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+        },
+        status: faker.helpers.arrayElement([
+            'expired',
+            'in_progress',
+            'completed',
+        ] as const),
+        expires_after: faker.helpers.arrayElement([
+            {
+                anchor: faker.helpers.arrayElement(['last_active_at'] as const),
+                days: faker.number.int({
+                    min: 1,
+                    max: 365,
+                }),
+            },
+            undefined,
+        ]),
+        expires_at: faker.helpers.arrayElement([
+            faker.helpers.arrayElement([
+                faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                null,
+            ]),
+            undefined,
+        ]),
+        last_active_at: faker.helpers.arrayElement([
+            faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            null,
+        ]),
+        metadata: {
+            [faker.string.alphanumeric(5)]: faker.string.alpha(20),
+        },
+        ...overrideResponse,
+    }
 }
 
 export function getModifyVectorStoreResponseMock(overrideResponse: Partial< VectorStoreObject > = {}): VectorStoreObject {
-    return { id: faker.string.alpha(20), object: faker.helpers.arrayElement(['vector_store'] as const), created_at: faker.number.int({ min: undefined, max: undefined }), name: faker.string.alpha(20), usage_bytes: faker.number.int({ min: undefined, max: undefined }), file_counts: { in_progress: faker.number.int({ min: undefined, max: undefined }), completed: faker.number.int({ min: undefined, max: undefined }), failed: faker.number.int({ min: undefined, max: undefined }), cancelled: faker.number.int({ min: undefined, max: undefined }), total: faker.number.int({ min: undefined, max: undefined }) }, status: faker.helpers.arrayElement(['expired', 'in_progress', 'completed'] as const), expires_after: faker.helpers.arrayElement([{ anchor: faker.helpers.arrayElement(['last_active_at'] as const), days: faker.number.int({ min: 1, max: 365 }) }, undefined]), expires_at: faker.helpers.arrayElement([faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), null]), undefined]), last_active_at: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), null]), metadata: {
-        [faker.string.alphanumeric(5)]: faker.string.alpha(20),
-    }, ...overrideResponse }
+    return {
+        id: faker.string.alpha(20),
+        object: faker.helpers.arrayElement(['vector_store'] as const),
+        created_at: faker.number.int({
+            min: undefined,
+            max: undefined,
+        }),
+        name: faker.string.alpha(20),
+        usage_bytes: faker.number.int({
+            min: undefined,
+            max: undefined,
+        }),
+        file_counts: {
+            in_progress: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            completed: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            failed: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            cancelled: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            total: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+        },
+        status: faker.helpers.arrayElement([
+            'expired',
+            'in_progress',
+            'completed',
+        ] as const),
+        expires_after: faker.helpers.arrayElement([
+            {
+                anchor: faker.helpers.arrayElement(['last_active_at'] as const),
+                days: faker.number.int({
+                    min: 1,
+                    max: 365,
+                }),
+            },
+            undefined,
+        ]),
+        expires_at: faker.helpers.arrayElement([
+            faker.helpers.arrayElement([
+                faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                null,
+            ]),
+            undefined,
+        ]),
+        last_active_at: faker.helpers.arrayElement([
+            faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            null,
+        ]),
+        metadata: {
+            [faker.string.alphanumeric(5)]: faker.string.alpha(20),
+        },
+        ...overrideResponse,
+    }
 }
 
-export const getDeleteVectorStoreResponseMock = (overrideResponse: Partial< DeleteVectorStoreResponse > = {}): DeleteVectorStoreResponse => ({ id: faker.string.alpha(20), deleted: faker.datatype.boolean(), object: faker.helpers.arrayElement(['vector_store.deleted'] as const), ...overrideResponse })
+export function getDeleteVectorStoreResponseMock(overrideResponse: Partial< DeleteVectorStoreResponse > = {}): DeleteVectorStoreResponse {
+    return {
+        id: faker.string.alpha(20),
+        deleted: faker.datatype.boolean(),
+        object: faker.helpers.arrayElement(['vector_store.deleted'] as const),
+        ...overrideResponse,
+    }
+}
 
-export const getCreateVectorStoreFileBatchResponseMock = (overrideResponse: Partial< VectorStoreFileBatchObject > = {}): VectorStoreFileBatchObject => ({ id: faker.string.alpha(20), object: faker.helpers.arrayElement(['vector_store.files_batch'] as const), created_at: faker.number.int({ min: undefined, max: undefined }), vector_store_id: faker.string.alpha(20), status: faker.helpers.arrayElement(['in_progress', 'completed', 'cancelled', 'failed'] as const), file_counts: { in_progress: faker.number.int({ min: undefined, max: undefined }), completed: faker.number.int({ min: undefined, max: undefined }), failed: faker.number.int({ min: undefined, max: undefined }), cancelled: faker.number.int({ min: undefined, max: undefined }), total: faker.number.int({ min: undefined, max: undefined }) }, ...overrideResponse })
+export function getCreateVectorStoreFileBatchResponseMock(overrideResponse: Partial< VectorStoreFileBatchObject > = {}): VectorStoreFileBatchObject {
+    return {
+        id: faker.string.alpha(20),
+        object: faker.helpers.arrayElement(['vector_store.files_batch'] as const),
+        created_at: faker.number.int({
+            min: undefined,
+            max: undefined,
+        }),
+        vector_store_id: faker.string.alpha(20),
+        status: faker.helpers.arrayElement([
+            'in_progress',
+            'completed',
+            'cancelled',
+            'failed',
+        ] as const),
+        file_counts: {
+            in_progress: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            completed: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            failed: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            cancelled: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            total: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+        },
+        ...overrideResponse,
+    }
+}
 
-export const getGetVectorStoreFileBatchResponseMock = (overrideResponse: Partial< VectorStoreFileBatchObject > = {}): VectorStoreFileBatchObject => ({ id: faker.string.alpha(20), object: faker.helpers.arrayElement(['vector_store.files_batch'] as const), created_at: faker.number.int({ min: undefined, max: undefined }), vector_store_id: faker.string.alpha(20), status: faker.helpers.arrayElement(['in_progress', 'completed', 'cancelled', 'failed'] as const), file_counts: { in_progress: faker.number.int({ min: undefined, max: undefined }), completed: faker.number.int({ min: undefined, max: undefined }), failed: faker.number.int({ min: undefined, max: undefined }), cancelled: faker.number.int({ min: undefined, max: undefined }), total: faker.number.int({ min: undefined, max: undefined }) }, ...overrideResponse })
+export function getGetVectorStoreFileBatchResponseMock(overrideResponse: Partial< VectorStoreFileBatchObject > = {}): VectorStoreFileBatchObject {
+    return {
+        id: faker.string.alpha(20),
+        object: faker.helpers.arrayElement(['vector_store.files_batch'] as const),
+        created_at: faker.number.int({
+            min: undefined,
+            max: undefined,
+        }),
+        vector_store_id: faker.string.alpha(20),
+        status: faker.helpers.arrayElement([
+            'in_progress',
+            'completed',
+            'cancelled',
+            'failed',
+        ] as const),
+        file_counts: {
+            in_progress: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            completed: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            failed: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            cancelled: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            total: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+        },
+        ...overrideResponse,
+    }
+}
 
-export const getCancelVectorStoreFileBatchResponseMock = (overrideResponse: Partial< VectorStoreFileBatchObject > = {}): VectorStoreFileBatchObject => ({ id: faker.string.alpha(20), object: faker.helpers.arrayElement(['vector_store.files_batch'] as const), created_at: faker.number.int({ min: undefined, max: undefined }), vector_store_id: faker.string.alpha(20), status: faker.helpers.arrayElement(['in_progress', 'completed', 'cancelled', 'failed'] as const), file_counts: { in_progress: faker.number.int({ min: undefined, max: undefined }), completed: faker.number.int({ min: undefined, max: undefined }), failed: faker.number.int({ min: undefined, max: undefined }), cancelled: faker.number.int({ min: undefined, max: undefined }), total: faker.number.int({ min: undefined, max: undefined }) }, ...overrideResponse })
+export function getCancelVectorStoreFileBatchResponseMock(overrideResponse: Partial< VectorStoreFileBatchObject > = {}): VectorStoreFileBatchObject {
+    return {
+        id: faker.string.alpha(20),
+        object: faker.helpers.arrayElement(['vector_store.files_batch'] as const),
+        created_at: faker.number.int({
+            min: undefined,
+            max: undefined,
+        }),
+        vector_store_id: faker.string.alpha(20),
+        status: faker.helpers.arrayElement([
+            'in_progress',
+            'completed',
+            'cancelled',
+            'failed',
+        ] as const),
+        file_counts: {
+            in_progress: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            completed: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            failed: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            cancelled: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            total: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+        },
+        ...overrideResponse,
+    }
+}
 
-export const getListFilesInVectorStoreBatchResponseStaticChunkingStrategyResponseParamMock = (overrideResponse: Partial<StaticChunkingStrategyResponseParam> = {}): StaticChunkingStrategyResponseParam => ({ ...{ type: faker.helpers.arrayElement(['static'] as const), static: { max_chunk_size_tokens: faker.number.int({ min: 100, max: 4096 }), chunk_overlap_tokens: faker.number.int({ min: undefined, max: undefined }) } }, ...overrideResponse })
+export function getListFilesInVectorStoreBatchResponseStaticChunkingStrategyResponseParamMock(overrideResponse: Partial<StaticChunkingStrategyResponseParam> = {}): StaticChunkingStrategyResponseParam {
+    return {
+        ...{
+            type: faker.helpers.arrayElement(['static'] as const),
+            static: {
+                max_chunk_size_tokens: faker.number.int({
+                    min: 100,
+                    max: 4096,
+                }),
+                chunk_overlap_tokens: faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+            },
+        },
+        ...overrideResponse,
+    }
+}
 
-export const getListFilesInVectorStoreBatchResponseOtherChunkingStrategyResponseParamMock = (overrideResponse: Partial<OtherChunkingStrategyResponseParam> = {}): OtherChunkingStrategyResponseParam => ({ ...{ type: faker.helpers.arrayElement(['other'] as const) }, ...overrideResponse })
+export function getListFilesInVectorStoreBatchResponseOtherChunkingStrategyResponseParamMock(overrideResponse: Partial<OtherChunkingStrategyResponseParam> = {}): OtherChunkingStrategyResponseParam {
+    return {
+        ...{
+            type: faker.helpers.arrayElement(['other'] as const),
+        },
+        ...overrideResponse,
+    }
+}
 
-export const getListFilesInVectorStoreBatchResponseMock = (overrideResponse: Partial< ListVectorStoreFilesResponse > = {}): ListVectorStoreFilesResponse => ({ object: faker.string.alpha(20), data: Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => ({ id: faker.string.alpha(20), object: faker.helpers.arrayElement(['vector_store.file'] as const), usage_bytes: faker.number.int({ min: undefined, max: undefined }), created_at: faker.number.int({ min: undefined, max: undefined }), vector_store_id: faker.string.alpha(20), status: faker.helpers.arrayElement(['in_progress', 'completed', 'cancelled', 'failed'] as const), last_error: { code: faker.helpers.arrayElement(['server_error', 'unsupported_file', 'invalid_file'] as const), message: faker.string.alpha(20) }, chunking_strategy: faker.helpers.arrayElement([faker.helpers.arrayElement([{ ...getListFilesInVectorStoreBatchResponseStaticChunkingStrategyResponseParamMock() }, { ...getListFilesInVectorStoreBatchResponseOtherChunkingStrategyResponseParamMock() }]), undefined]) })), first_id: faker.string.alpha(20), last_id: faker.string.alpha(20), has_more: faker.datatype.boolean(), ...overrideResponse })
+export function getListFilesInVectorStoreBatchResponseMock(overrideResponse: Partial< ListVectorStoreFilesResponse > = {}): ListVectorStoreFilesResponse {
+    return {
+        object: faker.string.alpha(20),
+        data: Array.from({
+            length: faker.number.int({
+                min: 1,
+                max: 10,
+            }),
+        }, (_, i) => i + 1).map(() => ({
+            id: faker.string.alpha(20),
+            object: faker.helpers.arrayElement(['vector_store.file'] as const),
+            usage_bytes: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            created_at: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            vector_store_id: faker.string.alpha(20),
+            status: faker.helpers.arrayElement([
+                'in_progress',
+                'completed',
+                'cancelled',
+                'failed',
+            ] as const),
+            last_error: {
+                code: faker.helpers.arrayElement([
+                    'server_error',
+                    'unsupported_file',
+                    'invalid_file',
+                ] as const),
+                message: faker.string.alpha(20),
+            },
+            chunking_strategy: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    {
+                        ...getListFilesInVectorStoreBatchResponseStaticChunkingStrategyResponseParamMock(),
+                    },
+                    {
+                        ...getListFilesInVectorStoreBatchResponseOtherChunkingStrategyResponseParamMock(),
+                    },
+                ]),
+                undefined,
+            ]),
+        })),
+        first_id: faker.string.alpha(20),
+        last_id: faker.string.alpha(20),
+        has_more: faker.datatype.boolean(),
+        ...overrideResponse,
+    }
+}
 
-export const getListVectorStoreFilesResponseStaticChunkingStrategyResponseParamMock = (overrideResponse: Partial<StaticChunkingStrategyResponseParam> = {}): StaticChunkingStrategyResponseParam => ({ ...{ type: faker.helpers.arrayElement(['static'] as const), static: { max_chunk_size_tokens: faker.number.int({ min: 100, max: 4096 }), chunk_overlap_tokens: faker.number.int({ min: undefined, max: undefined }) } }, ...overrideResponse })
+export function getListVectorStoreFilesResponseStaticChunkingStrategyResponseParamMock(overrideResponse: Partial<StaticChunkingStrategyResponseParam> = {}): StaticChunkingStrategyResponseParam {
+    return {
+        ...{
+            type: faker.helpers.arrayElement(['static'] as const),
+            static: {
+                max_chunk_size_tokens: faker.number.int({
+                    min: 100,
+                    max: 4096,
+                }),
+                chunk_overlap_tokens: faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+            },
+        },
+        ...overrideResponse,
+    }
+}
 
-export const getListVectorStoreFilesResponseOtherChunkingStrategyResponseParamMock = (overrideResponse: Partial<OtherChunkingStrategyResponseParam> = {}): OtherChunkingStrategyResponseParam => ({ ...{ type: faker.helpers.arrayElement(['other'] as const) }, ...overrideResponse })
+export function getListVectorStoreFilesResponseOtherChunkingStrategyResponseParamMock(overrideResponse: Partial<OtherChunkingStrategyResponseParam> = {}): OtherChunkingStrategyResponseParam {
+    return {
+        ...{
+            type: faker.helpers.arrayElement(['other'] as const),
+        },
+        ...overrideResponse,
+    }
+}
 
-export const getListVectorStoreFilesResponseMock = (overrideResponse: Partial< ListVectorStoreFilesResponse > = {}): ListVectorStoreFilesResponse => ({ object: faker.string.alpha(20), data: Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => ({ id: faker.string.alpha(20), object: faker.helpers.arrayElement(['vector_store.file'] as const), usage_bytes: faker.number.int({ min: undefined, max: undefined }), created_at: faker.number.int({ min: undefined, max: undefined }), vector_store_id: faker.string.alpha(20), status: faker.helpers.arrayElement(['in_progress', 'completed', 'cancelled', 'failed'] as const), last_error: { code: faker.helpers.arrayElement(['server_error', 'unsupported_file', 'invalid_file'] as const), message: faker.string.alpha(20) }, chunking_strategy: faker.helpers.arrayElement([faker.helpers.arrayElement([{ ...getListVectorStoreFilesResponseStaticChunkingStrategyResponseParamMock() }, { ...getListVectorStoreFilesResponseOtherChunkingStrategyResponseParamMock() }]), undefined]) })), first_id: faker.string.alpha(20), last_id: faker.string.alpha(20), has_more: faker.datatype.boolean(), ...overrideResponse })
+export function getListVectorStoreFilesResponseMock(overrideResponse: Partial< ListVectorStoreFilesResponse > = {}): ListVectorStoreFilesResponse {
+    return {
+        object: faker.string.alpha(20),
+        data: Array.from({
+            length: faker.number.int({
+                min: 1,
+                max: 10,
+            }),
+        }, (_, i) => i + 1).map(() => ({
+            id: faker.string.alpha(20),
+            object: faker.helpers.arrayElement(['vector_store.file'] as const),
+            usage_bytes: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            created_at: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            vector_store_id: faker.string.alpha(20),
+            status: faker.helpers.arrayElement([
+                'in_progress',
+                'completed',
+                'cancelled',
+                'failed',
+            ] as const),
+            last_error: {
+                code: faker.helpers.arrayElement([
+                    'server_error',
+                    'unsupported_file',
+                    'invalid_file',
+                ] as const),
+                message: faker.string.alpha(20),
+            },
+            chunking_strategy: faker.helpers.arrayElement([
+                faker.helpers.arrayElement([
+                    {
+                        ...getListVectorStoreFilesResponseStaticChunkingStrategyResponseParamMock(),
+                    },
+                    {
+                        ...getListVectorStoreFilesResponseOtherChunkingStrategyResponseParamMock(),
+                    },
+                ]),
+                undefined,
+            ]),
+        })),
+        first_id: faker.string.alpha(20),
+        last_id: faker.string.alpha(20),
+        has_more: faker.datatype.boolean(),
+        ...overrideResponse,
+    }
+}
 
-export const getCreateVectorStoreFileResponseStaticChunkingStrategyResponseParamMock = (overrideResponse: Partial<StaticChunkingStrategyResponseParam> = {}): StaticChunkingStrategyResponseParam => ({ ...{ type: faker.helpers.arrayElement(['static'] as const), static: { max_chunk_size_tokens: faker.number.int({ min: 100, max: 4096 }), chunk_overlap_tokens: faker.number.int({ min: undefined, max: undefined }) } }, ...overrideResponse })
+export function getCreateVectorStoreFileResponseStaticChunkingStrategyResponseParamMock(overrideResponse: Partial<StaticChunkingStrategyResponseParam> = {}): StaticChunkingStrategyResponseParam {
+    return {
+        ...{
+            type: faker.helpers.arrayElement(['static'] as const),
+            static: {
+                max_chunk_size_tokens: faker.number.int({
+                    min: 100,
+                    max: 4096,
+                }),
+                chunk_overlap_tokens: faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+            },
+        },
+        ...overrideResponse,
+    }
+}
 
-export const getCreateVectorStoreFileResponseOtherChunkingStrategyResponseParamMock = (overrideResponse: Partial<OtherChunkingStrategyResponseParam> = {}): OtherChunkingStrategyResponseParam => ({ ...{ type: faker.helpers.arrayElement(['other'] as const) }, ...overrideResponse })
+export function getCreateVectorStoreFileResponseOtherChunkingStrategyResponseParamMock(overrideResponse: Partial<OtherChunkingStrategyResponseParam> = {}): OtherChunkingStrategyResponseParam {
+    return {
+        ...{
+            type: faker.helpers.arrayElement(['other'] as const),
+        },
+        ...overrideResponse,
+    }
+}
 
-export const getCreateVectorStoreFileResponseMock = (overrideResponse: Partial< VectorStoreFileObject > = {}): VectorStoreFileObject => ({ id: faker.string.alpha(20), object: faker.helpers.arrayElement(['vector_store.file'] as const), usage_bytes: faker.number.int({ min: undefined, max: undefined }), created_at: faker.number.int({ min: undefined, max: undefined }), vector_store_id: faker.string.alpha(20), status: faker.helpers.arrayElement(['in_progress', 'completed', 'cancelled', 'failed'] as const), last_error: { code: faker.helpers.arrayElement(['server_error', 'unsupported_file', 'invalid_file'] as const), message: faker.string.alpha(20) }, chunking_strategy: faker.helpers.arrayElement([faker.helpers.arrayElement([{ ...getCreateVectorStoreFileResponseStaticChunkingStrategyResponseParamMock() }, { ...getCreateVectorStoreFileResponseOtherChunkingStrategyResponseParamMock() }]), undefined]), ...overrideResponse })
+export function getCreateVectorStoreFileResponseMock(overrideResponse: Partial< VectorStoreFileObject > = {}): VectorStoreFileObject {
+    return {
+        id: faker.string.alpha(20),
+        object: faker.helpers.arrayElement(['vector_store.file'] as const),
+        usage_bytes: faker.number.int({
+            min: undefined,
+            max: undefined,
+        }),
+        created_at: faker.number.int({
+            min: undefined,
+            max: undefined,
+        }),
+        vector_store_id: faker.string.alpha(20),
+        status: faker.helpers.arrayElement([
+            'in_progress',
+            'completed',
+            'cancelled',
+            'failed',
+        ] as const),
+        last_error: {
+            code: faker.helpers.arrayElement([
+                'server_error',
+                'unsupported_file',
+                'invalid_file',
+            ] as const),
+            message: faker.string.alpha(20),
+        },
+        chunking_strategy: faker.helpers.arrayElement([
+            faker.helpers.arrayElement([
+                {
+                    ...getCreateVectorStoreFileResponseStaticChunkingStrategyResponseParamMock(),
+                },
+                {
+                    ...getCreateVectorStoreFileResponseOtherChunkingStrategyResponseParamMock(),
+                },
+            ]),
+            undefined,
+        ]),
+        ...overrideResponse,
+    }
+}
 
-export const getGetVectorStoreFileResponseStaticChunkingStrategyResponseParamMock = (overrideResponse: Partial<StaticChunkingStrategyResponseParam> = {}): StaticChunkingStrategyResponseParam => ({ ...{ type: faker.helpers.arrayElement(['static'] as const), static: { max_chunk_size_tokens: faker.number.int({ min: 100, max: 4096 }), chunk_overlap_tokens: faker.number.int({ min: undefined, max: undefined }) } }, ...overrideResponse })
+export function getGetVectorStoreFileResponseStaticChunkingStrategyResponseParamMock(overrideResponse: Partial<StaticChunkingStrategyResponseParam> = {}): StaticChunkingStrategyResponseParam {
+    return {
+        ...{
+            type: faker.helpers.arrayElement(['static'] as const),
+            static: {
+                max_chunk_size_tokens: faker.number.int({
+                    min: 100,
+                    max: 4096,
+                }),
+                chunk_overlap_tokens: faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+            },
+        },
+        ...overrideResponse,
+    }
+}
 
-export const getGetVectorStoreFileResponseOtherChunkingStrategyResponseParamMock = (overrideResponse: Partial<OtherChunkingStrategyResponseParam> = {}): OtherChunkingStrategyResponseParam => ({ ...{ type: faker.helpers.arrayElement(['other'] as const) }, ...overrideResponse })
+export function getGetVectorStoreFileResponseOtherChunkingStrategyResponseParamMock(overrideResponse: Partial<OtherChunkingStrategyResponseParam> = {}): OtherChunkingStrategyResponseParam {
+    return {
+        ...{
+            type: faker.helpers.arrayElement(['other'] as const),
+        },
+        ...overrideResponse,
+    }
+}
 
-export const getGetVectorStoreFileResponseMock = (overrideResponse: Partial< VectorStoreFileObject > = {}): VectorStoreFileObject => ({ id: faker.string.alpha(20), object: faker.helpers.arrayElement(['vector_store.file'] as const), usage_bytes: faker.number.int({ min: undefined, max: undefined }), created_at: faker.number.int({ min: undefined, max: undefined }), vector_store_id: faker.string.alpha(20), status: faker.helpers.arrayElement(['in_progress', 'completed', 'cancelled', 'failed'] as const), last_error: { code: faker.helpers.arrayElement(['server_error', 'unsupported_file', 'invalid_file'] as const), message: faker.string.alpha(20) }, chunking_strategy: faker.helpers.arrayElement([faker.helpers.arrayElement([{ ...getGetVectorStoreFileResponseStaticChunkingStrategyResponseParamMock() }, { ...getGetVectorStoreFileResponseOtherChunkingStrategyResponseParamMock() }]), undefined]), ...overrideResponse })
+export function getGetVectorStoreFileResponseMock(overrideResponse: Partial< VectorStoreFileObject > = {}): VectorStoreFileObject {
+    return {
+        id: faker.string.alpha(20),
+        object: faker.helpers.arrayElement(['vector_store.file'] as const),
+        usage_bytes: faker.number.int({
+            min: undefined,
+            max: undefined,
+        }),
+        created_at: faker.number.int({
+            min: undefined,
+            max: undefined,
+        }),
+        vector_store_id: faker.string.alpha(20),
+        status: faker.helpers.arrayElement([
+            'in_progress',
+            'completed',
+            'cancelled',
+            'failed',
+        ] as const),
+        last_error: {
+            code: faker.helpers.arrayElement([
+                'server_error',
+                'unsupported_file',
+                'invalid_file',
+            ] as const),
+            message: faker.string.alpha(20),
+        },
+        chunking_strategy: faker.helpers.arrayElement([
+            faker.helpers.arrayElement([
+                {
+                    ...getGetVectorStoreFileResponseStaticChunkingStrategyResponseParamMock(),
+                },
+                {
+                    ...getGetVectorStoreFileResponseOtherChunkingStrategyResponseParamMock(),
+                },
+            ]),
+            undefined,
+        ]),
+        ...overrideResponse,
+    }
+}
 
-export const getDeleteVectorStoreFileResponseMock = (overrideResponse: Partial< DeleteVectorStoreFileResponse > = {}): DeleteVectorStoreFileResponse => ({ id: faker.string.alpha(20), deleted: faker.datatype.boolean(), object: faker.helpers.arrayElement(['vector_store.file.deleted'] as const), ...overrideResponse })
+export function getDeleteVectorStoreFileResponseMock(overrideResponse: Partial< DeleteVectorStoreFileResponse > = {}): DeleteVectorStoreFileResponse {
+    return {
+        id: faker.string.alpha(20),
+        deleted: faker.datatype.boolean(),
+        object: faker.helpers.arrayElement(['vector_store.file.deleted'] as const),
+        ...overrideResponse,
+    }
+}
 
 export function getListVectorStoresMockHandler(overrideResponse?: ListVectorStoresResponse | ((info: Parameters<Parameters<typeof http.get>[1]>[0]) => Promise<ListVectorStoresResponse> | ListVectorStoresResponse)) {
     return http.get('*/vector_stores', async (info) => {
@@ -91,7 +783,11 @@ export function getListVectorStoresMockHandler(overrideResponse?: ListVectorStor
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getListVectorStoresResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getListVectorStoresResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }
@@ -102,7 +798,11 @@ export function getCreateVectorStoreMockHandler(overrideResponse?: VectorStoreOb
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getCreateVectorStoreResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getCreateVectorStoreResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }
@@ -113,7 +813,11 @@ export function getGetVectorStoreMockHandler(overrideResponse?: VectorStoreObjec
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getGetVectorStoreResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getGetVectorStoreResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }
@@ -124,7 +828,11 @@ export function getModifyVectorStoreMockHandler(overrideResponse?: VectorStoreOb
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getModifyVectorStoreResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getModifyVectorStoreResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }
@@ -135,7 +843,11 @@ export function getDeleteVectorStoreMockHandler(overrideResponse?: DeleteVectorS
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getDeleteVectorStoreResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getDeleteVectorStoreResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }
@@ -146,7 +858,11 @@ export function getCreateVectorStoreFileBatchMockHandler(overrideResponse?: Vect
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getCreateVectorStoreFileBatchResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getCreateVectorStoreFileBatchResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }
@@ -157,7 +873,11 @@ export function getGetVectorStoreFileBatchMockHandler(overrideResponse?: VectorS
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getGetVectorStoreFileBatchResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getGetVectorStoreFileBatchResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }
@@ -168,7 +888,11 @@ export function getCancelVectorStoreFileBatchMockHandler(overrideResponse?: Vect
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getCancelVectorStoreFileBatchResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getCancelVectorStoreFileBatchResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }
@@ -179,7 +903,11 @@ export function getListFilesInVectorStoreBatchMockHandler(overrideResponse?: Lis
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getListFilesInVectorStoreBatchResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getListFilesInVectorStoreBatchResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }
@@ -190,7 +918,11 @@ export function getListVectorStoreFilesMockHandler(overrideResponse?: ListVector
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getListVectorStoreFilesResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getListVectorStoreFilesResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }
@@ -201,7 +933,11 @@ export function getCreateVectorStoreFileMockHandler(overrideResponse?: VectorSto
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getCreateVectorStoreFileResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getCreateVectorStoreFileResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }
@@ -212,7 +948,11 @@ export function getGetVectorStoreFileMockHandler(overrideResponse?: VectorStoreF
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getGetVectorStoreFileResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getGetVectorStoreFileResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }
@@ -223,7 +963,11 @@ export function getDeleteVectorStoreFileMockHandler(overrideResponse?: DeleteVec
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getDeleteVectorStoreFileResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getDeleteVectorStoreFileResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }

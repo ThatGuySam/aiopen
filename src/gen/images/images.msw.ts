@@ -19,11 +19,92 @@ import {
     HttpResponse,
 } from 'msw'
 
-export const getCreateImageEditResponseMock = (overrideResponse: Partial< ImagesResponse > = {}): ImagesResponse => ({ created: faker.number.int({ min: undefined, max: undefined }), data: Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => ({ b64_json: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), url: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), revised_prompt: faker.helpers.arrayElement([faker.string.alpha(20), undefined]) })), ...overrideResponse })
+export function getCreateImageEditResponseMock(overrideResponse: Partial< ImagesResponse > = {}): ImagesResponse {
+    return {
+        created: faker.number.int({
+            min: undefined,
+            max: undefined,
+        }),
+        data: Array.from({
+            length: faker.number.int({
+                min: 1,
+                max: 10,
+            }),
+        }, (_, i) => i + 1).map(() => ({
+            b64_json: faker.helpers.arrayElement([
+                faker.string.alpha(20),
+                undefined,
+            ]),
+            url: faker.helpers.arrayElement([
+                faker.string.alpha(20),
+                undefined,
+            ]),
+            revised_prompt: faker.helpers.arrayElement([
+                faker.string.alpha(20),
+                undefined,
+            ]),
+        })),
+        ...overrideResponse,
+    }
+}
 
-export const getCreateImageResponseMock = (overrideResponse: Partial< ImagesResponse > = {}): ImagesResponse => ({ created: faker.number.int({ min: undefined, max: undefined }), data: Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => ({ b64_json: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), url: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), revised_prompt: faker.helpers.arrayElement([faker.string.alpha(20), undefined]) })), ...overrideResponse })
+export function getCreateImageResponseMock(overrideResponse: Partial< ImagesResponse > = {}): ImagesResponse {
+    return {
+        created: faker.number.int({
+            min: undefined,
+            max: undefined,
+        }),
+        data: Array.from({
+            length: faker.number.int({
+                min: 1,
+                max: 10,
+            }),
+        }, (_, i) => i + 1).map(() => ({
+            b64_json: faker.helpers.arrayElement([
+                faker.string.alpha(20),
+                undefined,
+            ]),
+            url: faker.helpers.arrayElement([
+                faker.string.alpha(20),
+                undefined,
+            ]),
+            revised_prompt: faker.helpers.arrayElement([
+                faker.string.alpha(20),
+                undefined,
+            ]),
+        })),
+        ...overrideResponse,
+    }
+}
 
-export const getCreateImageVariationResponseMock = (overrideResponse: Partial< ImagesResponse > = {}): ImagesResponse => ({ created: faker.number.int({ min: undefined, max: undefined }), data: Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => ({ b64_json: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), url: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), revised_prompt: faker.helpers.arrayElement([faker.string.alpha(20), undefined]) })), ...overrideResponse })
+export function getCreateImageVariationResponseMock(overrideResponse: Partial< ImagesResponse > = {}): ImagesResponse {
+    return {
+        created: faker.number.int({
+            min: undefined,
+            max: undefined,
+        }),
+        data: Array.from({
+            length: faker.number.int({
+                min: 1,
+                max: 10,
+            }),
+        }, (_, i) => i + 1).map(() => ({
+            b64_json: faker.helpers.arrayElement([
+                faker.string.alpha(20),
+                undefined,
+            ]),
+            url: faker.helpers.arrayElement([
+                faker.string.alpha(20),
+                undefined,
+            ]),
+            revised_prompt: faker.helpers.arrayElement([
+                faker.string.alpha(20),
+                undefined,
+            ]),
+        })),
+        ...overrideResponse,
+    }
+}
 
 export function getCreateImageEditMockHandler(overrideResponse?: ImagesResponse | ((info: Parameters<Parameters<typeof http.post>[1]>[0]) => Promise<ImagesResponse> | ImagesResponse)) {
     return http.post('*/images/edits', async (info) => {
@@ -31,7 +112,11 @@ export function getCreateImageEditMockHandler(overrideResponse?: ImagesResponse 
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getCreateImageEditResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getCreateImageEditResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }
@@ -42,7 +127,11 @@ export function getCreateImageMockHandler(overrideResponse?: ImagesResponse | ((
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getCreateImageResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getCreateImageResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }
@@ -53,7 +142,11 @@ export function getCreateImageVariationMockHandler(overrideResponse?: ImagesResp
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getCreateImageVariationResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getCreateImageVariationResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }

@@ -52,7 +52,10 @@ export function getProjects() {
             `http://localhost:3000/v1/organization/projects`,
             {
                 ...options,
-                params: { ...params, ...options?.params },
+                params: {
+                    ...params,
+                    ...options?.params,
+                },
             },
         )
     }
@@ -107,7 +110,10 @@ export function getProjects() {
             `http://localhost:3000/v1/organization/projects/${projectId}/api_keys`,
             {
                 ...options,
-                params: { ...params, ...options?.params },
+                params: {
+                    ...params,
+                    ...options?.params,
+                },
             },
         )
     }
@@ -162,7 +168,10 @@ export function getProjects() {
             `http://localhost:3000/v1/organization/projects/${projectId}/rate_limits`,
             {
                 ...options,
-                params: { ...params, ...options?.params },
+                params: {
+                    ...params,
+                    ...options?.params,
+                },
             },
         )
     }
@@ -193,7 +202,10 @@ export function getProjects() {
             `http://localhost:3000/v1/organization/projects/${projectId}/service_accounts`,
             {
                 ...options,
-                params: { ...params, ...options?.params },
+                params: {
+                    ...params,
+                    ...options?.params,
+                },
             },
         )
     }
@@ -249,7 +261,10 @@ export function getProjects() {
             `http://localhost:3000/v1/organization/projects/${projectId}/users`,
             {
                 ...options,
-                params: { ...params, ...options?.params },
+                params: {
+                    ...params,
+                    ...options?.params,
+                },
             },
         )
     }
@@ -308,7 +323,27 @@ export function getProjects() {
             options,
         )
     }
-    return { listProjects, createProject, retrieveProject, modifyProject, listProjectApiKeys, retrieveProjectApiKey, deleteProjectApiKey, archiveProject, listProjectRateLimits, updateProjectRateLimits, listProjectServiceAccounts, createProjectServiceAccount, retrieveProjectServiceAccount, deleteProjectServiceAccount, listProjectUsers, createProjectUser, retrieveProjectUser, modifyProjectUser, deleteProjectUser }
+    return {
+        listProjects,
+        createProject,
+        retrieveProject,
+        modifyProject,
+        listProjectApiKeys,
+        retrieveProjectApiKey,
+        deleteProjectApiKey,
+        archiveProject,
+        listProjectRateLimits,
+        updateProjectRateLimits,
+        listProjectServiceAccounts,
+        createProjectServiceAccount,
+        retrieveProjectServiceAccount,
+        deleteProjectServiceAccount,
+        listProjectUsers,
+        createProjectUser,
+        retrieveProjectUser,
+        modifyProjectUser,
+        deleteProjectUser,
+    }
 }
 export type ListProjectsResult = AxiosResponse<ProjectListResponse>
 export type CreateProjectResult = AxiosResponse<Project>

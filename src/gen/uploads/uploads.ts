@@ -100,7 +100,12 @@ It is possible to add multiple Parts in parallel. You can decide the intended or
             options,
         )
     }
-    return { createUpload, cancelUpload, completeUpload, addUploadPart }
+    return {
+        createUpload,
+        cancelUpload,
+        completeUpload,
+        addUploadPart,
+    }
 }
 export type CreateUploadResult = AxiosResponse<Upload>
 export type CancelUploadResult = AxiosResponse<Upload>

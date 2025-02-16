@@ -20,13 +20,213 @@ import {
     HttpResponse,
 } from 'msw'
 
-export const getCreateUploadResponseMock = (overrideResponse: Partial< Upload > = {}): Upload => ({ id: faker.string.alpha(20), created_at: faker.number.int({ min: undefined, max: undefined }), filename: faker.string.alpha(20), bytes: faker.number.int({ min: undefined, max: undefined }), purpose: faker.string.alpha(20), status: faker.helpers.arrayElement(['pending', 'completed', 'cancelled', 'expired'] as const), expires_at: faker.number.int({ min: undefined, max: undefined }), object: faker.helpers.arrayElement([faker.helpers.arrayElement(['upload'] as const), undefined]), file: faker.helpers.arrayElement([{ id: faker.string.alpha(20), bytes: faker.number.int({ min: undefined, max: undefined }), created_at: faker.number.int({ min: undefined, max: undefined }), filename: faker.string.alpha(20), object: faker.helpers.arrayElement(['file'] as const), purpose: faker.helpers.arrayElement(['assistants', 'assistants_output', 'batch', 'batch_output', 'fine-tune', 'fine-tune-results', 'vision'] as const), status: faker.helpers.arrayElement(['uploaded', 'processed', 'error'] as const), status_details: faker.helpers.arrayElement([faker.string.alpha(20), undefined]) }, undefined]), ...overrideResponse })
+export function getCreateUploadResponseMock(overrideResponse: Partial< Upload > = {}): Upload {
+    return {
+        id: faker.string.alpha(20),
+        created_at: faker.number.int({
+            min: undefined,
+            max: undefined,
+        }),
+        filename: faker.string.alpha(20),
+        bytes: faker.number.int({
+            min: undefined,
+            max: undefined,
+        }),
+        purpose: faker.string.alpha(20),
+        status: faker.helpers.arrayElement([
+            'pending',
+            'completed',
+            'cancelled',
+            'expired',
+        ] as const),
+        expires_at: faker.number.int({
+            min: undefined,
+            max: undefined,
+        }),
+        object: faker.helpers.arrayElement([
+            faker.helpers.arrayElement(['upload'] as const),
+            undefined,
+        ]),
+        file: faker.helpers.arrayElement([
+            {
+                id: faker.string.alpha(20),
+                bytes: faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                created_at: faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                filename: faker.string.alpha(20),
+                object: faker.helpers.arrayElement(['file'] as const),
+                purpose: faker.helpers.arrayElement([
+                    'assistants',
+                    'assistants_output',
+                    'batch',
+                    'batch_output',
+                    'fine-tune',
+                    'fine-tune-results',
+                    'vision',
+                ] as const),
+                status: faker.helpers.arrayElement([
+                    'uploaded',
+                    'processed',
+                    'error',
+                ] as const),
+                status_details: faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    undefined,
+                ]),
+            },
+            undefined,
+        ]),
+        ...overrideResponse,
+    }
+}
 
-export const getCancelUploadResponseMock = (overrideResponse: Partial< Upload > = {}): Upload => ({ id: faker.string.alpha(20), created_at: faker.number.int({ min: undefined, max: undefined }), filename: faker.string.alpha(20), bytes: faker.number.int({ min: undefined, max: undefined }), purpose: faker.string.alpha(20), status: faker.helpers.arrayElement(['pending', 'completed', 'cancelled', 'expired'] as const), expires_at: faker.number.int({ min: undefined, max: undefined }), object: faker.helpers.arrayElement([faker.helpers.arrayElement(['upload'] as const), undefined]), file: faker.helpers.arrayElement([{ id: faker.string.alpha(20), bytes: faker.number.int({ min: undefined, max: undefined }), created_at: faker.number.int({ min: undefined, max: undefined }), filename: faker.string.alpha(20), object: faker.helpers.arrayElement(['file'] as const), purpose: faker.helpers.arrayElement(['assistants', 'assistants_output', 'batch', 'batch_output', 'fine-tune', 'fine-tune-results', 'vision'] as const), status: faker.helpers.arrayElement(['uploaded', 'processed', 'error'] as const), status_details: faker.helpers.arrayElement([faker.string.alpha(20), undefined]) }, undefined]), ...overrideResponse })
+export function getCancelUploadResponseMock(overrideResponse: Partial< Upload > = {}): Upload {
+    return {
+        id: faker.string.alpha(20),
+        created_at: faker.number.int({
+            min: undefined,
+            max: undefined,
+        }),
+        filename: faker.string.alpha(20),
+        bytes: faker.number.int({
+            min: undefined,
+            max: undefined,
+        }),
+        purpose: faker.string.alpha(20),
+        status: faker.helpers.arrayElement([
+            'pending',
+            'completed',
+            'cancelled',
+            'expired',
+        ] as const),
+        expires_at: faker.number.int({
+            min: undefined,
+            max: undefined,
+        }),
+        object: faker.helpers.arrayElement([
+            faker.helpers.arrayElement(['upload'] as const),
+            undefined,
+        ]),
+        file: faker.helpers.arrayElement([
+            {
+                id: faker.string.alpha(20),
+                bytes: faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                created_at: faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                filename: faker.string.alpha(20),
+                object: faker.helpers.arrayElement(['file'] as const),
+                purpose: faker.helpers.arrayElement([
+                    'assistants',
+                    'assistants_output',
+                    'batch',
+                    'batch_output',
+                    'fine-tune',
+                    'fine-tune-results',
+                    'vision',
+                ] as const),
+                status: faker.helpers.arrayElement([
+                    'uploaded',
+                    'processed',
+                    'error',
+                ] as const),
+                status_details: faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    undefined,
+                ]),
+            },
+            undefined,
+        ]),
+        ...overrideResponse,
+    }
+}
 
-export const getCompleteUploadResponseMock = (overrideResponse: Partial< Upload > = {}): Upload => ({ id: faker.string.alpha(20), created_at: faker.number.int({ min: undefined, max: undefined }), filename: faker.string.alpha(20), bytes: faker.number.int({ min: undefined, max: undefined }), purpose: faker.string.alpha(20), status: faker.helpers.arrayElement(['pending', 'completed', 'cancelled', 'expired'] as const), expires_at: faker.number.int({ min: undefined, max: undefined }), object: faker.helpers.arrayElement([faker.helpers.arrayElement(['upload'] as const), undefined]), file: faker.helpers.arrayElement([{ id: faker.string.alpha(20), bytes: faker.number.int({ min: undefined, max: undefined }), created_at: faker.number.int({ min: undefined, max: undefined }), filename: faker.string.alpha(20), object: faker.helpers.arrayElement(['file'] as const), purpose: faker.helpers.arrayElement(['assistants', 'assistants_output', 'batch', 'batch_output', 'fine-tune', 'fine-tune-results', 'vision'] as const), status: faker.helpers.arrayElement(['uploaded', 'processed', 'error'] as const), status_details: faker.helpers.arrayElement([faker.string.alpha(20), undefined]) }, undefined]), ...overrideResponse })
+export function getCompleteUploadResponseMock(overrideResponse: Partial< Upload > = {}): Upload {
+    return {
+        id: faker.string.alpha(20),
+        created_at: faker.number.int({
+            min: undefined,
+            max: undefined,
+        }),
+        filename: faker.string.alpha(20),
+        bytes: faker.number.int({
+            min: undefined,
+            max: undefined,
+        }),
+        purpose: faker.string.alpha(20),
+        status: faker.helpers.arrayElement([
+            'pending',
+            'completed',
+            'cancelled',
+            'expired',
+        ] as const),
+        expires_at: faker.number.int({
+            min: undefined,
+            max: undefined,
+        }),
+        object: faker.helpers.arrayElement([
+            faker.helpers.arrayElement(['upload'] as const),
+            undefined,
+        ]),
+        file: faker.helpers.arrayElement([
+            {
+                id: faker.string.alpha(20),
+                bytes: faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                created_at: faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                filename: faker.string.alpha(20),
+                object: faker.helpers.arrayElement(['file'] as const),
+                purpose: faker.helpers.arrayElement([
+                    'assistants',
+                    'assistants_output',
+                    'batch',
+                    'batch_output',
+                    'fine-tune',
+                    'fine-tune-results',
+                    'vision',
+                ] as const),
+                status: faker.helpers.arrayElement([
+                    'uploaded',
+                    'processed',
+                    'error',
+                ] as const),
+                status_details: faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    undefined,
+                ]),
+            },
+            undefined,
+        ]),
+        ...overrideResponse,
+    }
+}
 
-export const getAddUploadPartResponseMock = (overrideResponse: Partial< UploadPart > = {}): UploadPart => ({ id: faker.string.alpha(20), created_at: faker.number.int({ min: undefined, max: undefined }), upload_id: faker.string.alpha(20), object: faker.helpers.arrayElement(['upload.part'] as const), ...overrideResponse })
+export function getAddUploadPartResponseMock(overrideResponse: Partial< UploadPart > = {}): UploadPart {
+    return {
+        id: faker.string.alpha(20),
+        created_at: faker.number.int({
+            min: undefined,
+            max: undefined,
+        }),
+        upload_id: faker.string.alpha(20),
+        object: faker.helpers.arrayElement(['upload.part'] as const),
+        ...overrideResponse,
+    }
+}
 
 export function getCreateUploadMockHandler(overrideResponse?: Upload | ((info: Parameters<Parameters<typeof http.post>[1]>[0]) => Promise<Upload> | Upload)) {
     return http.post('*/uploads', async (info) => {
@@ -34,7 +234,11 @@ export function getCreateUploadMockHandler(overrideResponse?: Upload | ((info: P
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getCreateUploadResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getCreateUploadResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }
@@ -45,7 +249,11 @@ export function getCancelUploadMockHandler(overrideResponse?: Upload | ((info: P
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getCancelUploadResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getCancelUploadResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }
@@ -56,7 +264,11 @@ export function getCompleteUploadMockHandler(overrideResponse?: Upload | ((info:
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getCompleteUploadResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getCompleteUploadResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }
@@ -67,7 +279,11 @@ export function getAddUploadPartMockHandler(overrideResponse?: UploadPart | ((in
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getAddUploadPartResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getAddUploadPartResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }

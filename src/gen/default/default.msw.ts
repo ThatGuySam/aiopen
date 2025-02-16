@@ -21,13 +21,232 @@ import {
     HttpResponse,
 } from 'msw'
 
-export const getAdminApiKeysListResponseMock = (overrideResponse: Partial< ApiKeyList > = {}): ApiKeyList => ({ object: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), data: faker.helpers.arrayElement([Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => ({ object: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), id: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), name: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), redacted_value: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), value: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), created_at: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), owner: faker.helpers.arrayElement([{ type: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), id: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), name: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), created_at: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), role: faker.helpers.arrayElement([faker.string.alpha(20), undefined]) }, undefined]) })), undefined]), has_more: faker.helpers.arrayElement([faker.datatype.boolean(), undefined]), first_id: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), last_id: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), ...overrideResponse })
+export function getAdminApiKeysListResponseMock(overrideResponse: Partial< ApiKeyList > = {}): ApiKeyList {
+    return {
+        object: faker.helpers.arrayElement([
+            faker.string.alpha(20),
+            undefined,
+        ]),
+        data: faker.helpers.arrayElement([
+            Array.from({
+                length: faker.number.int({
+                    min: 1,
+                    max: 10,
+                }),
+            }, (_, i) => i + 1).map(() => ({
+                object: faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    undefined,
+                ]),
+                id: faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    undefined,
+                ]),
+                name: faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    undefined,
+                ]),
+                redacted_value: faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    undefined,
+                ]),
+                value: faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    undefined,
+                ]),
+                created_at: faker.helpers.arrayElement([
+                    faker.number.int({
+                        min: undefined,
+                        max: undefined,
+                    }),
+                    undefined,
+                ]),
+                owner: faker.helpers.arrayElement([
+                    {
+                        type: faker.helpers.arrayElement([
+                            faker.string.alpha(20),
+                            undefined,
+                        ]),
+                        id: faker.helpers.arrayElement([
+                            faker.string.alpha(20),
+                            undefined,
+                        ]),
+                        name: faker.helpers.arrayElement([
+                            faker.string.alpha(20),
+                            undefined,
+                        ]),
+                        created_at: faker.helpers.arrayElement([
+                            faker.number.int({
+                                min: undefined,
+                                max: undefined,
+                            }),
+                            undefined,
+                        ]),
+                        role: faker.helpers.arrayElement([
+                            faker.string.alpha(20),
+                            undefined,
+                        ]),
+                    },
+                    undefined,
+                ]),
+            })),
+            undefined,
+        ]),
+        has_more: faker.helpers.arrayElement([
+            faker.datatype.boolean(),
+            undefined,
+        ]),
+        first_id: faker.helpers.arrayElement([
+            faker.string.alpha(20),
+            undefined,
+        ]),
+        last_id: faker.helpers.arrayElement([
+            faker.string.alpha(20),
+            undefined,
+        ]),
+        ...overrideResponse,
+    }
+}
 
-export const getAdminApiKeysCreateResponseMock = (overrideResponse: Partial< AdminApiKey > = {}): AdminApiKey => ({ object: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), id: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), name: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), redacted_value: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), value: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), created_at: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), owner: faker.helpers.arrayElement([{ type: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), id: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), name: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), created_at: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), role: faker.helpers.arrayElement([faker.string.alpha(20), undefined]) }, undefined]), ...overrideResponse })
+export function getAdminApiKeysCreateResponseMock(overrideResponse: Partial< AdminApiKey > = {}): AdminApiKey {
+    return {
+        object: faker.helpers.arrayElement([
+            faker.string.alpha(20),
+            undefined,
+        ]),
+        id: faker.helpers.arrayElement([
+            faker.string.alpha(20),
+            undefined,
+        ]),
+        name: faker.helpers.arrayElement([
+            faker.string.alpha(20),
+            undefined,
+        ]),
+        redacted_value: faker.helpers.arrayElement([
+            faker.string.alpha(20),
+            undefined,
+        ]),
+        value: faker.helpers.arrayElement([
+            faker.string.alpha(20),
+            undefined,
+        ]),
+        created_at: faker.helpers.arrayElement([
+            faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            undefined,
+        ]),
+        owner: faker.helpers.arrayElement([
+            {
+                type: faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    undefined,
+                ]),
+                id: faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    undefined,
+                ]),
+                name: faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    undefined,
+                ]),
+                created_at: faker.helpers.arrayElement([
+                    faker.number.int({
+                        min: undefined,
+                        max: undefined,
+                    }),
+                    undefined,
+                ]),
+                role: faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    undefined,
+                ]),
+            },
+            undefined,
+        ]),
+        ...overrideResponse,
+    }
+}
 
-export const getAdminApiKeysGetResponseMock = (overrideResponse: Partial< AdminApiKey > = {}): AdminApiKey => ({ object: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), id: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), name: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), redacted_value: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), value: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), created_at: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), owner: faker.helpers.arrayElement([{ type: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), id: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), name: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), created_at: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), role: faker.helpers.arrayElement([faker.string.alpha(20), undefined]) }, undefined]), ...overrideResponse })
+export function getAdminApiKeysGetResponseMock(overrideResponse: Partial< AdminApiKey > = {}): AdminApiKey {
+    return {
+        object: faker.helpers.arrayElement([
+            faker.string.alpha(20),
+            undefined,
+        ]),
+        id: faker.helpers.arrayElement([
+            faker.string.alpha(20),
+            undefined,
+        ]),
+        name: faker.helpers.arrayElement([
+            faker.string.alpha(20),
+            undefined,
+        ]),
+        redacted_value: faker.helpers.arrayElement([
+            faker.string.alpha(20),
+            undefined,
+        ]),
+        value: faker.helpers.arrayElement([
+            faker.string.alpha(20),
+            undefined,
+        ]),
+        created_at: faker.helpers.arrayElement([
+            faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            undefined,
+        ]),
+        owner: faker.helpers.arrayElement([
+            {
+                type: faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    undefined,
+                ]),
+                id: faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    undefined,
+                ]),
+                name: faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    undefined,
+                ]),
+                created_at: faker.helpers.arrayElement([
+                    faker.number.int({
+                        min: undefined,
+                        max: undefined,
+                    }),
+                    undefined,
+                ]),
+                role: faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    undefined,
+                ]),
+            },
+            undefined,
+        ]),
+        ...overrideResponse,
+    }
+}
 
-export const getAdminApiKeysDeleteResponseMock = (overrideResponse: Partial< AdminApiKeysDelete200 > = {}): AdminApiKeysDelete200 => ({ id: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), object: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), deleted: faker.helpers.arrayElement([faker.datatype.boolean(), undefined]), ...overrideResponse })
+export function getAdminApiKeysDeleteResponseMock(overrideResponse: Partial< AdminApiKeysDelete200 > = {}): AdminApiKeysDelete200 {
+    return {
+        id: faker.helpers.arrayElement([
+            faker.string.alpha(20),
+            undefined,
+        ]),
+        object: faker.helpers.arrayElement([
+            faker.string.alpha(20),
+            undefined,
+        ]),
+        deleted: faker.helpers.arrayElement([
+            faker.datatype.boolean(),
+            undefined,
+        ]),
+        ...overrideResponse,
+    }
+}
 
 export function getAdminApiKeysListMockHandler(overrideResponse?: ApiKeyList | ((info: Parameters<Parameters<typeof http.get>[1]>[0]) => Promise<ApiKeyList> | ApiKeyList)) {
     return http.get('*/organization/admin_api_keys', async (info) => {
@@ -35,7 +254,11 @@ export function getAdminApiKeysListMockHandler(overrideResponse?: ApiKeyList | (
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getAdminApiKeysListResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getAdminApiKeysListResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }
@@ -46,7 +269,11 @@ export function getAdminApiKeysCreateMockHandler(overrideResponse?: AdminApiKey 
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getAdminApiKeysCreateResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getAdminApiKeysCreateResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }
@@ -57,7 +284,11 @@ export function getAdminApiKeysGetMockHandler(overrideResponse?: AdminApiKey | (
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getAdminApiKeysGetResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getAdminApiKeysGetResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }
@@ -68,7 +299,11 @@ export function getAdminApiKeysDeleteMockHandler(overrideResponse?: AdminApiKeys
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getAdminApiKeysDeleteResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getAdminApiKeysDeleteResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }

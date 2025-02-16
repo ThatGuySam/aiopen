@@ -21,13 +21,196 @@ import {
     HttpResponse,
 } from 'msw'
 
-export const getListInvitesResponseMock = (overrideResponse: Partial< InviteListResponse > = {}): InviteListResponse => ({ object: faker.helpers.arrayElement(['list'] as const), data: Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => ({ object: faker.helpers.arrayElement(['organization.invite'] as const), id: faker.string.alpha(20), email: faker.string.alpha(20), role: faker.helpers.arrayElement(['owner', 'reader'] as const), status: faker.helpers.arrayElement(['accepted', 'expired', 'pending'] as const), invited_at: faker.number.int({ min: undefined, max: undefined }), expires_at: faker.number.int({ min: undefined, max: undefined }), accepted_at: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), projects: faker.helpers.arrayElement([Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => ({ id: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), role: faker.helpers.arrayElement([faker.helpers.arrayElement(['member', 'owner'] as const), undefined]) })), undefined]) })), first_id: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), last_id: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), has_more: faker.helpers.arrayElement([faker.datatype.boolean(), undefined]), ...overrideResponse })
+export function getListInvitesResponseMock(overrideResponse: Partial< InviteListResponse > = {}): InviteListResponse {
+    return {
+        object: faker.helpers.arrayElement(['list'] as const),
+        data: Array.from({
+            length: faker.number.int({
+                min: 1,
+                max: 10,
+            }),
+        }, (_, i) => i + 1).map(() => ({
+            object: faker.helpers.arrayElement(['organization.invite'] as const),
+            id: faker.string.alpha(20),
+            email: faker.string.alpha(20),
+            role: faker.helpers.arrayElement([
+                'owner',
+                'reader',
+            ] as const),
+            status: faker.helpers.arrayElement([
+                'accepted',
+                'expired',
+                'pending',
+            ] as const),
+            invited_at: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            expires_at: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            accepted_at: faker.helpers.arrayElement([
+                faker.number.int({
+                    min: undefined,
+                    max: undefined,
+                }),
+                undefined,
+            ]),
+            projects: faker.helpers.arrayElement([
+                Array.from({
+                    length: faker.number.int({
+                        min: 1,
+                        max: 10,
+                    }),
+                }, (_, i) => i + 1).map(() => ({
+                    id: faker.helpers.arrayElement([
+                        faker.string.alpha(20),
+                        undefined,
+                    ]),
+                    role: faker.helpers.arrayElement([
+                        faker.helpers.arrayElement([
+                            'member',
+                            'owner',
+                        ] as const),
+                        undefined,
+                    ]),
+                })),
+                undefined,
+            ]),
+        })),
+        first_id: faker.helpers.arrayElement([
+            faker.string.alpha(20),
+            undefined,
+        ]),
+        last_id: faker.helpers.arrayElement([
+            faker.string.alpha(20),
+            undefined,
+        ]),
+        has_more: faker.helpers.arrayElement([
+            faker.datatype.boolean(),
+            undefined,
+        ]),
+        ...overrideResponse,
+    }
+}
 
-export const getInviteUserResponseMock = (overrideResponse: Partial< Invite > = {}): Invite => ({ object: faker.helpers.arrayElement(['organization.invite'] as const), id: faker.string.alpha(20), email: faker.string.alpha(20), role: faker.helpers.arrayElement(['owner', 'reader'] as const), status: faker.helpers.arrayElement(['accepted', 'expired', 'pending'] as const), invited_at: faker.number.int({ min: undefined, max: undefined }), expires_at: faker.number.int({ min: undefined, max: undefined }), accepted_at: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), projects: faker.helpers.arrayElement([Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => ({ id: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), role: faker.helpers.arrayElement([faker.helpers.arrayElement(['member', 'owner'] as const), undefined]) })), undefined]), ...overrideResponse })
+export function getInviteUserResponseMock(overrideResponse: Partial< Invite > = {}): Invite {
+    return {
+        object: faker.helpers.arrayElement(['organization.invite'] as const),
+        id: faker.string.alpha(20),
+        email: faker.string.alpha(20),
+        role: faker.helpers.arrayElement([
+            'owner',
+            'reader',
+        ] as const),
+        status: faker.helpers.arrayElement([
+            'accepted',
+            'expired',
+            'pending',
+        ] as const),
+        invited_at: faker.number.int({
+            min: undefined,
+            max: undefined,
+        }),
+        expires_at: faker.number.int({
+            min: undefined,
+            max: undefined,
+        }),
+        accepted_at: faker.helpers.arrayElement([
+            faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            undefined,
+        ]),
+        projects: faker.helpers.arrayElement([
+            Array.from({
+                length: faker.number.int({
+                    min: 1,
+                    max: 10,
+                }),
+            }, (_, i) => i + 1).map(() => ({
+                id: faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    undefined,
+                ]),
+                role: faker.helpers.arrayElement([
+                    faker.helpers.arrayElement([
+                        'member',
+                        'owner',
+                    ] as const),
+                    undefined,
+                ]),
+            })),
+            undefined,
+        ]),
+        ...overrideResponse,
+    }
+}
 
-export const getRetrieveInviteResponseMock = (overrideResponse: Partial< Invite > = {}): Invite => ({ object: faker.helpers.arrayElement(['organization.invite'] as const), id: faker.string.alpha(20), email: faker.string.alpha(20), role: faker.helpers.arrayElement(['owner', 'reader'] as const), status: faker.helpers.arrayElement(['accepted', 'expired', 'pending'] as const), invited_at: faker.number.int({ min: undefined, max: undefined }), expires_at: faker.number.int({ min: undefined, max: undefined }), accepted_at: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), projects: faker.helpers.arrayElement([Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => ({ id: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), role: faker.helpers.arrayElement([faker.helpers.arrayElement(['member', 'owner'] as const), undefined]) })), undefined]), ...overrideResponse })
+export function getRetrieveInviteResponseMock(overrideResponse: Partial< Invite > = {}): Invite {
+    return {
+        object: faker.helpers.arrayElement(['organization.invite'] as const),
+        id: faker.string.alpha(20),
+        email: faker.string.alpha(20),
+        role: faker.helpers.arrayElement([
+            'owner',
+            'reader',
+        ] as const),
+        status: faker.helpers.arrayElement([
+            'accepted',
+            'expired',
+            'pending',
+        ] as const),
+        invited_at: faker.number.int({
+            min: undefined,
+            max: undefined,
+        }),
+        expires_at: faker.number.int({
+            min: undefined,
+            max: undefined,
+        }),
+        accepted_at: faker.helpers.arrayElement([
+            faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            undefined,
+        ]),
+        projects: faker.helpers.arrayElement([
+            Array.from({
+                length: faker.number.int({
+                    min: 1,
+                    max: 10,
+                }),
+            }, (_, i) => i + 1).map(() => ({
+                id: faker.helpers.arrayElement([
+                    faker.string.alpha(20),
+                    undefined,
+                ]),
+                role: faker.helpers.arrayElement([
+                    faker.helpers.arrayElement([
+                        'member',
+                        'owner',
+                    ] as const),
+                    undefined,
+                ]),
+            })),
+            undefined,
+        ]),
+        ...overrideResponse,
+    }
+}
 
-export const getDeleteInviteResponseMock = (overrideResponse: Partial< InviteDeleteResponse > = {}): InviteDeleteResponse => ({ object: faker.helpers.arrayElement(['organization.invite.deleted'] as const), id: faker.string.alpha(20), deleted: faker.datatype.boolean(), ...overrideResponse })
+export function getDeleteInviteResponseMock(overrideResponse: Partial< InviteDeleteResponse > = {}): InviteDeleteResponse {
+    return {
+        object: faker.helpers.arrayElement(['organization.invite.deleted'] as const),
+        id: faker.string.alpha(20),
+        deleted: faker.datatype.boolean(),
+        ...overrideResponse,
+    }
+}
 
 export function getListInvitesMockHandler(overrideResponse?: InviteListResponse | ((info: Parameters<Parameters<typeof http.get>[1]>[0]) => Promise<InviteListResponse> | InviteListResponse)) {
     return http.get('*/organization/invites', async (info) => {
@@ -35,7 +218,11 @@ export function getListInvitesMockHandler(overrideResponse?: InviteListResponse 
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getListInvitesResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getListInvitesResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }
@@ -46,7 +233,11 @@ export function getInviteUserMockHandler(overrideResponse?: Invite | ((info: Par
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getInviteUserResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getInviteUserResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }
@@ -57,7 +248,11 @@ export function getRetrieveInviteMockHandler(overrideResponse?: Invite | ((info:
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getRetrieveInviteResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getRetrieveInviteResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }
@@ -68,7 +263,11 @@ export function getDeleteInviteMockHandler(overrideResponse?: InviteDeleteRespon
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getDeleteInviteResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getDeleteInviteResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }

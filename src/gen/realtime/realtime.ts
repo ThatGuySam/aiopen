@@ -39,6 +39,8 @@ for the Realtime API.
             options,
         )
     }
-    return { createRealtimeSession }
+    return {
+        createRealtimeSession,
+    }
 }
 export type CreateRealtimeSessionResult = AxiosResponse<RealtimeSessionCreateResponse>

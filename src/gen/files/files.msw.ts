@@ -21,13 +21,130 @@ import {
     HttpResponse,
 } from 'msw'
 
-export const getListFilesResponseMock = (overrideResponse: Partial< ListFilesResponse > = {}): ListFilesResponse => ({ object: faker.string.alpha(20), data: Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => ({ id: faker.string.alpha(20), bytes: faker.number.int({ min: undefined, max: undefined }), created_at: faker.number.int({ min: undefined, max: undefined }), filename: faker.string.alpha(20), object: faker.helpers.arrayElement(['file'] as const), purpose: faker.helpers.arrayElement(['assistants', 'assistants_output', 'batch', 'batch_output', 'fine-tune', 'fine-tune-results', 'vision'] as const), status: faker.helpers.arrayElement(['uploaded', 'processed', 'error'] as const), status_details: faker.helpers.arrayElement([faker.string.alpha(20), undefined]) })), first_id: faker.string.alpha(20), last_id: faker.string.alpha(20), has_more: faker.datatype.boolean(), ...overrideResponse })
+export function getListFilesResponseMock(overrideResponse: Partial< ListFilesResponse > = {}): ListFilesResponse {
+    return {
+        object: faker.string.alpha(20),
+        data: Array.from({
+            length: faker.number.int({
+                min: 1,
+                max: 10,
+            }),
+        }, (_, i) => i + 1).map(() => ({
+            id: faker.string.alpha(20),
+            bytes: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            created_at: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            filename: faker.string.alpha(20),
+            object: faker.helpers.arrayElement(['file'] as const),
+            purpose: faker.helpers.arrayElement([
+                'assistants',
+                'assistants_output',
+                'batch',
+                'batch_output',
+                'fine-tune',
+                'fine-tune-results',
+                'vision',
+            ] as const),
+            status: faker.helpers.arrayElement([
+                'uploaded',
+                'processed',
+                'error',
+            ] as const),
+            status_details: faker.helpers.arrayElement([
+                faker.string.alpha(20),
+                undefined,
+            ]),
+        })),
+        first_id: faker.string.alpha(20),
+        last_id: faker.string.alpha(20),
+        has_more: faker.datatype.boolean(),
+        ...overrideResponse,
+    }
+}
 
-export const getCreateFileResponseMock = (overrideResponse: Partial< OpenAIFile > = {}): OpenAIFile => ({ id: faker.string.alpha(20), bytes: faker.number.int({ min: undefined, max: undefined }), created_at: faker.number.int({ min: undefined, max: undefined }), filename: faker.string.alpha(20), object: faker.helpers.arrayElement(['file'] as const), purpose: faker.helpers.arrayElement(['assistants', 'assistants_output', 'batch', 'batch_output', 'fine-tune', 'fine-tune-results', 'vision'] as const), status: faker.helpers.arrayElement(['uploaded', 'processed', 'error'] as const), status_details: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), ...overrideResponse })
+export function getCreateFileResponseMock(overrideResponse: Partial< OpenAIFile > = {}): OpenAIFile {
+    return {
+        id: faker.string.alpha(20),
+        bytes: faker.number.int({
+            min: undefined,
+            max: undefined,
+        }),
+        created_at: faker.number.int({
+            min: undefined,
+            max: undefined,
+        }),
+        filename: faker.string.alpha(20),
+        object: faker.helpers.arrayElement(['file'] as const),
+        purpose: faker.helpers.arrayElement([
+            'assistants',
+            'assistants_output',
+            'batch',
+            'batch_output',
+            'fine-tune',
+            'fine-tune-results',
+            'vision',
+        ] as const),
+        status: faker.helpers.arrayElement([
+            'uploaded',
+            'processed',
+            'error',
+        ] as const),
+        status_details: faker.helpers.arrayElement([
+            faker.string.alpha(20),
+            undefined,
+        ]),
+        ...overrideResponse,
+    }
+}
 
-export const getDeleteFileResponseMock = (overrideResponse: Partial< DeleteFileResponse > = {}): DeleteFileResponse => ({ id: faker.string.alpha(20), object: faker.helpers.arrayElement(['file'] as const), deleted: faker.datatype.boolean(), ...overrideResponse })
+export function getDeleteFileResponseMock(overrideResponse: Partial< DeleteFileResponse > = {}): DeleteFileResponse {
+    return {
+        id: faker.string.alpha(20),
+        object: faker.helpers.arrayElement(['file'] as const),
+        deleted: faker.datatype.boolean(),
+        ...overrideResponse,
+    }
+}
 
-export const getRetrieveFileResponseMock = (overrideResponse: Partial< OpenAIFile > = {}): OpenAIFile => ({ id: faker.string.alpha(20), bytes: faker.number.int({ min: undefined, max: undefined }), created_at: faker.number.int({ min: undefined, max: undefined }), filename: faker.string.alpha(20), object: faker.helpers.arrayElement(['file'] as const), purpose: faker.helpers.arrayElement(['assistants', 'assistants_output', 'batch', 'batch_output', 'fine-tune', 'fine-tune-results', 'vision'] as const), status: faker.helpers.arrayElement(['uploaded', 'processed', 'error'] as const), status_details: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), ...overrideResponse })
+export function getRetrieveFileResponseMock(overrideResponse: Partial< OpenAIFile > = {}): OpenAIFile {
+    return {
+        id: faker.string.alpha(20),
+        bytes: faker.number.int({
+            min: undefined,
+            max: undefined,
+        }),
+        created_at: faker.number.int({
+            min: undefined,
+            max: undefined,
+        }),
+        filename: faker.string.alpha(20),
+        object: faker.helpers.arrayElement(['file'] as const),
+        purpose: faker.helpers.arrayElement([
+            'assistants',
+            'assistants_output',
+            'batch',
+            'batch_output',
+            'fine-tune',
+            'fine-tune-results',
+            'vision',
+        ] as const),
+        status: faker.helpers.arrayElement([
+            'uploaded',
+            'processed',
+            'error',
+        ] as const),
+        status_details: faker.helpers.arrayElement([
+            faker.string.alpha(20),
+            undefined,
+        ]),
+        ...overrideResponse,
+    }
+}
 
 export const getDownloadFileResponseMock = (): string => (faker.word.sample())
 
@@ -37,7 +154,11 @@ export function getListFilesMockHandler(overrideResponse?: ListFilesResponse | (
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getListFilesResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getListFilesResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }
@@ -48,7 +169,11 @@ export function getCreateFileMockHandler(overrideResponse?: OpenAIFile | ((info:
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getCreateFileResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getCreateFileResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }
@@ -59,7 +184,11 @@ export function getDeleteFileMockHandler(overrideResponse?: DeleteFileResponse |
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getDeleteFileResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getDeleteFileResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }
@@ -70,7 +199,11 @@ export function getRetrieveFileMockHandler(overrideResponse?: OpenAIFile | ((inf
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getRetrieveFileResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getRetrieveFileResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }
@@ -81,7 +214,11 @@ export function getDownloadFileMockHandler(overrideResponse?: string | ((info: P
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getDownloadFileResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getDownloadFileResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }

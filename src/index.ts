@@ -8,13 +8,17 @@ import { setupServer } from 'msw/node'
 const server = setupServer(...handlers)
 
 // Log intercepted endpoints
-server.events.on('request:start', ({ request }) => {
+server.events.on('request:start', ({
+    request,
+}) => {
     // eslint-disable-next-line no-console
     console.log(`▸ ${request.method} ${request.url}`)
 })
 
 // Start server on default port 3000
-server.listen({ onUnhandledRequest: 'bypass' })
+server.listen({
+    onUnhandledRequest: 'bypass',
+})
 
 // eslint-disable-next-line no-console
 console.log(`

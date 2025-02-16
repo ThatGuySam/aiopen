@@ -37,7 +37,10 @@ export function getUsage() {
             `http://localhost:3000/v1/organization/costs`,
             {
                 ...options,
-                params: { ...params, ...options?.params },
+                params: {
+                    ...params,
+                    ...options?.params,
+                },
             },
         )
     }
@@ -52,7 +55,10 @@ export function getUsage() {
             `http://localhost:3000/v1/organization/usage/audio_speeches`,
             {
                 ...options,
-                params: { ...params, ...options?.params },
+                params: {
+                    ...params,
+                    ...options?.params,
+                },
             },
         )
     }
@@ -67,7 +73,10 @@ export function getUsage() {
             `http://localhost:3000/v1/organization/usage/audio_transcriptions`,
             {
                 ...options,
-                params: { ...params, ...options?.params },
+                params: {
+                    ...params,
+                    ...options?.params,
+                },
             },
         )
     }
@@ -82,7 +91,10 @@ export function getUsage() {
             `http://localhost:3000/v1/organization/usage/code_interpreter_sessions`,
             {
                 ...options,
-                params: { ...params, ...options?.params },
+                params: {
+                    ...params,
+                    ...options?.params,
+                },
             },
         )
     }
@@ -97,7 +109,10 @@ export function getUsage() {
             `http://localhost:3000/v1/organization/usage/completions`,
             {
                 ...options,
-                params: { ...params, ...options?.params },
+                params: {
+                    ...params,
+                    ...options?.params,
+                },
             },
         )
     }
@@ -112,7 +127,10 @@ export function getUsage() {
             `http://localhost:3000/v1/organization/usage/embeddings`,
             {
                 ...options,
-                params: { ...params, ...options?.params },
+                params: {
+                    ...params,
+                    ...options?.params,
+                },
             },
         )
     }
@@ -127,7 +145,10 @@ export function getUsage() {
             `http://localhost:3000/v1/organization/usage/images`,
             {
                 ...options,
-                params: { ...params, ...options?.params },
+                params: {
+                    ...params,
+                    ...options?.params,
+                },
             },
         )
     }
@@ -142,7 +163,10 @@ export function getUsage() {
             `http://localhost:3000/v1/organization/usage/moderations`,
             {
                 ...options,
-                params: { ...params, ...options?.params },
+                params: {
+                    ...params,
+                    ...options?.params,
+                },
             },
         )
     }
@@ -157,11 +181,24 @@ export function getUsage() {
             `http://localhost:3000/v1/organization/usage/vector_stores`,
             {
                 ...options,
-                params: { ...params, ...options?.params },
+                params: {
+                    ...params,
+                    ...options?.params,
+                },
             },
         )
     }
-    return { usageCosts, usageAudioSpeeches, usageAudioTranscriptions, usageCodeInterpreterSessions, usageCompletions, usageEmbeddings, usageImages, usageModerations, usageVectorStores }
+    return {
+        usageCosts,
+        usageAudioSpeeches,
+        usageAudioTranscriptions,
+        usageCodeInterpreterSessions,
+        usageCompletions,
+        usageEmbeddings,
+        usageImages,
+        usageModerations,
+        usageVectorStores,
+    }
 }
 export type UsageCostsResult = AxiosResponse<UsageResponse>
 export type UsageAudioSpeechesResult = AxiosResponse<UsageResponse>

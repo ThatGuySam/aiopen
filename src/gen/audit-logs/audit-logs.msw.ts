@@ -22,7 +22,474 @@ import {
     AuditLogEventType,
 } from '.././models'
 
-export const getListAuditLogsResponseMock = (overrideResponse: Partial< ListAuditLogsResponse > = {}): ListAuditLogsResponse => ({ object: faker.helpers.arrayElement(['list'] as const), data: Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => ({ 'id': faker.string.alpha(20), 'type': faker.helpers.arrayElement(Object.values(AuditLogEventType)), 'effective_at': faker.number.int({ min: undefined, max: undefined }), 'project': faker.helpers.arrayElement([{ id: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), name: faker.helpers.arrayElement([faker.string.alpha(20), undefined]) }, undefined]), 'actor': { type: faker.helpers.arrayElement([faker.helpers.arrayElement(['session', 'api_key'] as const), undefined]), session: faker.helpers.arrayElement([{ user: faker.helpers.arrayElement([{ id: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), email: faker.helpers.arrayElement([faker.string.alpha(20), undefined]) }, undefined]), ip_address: faker.helpers.arrayElement([faker.string.alpha(20), undefined]) }, undefined]), api_key: faker.helpers.arrayElement([{ id: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), type: faker.helpers.arrayElement([faker.helpers.arrayElement(['user', 'service_account'] as const), undefined]), user: faker.helpers.arrayElement([{ id: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), email: faker.helpers.arrayElement([faker.string.alpha(20), undefined]) }, undefined]), service_account: faker.helpers.arrayElement([{ id: faker.helpers.arrayElement([faker.string.alpha(20), undefined]) }, undefined]) }, undefined]) }, 'api_key.created': faker.helpers.arrayElement([{ id: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), data: faker.helpers.arrayElement([{ scopes: faker.helpers.arrayElement([Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => (faker.string.alpha(20))), undefined]) }, undefined]) }, undefined]), 'api_key.updated': faker.helpers.arrayElement([{ id: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), changes_requested: faker.helpers.arrayElement([{ scopes: faker.helpers.arrayElement([Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => (faker.string.alpha(20))), undefined]) }, undefined]) }, undefined]), 'api_key.deleted': faker.helpers.arrayElement([{ id: faker.helpers.arrayElement([faker.string.alpha(20), undefined]) }, undefined]), 'invite.sent': faker.helpers.arrayElement([{ id: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), data: faker.helpers.arrayElement([{ email: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), role: faker.helpers.arrayElement([faker.string.alpha(20), undefined]) }, undefined]) }, undefined]), 'invite.accepted': faker.helpers.arrayElement([{ id: faker.helpers.arrayElement([faker.string.alpha(20), undefined]) }, undefined]), 'invite.deleted': faker.helpers.arrayElement([{ id: faker.helpers.arrayElement([faker.string.alpha(20), undefined]) }, undefined]), 'login.failed': faker.helpers.arrayElement([{ error_code: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), error_message: faker.helpers.arrayElement([faker.string.alpha(20), undefined]) }, undefined]), 'logout.failed': faker.helpers.arrayElement([{ error_code: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), error_message: faker.helpers.arrayElement([faker.string.alpha(20), undefined]) }, undefined]), 'organization.updated': faker.helpers.arrayElement([{ id: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), changes_requested: faker.helpers.arrayElement([{ title: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), description: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), name: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), settings: faker.helpers.arrayElement([{ threads_ui_visibility: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), usage_dashboard_visibility: faker.helpers.arrayElement([faker.string.alpha(20), undefined]) }, undefined]) }, undefined]) }, undefined]), 'project.created': faker.helpers.arrayElement([{ id: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), data: faker.helpers.arrayElement([{ name: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), title: faker.helpers.arrayElement([faker.string.alpha(20), undefined]) }, undefined]) }, undefined]), 'project.updated': faker.helpers.arrayElement([{ id: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), changes_requested: faker.helpers.arrayElement([{ title: faker.helpers.arrayElement([faker.string.alpha(20), undefined]) }, undefined]) }, undefined]), 'project.archived': faker.helpers.arrayElement([{ id: faker.helpers.arrayElement([faker.string.alpha(20), undefined]) }, undefined]), 'rate_limit.updated': faker.helpers.arrayElement([{ id: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), changes_requested: faker.helpers.arrayElement([{ max_requests_per_1_minute: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), max_tokens_per_1_minute: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), max_images_per_1_minute: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), max_audio_megabytes_per_1_minute: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), max_requests_per_1_day: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]), batch_1_day_max_input_tokens: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]) }, undefined]) }, undefined]), 'rate_limit.deleted': faker.helpers.arrayElement([{ id: faker.helpers.arrayElement([faker.string.alpha(20), undefined]) }, undefined]), 'service_account.created': faker.helpers.arrayElement([{ id: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), data: faker.helpers.arrayElement([{ role: faker.helpers.arrayElement([faker.string.alpha(20), undefined]) }, undefined]) }, undefined]), 'service_account.updated': faker.helpers.arrayElement([{ id: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), changes_requested: faker.helpers.arrayElement([{ role: faker.helpers.arrayElement([faker.string.alpha(20), undefined]) }, undefined]) }, undefined]), 'service_account.deleted': faker.helpers.arrayElement([{ id: faker.helpers.arrayElement([faker.string.alpha(20), undefined]) }, undefined]), 'user.added': faker.helpers.arrayElement([{ id: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), data: faker.helpers.arrayElement([{ role: faker.helpers.arrayElement([faker.string.alpha(20), undefined]) }, undefined]) }, undefined]), 'user.updated': faker.helpers.arrayElement([{ id: faker.helpers.arrayElement([faker.string.alpha(20), undefined]), changes_requested: faker.helpers.arrayElement([{ role: faker.helpers.arrayElement([faker.string.alpha(20), undefined]) }, undefined]) }, undefined]), 'user.deleted': faker.helpers.arrayElement([{ id: faker.helpers.arrayElement([faker.string.alpha(20), undefined]) }, undefined]) })), first_id: faker.string.alpha(20), last_id: faker.string.alpha(20), has_more: faker.datatype.boolean(), ...overrideResponse })
+export function getListAuditLogsResponseMock(overrideResponse: Partial< ListAuditLogsResponse > = {}): ListAuditLogsResponse {
+    return {
+        object: faker.helpers.arrayElement(['list'] as const),
+        data: Array.from({
+            length: faker.number.int({
+                min: 1,
+                max: 10,
+            }),
+        }, (_, i) => i + 1).map(() => ({
+            'id': faker.string.alpha(20),
+            'type': faker.helpers.arrayElement(Object.values(AuditLogEventType)),
+            'effective_at': faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            'project': faker.helpers.arrayElement([
+                {
+                    id: faker.helpers.arrayElement([
+                        faker.string.alpha(20),
+                        undefined,
+                    ]),
+                    name: faker.helpers.arrayElement([
+                        faker.string.alpha(20),
+                        undefined,
+                    ]),
+                },
+                undefined,
+            ]),
+            'actor': {
+                type: faker.helpers.arrayElement([
+                    faker.helpers.arrayElement([
+                        'session',
+                        'api_key',
+                    ] as const),
+                    undefined,
+                ]),
+                session: faker.helpers.arrayElement([
+                    {
+                        user: faker.helpers.arrayElement([
+                            {
+                                id: faker.helpers.arrayElement([
+                                    faker.string.alpha(20),
+                                    undefined,
+                                ]),
+                                email: faker.helpers.arrayElement([
+                                    faker.string.alpha(20),
+                                    undefined,
+                                ]),
+                            },
+                            undefined,
+                        ]),
+                        ip_address: faker.helpers.arrayElement([
+                            faker.string.alpha(20),
+                            undefined,
+                        ]),
+                    },
+                    undefined,
+                ]),
+                api_key: faker.helpers.arrayElement([
+                    {
+                        id: faker.helpers.arrayElement([
+                            faker.string.alpha(20),
+                            undefined,
+                        ]),
+                        type: faker.helpers.arrayElement([
+                            faker.helpers.arrayElement([
+                                'user',
+                                'service_account',
+                            ] as const),
+                            undefined,
+                        ]),
+                        user: faker.helpers.arrayElement([
+                            {
+                                id: faker.helpers.arrayElement([
+                                    faker.string.alpha(20),
+                                    undefined,
+                                ]),
+                                email: faker.helpers.arrayElement([
+                                    faker.string.alpha(20),
+                                    undefined,
+                                ]),
+                            },
+                            undefined,
+                        ]),
+                        service_account: faker.helpers.arrayElement([
+                            {
+                                id: faker.helpers.arrayElement([
+                                    faker.string.alpha(20),
+                                    undefined,
+                                ]),
+                            },
+                            undefined,
+                        ]),
+                    },
+                    undefined,
+                ]),
+            },
+            'api_key.created': faker.helpers.arrayElement([
+                {
+                    id: faker.helpers.arrayElement([
+                        faker.string.alpha(20),
+                        undefined,
+                    ]),
+                    data: faker.helpers.arrayElement([
+                        {
+                            scopes: faker.helpers.arrayElement([
+                                Array.from({
+                                    length: faker.number.int({
+                                        min: 1,
+                                        max: 10,
+                                    }),
+                                }, (_, i) => i + 1).map(() => (faker.string.alpha(20))),
+                                undefined,
+                            ]),
+                        },
+                        undefined,
+                    ]),
+                },
+                undefined,
+            ]),
+            'api_key.updated': faker.helpers.arrayElement([
+                {
+                    id: faker.helpers.arrayElement([
+                        faker.string.alpha(20),
+                        undefined,
+                    ]),
+                    changes_requested: faker.helpers.arrayElement([
+                        {
+                            scopes: faker.helpers.arrayElement([
+                                Array.from({
+                                    length: faker.number.int({
+                                        min: 1,
+                                        max: 10,
+                                    }),
+                                }, (_, i) => i + 1).map(() => (faker.string.alpha(20))),
+                                undefined,
+                            ]),
+                        },
+                        undefined,
+                    ]),
+                },
+                undefined,
+            ]),
+            'api_key.deleted': faker.helpers.arrayElement([
+                {
+                    id: faker.helpers.arrayElement([
+                        faker.string.alpha(20),
+                        undefined,
+                    ]),
+                },
+                undefined,
+            ]),
+            'invite.sent': faker.helpers.arrayElement([
+                {
+                    id: faker.helpers.arrayElement([
+                        faker.string.alpha(20),
+                        undefined,
+                    ]),
+                    data: faker.helpers.arrayElement([
+                        {
+                            email: faker.helpers.arrayElement([
+                                faker.string.alpha(20),
+                                undefined,
+                            ]),
+                            role: faker.helpers.arrayElement([
+                                faker.string.alpha(20),
+                                undefined,
+                            ]),
+                        },
+                        undefined,
+                    ]),
+                },
+                undefined,
+            ]),
+            'invite.accepted': faker.helpers.arrayElement([
+                {
+                    id: faker.helpers.arrayElement([
+                        faker.string.alpha(20),
+                        undefined,
+                    ]),
+                },
+                undefined,
+            ]),
+            'invite.deleted': faker.helpers.arrayElement([
+                {
+                    id: faker.helpers.arrayElement([
+                        faker.string.alpha(20),
+                        undefined,
+                    ]),
+                },
+                undefined,
+            ]),
+            'login.failed': faker.helpers.arrayElement([
+                {
+                    error_code: faker.helpers.arrayElement([
+                        faker.string.alpha(20),
+                        undefined,
+                    ]),
+                    error_message: faker.helpers.arrayElement([
+                        faker.string.alpha(20),
+                        undefined,
+                    ]),
+                },
+                undefined,
+            ]),
+            'logout.failed': faker.helpers.arrayElement([
+                {
+                    error_code: faker.helpers.arrayElement([
+                        faker.string.alpha(20),
+                        undefined,
+                    ]),
+                    error_message: faker.helpers.arrayElement([
+                        faker.string.alpha(20),
+                        undefined,
+                    ]),
+                },
+                undefined,
+            ]),
+            'organization.updated': faker.helpers.arrayElement([
+                {
+                    id: faker.helpers.arrayElement([
+                        faker.string.alpha(20),
+                        undefined,
+                    ]),
+                    changes_requested: faker.helpers.arrayElement([
+                        {
+                            title: faker.helpers.arrayElement([
+                                faker.string.alpha(20),
+                                undefined,
+                            ]),
+                            description: faker.helpers.arrayElement([
+                                faker.string.alpha(20),
+                                undefined,
+                            ]),
+                            name: faker.helpers.arrayElement([
+                                faker.string.alpha(20),
+                                undefined,
+                            ]),
+                            settings: faker.helpers.arrayElement([
+                                {
+                                    threads_ui_visibility: faker.helpers.arrayElement([
+                                        faker.string.alpha(20),
+                                        undefined,
+                                    ]),
+                                    usage_dashboard_visibility: faker.helpers.arrayElement([
+                                        faker.string.alpha(20),
+                                        undefined,
+                                    ]),
+                                },
+                                undefined,
+                            ]),
+                        },
+                        undefined,
+                    ]),
+                },
+                undefined,
+            ]),
+            'project.created': faker.helpers.arrayElement([
+                {
+                    id: faker.helpers.arrayElement([
+                        faker.string.alpha(20),
+                        undefined,
+                    ]),
+                    data: faker.helpers.arrayElement([
+                        {
+                            name: faker.helpers.arrayElement([
+                                faker.string.alpha(20),
+                                undefined,
+                            ]),
+                            title: faker.helpers.arrayElement([
+                                faker.string.alpha(20),
+                                undefined,
+                            ]),
+                        },
+                        undefined,
+                    ]),
+                },
+                undefined,
+            ]),
+            'project.updated': faker.helpers.arrayElement([
+                {
+                    id: faker.helpers.arrayElement([
+                        faker.string.alpha(20),
+                        undefined,
+                    ]),
+                    changes_requested: faker.helpers.arrayElement([
+                        {
+                            title: faker.helpers.arrayElement([
+                                faker.string.alpha(20),
+                                undefined,
+                            ]),
+                        },
+                        undefined,
+                    ]),
+                },
+                undefined,
+            ]),
+            'project.archived': faker.helpers.arrayElement([
+                {
+                    id: faker.helpers.arrayElement([
+                        faker.string.alpha(20),
+                        undefined,
+                    ]),
+                },
+                undefined,
+            ]),
+            'rate_limit.updated': faker.helpers.arrayElement([
+                {
+                    id: faker.helpers.arrayElement([
+                        faker.string.alpha(20),
+                        undefined,
+                    ]),
+                    changes_requested: faker.helpers.arrayElement([
+                        {
+                            max_requests_per_1_minute: faker.helpers.arrayElement([
+                                faker.number.int({
+                                    min: undefined,
+                                    max: undefined,
+                                }),
+                                undefined,
+                            ]),
+                            max_tokens_per_1_minute: faker.helpers.arrayElement([
+                                faker.number.int({
+                                    min: undefined,
+                                    max: undefined,
+                                }),
+                                undefined,
+                            ]),
+                            max_images_per_1_minute: faker.helpers.arrayElement([
+                                faker.number.int({
+                                    min: undefined,
+                                    max: undefined,
+                                }),
+                                undefined,
+                            ]),
+                            max_audio_megabytes_per_1_minute: faker.helpers.arrayElement([
+                                faker.number.int({
+                                    min: undefined,
+                                    max: undefined,
+                                }),
+                                undefined,
+                            ]),
+                            max_requests_per_1_day: faker.helpers.arrayElement([
+                                faker.number.int({
+                                    min: undefined,
+                                    max: undefined,
+                                }),
+                                undefined,
+                            ]),
+                            batch_1_day_max_input_tokens: faker.helpers.arrayElement([
+                                faker.number.int({
+                                    min: undefined,
+                                    max: undefined,
+                                }),
+                                undefined,
+                            ]),
+                        },
+                        undefined,
+                    ]),
+                },
+                undefined,
+            ]),
+            'rate_limit.deleted': faker.helpers.arrayElement([
+                {
+                    id: faker.helpers.arrayElement([
+                        faker.string.alpha(20),
+                        undefined,
+                    ]),
+                },
+                undefined,
+            ]),
+            'service_account.created': faker.helpers.arrayElement([
+                {
+                    id: faker.helpers.arrayElement([
+                        faker.string.alpha(20),
+                        undefined,
+                    ]),
+                    data: faker.helpers.arrayElement([
+                        {
+                            role: faker.helpers.arrayElement([
+                                faker.string.alpha(20),
+                                undefined,
+                            ]),
+                        },
+                        undefined,
+                    ]),
+                },
+                undefined,
+            ]),
+            'service_account.updated': faker.helpers.arrayElement([
+                {
+                    id: faker.helpers.arrayElement([
+                        faker.string.alpha(20),
+                        undefined,
+                    ]),
+                    changes_requested: faker.helpers.arrayElement([
+                        {
+                            role: faker.helpers.arrayElement([
+                                faker.string.alpha(20),
+                                undefined,
+                            ]),
+                        },
+                        undefined,
+                    ]),
+                },
+                undefined,
+            ]),
+            'service_account.deleted': faker.helpers.arrayElement([
+                {
+                    id: faker.helpers.arrayElement([
+                        faker.string.alpha(20),
+                        undefined,
+                    ]),
+                },
+                undefined,
+            ]),
+            'user.added': faker.helpers.arrayElement([
+                {
+                    id: faker.helpers.arrayElement([
+                        faker.string.alpha(20),
+                        undefined,
+                    ]),
+                    data: faker.helpers.arrayElement([
+                        {
+                            role: faker.helpers.arrayElement([
+                                faker.string.alpha(20),
+                                undefined,
+                            ]),
+                        },
+                        undefined,
+                    ]),
+                },
+                undefined,
+            ]),
+            'user.updated': faker.helpers.arrayElement([
+                {
+                    id: faker.helpers.arrayElement([
+                        faker.string.alpha(20),
+                        undefined,
+                    ]),
+                    changes_requested: faker.helpers.arrayElement([
+                        {
+                            role: faker.helpers.arrayElement([
+                                faker.string.alpha(20),
+                                undefined,
+                            ]),
+                        },
+                        undefined,
+                    ]),
+                },
+                undefined,
+            ]),
+            'user.deleted': faker.helpers.arrayElement([
+                {
+                    id: faker.helpers.arrayElement([
+                        faker.string.alpha(20),
+                        undefined,
+                    ]),
+                },
+                undefined,
+            ]),
+        })),
+        first_id: faker.string.alpha(20),
+        last_id: faker.string.alpha(20),
+        has_more: faker.datatype.boolean(),
+        ...overrideResponse,
+    }
+}
 
 export function getListAuditLogsMockHandler(overrideResponse?: ListAuditLogsResponse | ((info: Parameters<Parameters<typeof http.get>[1]>[0]) => Promise<ListAuditLogsResponse> | ListAuditLogsResponse)) {
     return http.get('*/organization/audit_logs', async (info) => {
@@ -30,12 +497,14 @@ export function getListAuditLogsMockHandler(overrideResponse?: ListAuditLogsResp
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getListAuditLogsResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getListAuditLogsResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }
 export function getAuditLogsMock() {
-    return [
-        getListAuditLogsMockHandler(),
-    ]
+    return [getListAuditLogsMockHandler()]
 }

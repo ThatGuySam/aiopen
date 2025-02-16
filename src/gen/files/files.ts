@@ -33,7 +33,10 @@ export function getFiles() {
             `http://localhost:3000/v1/files`,
             {
                 ...options,
-                params: { ...params, ...options?.params },
+                params: {
+                    ...params,
+                    ...options?.params,
+                },
             },
         )
     }
@@ -99,7 +102,13 @@ Please [contact us](https://help.openai.com/) if you need to increase these stor
             options,
         )
     }
-    return { listFiles, createFile, deleteFile, retrieveFile, downloadFile }
+    return {
+        listFiles,
+        createFile,
+        deleteFile,
+        retrieveFile,
+        downloadFile,
+    }
 }
 export type ListFilesResult = AxiosResponse<ListFilesResponse>
 export type CreateFileResult = AxiosResponse<OpenAIFile>

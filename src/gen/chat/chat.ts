@@ -42,6 +42,8 @@ unsupported parameters in reasoning models,
             options,
         )
     }
-    return { createChatCompletion }
+    return {
+        createChatCompletion,
+    }
 }
 export type CreateChatCompletionResult = AxiosResponse<CreateChatCompletionResponse | CreateChatCompletionStreamResponse>

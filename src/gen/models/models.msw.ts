@@ -21,11 +21,48 @@ import {
     HttpResponse,
 } from 'msw'
 
-export const getListModelsResponseMock = (overrideResponse: Partial< ListModelsResponse > = {}): ListModelsResponse => ({ object: faker.helpers.arrayElement(['list'] as const), data: Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => ({ id: faker.string.alpha(20), created: faker.number.int({ min: undefined, max: undefined }), object: faker.helpers.arrayElement(['model'] as const), owned_by: faker.string.alpha(20) })), ...overrideResponse })
+export function getListModelsResponseMock(overrideResponse: Partial< ListModelsResponse > = {}): ListModelsResponse {
+    return {
+        object: faker.helpers.arrayElement(['list'] as const),
+        data: Array.from({
+            length: faker.number.int({
+                min: 1,
+                max: 10,
+            }),
+        }, (_, i) => i + 1).map(() => ({
+            id: faker.string.alpha(20),
+            created: faker.number.int({
+                min: undefined,
+                max: undefined,
+            }),
+            object: faker.helpers.arrayElement(['model'] as const),
+            owned_by: faker.string.alpha(20),
+        })),
+        ...overrideResponse,
+    }
+}
 
-export const getRetrieveModelResponseMock = (overrideResponse: Partial< Model > = {}): Model => ({ id: faker.string.alpha(20), created: faker.number.int({ min: undefined, max: undefined }), object: faker.helpers.arrayElement(['model'] as const), owned_by: faker.string.alpha(20), ...overrideResponse })
+export function getRetrieveModelResponseMock(overrideResponse: Partial< Model > = {}): Model {
+    return {
+        id: faker.string.alpha(20),
+        created: faker.number.int({
+            min: undefined,
+            max: undefined,
+        }),
+        object: faker.helpers.arrayElement(['model'] as const),
+        owned_by: faker.string.alpha(20),
+        ...overrideResponse,
+    }
+}
 
-export const getDeleteModelResponseMock = (overrideResponse: Partial< DeleteModelResponse > = {}): DeleteModelResponse => ({ id: faker.string.alpha(20), deleted: faker.datatype.boolean(), object: faker.string.alpha(20), ...overrideResponse })
+export function getDeleteModelResponseMock(overrideResponse: Partial< DeleteModelResponse > = {}): DeleteModelResponse {
+    return {
+        id: faker.string.alpha(20),
+        deleted: faker.datatype.boolean(),
+        object: faker.string.alpha(20),
+        ...overrideResponse,
+    }
+}
 
 export function getListModelsMockHandler(overrideResponse?: ListModelsResponse | ((info: Parameters<Parameters<typeof http.get>[1]>[0]) => Promise<ListModelsResponse> | ListModelsResponse)) {
     return http.get('*/models', async (info) => {
@@ -33,7 +70,11 @@ export function getListModelsMockHandler(overrideResponse?: ListModelsResponse |
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getListModelsResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getListModelsResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }
@@ -44,7 +85,11 @@ export function getRetrieveModelMockHandler(overrideResponse?: Model | ((info: P
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getRetrieveModelResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getRetrieveModelResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }
@@ -55,7 +100,11 @@ export function getDeleteModelMockHandler(overrideResponse?: DeleteModelResponse
 
         return new HttpResponse(JSON.stringify(overrideResponse !== undefined
             ? (typeof overrideResponse === 'function' ? await overrideResponse(info) : overrideResponse)
-            : getDeleteModelResponseMock()), { status: 200, headers: { 'Content-Type': 'application/json' },
+            : getDeleteModelResponseMock()), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
     })
 }
