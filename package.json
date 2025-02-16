@@ -1,7 +1,7 @@
 {
   "name": "aiopen",
   "type": "module",
-  "version": "0.0.1-beta.1",
+  "version": "0.0.1-beta.2",
   "packageManager": "pnpm@10.2.1",
   "description": "Portable Mock Server for OpenAI's API",
   "author": "Sam Carlton <@ThatGuySam>",
