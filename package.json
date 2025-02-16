@@ -38,8 +38,7 @@
     "test": "vitest",
     "typecheck": "tsc --noEmit",
     "prepare": "simple-git-hooks",
-    "generate-orval": "pnpm tsx ./scripts/timed-orval.ts",
-    "postgenerate-orval": "pnpm tsx ./scripts/orval-cleanup.ts"
+    "generate-orval": "pnpm tsx ./scripts/timed-orval.ts"
   },
   "dependencies": {
     "@faker-js/faker": "^9.5.0",
