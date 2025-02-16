@@ -6,6 +6,7 @@ const DEFAULT_SPACE_INDENT = 4
 export default antfu(
     {
         type: 'lib',
+        yaml: false,
         stylistic: {
             indent: DEFAULT_SPACE_INDENT,
         },
