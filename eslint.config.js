@@ -5,20 +5,20 @@ const DEFAULT_SPACE_INDENT = 4
 
 export default antfu(
     {
-        type     : 'lib',
-        yaml     : false,
+        type: 'lib',
+        yaml: false,
         stylistic: {
-            indent   : DEFAULT_SPACE_INDENT,
+            indent: DEFAULT_SPACE_INDENT,
             overrides: {
                 '@stylistic/object-curly-newline': [
                     'error',
                     {
                         ObjectExpression: {
-                            multiline    : true,
+                            multiline: true,
                             minProperties: 1,
                         },
                         ObjectPattern: {
-                            multiline    : true,
+                            multiline: true,
                             minProperties: 1,
                         },
                     },
@@ -29,14 +29,6 @@ export default antfu(
                         allowAllPropertiesOnSameLine: false,
                     },
                 ],
-                '@stylistic/key-spacing': [
-                    'error',
-                    {
-                        beforeColon: false,
-                        afterColon : true,
-                        align      : 'colon',
-                    },
-                ],
                 '@stylistic/indent-binary-ops': [
                     'error',
                     4,
@@ -45,14 +37,14 @@ export default antfu(
                     'error',
                     {
                         multiline: true,
-                        minItems : 2,
+                        minItems: 2,
                     },
                 ],
                 '@stylistic/array-element-newline': [
                     'error',
                     {
                         multiline: true,
-                        minItems : 2,
+                        minItems: 2,
                     },
                 ],
                 '@stylistic/array-bracket-spacing': [
@@ -67,7 +59,7 @@ export default antfu(
                     'error',
                     {
                         before: false,
-                        after : true,
+                        after: true,
                     },
                 ],
                 '@stylistic/comma-dangle': [
