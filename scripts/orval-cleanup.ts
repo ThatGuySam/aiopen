@@ -30,6 +30,7 @@ async function processFiles(dir: string) {
         const content = readFileSync(fullPath, 'utf8')
         const replaced = content.replace(/@typescript-eslint\//g, 'ts/')
         const withComments = [
+          '/* eslint-disable eslint-comments/no-duplicate-disable */',
           '/* eslint-disable style/max-statements-per-line */',
           '/* eslint-disable jsdoc/check-alignment */',
           '/* eslint-disable ts/explicit-function-return-type */',
