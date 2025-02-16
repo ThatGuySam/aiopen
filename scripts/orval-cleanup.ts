@@ -29,12 +29,23 @@ async function processFiles(dir: string) {
       try {
         const content = readFileSync(fullPath, 'utf8')
         const replaced = content.replace(/@typescript-eslint\//g, 'ts/')
+
+        // Define required disable directives in order
+        const requiredDisables = [
+          'eslint-comments/no-duplicate-disable',
+          'style/max-statements-per-line',
+          'jsdoc/check-alignment',
+          'ts/explicit-function-return-type',
+          'unused-imports/no-unused-vars',
+        ]
+
+        // Generate comments and filter existing ones
+        const disableComments = requiredDisables
+          .map(rule => `/* eslint-disable ${rule} */`)
+          .filter(comment => !content.includes(comment))
+
         const withComments = [
-          '/* eslint-disable eslint-comments/no-duplicate-disable */',
-          '/* eslint-disable style/max-statements-per-line */',
-          '/* eslint-disable jsdoc/check-alignment */',
-          '/* eslint-disable ts/explicit-function-return-type */',
-          '/* eslint-disable unused-imports/no-unused-vars */',
+          ...disableComments,
           replaced,
         ].join('\n')
 
