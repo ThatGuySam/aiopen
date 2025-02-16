@@ -5,6 +5,9 @@ on:
   push:
     paths:
       - openapi.yaml
+      - scripts/orval-cleanup.ts
+      - .github/workflows/gen-orval.yaml
+      - orval.config.ts
   workflow_dispatch:
 
 # Generate Orval Artifacts
